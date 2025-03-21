@@ -1,0 +1,12 @@
+* { 
+    cursor: url(/img/01.png) 16 16, auto; 
+}
+a, [href], [onclick] { /* 可点击元素 */
+    cursor: url(/img/15.png), pointer; 
+} 
+
+/* 设置 logo 图片的大小 */
+img[src="/img/柠檬.png"] {
+  width: 900px;
+  height: 900px;
+}
