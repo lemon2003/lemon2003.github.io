@@ -10,3 +10,95 @@ img[src="/img/柠檬.png"] {
   width: 900px;
   height: 900px;
 }
+
+/* 
+  🎨 Giscus评论框美化大作战 
+  （温馨提示：修改前请备份原CSS，避免酿成"五彩斑斓的黑"惨案）
+*/
+
+/* 基础容器样式 */
+.giscus-frame {
+  max-width: 800px !important; /* 控制评论框最大宽度（避免在手机上看成"面条评论"） */
+  margin: 2rem auto !important; /* 居中显示，给页面留点呼吸感 */
+  border-radius: 15px !important; /* 圆角大法好，告别直角恐惧症 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 轻微投影，假装悬浮效果 */
+  transition: all 0.3s ease; /* 魔法渐变效果，让调整大小更丝滑 */
+}
+
+/* 评论区标题 */
+.giscus-header {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important; /* 渐变粉红包头，少女心爆棚 */
+  color: white !important;
+  padding: 1.5rem !important;
+  font-family: 'Comic Sans MS', sans-serif; /* 恶搞字体警告⚠️ */
+}
+
+/* 输入框深度定制 */
+.giscus-textarea {
+  background: #f8f9fa !important; /* 温柔灰背景，打字不刺眼 */
+  border: 2px solid #e9ecef !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  transition: border-color 0.3s ease; /* 输入时边框变色小惊喜 */
+}
+.giscus-textarea:focus {
+  border-color: #4dabf7 !important; /* 聚焦时变成科技蓝 */
+  outline: none !important;
+}
+
+/* 提交按钮魔法 */
+.giscus-button {
+  background: #4dabf7 !important; /* 主色调按钮 */
+  color: white !important;
+  padding: 0.8rem 2rem !important;
+  border-radius: 25px !important; /* 胶囊按钮更时尚 */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.giscus-button:hover {
+  transform: translateY(-2px); /* 悬浮微弹效果 */
+  box-shadow: 0 2px 8px rgba(77, 171, 247, 0.3); /* 投影也要同色系 */
+}
+.giscus-button:active {
+  transform: scale(0.98); /* 点击时轻微压扁，模拟物理反馈 */
+}
+
+/* 评论列表个性化 */
+.giscus-comment {
+  border-bottom: 1px dashed #dee2e6 !important; /* 虚线分隔更优雅 */
+  padding: 1.5rem 0 !important;
+}
+.giscus-comment-header {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 1rem !important;
+}
+.giscus-comment-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  margin-right: 1rem !important;
+  border: 2px solid #fff; /* 头像加白边，瞬间高大上 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 夜间模式适配 */
+@media (prefers-color-scheme: dark) {
+  .giscus-frame {
+    background: #1a1a1a !important;
+    border: 1px solid #2d2d2d;
+  }
+  .giscus-textarea {
+    background: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #fff !important;
+  }
+  /* 其他暗黑样式按需添加... */
+}
+
+/* 💡 自定义小贴士：
+1. 修改颜色时建议用HSL色轮工具取同色系
+2. 添加 background-image 可以做信纸纹理效果
+3. 用 :hover + 兄弟选择器实现联动动画
+4. 慎用 !important（除非你想和Giscus默认样式大战300回合）
+*/

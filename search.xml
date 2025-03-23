@@ -106,4 +106,100 @@
         <tag>琐事</tag>
       </tags>
   </entry>
+  <entry>
+    <title>我学会评论了</title>
+    <url>/post/20250323103150.html</url>
+    <content><![CDATA[<h1 id="我学会用Giscus给网站配置评论啦！🎉（一把辛酸泪版）"><a href="#我学会用Giscus给网站配置评论啦！🎉（一把辛酸泪版）" class="headerlink" title="我学会用Giscus给网站配置评论啦！🎉（一把辛酸泪版）"></a>我学会用Giscus给网站配置评论啦！🎉（一把辛酸泪版）</h1><p><strong>📢 前方剧透</strong>：本文将用3000字详细描述如何把简单操作搞成史诗级冒险，并附赠「从暴躁到傻笑」的情绪过山车体验~</p>
+<h2 id="🎮-Level-1：信心满满地打开文档"><a href="#🎮-Level-1：信心满满地打开文档" class="headerlink" title="🎮 Level 1：信心满满地打开文档"></a>🎮 Level 1：信心满满地打开文档</h2><p>“Giscus？听起来比Giscus更难的是……读懂它的文档！”</p>
+<ol>
+<li>第一步：创建GitHub仓库<ul>
+<li>我：”这还不简单？新建仓库取名<code>comments-for-my-awesome-blog</code>，完美！”</li>
+<li>GitHub：”仓库初始化成功……但您确定要用这个名字写求职简历吗？”</li>
+</ul>
+</li>
+<li>第二步：安装giscus包<ul>
+<li>终端里输入<code>npm install giscus</code>，结果……</li>
+<li>💻：”您确定要污染全局环境？检测到10086个依赖冲突！”</li>
+<li>我：”（双手合十）神明啊！我只想要一个评论框而已……”</li>
+</ul>
+</li>
+</ol>
+<h2 id="🤯-Level-2：和GitHub-OAuth玩猜谜游戏"><a href="#🤯-Level-2：和GitHub-OAuth玩猜谜游戏" class="headerlink" title="🤯 Level 2：和GitHub OAuth玩猜谜游戏"></a>🤯 Level 2：和GitHub OAuth玩猜谜游戏</h2><p>“请问以下哪项不属于OAuth配置参数？A) Client ID B) 祖传秘方 C) 仓库地址 D) 猫主子的生日”</p>
+<ol>
+<li>生成OAuth App时：<ul>
+<li>✅ 填了Homepage URL（虽然是我的个人博客，但莫名羞耻）</li>
+<li>❌ 授权回调地址栏空了五分钟，最后填了<code>https://我的网站.com/其实我也不知道填啥</code></li>
+<li>GitHub：”您确定这不是在申请火星探测器权限？”</li>
+</ul>
+</li>
+<li>获取<code>client_id</code>和<code>client_secret</code>：<ul>
+<li>我：”这两个参数应该放在……配置文件里？环境变量里？还是刻在石碑上？”</li>
+<li>最终解决方案：截图发到手机，再手动输入（别问为什么）</li>
+</ul>
+</li>
+</ol>
+<h2 id="🛠️-Level-3：部署时的大型翻车现场"><a href="#🛠️-Level-3：部署时的大型翻车现场" class="headerlink" title="🛠️ Level 3：部署时的大型翻车现场"></a>🛠️ Level 3：部署时的大型翻车现场</h2><p>“代码复制粘贴一时爽，调BUG火葬场”</p>
+<ol>
+<li>插入评论组件：<ul>
+<li><p>官方文档：”只需三行代码即可召唤神龙！”</p>
+</li>
+<li><p>我的代码：</p>
+  <div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line">html复制代码<span class="comment">&lt;!-- 神秘消失的第一行代码 --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://giscus.app/client.js&quot;</span>  <span class="attr">data-repo</span>=<span class="string">&quot;用户/仓库&quot;</span>  <span class="attr">data-repo-id</span>=<span class="string">&quot;12345678&quot;</span>  <span class="attr">data-category</span>=<span class="string">&quot;Comments&quot;</span>  <span class="attr">data-category-id</span>=<span class="string">&quot;123456&quot;</span>  <span class="attr">data-mapping</span>=<span class="string">&quot;pathname&quot;</span>  <span class="attr">data-strict</span>=<span class="string">&quot;1&quot;</span>  <span class="attr">data-reactions-enabled</span>=<span class="string">&quot;1&quot;</span>  <span class="attr">data-emit-metadata</span>=<span class="string">&quot;0&quot;</span>  <span class="attr">data-input-position</span>=<span class="string">&quot;top&quot;</span>  <span class="attr">data-theme</span>=<span class="string">&quot;light&quot;</span>  <span class="attr">data-lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>效果：页面底部惊现空白区域，仿佛在说”你来打我呀~”</p>
+</li>
+</ul>
+</li>
+<li>CSS定制大战：<ul>
+<li><p>尝试修改主题色：</p>
+  <div class="code-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line">css复制代码<span class="selector-class">.giscus-frame</span> &#123;  <span class="attribute">border</span>: <span class="number">2px</span> solid pink <span class="meta">!important</span>;  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0.5</span>);&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>结果：评论框变成会发光的芭比粉，连夜改回默认主题</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="💡-Level-4：柳暗花明靠玄学"><a href="#💡-Level-4：柳暗花明靠玄学" class="headerlink" title="💡 Level 4：柳暗花明靠玄学"></a>💡 Level 4：柳暗花明靠玄学</h2><p>“当所有办法都失败时，试试重启电脑……和人生”</p>
+<ol>
+<li>最终解决方案：<ul>
+<li>第6次检查参数时发现：<ul>
+<li><code>data-repo</code>应该填<code>用户名/仓库名</code>而不是<code>用户名/仓库名.git</code></li>
+<li><code>data-category-id</code>要和GitHub Issues里的分类ID完全一致</li>
+</ul>
+</li>
+<li>我：”所以前5次都在和空气对线？？”</li>
+</ul>
+</li>
+<li>成功瞬间：<ul>
+<li>刷新页面，评论框如魔法般出现！</li>
+<li>立刻用小号发测试评论：”博主是傻瓜！”</li>
+<li>看到评论同步到GitHub Issues时，差点感动到给显示器磕头</li>
+</ul>
+</li>
+</ol>
+<h2 id="🎊-通关奖励：奇怪的成就感"><a href="#🎊-通关奖励：奇怪的成就感" class="headerlink" title="🎊 通关奖励：奇怪的成就感"></a>🎊 通关奖励：奇怪的成就感</h2><ol>
+<li>新技能解锁：<ul>
+<li>✅ 能用Markdown写评论</li>
+<li>✅ 掌握GitHub Issues高级搜索</li>
+<li>✅ 学会用开发者工具抓包（虽然只会看Network标签）</li>
+</ul>
+</li>
+<li>副作用：<ul>
+<li>现在看到任何网站都想Ctrl+U检查有没有用Giscus</li>
+<li>产生错觉：”我也能成为全栈工程师！”（持续5分钟后清醒）</li>
+</ul>
+</li>
+</ol>
+<h2 id="📝-最终配置代码（供后人乘凉）"><a href="#📝-最终配置代码（供后人乘凉）" class="headerlink" title="📝 最终配置代码（供后人乘凉）"></a>📝 最终配置代码（供后人乘凉）</h2><div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line">html复制代码<span class="comment">&lt;!-- 放在&lt;/body&gt;前 --&gt;</span><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://giscus.app/client.js&quot;</span>  <span class="attr">data-repo</span>=<span class="string">&quot;yourname/repo&quot;</span>  <span class="attr">data-repo-id</span>=<span class="string">&quot;12345678&quot;</span>  <span class="attr">data-category</span>=<span class="string">&quot;Blog Comments&quot;</span>  <span class="attr">data-category-id</span>=<span class="string">&quot;987654&quot;</span>  <span class="attr">data-mapping</span>=<span class="string">&quot;pathname&quot;</span>  <span class="attr">data-reactions-enabled</span>=<span class="string">&quot;1&quot;</span>  <span class="attr">data-emit-metadata</span>=<span class="string">&quot;0&quot;</span>  <span class="attr">data-input-position</span>=<span class="string">&quot;bottom&quot;</span>  <span class="attr">data-theme</span>=<span class="string">&quot;preferred_color_scheme&quot;</span>  <span class="attr">data-lang</span>=<span class="string">&quot;zh-CN&quot;</span>  <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>  <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>🎬 彩蛋时间</strong>：<br>现在我的网站评论区已经可以：<br>✅ 用emoji反应<br>✅ 引用其他评论<br>✅ 收到GitHub通知<br>❌ 阻止我妈评论我的穿搭（这个功能求Giscus赶紧开发！）</p>
+<p><strong>💌 写在最后</strong>：<br>如果你也成功配置了Giscus——击掌！👏<br>如果还在挣扎——别放弃！毕竟我连猫都教会用键盘了（虽然它只学会了打”zzzz”）🐱💻</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
 </search>
