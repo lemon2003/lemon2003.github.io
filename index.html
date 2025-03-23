@@ -118,6 +118,35 @@
 
 
 
+<!-- 在head部分结束前添加CSS样式 -->
+<style>
+  .firework {
+    position: fixed;
+    pointer-events: none;
+    animation: explode 0.5s ease-out forwards;
+    z-index: 9999; /* 确保烟花在最顶层 */
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    animation: particle 1s ease-out;
+  }
+
+  @keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+
+  @keyframes particle {
+    0% { transform: translate(0, 0); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)); opacity: 0; }
+  }
+</style>
+
 <body>
 	<div class="progress-bar-container">
 	
@@ -1195,6 +1224,8 @@ GitHub：”仓库初始化成功……但您确定要用这个名字写求职�
 
 
 	
+	<!-- 在scripts部分结束前添加JavaScript -->
+	
 <script src="/js/build/tools/imageViewer.js" type="module"></script>
 
 <script src="/js/build/utils.js" type="module"></script>
@@ -1283,6 +1314,37 @@ GitHub：”仓库初始化成功……但您确定要用这个名字写求职�
 
 
 	
+
+	<script>
+	// 鼠标点击烟花效果
+	document.addEventListener('click', (e) => {
+	  const firework = document.createElement('div');
+	  firework.className = 'firework';
+	  firework.style.left = `${e.clientX}px`;
+	  firework.style.top = `${e.clientY}px`;
+
+	  // 创建30个粒子
+	  for(let i=0; i<30; i++) {
+	    const particle = document.createElement('div');
+	    particle.className = 'particle';
+	    
+	    // 随机生成粒子运动轨迹
+	    const angle = Math.random() * 360; // 0-360度随机角度
+	    const speed = Math.random() * 5 + 2; // 2-7的随机速度
+	    
+	    // 使用CSS变量存储运动参数
+	    particle.style.setProperty('--x', `${Math.cos(angle) * speed}px`);
+	    particle.style.setProperty('--y', `${Math.sin(angle) * speed}px`);
+	    
+	    firework.appendChild(particle);
+	  }
+
+	  document.body.appendChild(firework);
+	  
+	  // 0.5秒后移除烟花元素
+	  setTimeout(() => firework.remove(), 500);
+	});
+	</script>
 </body>
 
 </html>
