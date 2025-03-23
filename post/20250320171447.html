@@ -125,31 +125,40 @@
 
 <!-- 在head部分结束前添加CSS样式 -->
 <style>
-  .firework {
+  .star {
     position: fixed;
     pointer-events: none;
-    animation: explode 0.5s ease-out forwards;
-    z-index: 9999; /* 确保烟花在最顶层 */
+    font-size: 24px;
+    animation: twinkle 1.2s ease-out forwards;
+    z-index: 9999;
   }
 
-  .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    background: #fff;
-    animation: particle 1s ease-out;
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-40px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-80px) scale(1.2);
+    }
   }
 
-  @keyframes explode {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(1); opacity: 0; }
-  }
-
-  @keyframes particle {
-    0% { transform: translate(0, 0); opacity: 1; }
-    100% { transform: translate(var(--x), var(--y)); opacity: 0; }
-  }
+  /* 颜色定义 */
+  .red { color: #ff4444; }
+  .orange { color: #ffaa00; }
+  .yellow { color: #ffff00; }
+  .green { color: #00ff00; }
+  .blue { color: #00aaff; }
+  .purple { color: #aa00ff; }
+  .pink { color: #ff00aa; }
+  .cyan { color: #00ffff; }
+  .lime { color: #aaff00; }
+  .magenta { color: #ff00ff; }
 </style>
 
 <body>
@@ -1081,33 +1090,33 @@
 	
 
 	<script>
-	// 鼠标点击烟花效果
+	// 鼠标点击星星效果
 	document.addEventListener('click', (e) => {
-	  const firework = document.createElement('div');
-	  firework.className = 'firework';
-	  firework.style.left = `${e.clientX}px`;
-	  firework.style.top = `${e.clientY}px`;
-
-	  // 创建30个粒子
-	  for(let i=0; i<30; i++) {
-	    const particle = document.createElement('div');
-	    particle.className = 'particle';
-	    
-	    // 随机生成粒子运动轨迹
-	    const angle = Math.random() * 360; // 0-360度随机角度
-	    const speed = Math.random() * 5 + 2; // 2-7的随机速度
-	    
-	    // 使用CSS变量存储运动参数
-	    particle.style.setProperty('--x', `${Math.cos(angle) * speed}px`);
-	    particle.style.setProperty('--y', `${Math.sin(angle) * speed}px`);
-	    
-	    firework.appendChild(particle);
-	  }
-
-	  document.body.appendChild(firework);
+	  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 
+	                 'purple', 'pink', 'cyan', 'lime', 'magenta'];
+	  const container = document.body;
 	  
-	  // 0.5秒后移除烟花元素
-	  setTimeout(() => firework.remove(), 500);
+	  // 创建5颗星星
+	  for(let i=0; i<5; i++) {
+	    const star = document.createElement('span');
+	    star.className = `star ${colors[Math.floor(Math.random() * colors.length)]}`;
+	    star.textContent = '✨';
+	    
+	    // 随机位置偏移（在点击点下方10-30px范围内）
+	    const offsetX = (Math.random() - 0.5) * 40; // 水平偏移±20px
+	    const offsetY = (Math.random() * 20) + 10;   // 垂直偏移10-30px
+	    
+	    star.style.left = `${e.clientX + offsetX}px`;
+	    star.style.top = `${e.clientY + offsetY}px`;
+	    
+	    // 添加旋转效果
+	    star.style.transform += `rotate(${Math.random() * 360}deg)`;
+	    
+	    container.appendChild(star);
+	    
+	    // 动画结束后移除元素
+	    setTimeout(() => star.remove(), 1200);
+	  }
 	});
 	</script>
 </body>
