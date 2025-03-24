@@ -234,18 +234,17 @@
 <li><strong>功能丰富</strong>：支持评论邮件通知功能🎁 </li>
 <li><strong>界面清新</strong>：简约风格，和博客超搭配🍃</li>
 </ul>
-<h3 id="🎨评论系统对比图🎨"><a href="#🎨评论系统对比图🎨" class="headerlink" title="🎨评论系统对比图🎨"></a>🎨评论系统对比图🎨</h3><h4 id="waline-魔法图"><a href="#waline-魔法图" class="headerlink" title="waline 魔法图"></a>waline 魔法图</h4><p><img  
+<h3 id="🎨评论系统对比图🎨"><a href="#🎨评论系统对比图🎨" class="headerlink" title="🎨评论系统对比图🎨"></a>🎨评论系统对比图🎨</h3><p> waline 魔法图<br><img  
                      lazyload
                      src="/images/loading.gif"
-                     data-src="/source/img/20250324/1.png"
+                     data-src="/img/20250324/1.png"
                       alt="Waline魔法登录页"
-                ></p>
-<h4 id="giscus-阳光图"><a href="#giscus-阳光图" class="headerlink" title="giscus 阳光图"></a>giscus 阳光图</h4><p><img  
+                ><br> giscus 阳光图<br><img  
                      lazyload
                      src="/images/loading.gif"
-                     data-src="/source/img/20250324/2.png"
+                     data-src="/img/20250324/2.png"
                       alt="Giscus阳光登录页"
-                >  </p>
+                > </p>
 <h3 id="💡搭建小贴士💡"><a href="#💡搭建小贴士💡" class="headerlink" title="💡搭建小贴士💡"></a>💡搭建小贴士💡</h3><ol>
 <li><strong>域名准备</strong>：想搭Waline？先备好域名哦～🌐  </li>
 <li><strong>魔法问题</strong>：没有魔法？试试Giscus吧！☀️  </li>
