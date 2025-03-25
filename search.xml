@@ -259,4 +259,131 @@
         <tag>学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>B数与B+树</title>
+    <url>/post/20250325214755.html</url>
+    <content><![CDATA[<h2 id="B树和B-树的爱恨情仇"><a href="#B树和B-树的爱恨情仇" class="headerlink" title="B树和B+树的爱恨情仇"></a>B树和B+树的爱恨情仇</h2><h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><ol>
+<li><p><strong>定义</strong>：<br>B树是一种平衡树数据结构，用于存储和访问大量数据。B树的每个节点可以存储多个键值，节点中的键值按照大小顺序排列。</p>
+</li>
+<li><p><strong>特性</strong>：</p>
+<ul>
+<li>具有多个关键字，且每个节点中关键字的数目通常介于m&#x2F;2和m之间，其中m称为B树的阶数。</li>
+<li>根节点至少有两个子节点，且每个非根节点至少有m&#x2F;2个子节点。</li>
+<li>所有叶子节点都在同一层，即具有相同的深度，从而保证B树的平衡性。</li>
+<li>每个节点最多可以包含m个孩子（子节点），其中m&gt;&#x3D;2，这也就意味着B树的高度相对较小。</li>
+<li>查找、插入、删除操作都具有较好的平均时间复杂度，通常为O(logn)。</li>
+</ul>
+</li>
+<li><p><strong>用法</strong>：</p>
+<ul>
+<li>广泛应用于文件系统、数据库索引和其他数据存储领域中。</li>
+<li>支持数据的快速查找、插入和删除操作。</li>
+</ul>
+</li>
+<li><p><strong>操作</strong>：</p>
+<ul>
+<li><strong>查找</strong>：从根节点开始，依次比较键值和每个节点中的键值，找到一个最合适的子节点。如果该子节点是叶子节点，则根据键值找到相应的值并返回；如果该子节点不是叶子节点，则重复查找直到找到叶子节点或者遍历完整棵树。</li>
+<li><strong>插入</strong>：找到要插入的位置后，将新插入结点的关键字和指针插入到对应位置。如果插入后该结点的关键字个数超过了B树的阶数，就需要进行分裂操作。</li>
+<li><strong>删除</strong>：在B树中搜索需要删除的关键字K。如果K位于叶子节点上，直接删除K并进行必要的调整；如果K不在叶子节点上，则找到其后继节点S（S一定在K的右子树中，并且是右子树中关键字最小的节点），将S的关键字复制到K中并将S删除。如果删除后导致节点关键字数量不满足B树的性质，则需要进行合并或借位操作。</li>
+</ul>
+</li>
+</ol>
+<h4 id="B树定义代码示例"><a href="#B树定义代码示例" class="headerlink" title="B树定义代码示例"></a>B树定义代码示例</h4><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> STDIO.H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_KEYS 4  <span class="comment">// 假设B树的阶数为2t（t为正整数），这里MAX_KEYS = 2t - 1</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BTreeNode</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> t;              <span class="comment">// B树的阶数的一半（即一个节点最多有2t-1个关键字）</span></span><br><span class="line">    <span class="type">int</span> n;              <span class="comment">// 当前节点中关键字的数量</span></span><br><span class="line">    <span class="type">int</span> keys[MAX_KEYS]; <span class="comment">// 存储的关键字数组</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BTreeNode</span> **<span class="title">children</span>;</span> <span class="comment">// 存储的子节点指针数组（或子树）</span></span><br><span class="line">    <span class="type">int</span> *leaf;          <span class="comment">// 标记该节点是否为叶子节点（这里为了简化，实际上可以用一个布尔值，但C语言没有直接的布尔类型，所以用int代替）</span></span><br><span class="line">&#125; BTreeNode, *BTree;</span><br><span class="line"><span class="comment">// 注意：为了简化，这里的leaf实际上是一个指向int的指针，但在实际应用中，我们可能会用其他方式来表示叶子节点，比如用一个布尔值（需要包含stdbool.h头文件或使用int代替）或者将叶子节点的children设置为NULL。&gt;)  </span></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h3><ol>
+<li><p><strong>定义</strong>：<br>B+树是B树的一种特殊形式（或变种），通常被用来实现关系数据库的索引。</p>
+</li>
+<li><p><strong>特性</strong>：</p>
+<ul>
+<li>所有关键字都在叶节点中出现，且叶节点按关键字大小排序。</li>
+<li>非叶节点存储的仅是其子节点的最大&#x2F;小关键字值，而不是真正的数据。</li>
+<li>所有叶节点都有一个指向相邻叶节点的指针，因此可以支持区间查找等操作。</li>
+<li>B+树的高度通常比B树低，因为非叶节点存储的是子节点的最大&#x2F;小关键字值，可以减少树高度，提高查询效率。</li>
+</ul>
+</li>
+<li><p><strong>用法</strong>：</p>
+<ul>
+<li>主要用于数据库系统和文件系统的索引结构。</li>
+<li>由于其顺序存储的特点和高效的磁盘预读取能力，特别适合于范围查询操作。</li>
+</ul>
+</li>
+<li><p><strong>与B树的区别</strong>：</p>
+<ul>
+<li>结构不同：B树的每个节点既可以存储数据，又可以存储下级节点的指针；而B+树的所有数据都只存储在叶子节点上，同时内部节点只存储指向叶子节点的指针。</li>
+<li>存储性质不同：B+树所有数据都存储在叶子节点上，具有更加顺序存储的特点，可以提高磁盘预读取的效率；而B树的数据分散在各个节点上，因此存储效率不如B+树。</li>
+<li>指针数量不同：B+树每个节点存储的指针数量比B树少，因为B+树的节点只存储指向叶子节点的指针。</li>
+</ul>
+</li>
+<li><p><strong>操作</strong>（与B树类似，但有一些细微差别）：</p>
+<ul>
+<li><strong>查找</strong>：从根节点开始，依次比较键值和每个节点中的键值（非叶节点存储的是子节点的最大&#x2F;小关键字值），直到找到叶子节点或确定关键字不存在。</li>
+<li><strong>插入</strong>：在叶子节点上进行插入操作。如果插入后叶子节点关键字数量超过限制，则进行分裂操作，并可能需要向上调整父节点的关键字和指针。</li>
+<li><strong>删除</strong>：在叶子节点上进行删除操作。如果删除后叶子节点关键字数量不满足B+树的性质，则进行合并或借位操作（与B树类似，但需要注意保持叶节点的顺序性和指针的连续性）。</li>
+</ul>
+</li>
+</ol>
+<h4 id="B-树定义代码示例"><a href="#B-树定义代码示例" class="headerlink" title="B+树定义代码示例"></a>B+树定义代码示例</h4><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_KEYS 4 <span class="comment">// 假设B+树的阶数为2t（t为正整数），这里MAX_KEYS = 2t - 1 typedef  struct BPlusTreeNode </span></span></span><br><span class="line">&#123; </span><br><span class="line">	<span class="type">int</span> t; <span class="comment">// B+树的阶数的一半（即一个节点最多有2t-1个关键字） </span></span><br><span class="line">	<span class="type">int</span> n; <span class="comment">// 当前节点中关键字的数量 </span></span><br><span class="line">	<span class="type">int</span> keys[MAX_KEYS]; <span class="comment">// 存储的关键字数组（仅用于索引） </span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">BPlusTreeNode</span> **<span class="title">children</span>;</span> <span class="comment">// 存储的子节点指针数组（或子树） </span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">BPlusTreeNode</span> *<span class="title">next</span>;</span> <span class="comment">// 指向下一个叶子节点的指针（仅在叶子节点中使用） </span></span><br><span class="line">	<span class="type">int</span> leaf; <span class="comment">// 标记该节点是否为叶子节点（使用int类型，0表示非叶子节点，1表示叶子节点） </span></span><br><span class="line">&#125; BPlusTreeNode, *BPlusTree; <span class="comment">// 注意：在B+树中，叶子节点之间通过next指针相连，形成一个链表，便于范围查询。非叶子节点则不包含数据，只包含索引和指向子节点的指针。</span></span><br></pre></td></tr></table></figure></div>
+
+<p>请注意，上述代码仅提供了B树和B+树节点以及树的基本结构定义，并没有包含实际的插入、删除、查找等操作方法的实现。这些操作方法会涉及复杂的逻辑，包括节点的分裂、合并、关键字和指针的调整等。</p>
+<p>在实际应用中，B树和B+树的实现通常会更加复杂，并且会针对性能进行优化，例如通过缓存频繁访问的节点、使用内存池来管理节点分配等。此外，为了支持并发访问，还可能需要添加锁机制来确保数据的一致性和完整性。</p>
+<h4 id="B树和B-树之间的区别："><a href="#B树和B-树之间的区别：" class="headerlink" title="B树和B+树之间的区别："></a>B树和B+树之间的区别：</h4><table>
+<thead>
+<tr>
+<th>特性&#x2F;数据结构</th>
+<th>B树</th>
+<th>B+树</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>节点存储内容</td>
+<td>关键字和数据，以及指向子节点的指针</td>
+<td>非叶节点存储关键字（作为索引）和指向子节点的指针；叶节点存储全部关键字和数据，以及指向相邻叶节点的指针</td>
+</tr>
+<tr>
+<td>数据存储位置</td>
+<td>数据可以存储在任意节点中</td>
+<td>数据只存储在叶节点中</td>
+</tr>
+<tr>
+<td>关键字数量限制</td>
+<td>每个节点关键字数量介于m&#x2F;2和m之间（m为B树的阶数）</td>
+<td>同B树，但非叶节点只存储索引关键字，不存储实际数据</td>
+</tr>
+<tr>
+<td>顺序访问能力</td>
+<td>较弱，因为数据分散在各个节点中</td>
+<td>较强，因为所有数据都集中在叶节点，且叶节点通过指针相连，支持高效的顺序访问和范围查询</td>
+</tr>
+<tr>
+<td>内部节点指针数量</td>
+<td>较多，因为每个内部节点都需要存储指向子节点的指针和数据（如果存储的话）</td>
+<td>较少，因为每个内部节点只存储指向子节点的指针（作为索引）</td>
+</tr>
+<tr>
+<td>树的高度</td>
+<td>通常较高，因为每个节点都存储数据和指针</td>
+<td>通常较低，因为非叶节点只存储索引，可以容纳更多的关键字，从而减少树的高度</td>
+</tr>
+<tr>
+<td>磁盘I&#x2F;O效率</td>
+<td>一般，因为数据分散，可能导致多次磁盘访问</td>
+<td>较高，因为所有数据集中在叶节点，且叶节点通过指针相连，有利于磁盘的预读取和顺序访问</td>
+</tr>
+<tr>
+<td>适用范围</td>
+<td>适用于需要频繁插入、删除和查找单个关键字的场景</td>
+<td>更适用于需要范围查询、顺序访问和磁盘I&#x2F;O效率较高的场景，如数据库索引</td>
+</tr>
+</tbody></table>
+<h4 id="一句话总结B树和B-树的区别（说人话）："><a href="#一句话总结B树和B-树的区别（说人话）：" class="headerlink" title="一句话总结B树和B+树的区别（说人话）："></a>一句话总结B树和B+树的区别（说人话）：</h4><p>B树每个节点都可以存储数据和索引，而B+树则把所有数据都放在叶子节点，非叶子节点只存索引，且叶子节点之间通过指针相连，便于范围查询。</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
