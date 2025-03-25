@@ -376,7 +376,17 @@
 <td>更适用于需要范围查询、顺序访问和磁盘I&#x2F;O效率较高的场景，如数据库索引</td>
 </tr>
 </tbody></table>
-<h4 id="一句话总结B树和B-树的区别（说人话）："><a href="#一句话总结B树和B-树的区别（说人话）：" class="headerlink" title="一句话总结B树和B+树的区别（说人话）："></a>一句话总结B树和B+树的区别（说人话）：</h4><p>B树每个节点都可以存储数据和索引，而B+树则把所有数据都放在叶子节点，非叶子节点只存索引，且叶子节点之间通过指针相连，便于范围查询。</p>
+<h4 id="一句话总结B树和B-树的区别（说人话）："><a href="#一句话总结B树和B-树的区别（说人话）：" class="headerlink" title="一句话总结B树和B+树的区别（说人话）："></a>一句话总结B树和B+树的区别（说人话）：</h4><p>B树每个节点都可以存储数据和索引，而B+树则把所有数据都放在叶子节点，非叶子节点只存索引，且叶子节点之间通过指针相连，便于范围查询。<br>看图：B树非根节点上出现的数字，叶子节点就不会出现了，B+树叶子节点上出现了所有数字。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/b.png"
+                      alt="B树"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/b2.png"
+                      alt="B+树"
+                ></p>
 ]]></content>
       <categories>
         <category>数据结构</category>
