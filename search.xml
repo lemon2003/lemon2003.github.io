@@ -431,4 +431,510 @@
         <tag>琐事</tag>
       </tags>
   </entry>
+  <entry>
+    <title>16个灯依次点亮（cubeMX+Keil uVision5+Proteus 8 Professional ）</title>
+    <url>/post/20250326233925.html</url>
+    <content><![CDATA[<h2 id="1-cubeMX部分"><a href="#1-cubeMX部分" class="headerlink" title="1.cubeMX部分"></a>1.cubeMX部分</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="(1)下载"></a>(1)下载</h3><p>如果没有下载cubeMX，需要先下载，可以到官网（st.com）上下载。<br>下载后运行：<br>①下图是运行后的第一步，可与去官网注册账号，推荐在官网注册，因为官网有中文模式，这一步想点个链接就点去看看，不想点的话，直接next就可以了。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/1.png"
+                      alt="1"
+                ><br>②✔并且点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/2.png"
+                      alt="2"
+                ><br>③✔并且点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/3.png"
+                      alt="3"
+                ><br>④选择下载的路径，然后点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/4.png"
+                      alt="4"
+                ><br>⑤点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/5.png"
+                      alt="5"
+                ><br>⑥点击next（这里比较慢，是正常的，请耐心等待）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/6.png"
+                      alt="6"
+                ><br>⑦点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/7.png"
+                      alt="7"
+                ><br>⑧点击next<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/8.png"
+                      alt="8"
+                ><br>⑨下载成功了，桌面上会出现这个图标<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/9.png"
+                      alt="9"
+                ></p>
+<h3 id="2-配置"><a href="#2-配置" class="headerlink" title="(2)配置"></a>(2)配置</h3><p>①打开cubeMX,点击file –&gt; new project<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/10.png"
+                      alt="10"
+                ><br>②如果出现这种情况，点击ok<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/11.png"
+                      alt="11"
+                ><br>③选择芯片型号，这里我选择的是STM32F103R6里面的STM32F103R6ATR<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/12.png"
+                      alt="12"
+                ><br>④点击System Core<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/13.png"
+                      alt="13"
+                ><br>⑤然后点击RCC<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/14.png"
+                      alt="14"
+                ><br>⑥按图修改<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/15.png"
+                      alt="15"
+                ><br>⑦点击Clock Configuration<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/16.png"
+                      alt="16"
+                ><br>⑧按图修改(这一步很重要，一定要修改，不然会出现错误)<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/17.png"
+                      alt="17"
+                ><br>⑨回到Pinout Configuration ，我这里需要做16个灯，所以我选择的是整个PB口（一个一个选择），选中一个后，然后点击GPIO Pinout<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/18.png"
+                      alt="18"
+                ><br>⑩我这里选择的是整个PB口，其他的不用管<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/19.png"
+                      alt="19"
+                ><br>⑪点击project manager<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/20.png"
+                      alt="20"
+                ><br>⑫修改红框画着的部分，小红框部分按照自己的uVision5版本修改<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/21.png"
+                      alt="21"
+                ><br>⑬点击generate code<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/22.png"
+                      alt="22"
+                ></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>①如果要是出现图中情况，先点yes<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/23.png"
+                      alt="23"
+                ><br>②登录你的邮件名称和密码，推荐去官网注册，因为官网有中文模式，好填，填完之后一定要去你的邮件中点击给你发的那个链接，相当于是激活你的账号。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/24.png"
+                      alt="24"
+                ><br>③这一步不一定所有人都出现<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/25.png"
+                      alt="25"
+                ><br>如果出现图中情况，我知道两个解决办法：<br>Ⅰ.关闭你的防火墙和杀毒软件(这个方法最快)，然后先关闭cubeMX，再打开<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/26.png"
+                      alt="26"
+                ><br>Ⅱ.先到防火墙，点击图中箭头所指的地方<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/27.png"
+                      alt="27"
+                ><br>然后把图中（你的界面不是这样的，我这个界面是为了告诉你路径）红框所指的软件添加到允许防火墙，然后先关闭cubeMX，再打开<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/28.png"
+                      alt="28"
+                ><br>之后就可以输入你的邮箱密码开始下载了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/29.png"
+                      alt="29"
+                ><br>然后。。。。等一下加载，就可以打开工程了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/30.png"
+                      alt="30"
+                ></p>
+<h2 id="2-Keil-uVision5部分"><a href="#2-Keil-uVision5部分" class="headerlink" title="2.Keil uVision5部分"></a>2.Keil uVision5部分</h2><h3 id="打开工程"><a href="#打开工程" class="headerlink" title="打开工程"></a>打开工程</h3><p>①打开工程，找到main.c<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/31.png"
+                      alt="31"
+                ><br>②找到mian()函数，在main()函数里面找到while(1)，然后在里面添加代码了，我懒，我不想动脑子，你要是不想写的话直接复制我的代码，把整个main.c文件替换成我的就可以了，（我忘了我都改哪里了，直接全部放进去算了）然后编译一下，没有错误就可以了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250326/32.png"
+                      alt="32"
+                ></p>
+<pre><code class="language-c">
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include &quot;main.h&quot;
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+&#123;
+	HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  
+  uint16_t temp,i,j;
+
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  /* USER CODE BEGIN 2 */
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+&#123; 
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+	
+	
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+ HAL_Delay(500);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+ HAL_Delay(500);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+ HAL_Delay(500);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
+ HAL_Delay(500);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
+ HAL_Delay(500);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
+ HAL_Delay(500);
+ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
+ HAL_Delay(500);
+
+ &#125; 
+  /* USER CODE END 3 */
+&#125;
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+&#123;
+  RCC_OscInitTypeDef RCC_OscInitStruct = &#123;0&#125;;
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = &#123;0&#125;;
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  if (HAL_RCC_OscConfig(&amp;RCC_OscInitStruct) != HAL_OK)
+  &#123;
+    Error_Handler();
+  &#125;
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  &#123;
+    Error_Handler();
+  &#125;
+&#125;
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+&#123;
+  GPIO_InitTypeDef GPIO_InitStruct = &#123;0&#125;;
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_10
+                          |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+                          |GPIO_PIN_15|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PB0 PB1 PB2 PB10
+                           PB11 PB12 PB13 PB14
+                           PB15 PB3 PB4 PB5
+                           PB6 PB7 PB8 PB9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_10
+                          |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+                          |GPIO_PIN_15|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
+&#125;
+
+/* USER CODE BEGIN 4 */
+
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+&#123;
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  &#123;
+  &#125;
+  /* USER CODE END Error_Handler_Debug */
+&#125;
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+&#123;
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf(&quot;Wrong parameters value: file %s on line %d\r\n&quot;, file, line) */
+  /* USER CODE END 6 */
+&#125;
+#endif /* USE_FULL_ASSERT */
+
+```c
+
+
+## 3.Proteus 8 Professional 部分
+①创建一个新工程，名称、位置自己写也写，用它生成的也行
+![33](img/20250326/33.png)
+②选择“从选中的模板中创建原理图”
+![34](img/20250326/34.png)
+③选择“创建固件项目”（这部很重要，不要选错，选错后面执行不出来，但是他还不报错，别问我怎么知道的，一下午，每一个错误就是不出结果，血泪泪的教训）
+![35](img/20250326/35.png)
+④选择“finish”
+![36](img/20250326/36.png)
+⑤打开后界面如下
+![37](img/20250326/37.png)
+⑥选择“添加元件”
+灯是“led-颜色”，电阻是“res”，电池在“终端原件”里面选择“power”，一个小灯连一个电阻，然后整体要链接电源，电阻记得改成100，不然会有问题
+⑦点击咱们的芯片，会有个弹框，把“.hex”文件配置进去，路径一般是“MDK-ARM\项目名称”，找不到的话，就退出去，在你的项目里面直接搜“.hex”选中后打开文件所在位置，看着导航栏，然后把“.hex”文件添加进去就可以了
+![38](img/20250326/38.png)
+### 注意，这里要把 OSC Frequency 设置为 72MHz
+然后画一下电路图就行了，我这里就直接放图了
+![39](img/20250326/39.png)
+如果嫌麻烦的话，小灯用那个“LED-BARGRAPH-颜色”就可以了，电阻用那个“RESPACK-7”也行，但是记得每个小灯都要配置一个电阻。
+![40](img/20250326/40.png)
+
+## 4.运行
+然后就没了，别吐槽我代码low,我懒，我不想动脑子，你要是不想写的话直接复制我的代码吧，想写的话自己用用循环什么的写一下吧！对了HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);一次只能设置一个引脚的电平。
+</code></pre>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
 </search>
