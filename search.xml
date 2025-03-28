@@ -651,4 +651,120 @@
         <tag>STM32</tag>
       </tags>
   </entry>
+  <entry>
+    <title>二叉排序树</title>
+    <url>/post/20250328115300.html</url>
+    <content><![CDATA[<h2 id="一、二叉排序树的基本概念"><a href="#一、二叉排序树的基本概念" class="headerlink" title="一、二叉排序树的基本概念"></a>一、二叉排序树的基本概念</h2><ol>
+<li>定义：<br> • 二叉排序树（BST）是一种特殊的二叉树，它满足以下性质：<br> ①若左子树非空，则左子树上所有节点的值均小于根节点的值。<br> ② 若右子树非空，则右子树上所有节点的值均大于根节点的值。<br> ③左子树和右子树也分别为二叉排序树。</li>
+<li>特点：<br> ①中序遍历二叉排序树，可以得到一个递增的有序序列。<br> ②没有键值相等的节点。</li>
+</ol>
+<h2 id="二、二叉排序树的基本操作"><a href="#二、二叉排序树的基本操作" class="headerlink" title="二、二叉排序树的基本操作"></a>二、二叉排序树的基本操作</h2><ol>
+<li>查找操作：<br> • 过程：从根节点开始，如果当前节点的值等于目标值，则查找成功；如果当前节点的值大于目标值，则继续遍历左子树；如果当前节点的值小于目标值，则继续遍历右子树。<br> • 时间复杂度：最好情况下为O(log⁡n），最坏情况下为O(n)，取决于树的形态。<br>算法代码：</li>
+</ol>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">BSTNode*<span class="title function_">BST_Search</span><span class="params">(BiTreeT,ElemTypekey)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">while</span>(T!=<span class="literal">NULL</span>&amp;&amp;key!=T-&gt;data) <span class="comment">//若树空或等于根结点值，则结束循环</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(key&lt;T-&gt;data)T=T-&gt;lchild;<span class="comment">//小于，则在左子树上查找</span></span><br><span class="line">		elseT=T-&gt;rchild;<span class="comment">//大于，则在右子树上查找&#125;returnT</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>插入操作：<br> • 过程：首先查找要插入的位置（一定是叶子节点），然后创建新节点插入到该位置。<br> • 时间复杂度：O(logn)，取决于树的形态。<br>插入展示：<br> <img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/1.png"
+                      alt="cr"
+                ><br>算法代码：</li>
+</ol>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">BST_Insert</span><span class="params">(BiTree&amp;T,KeyTypek)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;<span class="comment">//原树为空，新插入的记录为根结点</span></span><br><span class="line">		T=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BSTNode));</span><br><span class="line">		T-&gt;data=k;</span><br><span class="line">		T-&gt;lchilds=T-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">		return1;<span class="comment">//返回1,插入成功).</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k==sT-&gt;data)<span class="comment">//树中存在相同关键字的结点，插入失败</span></span><br><span class="line">		return0;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k&lt;T-&gt;data)<span class="comment">//插入到T的左子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;lchildrk);</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//插入到T的右子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;rchild,k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>删除操作：<br> • 过程：<br> • 找到要删除的节点，并确定其父节点。<br> • 如果要删除的节点是叶子节点，直接删除。<br> • 如果要删除的节点只有一个子节点，将其子节点代替要删除的节点。<br> • 如果要删除的节点有两个子节点，找到其右子树中的最小节点或左子树中的最大节点，用该节点代替要删除的节点，并将其删除。<br> • 时间复杂度：O(logn)，取决于树的形态。</li>
+</ol>
+<p>删除展示：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/2.png"
+                      alt="sc"
+                ></p>
+<h2 id="三、二叉排序树的性质与应用"><a href="#三、二叉排序树的性质与应用" class="headerlink" title="三、二叉排序树的性质与应用"></a>三、二叉排序树的性质与应用</h2><ol>
+<li>性质：<br> • 由于二叉排序树的性质，查找、插入和删除操作的时间复杂度通常为O(log⁡n)，但在最坏情况下（如树退化为链表）可能达到O(n)。</li>
+<li>应用：<br> • 二叉排序树在数据库索引、符号表、字典等应用中非常常见，用于实现高效的查找、插入和删除操作。</li>
+</ol>
+<h2 id="四、二叉排序树的构造与调整"><a href="#四、二叉排序树的构造与调整" class="headerlink" title="四、二叉排序树的构造与调整"></a>四、二叉排序树的构造与调整</h2><p>  1.二叉排序树的构造：从一棵空树出发，依次输入元素，将他们插入二叉排序树中的合适位置。<br>设查找的关键字序列为{45,24,53,45,12,24}<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/3.png"
+                      alt="gz"
+                ><br>算法代码：</p>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Creat_BST</span><span class="params">(BiTree&amp;T,KeyTypestr[],<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	T=<span class="literal">NULL</span>;<span class="comment">//初始时T为空树</span></span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;n)</span><br><span class="line">	&#123;<span class="comment">//依次将每个关键字插入到二叉排序树中</span></span><br><span class="line">		BST_Insert(T,str[i]);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="3">
+<li>调整：<br> • 在实际应用中，为了避免二叉排序树退化为链表，可以采用平衡二叉树（如AVL树、红黑树）来保持树的平衡性。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>平衡二叉树（AVL）</title>
+    <url>/post/20250328121706.html</url>
+    <content><![CDATA[<h2 id="一、平衡二叉树的基本概念"><a href="#一、平衡二叉树的基本概念" class="headerlink" title="一、平衡二叉树的基本概念"></a>一、平衡二叉树的基本概念</h2><ol>
+<li>定义：<br> • 平衡二叉树是一棵二叉排序树，其任何节点的两个子树的高度差（平衡因子）的绝对值不超过1。<br> • 平衡因子（Balance Factor，BF）：节点的左子树高度减去右子树高度的值。在AVL树中，平衡因子的取值只能为-1、0或1。</li>
+<li>目的：<br> • 保持二叉排序树的平衡，使得查找、插入和删除操作的时间复杂度均为O(logn)。</li>
+</ol>
+<h2 id="二、平衡二叉树的性质"><a href="#二、平衡二叉树的性质" class="headerlink" title="二、平衡二叉树的性质"></a>二、平衡二叉树的性质</h2><ol>
+<li>高度平衡：<br> • 平衡二叉树的任意节点的左右子树都是平衡二叉树，且高度差不超过1。</li>
+<li>查找效率：<br> • 在平衡二叉树中查找一个节点，最多需要比较$$log_2N$$次（其中 N是树中节点的数量），保证了较高的查找效率。</li>
+</ol>
+<h2 id="三、平衡二叉树的调整方法"><a href="#三、平衡二叉树的调整方法" class="headerlink" title="三、平衡二叉树的调整方法"></a>三、平衡二叉树的调整方法</h2><ol>
+<li>失衡类型：<br> • 在插入或删除节点后，平衡二叉树可能会出现失衡。失衡分为四种类型：左左失衡（LL）、左右失衡（LR）、右右失衡（RR）和右左失衡（RL）。</li>
+<li>调整方法：<br> • 单旋转：<br> • 左左失衡（LL）：对失衡节点进行右旋。</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/4.png"
+                      alt="zz"
+                ><br>          • 右右失衡（RR）：对失衡节点进行左旋。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/5.png"
+                      alt="yy"
+                ><br>      • 双旋转：<br>          • 左右失衡（LR）：先对失衡节点的左子节点进行左旋，再对失衡节点进行右旋。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/6.png"
+                      alt="lr"
+                ><br>          • 右左失衡（RL）：先对失衡节点的右子节点进行右旋，再对失衡节点进行左旋。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/7.png"
+                      alt="rl"
+                ></p>
+<h2 id="四、平衡二叉树的插入操作"><a href="#四、平衡二叉树的插入操作" class="headerlink" title="四、平衡二叉树的插入操作"></a>四、平衡二叉树的插入操作</h2><ol>
+<li>插入过程：<br> • 首先按照二叉排序树的插入规则，将新节点插入到适当的位置。<br> • 然后从插入节点开始，向上回溯，检查每个节点的平衡因子。<br> • 如果发现失衡，则根据失衡类型进行相应的旋转调整。<br><strong>【注意】①LR和RL旋转时，新节点究竟是插入C的左子树还是插入C的右子树，不影响旋转过程。</strong><br><strong>②每次的调整对象都是最小不平衡子树，也就是插入路径上的理解点最近的平衡因子的绝对值大于1的结点作为根的因子。</strong><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/8.png"
+                      alt="1a"
+                ><br>例：{15,3,7,10,9,8}构造一棵平衡二叉树<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/9.png"
+                      alt="aa"
+                ></li>
+<li>时间复杂度：<br> • 插入操作的时间复杂度为O(logn)，因为在最坏情况下，需要回溯到根节点并进行一次或多次旋转。</li>
+</ol>
+<h2 id="五、平衡二叉树的删除操作"><a href="#五、平衡二叉树的删除操作" class="headerlink" title="五、平衡二叉树的删除操作"></a>五、平衡二叉树的删除操作</h2><ol>
+<li>删除过程：<br> • 首先按照二叉排序树的删除规则，删除指定节点。<br> • 然后从删除节点开始，向上回溯，检查每个节点的平衡因子。<br> • 如果发现失衡，则根据失衡类型进行相应的旋转调整。</li>
+<li>时间复杂度：<br> • 删除操作的时间复杂度也为O(logn)，原因与插入操作相同。</li>
+</ol>
+<h2 id="六、平衡二叉树的查找操作"><a href="#六、平衡二叉树的查找操作" class="headerlink" title="六、平衡二叉树的查找操作"></a>六、平衡二叉树的查找操作</h2><p>  • 平衡二叉树的查找操作与二叉排序树相同，从根节点开始，根据目标值与当前节点值的比较结果，决定向左子树或右子树移动，直到找到目标值或遍历到叶子节点。<br>  • 查找操作的时间复杂度为$$O(log_2N)$$。</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
 </search>
