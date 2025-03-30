@@ -833,4 +833,38 @@
         <tag>编译原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hexo写博客出现unknown path</title>
+    <url>/post/20250330222251.html</url>
+    <content><![CDATA[<h2 id="写hexo博客时报错Template-render-error-unknown-path"><a href="#写hexo博客时报错Template-render-error-unknown-path" class="headerlink" title="写hexo博客时报错Template render error: (unknown path)"></a>写hexo博客时报错Template render error: (unknown path)</h2><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/5.png"
+                      alt="aa"
+                ></p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>可能出现了<code>&#123;&#123;&#125;&#125;、&#123;（）&#125;、&#123;% %&#125;</code>等等，这种hexo无法转义的字符</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>加上键盘左上角的符号，下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/4.png"
+                      alt="a"
+                ><br>用这个符号将需要注释的部分括住，就行了<br>就像这样<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/6.png"
+                      alt="a"
+                ><br>然后显示的效果就是上面的错误示范那样，如下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/7.png"
+                      alt="a"
+                ></p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
+      </tags>
+  </entry>
 </search>
