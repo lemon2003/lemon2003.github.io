@@ -610,7 +610,7 @@
                      src="/images/loading.gif"
                      data-src="/img/20250326/34.png"
                       alt="34"
-                ><br>③选择“创建固件项目”（这部很重要，不要选错，选错后面执行不出来，但是他还不报错，别问我怎么知道的，一下午，每一个错误就是不出结果，血泪泪的教训）<br><img  
+                ><br>③选择“创建固件项目”（这部很重要，不要选错，选错后面执行不出来，但是他还不报错，别问我怎么知道的，一下午，没有一个错误就是不出结果，血泪泪的教训）<br><img  
                      lazyload
                      src="/images/loading.gif"
                      data-src="/img/20250326/35.png"
@@ -765,6 +765,72 @@
       <tags>
         <tag>学习</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一道例题带你理解LL(1)分析法</title>
+    <url>/post/20250330114720.html</url>
+    <content><![CDATA[<h2 id="LL（1）分析法步骤"><a href="#LL（1）分析法步骤" class="headerlink" title="LL（1）分析法步骤"></a>LL（1）分析法步骤</h2><ol>
+<li><strong>对文法进行改造</strong></li>
+<li><strong>求FIRST集</strong></li>
+<li><strong>求FOLLOW集</strong></li>
+<li><strong>求SELECT集</strong></li>
+<li><strong>分析表分析</strong></li>
+</ol>
+<p>（❤️一道完整的例题及其解析与步骤）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/1.png"
+                      alt="a"
+                ></p>
+<h2 id="🌞🌞🌞FIRST集："><a href="#🌞🌞🌞FIRST集：" class="headerlink" title="🌞🌞🌞FIRST集："></a>🌞🌞🌞FIRST集：</h2><h3 id="（⭐能听懂版本的官方话）："><a href="#（⭐能听懂版本的官方话）：" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><ol>
+<li>对终结符a，有FIRST(a)＝{a}</li>
+<li>对非终结符A，FIRST(A)包含所有可以从A推导出的符号串的第一个符号（不包括“空串ε”，除非A能推导出ε）</li>
+</ol>
+<h3 id="（🌙人话）："><a href="#（🌙人话）：" class="headerlink" title="（🌙人话）："></a>（🌙人话）：</h3><p>比如第一句E→ TE’，求FIRST(E)，E → TE’，箭头后面第一个字符是T，那么FIRST(E)&#x3D;FIRST(T)。由T→FT’，得，箭头后面第一个字符是F，那么FIRST(E)&#x3D;FIRST(T)＝FIRST(F)。因为①F→(E)，第一个字符是“（”，那么括号就是E→ TE’ 的一个FIRST集里面的元素。②由于F还有一个式子F→i，箭头后面第一个字符是“i”，那么i也是E→ TE’ 的一个FIRST集里面的元素。也就是说FIRST(E)&#x3D;FIRST(T)＝FIRST(F)＝{（,i}。</p>
+<h2 id="🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】"><a href="#🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】" class="headerlink" title="🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】"></a>🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】</h2><h3 id="（⭐能听懂版本的官方话）：-1"><a href="#（⭐能听懂版本的官方话）：-1" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><ol>
+<li>如果S为识别符号，则把“#”添加进入FOLLOW(S)中。</li>
+<li>若A→αBβ (β里面没有ε），那么把FIRST(β）加入到FOLLOW（B)中。</li>
+<li>若A→αB或者A→αBβ（β里面有ε），那么把FOLLOW（A)加入FOLLOW(B)中。</li>
+</ol>
+<h3 id="（🌙人话）：情况比较多，举3个例子"><a href="#（🌙人话）：情况比较多，举3个例子" class="headerlink" title="（🌙人话）：情况比较多，举3个例子"></a>（🌙人话）：情况比较多，举3个例子</h3><ol>
+<li>E→TE’，找哪个式子中有“谁→”能退出“E”的，找到了F→（E），那么就取E的右边第一个字符“）”。因为“E”又是开始符，需要再加一个“#”，所以FOLLOW(E)&#x3D;{<code>）</code>,<code>#</code>}。</li>
+<li>E’→TE，找出 谁推出了“E’”，找到了E→TE’，那么看E’后面是啥，一看没东西，那就FOLLOW(E’)&#x3D;FOLLOW(E)。</li>
+<li>T→FT’，找谁推出了T，找到了E’→TE’，看看T的后面是啥，一看是E’,那么我们应该把FIRST(E’)添加到FOLLOW（T）中，但是，咱们可以看到FIRST(E’)里面是有“ε”的，所以我们也应该把FOLLOW(E’)加入FOLLOW(T)中，所以咱可以写成FOLLOW(T)&#x3D;FOLLOW(E’)+FIRST(E’)。</li>
+</ol>
+<h2 id="🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】"><a href="#🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】" class="headerlink" title="🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】"></a>🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】</h2><h3 id="（⭐能听懂版本的官方话）：-2"><a href="#（⭐能听懂版本的官方话）：-2" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><p>看FIRST集，如果没“ε”，那么SELECT&#x3D;FIRST；如果有“ε”，那么SELECT&#x3D;FOLLOW</p>
+<h3 id="（🌙人话）：-1"><a href="#（🌙人话）：-1" class="headerlink" title="（🌙人话）："></a>（🌙人话）：</h3><ol>
+<li>比如E→TE’，其中FIRST(E)&#x3D;{<code>（</code>, i }这里面没有“ε”，那么SELECT(E)&#x3D;FIRST(E)&#x3D;{<code>（</code>, i }。</li>
+<li>比如E’的第二个式子，E’→ε，这个里面是有“ε”的，那么SELECT(E’)&#x3D;FOLLOW(E’)&#x3D;{<code>）</code>,<code>#</code>}。</li>
+</ol>
+<p>（❤️列表格的时候建议：SELECT集和FIRST集一样，如果有两个式子的话，要分开写）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/3.png"
+                      alt="b"
+                ></p>
+<h2 id="步骤⑤分析表分析"><a href="#步骤⑤分析表分析" class="headerlink" title="步骤⑤分析表分析:"></a>步骤⑤分析表分析:</h2><p>表格是根据SELECT集画的，如E’→TE’填在了 “E’”行的“＋”列；E’→ε填在了“E’”行“）”列和“#”列。<br>此时可以画一个分析栈，旁边画一个“余留输入串”（❤️如下图）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/2.png"
+                      alt="c"
+                ></p>
+<p>此时的栈中元素有“#E”，栈顶元素是E，余留串首位是i，根据预测分析表表格，调用（栈顶元素）“E”行的（余留串首位）“i”列对应的产生式E→TE’，将栈中“E”弹出，将箭头后的“TE’”压入栈中（从右往左进入，“E’”先进，栈顶元素是T），然后再根据栈顶元素与余留输入串的串首，找相应的产生式，当栈顶元素＝余留串首位时，抵消。重复操作直到抵消完。</p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/4.jpg"
+                      alt="d"
+                ></p>
+]]></content>
+      <categories>
+        <category>编译原理</category>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
       </tags>
   </entry>
 </search>

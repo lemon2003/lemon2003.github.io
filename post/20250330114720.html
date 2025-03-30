@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://lemon2003.github.io/categories/数据结构/"/>
+    <link rel="canonical" href="http://lemon2003.github.io/post/20250330114720.html"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,13 +21,18 @@
     
     
         
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Lemon">
-<meta property="og:url" content="http://lemon2003.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+        <meta name="description" content="LL（1）分析法步骤 对文法进行改造 求FIRST集 求FOLLOW集 求SELECT集 分析表分析  （❤️一道完整的例题及其解析与步骤） 🌞🌞🌞FIRST集：（⭐能听懂版本的官方话）： 对终结符a，有FIRST(a)＝{a} 对非终结符A，FIRST(A)包含所有可以从A推导出的符号串的第一个符号（不包括“空串ε”，除非A能推导出ε）  （🌙人话）：比如第一句E→ TE’，求FIRST">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一道例题带你理解LL(1)分析法">
+<meta property="og:url" content="http://lemon2003.github.io/post/20250330114720.html">
 <meta property="og:site_name" content="Lemon">
+<meta property="og:description" content="LL（1）分析法步骤 对文法进行改造 求FIRST集 求FOLLOW集 求SELECT集 分析表分析  （❤️一道完整的例题及其解析与步骤） 🌞🌞🌞FIRST集：（⭐能听懂版本的官方话）： 对终结符a，有FIRST(a)＝{a} 对非终结符A，FIRST(A)包含所有可以从A推导出的符号串的第一个符号（不包括“空串ε”，除非A能推导出ε）  （🌙人话）：比如第一句E→ TE’，求FIRST">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://lemon2003.github.io/images/redefine-og.webp">
-<meta property="article:author" content="John Doe">
+<meta property="article:published_time" content="2025-03-30T03:47:20.000Z">
+<meta property="article:modified_time" content="2025-03-30T05:16:54.460Z">
+<meta property="article:author" content="lemon">
+<meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lemon2003.github.io/images/redefine-og.webp">
     
@@ -41,7 +46,7 @@
     
     <title>
         
-            分类: 数据结构 | Lemon
+            一道例题带你理解LL(1)分析法 | Lemon
         
     </title>
 
@@ -365,7 +370,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/categories"
                                         >
                                     <i class="fa-regular fa-folder fa-fw"></i>
@@ -459,7 +464,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/categories"
                         >
                             <span>
@@ -543,78 +548,301 @@
 			
 
 			<div class="main-content">
-				<div class="page-template-container">
-	
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
 
-	
-	<div class="category-name">
-    <i class="fa-solid fa-folder"></i>&nbsp;数据结构
-</div>
-<div class="category-post-list">
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">一道例题带你理解LL(1)分析法</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/img/%E6%9F%A0%E6%AA%AC.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">lemon</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-03-30 11:47:20</span>
+        <span class="mobile">2025-03-30 11:47:20</span>
+        <span class="hover-info">创建</span>
+    </span>
     
-<div class="archive-list-container">
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-03-30 13:16:54</span>
+            <span class="mobile">2025-03-30 13:16:54</span>
+            <span class="hover-info">更新</span>
+        </span>
     
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2025</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">3</span>
-            </div>
-            
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
                 
-                    
-                    
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='03-28'>
-                    
-                    <a href="/post/20250328121706.html" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">平衡二叉树（AVL）</span>
-                    </a>
-                    
                 
-                    
-                    
-                    <a href="/post/20250328115300.html" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">二叉排序树</span>
-                    </a>
-                    
-                
-                    
                     
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='03-25'>
+                        <li>
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
+                        </li>
                     
-                    <a href="/post/20250325214755.html" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">B数与B+树</span>
-                    </a>
                     
                 
-                </li> <!-- Ensure the last item is properly closed -->
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>810 字</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="LL（1）分析法步骤"><a href="#LL（1）分析法步骤" class="headerlink" title="LL（1）分析法步骤"></a>LL（1）分析法步骤</h2><ol>
+<li><strong>对文法进行改造</strong></li>
+<li><strong>求FIRST集</strong></li>
+<li><strong>求FOLLOW集</strong></li>
+<li><strong>求SELECT集</strong></li>
+<li><strong>分析表分析</strong></li>
+</ol>
+<p>（❤️一道完整的例题及其解析与步骤）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/1.png"
+                      alt="a"
+                ></p>
+<h2 id="🌞🌞🌞FIRST集："><a href="#🌞🌞🌞FIRST集：" class="headerlink" title="🌞🌞🌞FIRST集："></a>🌞🌞🌞FIRST集：</h2><h3 id="（⭐能听懂版本的官方话）："><a href="#（⭐能听懂版本的官方话）：" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><ol>
+<li>对终结符a，有FIRST(a)＝{a}</li>
+<li>对非终结符A，FIRST(A)包含所有可以从A推导出的符号串的第一个符号（不包括“空串ε”，除非A能推导出ε）</li>
+</ol>
+<h3 id="（🌙人话）："><a href="#（🌙人话）：" class="headerlink" title="（🌙人话）："></a>（🌙人话）：</h3><p>比如第一句E→ TE’，求FIRST(E)，E → TE’，箭头后面第一个字符是T，那么FIRST(E)&#x3D;FIRST(T)。由T→FT’，得，箭头后面第一个字符是F，那么FIRST(E)&#x3D;FIRST(T)＝FIRST(F)。因为①F→(E)，第一个字符是“（”，那么括号就是E→ TE’ 的一个FIRST集里面的元素。②由于F还有一个式子F→i，箭头后面第一个字符是“i”，那么i也是E→ TE’ 的一个FIRST集里面的元素。也就是说FIRST(E)&#x3D;FIRST(T)＝FIRST(F)＝{（,i}。</p>
+<h2 id="🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】"><a href="#🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】" class="headerlink" title="🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】"></a>🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】</h2><h3 id="（⭐能听懂版本的官方话）：-1"><a href="#（⭐能听懂版本的官方话）：-1" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><ol>
+<li>如果S为识别符号，则把“#”添加进入FOLLOW(S)中。</li>
+<li>若A→αBβ (β里面没有ε），那么把FIRST(β）加入到FOLLOW（B)中。</li>
+<li>若A→αB或者A→αBβ（β里面有ε），那么把FOLLOW（A)加入FOLLOW(B)中。</li>
+</ol>
+<h3 id="（🌙人话）：情况比较多，举3个例子"><a href="#（🌙人话）：情况比较多，举3个例子" class="headerlink" title="（🌙人话）：情况比较多，举3个例子"></a>（🌙人话）：情况比较多，举3个例子</h3><ol>
+<li>E→TE’，找哪个式子中有“谁→”能退出“E”的，找到了F→（E），那么就取E的右边第一个字符“）”。因为“E”又是开始符，需要再加一个“#”，所以FOLLOW(E)&#x3D;{<code>）</code>,<code>#</code>}。</li>
+<li>E’→TE，找出 谁推出了“E’”，找到了E→TE’，那么看E’后面是啥，一看没东西，那就FOLLOW(E’)&#x3D;FOLLOW(E)。</li>
+<li>T→FT’，找谁推出了T，找到了E’→TE’，看看T的后面是啥，一看是E’,那么我们应该把FIRST(E’)添加到FOLLOW（T）中，但是，咱们可以看到FIRST(E’)里面是有“ε”的，所以我们也应该把FOLLOW(E’)加入FOLLOW(T)中，所以咱可以写成FOLLOW(T)&#x3D;FOLLOW(E’)+FIRST(E’)。</li>
+</ol>
+<h2 id="🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】"><a href="#🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】" class="headerlink" title="🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】"></a>🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】</h2><h3 id="（⭐能听懂版本的官方话）：-2"><a href="#（⭐能听懂版本的官方话）：-2" class="headerlink" title="（⭐能听懂版本的官方话）："></a>（⭐能听懂版本的官方话）：</h3><p>看FIRST集，如果没“ε”，那么SELECT&#x3D;FIRST；如果有“ε”，那么SELECT&#x3D;FOLLOW</p>
+<h3 id="（🌙人话）：-1"><a href="#（🌙人话）：-1" class="headerlink" title="（🌙人话）："></a>（🌙人话）：</h3><ol>
+<li>比如E→TE’，其中FIRST(E)&#x3D;{<code>（</code>, i }这里面没有“ε”，那么SELECT(E)&#x3D;FIRST(E)&#x3D;{<code>（</code>, i }。</li>
+<li>比如E’的第二个式子，E’→ε，这个里面是有“ε”的，那么SELECT(E’)&#x3D;FOLLOW(E’)&#x3D;{<code>）</code>,<code>#</code>}。</li>
+</ol>
+<p>（❤️列表格的时候建议：SELECT集和FIRST集一样，如果有两个式子的话，要分开写）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/3.png"
+                      alt="b"
+                ></p>
+<h2 id="步骤⑤分析表分析"><a href="#步骤⑤分析表分析" class="headerlink" title="步骤⑤分析表分析:"></a>步骤⑤分析表分析:</h2><p>表格是根据SELECT集画的，如E’→TE’填在了 “E’”行的“＋”列；E’→ε填在了“E’”行“）”列和“#”列。<br>此时可以画一个分析栈，旁边画一个“余留输入串”（❤️如下图）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/2.png"
+                      alt="c"
+                ></p>
+<p>此时的栈中元素有“#E”，栈顶元素是E，余留串首位是i，根据预测分析表表格，调用（栈顶元素）“E”行的（余留串首位）“i”列对应的产生式E→TE’，将栈中“E”弹出，将箭头后的“TE’”压入栈中（从右往左进入，“E’”先进，栈顶元素是T），然后再根据栈顶元素与余留输入串的串首，找相应的产生式，当栈顶元素＝余留串首位时，抵消。重复操作直到抵消完。</p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/4.jpg"
+                      alt="d"
+                ></p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 一道例题带你理解LL(1)分析法</li>
+        <li><strong>作者:</strong> lemon</li>
+        <li><strong>创建于
+                :</strong> 2025-03-30 11:47:20</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-03-30 13:16:54
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://lemon2003.github.io/post/20250330114720.html
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
 </div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">#编译原理</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/post/20250328121706.html">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">平衡二叉树（AVL）</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'lemon2003/gitalk',
+                'data-repo-id': 'R_kgDOOM7rWQ',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDOOM7rWc4CoXWC',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '0',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
 
 	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">一道例题带你理解LL(1)分析法</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LL%EF%BC%881%EF%BC%89%E5%88%86%E6%9E%90%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="nav-text">LL（1）分析法步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9E%F0%9F%8C%9E%F0%9F%8C%9EFIRST%E9%9B%86%EF%BC%9A"><span class="nav-text">🌞🌞🌞FIRST集：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E2%AD%90%E8%83%BD%E5%90%AC%E6%87%82%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%98%E6%96%B9%E8%AF%9D%EF%BC%89%EF%BC%9A"><span class="nav-text">（⭐能听懂版本的官方话）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%F0%9F%8C%99%E4%BA%BA%E8%AF%9D%EF%BC%89%EF%BC%9A"><span class="nav-text">（🌙人话）：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9E%F0%9F%8C%9E%F0%9F%8C%9EFOLLOW%E9%9B%86%EF%BC%9A%E3%80%90%E6%B3%A8%E6%84%8F%EF%BC%9AFOLLOW%E9%9B%86%E9%87%8C%E9%9D%A2%E6%B2%A1%E6%9C%89%CE%B5%E3%80%91"><span class="nav-text">🌞🌞🌞FOLLOW集：【注意：FOLLOW集里面没有ε】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E2%AD%90%E8%83%BD%E5%90%AC%E6%87%82%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%98%E6%96%B9%E8%AF%9D%EF%BC%89%EF%BC%9A-1"><span class="nav-text">（⭐能听懂版本的官方话）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%F0%9F%8C%99%E4%BA%BA%E8%AF%9D%EF%BC%89%EF%BC%9A%E6%83%85%E5%86%B5%E6%AF%94%E8%BE%83%E5%A4%9A%EF%BC%8C%E4%B8%BE3%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="nav-text">（🌙人话）：情况比较多，举3个例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9E%F0%9F%8C%9E%F0%9F%8C%9ESELECT%E9%9B%86%EF%BC%9A%E3%80%90%E6%B3%A8%E6%84%8F%EF%BC%9ASELECT%E9%9B%86%E9%87%8C%E9%9D%A2%E6%B2%A1%E6%9C%89%CE%B5%E3%80%91"><span class="nav-text">🌞🌞🌞SELECT集：【注意：SELECT集里面没有ε】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E2%AD%90%E8%83%BD%E5%90%AC%E6%87%82%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%98%E6%96%B9%E8%AF%9D%EF%BC%89%EF%BC%9A-2"><span class="nav-text">（⭐能听懂版本的官方话）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%F0%9F%8C%99%E4%BA%BA%E8%AF%9D%EF%BC%89%EF%BC%9A-1"><span class="nav-text">（🌙人话）：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E2%91%A4%E5%88%86%E6%9E%90%E8%A1%A8%E5%88%86%E6%9E%90"><span class="nav-text">步骤⑤分析表分析:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0"><span class="nav-text">练习</span></a></li></ol></li></ol>
 
-	<div class="page-template-content markdown-body">
-		
-
-		
-	</div>
-
-	<div class="page-template-comments">
-		
 	</div>
 </div>
-
-<div class="paginator">
-	<span class="page-number current">1</span>
+	</div>
+	
 </div>
-  
 			</div>
 
 			
@@ -703,6 +931,26 @@
 		</div>
 	</div>
 
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
 	
 
 	<div class="right-side-tools-container">
@@ -806,6 +1054,7 @@
         containers: ["#swup"],
     });
 </script>
+
 
 
 
