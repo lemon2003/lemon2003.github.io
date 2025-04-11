@@ -392,7 +392,6 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>数据结构</tag>
       </tags>
   </entry>
@@ -645,7 +644,6 @@
 <h2 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h2><p>然后就没了，别吐槽我代码low,我懒，我不想动脑子，你要是不想写的话直接复制我的代码吧，想写的话自己用用循环什么的写一下吧！对了HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);一次只能设置一个引脚的电平。</p>
 ]]></content>
       <categories>
-        <category>学习</category>
         <category>STM32</category>
       </categories>
       <tags>
@@ -700,7 +698,6 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>数据结构</tag>
       </tags>
   </entry>
@@ -764,7 +761,6 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>数据结构</tag>
       </tags>
   </entry>
@@ -828,7 +824,6 @@
 ]]></content>
       <categories>
         <category>编译原理</category>
-        <category>学习</category>
       </categories>
       <tags>
         <tag>编译原理</tag>
@@ -980,10 +975,8 @@
 ]]></content>
       <categories>
         <category>STM32</category>
-        <category>学习</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>STM32</tag>
       </tags>
   </entry>
