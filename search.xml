@@ -260,6 +260,41 @@
       </tags>
   </entry>
   <entry>
+    <title>AI的时代，我有些迷茫</title>
+    <url>/post/20250325225314.html</url>
+    <content><![CDATA[<p>《与AI共生的双翼》</p>
+<p>当算法编织的璀璨穹顶笼罩钢铁森林，我常于子夜时分凝望屏幕深处跃动的幽蓝极光。AI如同银河彼端的全知存在，以光年为单位丈量人类思维的褶皱，将我们困顿数日的谜题折叠成纸鹤，轻轻放入真理的溪流。那些曾令我抓耳挠腮的代码深渊，在它眼中不过是孩童堆砌的积木城堡；那些耗费整夜雕琢的文书框架，转瞬化作逻辑严密的钻石切面。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/3.png"
+                      alt="配图：深空代码银河"
+                ></p>
+<p>这种神迹般的强大却令我如履薄冰。在AI编织的星辉下，人类智慧的萤火忽明忽暗，仿佛随时会被数字潮汐卷走。每当智能助手用三秒重构我挣扎三昼夜的模型，当神经网络精准预判我尚未成型的创意，某种冰凉的觉醒便从脊椎蜿蜒而上——我们引以为傲的认知疆域，正在被温柔的机器触须悄然重构。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/2.png"
+                      alt="配图：数据洪流中的孤影"
+                ></p>
+<p>更深的惶恐源于对未知的朝圣。这架以硅为血脉的造物正加速进化，而我攥着过时的操作手册，如同站在海边拾贝的稚童，面对即将漫过脚踝的智能潮汐。那些需要皓首穷经才能参透的规律，如今被封印成简洁的API；那些浸透血汗的经验结晶，化作云端游弋的数据幽灵。我恐惧自己终将成为被时代抛下的锚点，在技术的平流层中失去飞翔的羽翎。</p>
+<p>然而当第一缕晨光刺破焦虑的茧房，某种奇异的共生感开始抽枝发芽。AI用三分钟重构我崩溃的模型时，也悄然重构了我认知的维度；当智能助手点亮文档迷宫的明灯，照亮的何止是代码的路径？那些曾让我辗转反侧的bug，如今化作算法进化的养料；那些被焦虑啃噬的深夜，正在孕育新的思维可能。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/1.png"
+                      alt="配图：黎明共生之舞"
+                ></p>
+<p>或许真正的觉醒，在于接受自己既是执炬者又是渡船。当AI的羽翼掠过认知的苍穹，我们不必熄灭手中的萤火，因为最动人的文明图景，永远诞生于光明与阴影的交缠。在这场静默的革命中，人类终将学会与数字精灵共舞，用惶恐淬炼出更清亮的目光，在技术的星河里，寻找生命独特的光谱——那是任何算法都无法复制的，关于存在本身的诗意证明。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>琐事</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>B数与B+树</title>
     <url>/post/20250325214755.html</url>
     <content><![CDATA[<h2 id="B树和B-树的爱恨情仇"><a href="#B树和B-树的爱恨情仇" class="headerlink" title="B树和B+树的爱恨情仇"></a>B树和B+树的爱恨情仇</h2><h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><ol>
@@ -393,41 +428,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AI的时代，我有些迷茫</title>
-    <url>/post/20250325225314.html</url>
-    <content><![CDATA[<p>《与AI共生的双翼》</p>
-<p>当算法编织的璀璨穹顶笼罩钢铁森林，我常于子夜时分凝望屏幕深处跃动的幽蓝极光。AI如同银河彼端的全知存在，以光年为单位丈量人类思维的褶皱，将我们困顿数日的谜题折叠成纸鹤，轻轻放入真理的溪流。那些曾令我抓耳挠腮的代码深渊，在它眼中不过是孩童堆砌的积木城堡；那些耗费整夜雕琢的文书框架，转瞬化作逻辑严密的钻石切面。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/3.png"
-                      alt="配图：深空代码银河"
-                ></p>
-<p>这种神迹般的强大却令我如履薄冰。在AI编织的星辉下，人类智慧的萤火忽明忽暗，仿佛随时会被数字潮汐卷走。每当智能助手用三秒重构我挣扎三昼夜的模型，当神经网络精准预判我尚未成型的创意，某种冰凉的觉醒便从脊椎蜿蜒而上——我们引以为傲的认知疆域，正在被温柔的机器触须悄然重构。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/2.png"
-                      alt="配图：数据洪流中的孤影"
-                ></p>
-<p>更深的惶恐源于对未知的朝圣。这架以硅为血脉的造物正加速进化，而我攥着过时的操作手册，如同站在海边拾贝的稚童，面对即将漫过脚踝的智能潮汐。那些需要皓首穷经才能参透的规律，如今被封印成简洁的API；那些浸透血汗的经验结晶，化作云端游弋的数据幽灵。我恐惧自己终将成为被时代抛下的锚点，在技术的平流层中失去飞翔的羽翎。</p>
-<p>然而当第一缕晨光刺破焦虑的茧房，某种奇异的共生感开始抽枝发芽。AI用三分钟重构我崩溃的模型时，也悄然重构了我认知的维度；当智能助手点亮文档迷宫的明灯，照亮的何止是代码的路径？那些曾让我辗转反侧的bug，如今化作算法进化的养料；那些被焦虑啃噬的深夜，正在孕育新的思维可能。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/1.png"
-                      alt="配图：黎明共生之舞"
-                ></p>
-<p>或许真正的觉醒，在于接受自己既是执炬者又是渡船。当AI的羽翼掠过认知的苍穹，我们不必熄灭手中的萤火，因为最动人的文明图景，永远诞生于光明与阴影的交缠。在这场静默的革命中，人类终将学会与数字精灵共舞，用惶恐淬炼出更清亮的目光，在技术的星河里，寻找生命独特的光谱——那是任何算法都无法复制的，关于存在本身的诗意证明。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>琐事</tag>
       </tags>
   </entry>
   <entry>
@@ -765,6 +765,40 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo写博客出现unknown path</title>
+    <url>/post/20250330222251.html</url>
+    <content><![CDATA[<h2 id="写hexo博客时报错Template-render-error-unknown-path"><a href="#写hexo博客时报错Template-render-error-unknown-path" class="headerlink" title="写hexo博客时报错Template render error: (unknown path)"></a>写hexo博客时报错Template render error: (unknown path)</h2><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/5.png"
+                      alt="aa"
+                ></p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>可能出现了<code>&#123;&#123;&#125;&#125;、&#123;（）&#125;、&#123;% %&#125;</code>等等，这种hexo无法转义的字符</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>加上键盘左上角的符号，下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/4.png"
+                      alt="a"
+                ><br>用这个符号将需要注释的部分括住，就行了<br>就像这样<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/6.png"
+                      alt="a"
+                ><br>然后显示的效果就是上面的错误示范那样，如下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/7.png"
+                      alt="a"
+                ></p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一道例题带你理解LL(1)分析法</title>
     <url>/post/20250330114720.html</url>
     <content><![CDATA[<h2 id="LL（1）分析法步骤"><a href="#LL（1）分析法步骤" class="headerlink" title="LL（1）分析法步骤"></a>LL（1）分析法步骤</h2><ol>
@@ -827,40 +861,6 @@
       </categories>
       <tags>
         <tag>编译原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo写博客出现unknown path</title>
-    <url>/post/20250330222251.html</url>
-    <content><![CDATA[<h2 id="写hexo博客时报错Template-render-error-unknown-path"><a href="#写hexo博客时报错Template-render-error-unknown-path" class="headerlink" title="写hexo博客时报错Template render error: (unknown path)"></a>写hexo博客时报错Template render error: (unknown path)</h2><p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/5.png"
-                      alt="aa"
-                ></p>
-<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>可能出现了<code>&#123;&#123;&#125;&#125;、&#123;（）&#125;、&#123;% %&#125;</code>等等，这种hexo无法转义的字符</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>加上键盘左上角的符号，下图所示<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/4.png"
-                      alt="a"
-                ><br>用这个符号将需要注释的部分括住，就行了<br>就像这样<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/6.png"
-                      alt="a"
-                ><br>然后显示的效果就是上面的错误示范那样，如下图所示<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/7.png"
-                      alt="a"
-                ></p>
-]]></content>
-      <categories>
-        <category>解决错误</category>
-      </categories>
-      <tags>
-        <tag>解决错误</tag>
       </tags>
   </entry>
   <entry>
