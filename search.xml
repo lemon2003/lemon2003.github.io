@@ -1042,4 +1042,621 @@
         <tag>琐事</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python中的cv2库</title>
+    <url>/post/20250412220639.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>计算机视觉</strong>：支持图像处理、视频分析、特征提取、目标检测等任务。</li>
+<li><strong>跨平台</strong>：可在 Windows、Linux、macOS 等系统上运行。</li>
+<li><strong>算法丰富</strong>：提供 2500+ 优化算法，涵盖经典和先进的计算机视觉技术。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>图像读取与显示</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像（支持 JPG、PNG 等格式）</span></span><br><span class="line">img = cv2.imread(<span class="string">&quot;image.jpg&quot;</span>, cv2.IMREAD_COLOR)  <span class="comment"># 彩色模式（默认）</span></span><br><span class="line"><span class="comment"># img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_GRAYSCALE)  # 灰度模式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&quot;Image Window&quot;</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)          <span class="comment"># 等待按键（0 表示无限等待）</span></span><br><span class="line">cv2.destroyAllWindows() <span class="comment"># 关闭所有窗口</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>图像处理</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 颜色空间转换（BGR 转灰度）</span></span><br><span class="line">gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整图像大小</span></span><br><span class="line">resized = cv2.resize(img, (<span class="number">800</span>, <span class="number">600</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 边缘检测（Canny 算法）</span></span><br><span class="line">edges = cv2.Canny(gray, <span class="number">100</span>, <span class="number">200</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>特征检测与匹配</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># SIFT 特征检测</span></span><br><span class="line">sift = cv2.SIFT_create()</span><br><span class="line">keypoints, descriptors = sift.detectAndCompute(img, <span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 特征匹配（Brute-Force）</span></span><br><span class="line">bf = cv2.BFMatcher()</span><br><span class="line">matches = bf.<span class="keyword">match</span>(descriptors1, descriptors2)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>视频处理</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开视频文件或摄像头</span></span><br><span class="line">cap = cv2.VideoCapture(<span class="string">&quot;video.mp4&quot;</span>)  <span class="comment"># 或 0 表示默认摄像头</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> cap.isOpened():</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ret:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    cv2.imshow(<span class="string">&quot;Video&quot;</span>, frame)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">25</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&quot;q&quot;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cap.release()  <span class="comment"># 释放资源</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><ul>
+<li><p><strong>读取并显示图像</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">img = cv2.imread(<span class="string">&quot;image.jpg&quot;</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;Image&quot;</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>灰度转换与边缘检测</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">edges = cv2.Canny(gray, <span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;Edges&quot;</span>, edges)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>人脸检测</strong>（需 Haar 级联文件）：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">face_cascade = cv2.CascadeClassifier(<span class="string">&quot;haarcascade_frontalface_default.xml&quot;</span>)</span><br><span class="line">faces = face_cascade.detectMultiScale(gray, <span class="number">1.1</span>, <span class="number">4</span>)</span><br><span class="line"><span class="keyword">for</span> (x, y, w, h) <span class="keyword">in</span> faces:</span><br><span class="line">    cv2.rectangle(img, (x, y), (x+w, y+h), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;Faces&quot;</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>安装依赖</strong>：需先安装 OpenCV 库，使用命令 <code>pip install opencv-python</code>。</li>
+<li><strong>颜色空间</strong>：OpenCV 默认使用 BGR 格式，与其他库（如 PIL、Matplotlib）交互时需转换。</li>
+<li><strong>图像路径</strong>：确保路径正确，避免读取失败（返回 <code>None</code>）。</li>
+<li><strong>资源释放</strong>：处理视频或摄像头时，及时调用 <code>release()</code> 释放资源。</li>
+<li><strong>异常处理</strong>：检查图像是否加载成功，避免后续操作报错。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>读取图像</strong>：<code>cv2.imread()</code>，支持多种格式和读取模式。</li>
+<li><strong>处理图像</strong>：使用 <code>cvtColor</code>、<code>resize</code>、<code>Canny</code> 等函数进行颜色转换、缩放、边缘检测。</li>
+<li><strong>特征检测</strong>：通过 SIFT、SURF 等算法提取关键点，再进行特征匹配。</li>
+<li><strong>视频处理</strong>：用 <code>VideoCapture</code> 读取视频，逐帧处理并分析。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的datetime库</title>
+    <url>/post/20250412215030.html</url>
+    <content><![CDATA[<h3 id="1-核心类介绍"><a href="#1-核心类介绍" class="headerlink" title="1. 核心类介绍"></a><strong>1. 核心类介绍</strong></h3><ul>
+<li><strong><code>date</code></strong>：处理年月日（如 <code>2025-04-12</code>）。</li>
+<li><strong><code>time</code></strong>：处理时分秒（如 <code>15:30:00</code>）。</li>
+<li><strong><code>datetime</code></strong>：结合日期和时间（如 <code>2025-04-12 15:30:00</code>）。</li>
+<li><strong><code>timedelta</code></strong>：表示时间间隔（如 <code>1天2小时</code>）。</li>
+</ul>
+<h3 id="2-获取当前时间"><a href="#2-获取当前时间" class="headerlink" title="2. 获取当前时间"></a><strong>2. 获取当前时间</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前本地时间（含日期和时间）</span></span><br><span class="line">now = datetime.now()  <span class="comment"># 2025-04-12 15:30:00.123456</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前日期（只含年月日）</span></span><br><span class="line">today_date = now.date()  <span class="comment"># 2025-04-12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前时间（只含时分秒）</span></span><br><span class="line">current_time = now.time()  <span class="comment"># 15:30:00.123456</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-创建对象"><a href="#3-创建对象" class="headerlink" title="3. 创建对象"></a><strong>3. 创建对象</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接指定日期时间</span></span><br><span class="line">dt = datetime(<span class="number">2025</span>, <span class="number">4</span>, <span class="number">12</span>, <span class="number">15</span>, <span class="number">30</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从时间戳转换（1970年1月1日以来的秒数）</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">dt = datetime.fromtimestamp(<span class="number">1681294200</span>)  <span class="comment"># 输出：2025-04-12 15:30:00</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-格式化与解析"><a href="#4-格式化与解析" class="headerlink" title="4. 格式化与解析"></a><strong>4. 格式化与解析</strong></h3><ul>
+<li><strong><code>strftime()</code></strong>：将日期时间转为字符串。</li>
+<li><strong><code>strptime()</code></strong>：将字符串转为日期时间。</li>
+</ul>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 格式化字符串（常用符号）</span></span><br><span class="line">formatted = now.strftime(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)  <span class="comment"># 2025-04-12 15:30:00</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解析字符串</span></span><br><span class="line">time_str = <span class="string">&quot;2025-04-12 15:30:00&quot;</span></span><br><span class="line">dt = datetime.strptime(time_str, <span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>常用格式符号</strong>：</p>
+<ul>
+<li><code>%Y</code>：四位年份（如2025）</li>
+<li><code>%m</code>：月份（01-12）</li>
+<li><code>%d</code>：日期（01-31）</li>
+<li><code>%H</code>：小时（24小时制，00-23）</li>
+<li><code>%M</code>：分钟（00-59）</li>
+<li><code>%S</code>：秒（00-59）</li>
+</ul>
+<h3 id="5-时间运算（timedelta）"><a href="#5-时间运算（timedelta）" class="headerlink" title="5. 时间运算（timedelta）"></a><strong>5. 时间运算（<code>timedelta</code>）</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加1天</span></span><br><span class="line">new_time = now + timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 减2小时</span></span><br><span class="line">new_time = now - timedelta(hours=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算时间差</span></span><br><span class="line">delta = new_time - now</span><br><span class="line"><span class="built_in">print</span>(delta.total_seconds())  <span class="comment"># 输出总秒数</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-时区处理"><a href="#6-时区处理" class="headerlink" title="6. 时区处理"></a><strong>6. 时区处理</strong></h3><p>需安装 <code>pytz</code> 库：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> pytz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建带时区的对象</span></span><br><span class="line">shanghai_tz = pytz.timezone(<span class="string">&quot;Asia/Shanghai&quot;</span>)</span><br><span class="line">dt = datetime.now(shanghai_tz)  <span class="comment"># 2025-04-12 15:30:00+08:00</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换时区</span></span><br><span class="line">utc_time = dt.astimezone(pytz.UTC)  <span class="comment"># 转为UTC时间</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="7-常用方法"><a href="#7-常用方法" class="headerlink" title="7. 常用方法"></a><strong>7. 常用方法</strong></h3><ul>
+<li><strong><code>replace()</code></strong>：修改日期时间。<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">new_dt = now.replace(year=<span class="number">2026</span>, hour=<span class="number">10</span>)</span><br></pre></td></tr></table></figure></div></li>
+<li><strong><code>weekday()</code></strong>：返回星期几（0&#x3D;周一，6&#x3D;周日）。</li>
+<li><strong><code>isoweekday()</code></strong>：返回星期几（1&#x3D;周一，7&#x3D;周日）。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>创建对象</strong>：用 <code>datetime()</code>、<code>date()</code> 或 <code>time()</code> 直接定义。</li>
+<li><strong>格式化</strong>：<code>strftime()</code> 转字符串，<code>strptime()</code> 解析字符串。</li>
+<li><strong>运算</strong>：用 <code>timedelta</code> 加减时间。</li>
+<li><strong>时区</strong>：通过 <code>pytz</code> 处理不同时区。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的matplotlib库</title>
+    <url>/post/20250412220940.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>数据可视化</strong>：支持折线图、散点图、柱状图、饼图、3D 图等 20+ 种图表类型。</li>
+<li><strong>高度定制</strong>：可调整颜色、线型、标记、标签、标题、网格等样式。</li>
+<li><strong>跨平台输出</strong>：支持保存为 PNG、PDF、SVG 等格式，适配论文、网页、报告等场景。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong><code>pyplot</code> 模块</strong>（类似 MATLAB 语法）：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制折线图</span></span><br><span class="line">plt.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">10</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>], <span class="string">&#x27;r--o&#x27;</span>, label=<span class="string">&#x27;Line 1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置标签、标题、图例</span></span><br><span class="line">plt.xlabel(<span class="string">&quot;X-axis&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Y-axis&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Simple Plot&quot;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示网格和图表</span></span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong><code>Figure</code> 和 <code>Axes</code> 对象</strong>（面向对象风格）：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">fig = plt.figure(figsize=(<span class="number">8</span>, <span class="number">6</span>))  <span class="comment"># 创建画布</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)         <span class="comment"># 添加子图</span></span><br><span class="line"></span><br><span class="line">ax.plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">10</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>], <span class="string">&#x27;g:&#x27;</span>, label=<span class="string">&#x27;Line 2&#x27;</span>)</span><br><span class="line">ax.set_xlabel(<span class="string">&quot;X-axis&quot;</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">&quot;Y-axis&quot;</span>)</span><br><span class="line">ax.set_title(<span class="string">&quot;Object-Oriented Plot&quot;</span>)</span><br><span class="line">ax.legend()</span><br><span class="line">ax.grid(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>常用函数</strong>：</p>
+<ul>
+<li><code>plt.scatter(x, y, s=None, c=None)</code>：绘制散点图，<code>s</code> 控制点大小，<code>c</code> 控制颜色。</li>
+<li><code>plt.bar(x, height, width=0.8)</code>：绘制柱状图。</li>
+<li><code>plt.pie(sizes, labels=None)</code>：绘制饼图。</li>
+<li><code>plt.hist(data, bins=10)</code>：绘制直方图。</li>
+<li><code>plt.savefig(&quot;plot.png&quot;, dpi=300, bbox_inches=&#39;tight&#39;)</code>：保存图表。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><ul>
+<li><p><strong>折线图</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line"></span><br><span class="line">plt.plot(x, y, <span class="string">&#x27;b-&#x27;</span>, linewidth=<span class="number">2</span>, label=<span class="string">&#x27;sin(x)&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;X&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Y&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Sine Wave&quot;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>散点图</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">x = np.random.rand(<span class="number">50</span>)</span><br><span class="line">y = x + np.random.normal(<span class="number">0</span>, <span class="number">0.1</span>, <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(x, y, s=<span class="number">50</span>, c=<span class="string">&#x27;red&#x27;</span>, edgecolor=<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;X&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Y&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Scatter Plot&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>多子图</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">fig, axes = plt.subplots(<span class="number">2</span>, <span class="number">2</span>, figsize=(<span class="number">10</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子图 1</span></span><br><span class="line">axes[<span class="number">0</span>, <span class="number">0</span>].plot([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], <span class="string">&#x27;g--&#x27;</span>)</span><br><span class="line">axes[<span class="number">0</span>, <span class="number">0</span>].set_title(<span class="string">&quot;Subplot 1&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子图 2</span></span><br><span class="line">axes[<span class="number">0</span>, <span class="number">1</span>].scatter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], s=<span class="number">100</span>, c=<span class="string">&#x27;blue&#x27;</span>)</span><br><span class="line">axes[<span class="number">0</span>, <span class="number">1</span>].set_title(<span class="string">&quot;Subplot 2&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子图 3</span></span><br><span class="line">axes[<span class="number">1</span>, <span class="number">0</span>].bar([<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>], [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>], color=<span class="string">&#x27;lightgreen&#x27;</span>)</span><br><span class="line">axes[<span class="number">1</span>, <span class="number">0</span>].set_title(<span class="string">&quot;Subplot 3&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子图 4</span></span><br><span class="line">axes[<span class="number">1</span>, <span class="number">1</span>].hist(np.random.randn(<span class="number">1000</span>), bins=<span class="number">30</span>, color=<span class="string">&#x27;purple&#x27;</span>)</span><br><span class="line">axes[<span class="number">1</span>, <span class="number">1</span>].set_title(<span class="string">&quot;Subplot 4&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>安装问题</strong>：使用 <code>pip install matplotlib</code> 安装，若报错需检查依赖项（如 NumPy）。</li>
+<li><strong>中文显示</strong>：添加以下代码解决中文乱码：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]  <span class="comment"># 设置字体</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>    <span class="comment"># 解决负号显示问题</span></span><br></pre></td></tr></table></figure></div></li>
+<li><strong>图像保存</strong>：<ul>
+<li>使用 <code>bbox_inches=&#39;tight&#39;</code> 避免图表被截断。</li>
+<li>指定 <code>dpi</code> 提高分辨率（如 <code>dpi=300</code>）。</li>
+</ul>
+</li>
+<li><strong>性能优化</strong>：大数据量时避免频繁调用 <code>plt.plot()</code>，改用 <code>plt.draw()</code> 或分批绘制。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>基础绘图</strong>：用 <code>plt.plot()</code>、<code>plt.scatter()</code>、<code>plt.bar()</code> 等快速绘图。</li>
+<li><strong>样式调整</strong>：通过参数设置颜色、线型、标签等，或使用 <code>plt.style.use(&#39;ggplot&#39;)</code> 应用预定义样式。</li>
+<li><strong>多子图布局</strong>：用 <code>plt.subplots()</code> 创建复杂图表，<code>plt.tight_layout()</code> 自动调整间距。</li>
+<li><strong>输出图表</strong>：<code>plt.savefig()</code> 保存为文件，<code>plt.show()</code> 直接显示。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的numpy库</title>
+    <url>/post/20250412220653.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>多维数组操作</strong>：提供高效的 <code>ndarray</code> 对象，支持向量、矩阵、高维数组运算。</li>
+<li><strong>数学函数集成</strong>：内置三角函数、指数函数、统计函数等，如 <code>np.sin()</code>, <code>np.exp()</code>, <code>np.mean()</code>。</li>
+<li><strong>线性代数</strong>：支持矩阵乘法、求逆、特征值计算等（通过 <code>np.linalg</code> 模块）。</li>
+<li><strong>随机数生成</strong>：提供均匀分布、正态分布等随机数生成函数（如 <code>np.random.rand()</code>）。</li>
+<li><strong>文件读写</strong>：支持 CSV、二进制文件等数据格式的读写。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>创建数组</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从列表创建</span></span><br><span class="line">arr = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 全零/全一数组</span></span><br><span class="line">zeros = np.zeros((<span class="number">2</span>, <span class="number">3</span>))    <span class="comment"># 2行3列全零</span></span><br><span class="line">ones = np.ones((<span class="number">3</span>, <span class="number">4</span>), dtype=<span class="built_in">int</span>)  <span class="comment"># 3行4列全一，指定数据类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等差/等分数组</span></span><br><span class="line">arange = np.arange(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>)       <span class="comment"># [0,2,4,6,8]</span></span><br><span class="line">linspace = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)     <span class="comment"># [0.0, 0.25, 0.5, 0.75, 1.0]</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>数组属性</strong>：</p>
+<ul>
+<li><code>shape</code>：维度（如 <code>(3, 4)</code> 表示3行4列）。</li>
+<li><code>dtype</code>：数据类型（如 <code>int32</code>, <code>float64</code>）。</li>
+<li><code>ndim</code>：维度数（一维、二维等）。</li>
+<li><code>size</code>：元素总数。</li>
+</ul>
+</li>
+<li><p><strong>数组操作</strong>：</p>
+<ul>
+<li><code>reshape()</code>：改变形状（如 <code>arr.reshape(3, 4)</code>）。</li>
+<li><code>flatten()</code>：展平为一维数组。</li>
+<li><code>transpose()</code>：转置（行列互换）。</li>
+<li><code>concatenate()</code>：合并数组（按行或列）。</li>
+</ul>
+</li>
+<li><p><strong>数学运算</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = np.array([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a + b)    <span class="comment"># 加法 → [5,7,9]</span></span><br><span class="line"><span class="built_in">print</span>(a * <span class="number">2</span>)    <span class="comment"># 标量乘法 → [2,4,6]</span></span><br><span class="line"><span class="built_in">print</span>(np.dot(a, b))  <span class="comment"># 点积 → 32</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>统计函数</strong>：</p>
+<ul>
+<li><code>np.mean()</code>：平均值。</li>
+<li><code>np.std()</code>：标准差。</li>
+<li><code>np.max()</code>&#x2F;<code>np.min()</code>：最大值&#x2F;最小值。</li>
+</ul>
+</li>
+<li><p><strong>线性代数</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line">B = np.array([[<span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.dot(A, B))    <span class="comment"># 矩阵乘法 → [[19,22], [43,50]]</span></span><br><span class="line"><span class="built_in">print</span>(np.linalg.inv(A)) <span class="comment"># 矩阵求逆（需方阵）</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>随机数生成</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 均匀分布（0-1）</span></span><br><span class="line">rand = np.random.rand(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正态分布</span></span><br><span class="line">randn = np.random.randn(<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 随机整数（1-10）</span></span><br><span class="line">randint = np.random.randint(<span class="number">1</span>, <span class="number">11</span>, size=(<span class="number">5</span>,))</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><ul>
+<li><p><strong>数组索引与切片</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(arr[<span class="number">0</span>, <span class="number">1</span>])    <span class="comment"># 输出第二行第一列 → 2</span></span><br><span class="line"><span class="built_in">print</span>(arr[<span class="number">1</span>:, :<span class="number">2</span>])  <span class="comment"># 输出第二行到最后一行，前两列 → [[4,5], [7,8]]</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>广播机制</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(a * b)    <span class="comment"># 输出 [2,4,6]（标量自动广播到每个元素）</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>文件读写</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 保存到 CSV</span></span><br><span class="line">np.savetxt(<span class="string">&quot;data.csv&quot;</span>, arr, delimiter=<span class="string">&quot;,&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从 CSV 读取</span></span><br><span class="line">loaded_arr = np.loadtxt(<span class="string">&quot;data.csv&quot;</span>, delimiter=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>数据类型一致性</strong>：确保数组元素类型一致，避免隐式转换错误。</li>
+<li><strong>越界访问</strong>：避免使用超出数组维度的索引（如 <code>arr[10]</code> 对长度为5的数组）。</li>
+<li><strong>内存管理</strong>：处理大型数组时，注意内存使用情况，避免溢出。</li>
+<li><strong>广播规则</strong>：理解不同形状数组间的运算规则（如 <code>(3,)</code> 与 <code>(3,1)</code> 的广播）。</li>
+<li><strong>文件路径</strong>：读写文件时检查路径是否存在及权限问题。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>基础操作</strong>：用 <code>np.array()</code> 创建数组，<code>reshape()</code> 调整形状，<code>dtype</code> 指定数据类型。</li>
+<li><strong>数学运算</strong>：直接对数组进行加减乘除，或使用 <code>np.dot()</code> 计算点积。</li>
+<li><strong>统计分析</strong>：用 <code>np.mean()</code>, <code>np.std()</code> 等函数快速计算统计量。</li>
+<li><strong>线性代数</strong>：通过 <code>np.linalg</code> 模块进行矩阵运算。</li>
+<li><strong>随机数</strong>：用 <code>np.random</code> 模块生成各种分布的随机数。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的os库</title>
+    <url>/post/20250412215244.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>与操作系统交互</strong>：处理文件&#x2F;目录、环境变量、进程控制等。</li>
+<li><strong>跨平台兼容</strong>：自动适配不同操作系统（Windows&#x2F;Linux&#x2F;macOS）。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>文件&#x2F;目录操作</strong>：</p>
+<ul>
+<li><code>os.getcwd()</code>：获取当前工作目录。</li>
+<li><code>os.listdir(path)</code>：列出目录下的所有文件和子目录。</li>
+<li><code>os.mkdir(path)</code>：创建单层目录。</li>
+<li><code>os.makedirs(path)</code>：递归创建多层目录。</li>
+<li><code>os.rmdir(path)</code>：删除空目录。</li>
+<li><code>os.removedirs(path)</code>：递归删除空目录。</li>
+<li><code>os.rename(old, new)</code>：重命名文件&#x2F;目录。</li>
+<li><code>os.remove(path)</code>：删除文件。</li>
+</ul>
+</li>
+<li><p><strong>路径处理</strong>：</p>
+<ul>
+<li><code>os.path.join(path1, path2)</code>：拼接路径（自动处理分隔符）。</li>
+<li><code>os.path.exists(path)</code>：检查路径是否存在。</li>
+<li><code>os.path.isfile(path)</code>：判断是否为文件。</li>
+<li><code>os.path.isdir(path)</code>：判断是否为目录。</li>
+<li><code>os.path.abspath(path)</code>：获取绝对路径。</li>
+</ul>
+</li>
+<li><p><strong>环境变量</strong>：</p>
+<ul>
+<li><code>os.environ.get(&quot;VAR_NAME&quot;)</code>：获取环境变量。</li>
+<li><code>os.environ[&quot;VAR_NAME&quot;] = &quot;value&quot;</code>：设置环境变量（谨慎使用）。</li>
+</ul>
+</li>
+<li><p><strong>系统信息</strong>：</p>
+<ul>
+<li><code>os.name</code>：返回操作系统名称（<code>posix</code>&#x3D;Linux&#x2F;macOS，<code>nt</code>&#x3D;Windows）。</li>
+<li><code>os.cpu_count()</code>：获取CPU核心数。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前目录并列出文件</span></span><br><span class="line">current_dir = os.getcwd()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前目录:&quot;</span>, current_dir)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;目录内容:&quot;</span>, os.listdir(current_dir))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建/删除目录</span></span><br><span class="line">os.mkdir(<span class="string">&quot;new_folder&quot;</span>)</span><br><span class="line">os.rmdir(<span class="string">&quot;new_folder&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 路径拼接</span></span><br><span class="line">full_path = os.path.join(current_dir, <span class="string">&quot;data&quot;</span>, <span class="string">&quot;file.txt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查文件是否存在</span></span><br><span class="line"><span class="keyword">if</span> os.path.exists(full_path):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;文件存在！&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取绝对路径</span></span><br><span class="line">abs_path = os.path.abspath(<span class="string">&quot;file.txt&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>路径分隔符</strong>：Windows用 <code>\</code>，Linux&#x2F;macOS用 <code>/</code>，建议用 <code>os.path.join()</code> 自动处理。</li>
+<li><strong>权限问题</strong>：操作文件&#x2F;目录前，检查是否有读写权限（<code>os.access(path, os.R_OK)</code>）。</li>
+<li><strong>安全风险</strong>：避免直接用用户输入拼接命令（用 <code>subprocess</code> 替代 <code>os.system()</code>）。</li>
+<li><strong>跨平台性</strong>：使用 <code>os.path</code> 模块的函数处理路径，提高代码兼容性。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>文件&#x2F;目录操作</strong>：用 <code>os.mkdir</code>、<code>os.rename</code> 等函数管理文件和目录。</li>
+<li><strong>路径处理</strong>：用 <code>os.path.join</code> 拼接路径，<code>os.path.exists</code> 检查存在性。</li>
+<li><strong>环境变量</strong>：通过 <code>os.environ</code> 读写系统环境变量。</li>
+<li><strong>系统信息</strong>：用 <code>os.name</code> 和 <code>os.cpu_count()</code> 获取系统信息。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的pandas库</title>
+    <url>/post/20250412220708.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>数据结构操作</strong>：提供 <code>Series</code>（一维）和 <code>DataFrame</code>（二维）数据结构，支持高效的数据操作。</li>
+<li><strong>数据清洗</strong>：集成处理缺失值、重复值、异常值等方法（如 <code>dropna()</code>, <code>fillna()</code>, <code>drop_duplicates()</code>）。</li>
+<li><strong>数据分析</strong>：支持描述性统计、聚合、分组、排序、合并等操作（如 <code>mean()</code>, <code>sum()</code>, <code>groupby()</code>, <code>sort_values()</code>, <code>merge()</code>）。</li>
+<li><strong>文件读写</strong>：支持 CSV、Excel、SQL、JSON 等格式的数据读写（如 <code>read_csv()</code>, <code>to_excel()</code>）。</li>
+<li><strong>数据可视化</strong>：集成 Matplotlib 库，支持直接绘制图表（如 <code>plot()</code>）。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>创建对象</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 Series（一维数据）</span></span><br><span class="line">s = pd.Series([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 DataFrame（二维表格）</span></span><br><span class="line">df = pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>: [<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Charlie&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;age&#x27;</span>: [<span class="number">25</span>, <span class="number">32</span>, <span class="number">18</span>],</span><br><span class="line">    <span class="string">&#x27;city&#x27;</span>: [<span class="string">&#x27;New York&#x27;</span>, <span class="string">&#x27;Seattle&#x27;</span>, <span class="string">&#x27;Los Angeles&#x27;</span>]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>查看数据</strong>：</p>
+<ul>
+<li><code>head(n)</code>：查看前 <code>n</code> 行（默认前5行）。</li>
+<li><code>tail(n)</code>：查看后 <code>n</code> 行（默认后5行）。</li>
+<li><code>info()</code>：查看数据类型、非空值数量等。</li>
+<li><code>describe()</code>：查看数值列的统计摘要（均值、标准差等）。</li>
+</ul>
+</li>
+<li><p><strong>数据清洗</strong>：</p>
+<ul>
+<li><code>dropna()</code>：删除缺失值。</li>
+<li><code>fillna(value)</code>：用指定值填充缺失值。</li>
+<li><code>drop_duplicates()</code>：删除重复行。</li>
+<li><code>clip(lower, upper)</code>：限制数值范围（如将小于0的值设为0）。</li>
+</ul>
+</li>
+<li><p><strong>数据分析</strong>：</p>
+<ul>
+<li><strong>选择数据</strong>：<ul>
+<li><code>df[&#39;column&#39;]</code>：选择单列。</li>
+<li><code>df[[&#39;col1&#39;, &#39;col2&#39;]]</code>：选择多列。</li>
+<li><code>df.loc[row_label]</code>：按行标签选择数据。</li>
+<li><code>df.iloc[row_index]</code>：按行索引选择数据。</li>
+</ul>
+</li>
+<li><strong>统计计算</strong>：<ul>
+<li><code>mean()</code>：均值。</li>
+<li><code>sum()</code>：求和。</li>
+<li><code>min()</code>&#x2F;<code>max()</code>：最小值&#x2F;最大值。</li>
+<li><code>groupby(&#39;column&#39;).agg(func)</code>：按列分组后聚合（如计算每组均值）。</li>
+</ul>
+</li>
+<li><strong>排序</strong>：<ul>
+<li><code>sort_values(by=&#39;column&#39;)</code>：按列值排序。</li>
+<li><code>sort_index()</code>：按行&#x2F;列索引排序。</li>
+</ul>
+</li>
+<li><strong>合并数据</strong>：<ul>
+<li><code>merge(df1, df2, on=&#39;column&#39;)</code>：按列合并两个 DataFrame。</li>
+<li><code>concat([df1, df2])</code>：沿行或列拼接多个 DataFrame。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件读写</strong>：</p>
+<ul>
+<li><strong>CSV 文件</strong>：<ul>
+<li><code>read_csv(&#39;file.csv&#39;)</code>：读取 CSV。</li>
+<li><code>to_csv(&#39;file.csv&#39;, index=False)</code>：写入 CSV（不保存索引）。</li>
+</ul>
+</li>
+<li><strong>Excel 文件</strong>：<ul>
+<li><code>read_excel(&#39;file.xlsx&#39;, sheet_name=&#39;Sheet1&#39;)</code>：读取 Excel。</li>
+<li><code>to_excel(&#39;file.xlsx&#39;, sheet_name=&#39;Sheet1&#39;)</code>：写入 Excel。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>数据可视化</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制柱状图</span></span><br><span class="line">df[<span class="string">&#x27;age&#x27;</span>].plot(kind=<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制折线图</span></span><br><span class="line">df.plot(x=<span class="string">&#x27;name&#x27;</span>, y=<span class="string">&#x27;age&#x27;</span>, kind=<span class="string">&#x27;line&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><ul>
+<li><p><strong>筛选数据</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选 age 列大于 30 的行</span></span><br><span class="line">filtered_df = df[df[<span class="string">&#x27;age&#x27;</span>] &gt; <span class="number">30</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多条件筛选（age &gt; 20 且 city 为 &#x27;New York&#x27;）</span></span><br><span class="line">filtered_df = df[(df[<span class="string">&#x27;age&#x27;</span>] &gt; <span class="number">20</span>) &amp; (df[<span class="string">&#x27;city&#x27;</span>] == <span class="string">&#x27;New York&#x27;</span>)]</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>分组统计</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 按 city 分组，计算每组的平均年龄</span></span><br><span class="line">grouped_df = df.groupby(<span class="string">&#x27;city&#x27;</span>)[<span class="string">&#x27;age&#x27;</span>].mean()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>处理缺失值</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 用 0 填充缺失值</span></span><br><span class="line">df.fillna(<span class="number">0</span>, inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除包含缺失值的行</span></span><br><span class="line">df.dropna(inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>数据类型一致性</strong>：确保数据列的数据类型一致，避免隐式转换错误。</li>
+<li><strong>缺失值处理</strong>：在分析前处理缺失值，避免影响结果准确性。</li>
+<li><strong>内存管理</strong>：处理大型数据集时，注意内存使用情况，避免溢出。</li>
+<li><strong>索引和列名</strong>：理解索引和列名的概念，正确使用 <code>loc[]</code> 和 <code>iloc[]</code> 进行数据选择。</li>
+<li><strong>文件路径</strong>：读写文件时检查路径是否存在及权限问题。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>基础操作</strong>：用 <code>pd.Series()</code> 和 <code>pd.DataFrame()</code> 创建数据对象，<code>head()</code> 和 <code>tail()</code> 查看数据。</li>
+<li><strong>数据清洗</strong>：用 <code>dropna()</code>、<code>fillna()</code>、<code>drop_duplicates()</code> 处理缺失值和重复值。</li>
+<li><strong>数据分析</strong>：用 <code>mean()</code>、<code>sum()</code>、<code>groupby()</code> 进行统计和分组计算，<code>sort_values()</code> 排序数据。</li>
+<li><strong>文件读写</strong>：用 <code>read_csv()</code> 和 <code>to_csv()</code> 读写 CSV，<code>read_excel()</code> 和 <code>to_excel()</code> 读写 Excel。</li>
+<li><strong>数据可视化</strong>：用 <code>plot()</code> 方法直接绘制图表。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的qrcode库</title>
+    <url>/post/20250412220456.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>生成二维码</strong>：将文本、网址等信息编码为二维码图片，支持自定义尺寸、颜色、容错率等。</li>
+<li><strong>依赖库</strong>：需配合 <code>Pillow</code>（PIL）库生成图像，安装时需使用 <code>pip install qrcode[pil]</code>。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>QRCode 类</strong>：</p>
+<ul>
+<li><strong>初始化</strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">qr = qrcode.QRCode(</span><br><span class="line">    version=<span class="number">1</span>,                <span class="comment"># 二维码尺寸（1-40），值越大尺寸越大</span></span><br><span class="line">    error_correction=qrcode.constants.ERROR_CORRECT_H,  <span class="comment"># 容错率（L/M/Q/H）</span></span><br><span class="line">    box_size=<span class="number">10</span>,              <span class="comment"># 每个点的像素大小</span></span><br><span class="line">    border=<span class="number">4</span>                  <span class="comment"># 边框宽度（单位：点）</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>添加数据</strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)  <span class="comment"># 支持文本、网址等</span></span><br></pre></td></tr></table></figure></div></li>
+<li><strong>生成二维码</strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">qr.make(fit=<span class="literal">True</span>)  <span class="comment"># fit=True 自动调整尺寸以适应数据</span></span><br></pre></td></tr></table></figure></div></li>
+<li><strong>生成图像</strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>)  <span class="comment"># 自定义颜色</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode.png&quot;</span>)  <span class="comment"># 保存为文件</span></span><br><span class="line">img.show()             <span class="comment"># 显示二维码</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+<li><p><strong>快捷方法</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 快速生成二维码（自动配置参数）</span></span><br><span class="line">img = qrcode.make(<span class="string">&quot;Hello, QR Code!&quot;</span>, fill_color=<span class="string">&quot;blue&quot;</span>, back_color=<span class="string">&quot;yellow&quot;</span>)</span><br><span class="line">img.save(<span class="string">&quot;simple_qrcode.png&quot;</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><ul>
+<li><p><strong>基础示例</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> qrcode</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建二维码对象</span></span><br><span class="line">qr = qrcode.QRCode(version=<span class="number">2</span>, error_correction=qrcode.constants.ERROR_CORRECT_H)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://github.com&quot;</span>)</span><br><span class="line">qr.make(fit=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成并保存图像</span></span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;green&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>)</span><br><span class="line">img.save(<span class="string">&quot;github_qrcode.png&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>添加 Logo</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成二维码图像</span></span><br><span class="line">qr = qrcode.QRCode(version=<span class="number">5</span>, error_correction=qrcode.constants.ERROR_CORRECT_H)</span><br><span class="line">qr.add_data(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">qr.make(fit=<span class="literal">True</span>)</span><br><span class="line">img = qr.make_image(fill_color=<span class="string">&quot;black&quot;</span>, back_color=<span class="string">&quot;white&quot;</span>).convert(<span class="string">&quot;RGBA&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开 Logo 并调整大小</span></span><br><span class="line">logo = Image.<span class="built_in">open</span>(<span class="string">&quot;logo.png&quot;</span>)</span><br><span class="line">logo = logo.resize((<span class="number">50</span>, <span class="number">50</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 Logo 粘贴到二维码中心</span></span><br><span class="line">pos = ((img.size[<span class="number">0</span>] - logo.size[<span class="number">0</span>]) // <span class="number">2</span>, (img.size[<span class="number">1</span>] - logo.size[<span class="number">1</span>]) // <span class="number">2</span>)</span><br><span class="line">img.paste(logo, pos, logo)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存结果</span></span><br><span class="line">img.save(<span class="string">&quot;qrcode_with_logo.png&quot;</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>安装依赖</strong>：需安装 <code>qrcode</code> 和 <code>Pillow</code> 库，使用命令 <code>pip install qrcode[pil]</code>。</li>
+<li><strong>容错率选择</strong>：<code>ERROR_CORRECT_H</code> 容错率最高（约30%），但二维码尺寸较大。</li>
+<li><strong>颜色对比度</strong>：自定义颜色时，需确保前景色与背景色有足够对比度，以便扫描识别。</li>
+<li><strong>二维码尺寸</strong>：<code>version</code> 参数控制尺寸，值越大可存储信息越多，但扫描速度可能变慢。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>创建二维码</strong>：通过 <code>QRCode</code> 类配置参数（尺寸、容错率、颜色等）。</li>
+<li><strong>添加数据</strong>：使用 <code>add_data()</code> 方法添加要编码的信息。</li>
+<li><strong>生成图像</strong>：调用 <code>make_image()</code> 生成二维码图片，支持自定义颜色。</li>
+<li><strong>保存&#x2F;显示</strong>：用 <code>save()</code> 保存为文件，<code>show()</code> 直接显示二维码。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的random库</title>
+    <url>/post/20250412215612.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>生成伪随机数</strong>：包括整数、浮点数、序列等。</li>
+<li><strong>随机操作</strong>：设置种子、随机选择、打乱序列顺序等。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>基本随机函数</strong>：</p>
+<ul>
+<li><code>random.random()</code>：生成 <code>[0.0, 1.0)</code> 之间的随机浮点数。</li>
+<li><code>random.seed(a)</code>：设置随机数种子（<code>a</code> 为整数或浮点数，默认以系统时间为种子）。</li>
+</ul>
+</li>
+<li><p><strong>扩展随机函数</strong>：</p>
+<ul>
+<li><code>random.randint(a, b)</code>：生成 <code>[a, b]</code> 之间的随机整数。</li>
+<li><code>random.uniform(a, b)</code>：生成 <code>[a, b]</code> 之间的随机浮点数。</li>
+<li><code>random.randrange(start, stop[, step])</code>：生成指定范围内以指定步长递增的随机整数。</li>
+<li><code>random.choice(seq)</code>：从序列 <code>seq</code>（如列表、元组、字符串）中随机选择一个元素。</li>
+<li><code>random.shuffle(x)</code>：打乱序列 <code>x</code> 的顺序（直接修改原序列）。</li>
+<li><code>random.sample(population, k)</code>：从总体 <code>population</code> 中随机选择 <code>k</code> 个不重复的元素。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成随机浮点数和整数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;随机浮点数:&quot;</span>, random.random())  <span class="comment"># 输出: 0.5488135039273248</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;随机整数:&quot;</span>, random.randint(<span class="number">1</span>, <span class="number">10</span>))  <span class="comment"># 输出: 7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从列表中随机选择元素和打乱列表顺序</span></span><br><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;随机选择元素:&quot;</span>, random.choice(my_list))  <span class="comment"># 输出: 3</span></span><br><span class="line">random.shuffle(my_list)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;打乱后的列表:&quot;</span>, my_list)  <span class="comment"># 输出: [2, 5, 1, 4, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成指定范围内的随机浮点数和整数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;指定范围的随机浮点数:&quot;</span>, random.uniform(<span class="number">1.0</span>, <span class="number">5.0</span>))  <span class="comment"># 输出: 3.141592653589793</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;指定范围和步长的随机整数:&quot;</span>, random.randrange(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>))  <span class="comment"># 输出: 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置种子以确保生成相同的随机数序列</span></span><br><span class="line">random.seed(<span class="number">42</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;固定种子下的随机浮点数:&quot;</span>, random.random())  <span class="comment"># 输出: 0.6394267984578837</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>伪随机数</strong>：<code>random</code> 库生成的是伪随机数，由算法生成，具有确定性。在需要真正随机数的场合（如密码学），可能需要使用更专业的随机数生成器。</li>
+<li><strong>种子设置</strong>：设置相同的种子会生成相同的随机数序列。这在调试和重现实验结果时很有用，但在需要每次运行都生成不同随机数的场合需避免。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>生成随机数</strong>：用 <code>random.random()</code> 生成浮点数，<code>random.randint()</code> 生成整数。</li>
+<li><strong>随机选择</strong>：用 <code>random.choice()</code> 从序列中选择元素。</li>
+<li><strong>打乱序列</strong>：用 <code>random.shuffle()</code> 打乱列表顺序。</li>
+<li><strong>设置种子</strong>：用 <code>random.seed()</code> 设置种子以确保生成相同的随机数序列。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的tkinter库</title>
+    <url>/post/20250412220314.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>GUI 开发</strong>：用于创建桌面应用程序的图形界面，支持按钮、标签、文本框等组件。</li>
+<li><strong>跨平台</strong>：可在 Windows、Linux、macOS 等系统上运行。</li>
+<li><strong>事件驱动</strong>：通过绑定事件（如点击、按键）实现用户交互。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>主窗口类 <code>Tk()</code></strong>：</p>
+<ul>
+<li><code>root = tk.Tk()</code>：创建主窗口对象。</li>
+<li><code>root.title(&quot;标题&quot;)</code>：设置窗口标题。</li>
+<li><code>root.geometry(&quot;宽x高&quot;)</code>：设置窗口大小和位置。</li>
+<li><code>root.mainloop()</code>：启动主事件循环，保持窗口运行。</li>
+</ul>
+</li>
+<li><p><strong>常用组件</strong>：</p>
+<ul>
+<li><strong>标签 <code>Label</code></strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">label = tk.Label(root, text=<span class="string">&quot;文本&quot;</span>, font=(<span class="string">&quot;字体&quot;</span>, 字号))</span><br><span class="line">label.pack()  <span class="comment"># 添加到窗口</span></span><br></pre></td></tr></table></figure></div></li>
+<li><strong>按钮 <code>Button</code></strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on_click</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;按钮被点击&quot;</span>)</span><br><span class="line">button = tk.Button(root, text=<span class="string">&quot;点击&quot;</span>, command=on_click)</span><br><span class="line">button.pack()</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>输入框 <code>Entry</code></strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">entry = tk.Entry(root)</span><br><span class="line">entry.pack()</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>文本框 <code>Text</code></strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">text = tk.Text(root)</span><br><span class="line">text.pack()</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>画布 <code>Canvas</code></strong>：<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">canvas = tk.Canvas(root, width=<span class="number">200</span>, height=<span class="number">200</span>)</span><br><span class="line">canvas.pack()</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+<li><p><strong>布局管理器</strong>：</p>
+<ul>
+<li><strong><code>pack()</code></strong>：自动排列组件（简单布局）。</li>
+<li><strong><code>grid()</code></strong>：按网格行列布局（复杂布局）。</li>
+<li><strong><code>place()</code></strong>：绝对或相对坐标定位（精细控制）。</li>
+</ul>
+</li>
+<li><p><strong>事件绑定</strong>：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on_key_press</span>(<span class="params">event</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;按下按键:&quot;</span>, event.keysym)</span><br><span class="line">root.bind(<span class="string">&quot;&lt;Key&gt;&quot;</span>, on_key_press)  <span class="comment"># 绑定键盘事件</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建主窗口</span></span><br><span class="line">root = tk.Tk()</span><br><span class="line">root.title(<span class="string">&quot;我的应用&quot;</span>)</span><br><span class="line">root.geometry(<span class="string">&quot;300x200&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标签和输入框</span></span><br><span class="line">label = tk.Label(root, text=<span class="string">&quot;用户名:&quot;</span>)</span><br><span class="line">label.pack(side=<span class="string">&quot;left&quot;</span>)</span><br><span class="line">entry = tk.Entry(root)</span><br><span class="line">entry.pack(side=<span class="string">&quot;left&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加按钮和事件处理</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">on_click</span>():</span><br><span class="line">    username = entry.get()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;用户名:&quot;</span>, username)</span><br><span class="line">button = tk.Button(root, text=<span class="string">&quot;提交&quot;</span>, command=on_click)</span><br><span class="line">button.pack()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动主循环</span></span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>主循环</strong>：必须调用 <code>mainloop()</code> 启动事件循环，否则窗口会立即关闭。</li>
+<li><strong>组件布局</strong>：组件需通过 <code>pack()</code>、<code>grid()</code> 或 <code>place()</code> 添加到窗口。</li>
+<li><strong>事件对象</strong>：事件处理函数需接收一个 <code>event</code> 对象，包含事件详细信息。</li>
+<li><strong>跨平台差异</strong>：某些功能（如窗口透明度、图标）在不同系统上表现可能不同。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>创建窗口</strong>：用 <code>Tk()</code> 初始化主窗口，设置标题和大小。</li>
+<li><strong>添加组件</strong>：使用 <code>Label</code>、<code>Button</code>、<code>Entry</code> 等类创建组件，并通过布局管理器添加到窗口。</li>
+<li><strong>处理事件</strong>：通过 <code>bind()</code> 方法绑定事件（如点击、按键）和处理函数。</li>
+<li><strong>启动循环</strong>：调用 <code>mainloop()</code> 保持窗口运行并处理用户交互。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的turtle库</title>
+    <url>/post/20250412215911.html</url>
+    <content><![CDATA[<h3 id="1-核心功能"><a href="#1-核心功能" class="headerlink" title="1. 核心功能"></a><strong>1. 核心功能</strong></h3><ul>
+<li><strong>绘图工具</strong>：通过控制“海龟”在屏幕上的移动绘制图形，适合编程初学者学习。</li>
+<li><strong>可视化编程</strong>：直观展示代码效果，帮助理解程序执行流程。</li>
+</ul>
+<h3 id="2-常用类与方法"><a href="#2-常用类与方法" class="headerlink" title="2. 常用类与方法"></a><strong>2. 常用类与方法</strong></h3><ul>
+<li><p><strong>Turtle类</strong>（控制海龟）：</p>
+<ul>
+<li><code>turtle.forward(d)</code> &#x2F; <code>turtle.fd(d)</code>：向前移动 <code>d</code> 像素。</li>
+<li><code>turtle.backward(d)</code> &#x2F; <code>turtle.bk(d)</code>：向后移动 <code>d</code> 像素。</li>
+<li><code>turtle.left(angle)</code> &#x2F; <code>turtle.lt(angle)</code>：逆时针旋转 <code>angle</code> 度。</li>
+<li><code>turtle.right(angle)</code> &#x2F; <code>turtle.rt(angle)</code>：顺时针旋转 <code>angle</code> 度。</li>
+<li><code>turtle.penup()</code> &#x2F; <code>turtle.pu()</code>：抬起画笔（移动不绘制）。</li>
+<li><code>turtle.pendown()</code> &#x2F; <code>turtle.pd()</code>：落下画笔（移动时绘制）。</li>
+<li><code>turtle.color(color)</code>：设置画笔颜色。</li>
+<li><code>turtle.fillcolor(color)</code>：设置填充颜色。</li>
+<li><code>turtle.begin_fill()</code>：开始填充图形。</li>
+<li><code>turtle.end_fill()</code>：结束填充图形。</li>
+<li><code>turtle.circle(r)</code>：绘制半径为 <code>r</code> 的圆。</li>
+<li><code>turtle.hideturtle()</code>：隐藏海龟图标。</li>
+</ul>
+</li>
+<li><p><strong>Screen类</strong>（控制画布）：</p>
+<ul>
+<li><code>turtle.Screen()</code>：创建画布窗口。</li>
+<li><code>turtle.title(title)</code>：设置窗口标题。</li>
+<li><code>turtle.setup(width, height, startx, starty)</code>：设置窗口大小和位置。</li>
+<li><code>turtle.done()</code>：保持窗口不关闭。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-使用示例"><a href="#3-使用示例" class="headerlink" title="3. 使用示例"></a><strong>3. 使用示例</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建画布和画笔</span></span><br><span class="line">screen = turtle.Screen()</span><br><span class="line">screen.title(<span class="string">&quot;我的绘图&quot;</span>)</span><br><span class="line">t = turtle.Turtle()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制正方形</span></span><br><span class="line">t.color(<span class="string">&quot;red&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">    t.forward(<span class="number">100</span>)</span><br><span class="line">    t.right(<span class="number">90</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制圆形</span></span><br><span class="line">t.penup()</span><br><span class="line">t.goto(<span class="number">0</span>, -<span class="number">150</span>)</span><br><span class="line">t.pendown()</span><br><span class="line">t.color(<span class="string">&quot;blue&quot;</span>)</span><br><span class="line">t.circle(<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制五角星</span></span><br><span class="line">t.penup()</span><br><span class="line">t.goto(-<span class="number">100</span>, -<span class="number">100</span>)</span><br><span class="line">t.pendown()</span><br><span class="line">t.color(<span class="string">&quot;green&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    t.forward(<span class="number">100</span>)</span><br><span class="line">    t.right(<span class="number">144</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保持窗口不关闭</span></span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a><strong>4. 注意事项</strong></h3><ul>
+<li><strong>坐标系</strong>：默认以屏幕中心为原点 <code>(0,0)</code>，向右为 <code>x</code> 轴正方向，向上为 <code>y</code> 轴正方向。</li>
+<li><strong>画笔状态</strong>：移动前需用 <code>pendown()</code> 落笔，否则不会绘制图形。</li>
+<li><strong>窗口关闭</strong>：代码结尾需调用 <code>turtle.done()</code> 保持窗口不关闭。</li>
+<li><strong>颜色设置</strong>：支持颜色名称（如 <code>&quot;red&quot;</code>）或 RGB 元组（如 <code>(255, 0, 0)</code>）。</li>
+</ul>
+<h3 id="5-七巧板"><a href="#5-七巧板" class="headerlink" title="5.七巧板"></a>5.七巧板</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle  </span><br><span class="line"><span class="keyword">import</span> math  </span><br><span class="line">t=turtle.Turtle()  </span><br><span class="line">t.speed(<span class="number">10</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 橙色正方形  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">45</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">90</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">90</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">90</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;orange&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 三角绿  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">90</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.left(<span class="number">135</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">100</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;green&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 平行四边形 浅蓝  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.right(<span class="number">135</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">45</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">135</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;lightblue&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 指针左下角  </span></span><br><span class="line">t.backward(<span class="number">100</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 三角 黄  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">45</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">200</span>)  </span><br><span class="line">t.right(<span class="number">135</span>)  </span><br><span class="line">t.forward(<span class="number">200</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;yellow&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 指针左上角  </span></span><br><span class="line">t.backward(<span class="number">200</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 三角 红  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">45</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">200</span>)  </span><br><span class="line">t.right(<span class="number">135</span>)  </span><br><span class="line">t.forward(<span class="number">200</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;red&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 指针右上角  </span></span><br><span class="line">t.backward(<span class="number">200</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 三角 紫色  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">45</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">135</span>)  </span><br><span class="line">t.forward(<span class="number">100</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;purple&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 指针右中  </span></span><br><span class="line">t.backward(<span class="number">100</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 三角 深蓝色  </span></span><br><span class="line">t.begin_fill()  </span><br><span class="line">t.left(<span class="number">135</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">100</span>)  </span><br><span class="line">t.right(<span class="number">90</span>)  </span><br><span class="line">t.forward(math.sqrt(<span class="number">2</span>)*<span class="number">100</span>)  </span><br><span class="line">t.fillcolor(<span class="string">&quot;blue&quot;</span>)  </span><br><span class="line">t.end_fill()  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 隐藏画笔  </span></span><br><span class="line">t.hideturtle()  </span><br><span class="line">  </span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure></div>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li><strong>移动与旋转</strong>：用 <code>forward()</code>、<code>backward()</code>、<code>left()</code>、<code>right()</code> 控制海龟移动。</li>
+<li><strong>绘制图形</strong>：用 <code>circle()</code> 绘制圆，结合循环绘制多边形。</li>
+<li><strong>颜色与填充</strong>：用 <code>color()</code> 设置画笔颜色，<code>fillcolor()</code> 设置填充颜色，配合 <code>begin_fill()</code> 和 <code>end_fill()</code> 填充图形。</li>
+<li><strong>画布设置</strong>：用 <code>Screen()</code> 创建画布，<code>title()</code> 设置标题，<code>setup()</code> 设置窗口大小和位置。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
