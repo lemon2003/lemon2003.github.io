@@ -645,7 +645,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -695,7 +695,7 @@
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
     <div class="name">Lemon</div>
     
-        <div class="label">Lv3</div>
+        <div class="label">Lv4</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
@@ -708,7 +708,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -723,6 +723,165 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250414131146.html">
+                            OpenCV汉字输出
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            在Python中，matplotlib和opencv-python（cv2）是两套独立的库，它们的字体配置互不影响。你遇到的cv2.imshow显示中文失败的问题，需要从以下两个方向排查和解决：
+
+1. OpenCV本身不支持直接渲染中文OpenCV的cv2.putText()函数默认不支持Unicode字符（包括中文），直接传递中文字符串会导致乱码或显示异常。而cv2.imshow()显示图像时，如果图像本身包含未正确渲染的文本，自然无法正确显示中文。
+
+2. 解决方案：使用PIL渲染中文使用PIL（Python Imaging Library）绘制中文**12345678910111...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Apr 14 2025 13:11:46 GMT+0800">
+                
+                    2025-04-14 13:11:46
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250414131146.html">阅读全文<span class="seo-reader-text">OpenCV汉字输出</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250414124549.html">
+                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）操作，这是形态学处理的两个基础操作，常用于图像去噪、分割和特征提取。
+一、核心概念
+形态学操作：基于**结构元素（Kernel）**对二值图像（或灰度图像）进行几何运算，改变物体形状但不改变其拓扑结构。
+
+结构元素：
+
+是一个小型矩阵（如3x3、5x5）
+定义操作的作用范围
+常见形状：矩形、椭圆、十字形等
+
+
+
+二、腐蚀（Erosion）1. 原理
+用结构元素在图像上滑动
+仅当结构元素完全覆盖前景像素时，中心像素保留为前景
+效果：前景区域会”缩小”，可消除小物体、平滑边界
+
+2. 特点
+消除小于结构元素的噪声点
+分割粘连物体...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Apr 14 2025 12:45:49 GMT+0800">
+                
+                    2025-04-14 12:45:49
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250414124549.html">阅读全文<span class="seo-reader-text">OpenCV中的腐蚀（Erosion）和膨胀（Dilation）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1340,161 +1499,11 @@ pyplot 模块（类似 MATLAB 语法）：
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220639.html">
-                            python中的cv2库
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-计算机视觉：支持图像处理、视频分析、特征提取、目标检测等任务。
-跨平台：可在 Windows、Linux、macOS 等系统上运行。
-算法丰富：提供 2500+ 优化算法，涵盖经典和先进的计算机视觉技术。
-
-2. 常用类与方法
-图像读取与显示：
-12345678910import cv2# 读取图像（支持 JPG、PNG 等格式）img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_COLOR)  # 彩色模式（默认）# img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_G...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:39 GMT+0800">
-                
-                    2025-04-12 22:06:39
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220639.html">阅读全文<span class="seo-reader-text">python中的cv2库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220456.html">
-                            python中的qrcode库
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-生成二维码：将文本、网址等信息编码为二维码图片，支持自定义尺寸、颜色、容错率等。
-依赖库：需配合 Pillow（PIL）库生成图像，安装时需使用 pip install qrcode[pil]。
-
-2. 常用类与方法
-QRCode 类：
-
-初始化：123456qr = qrcode.QRCode(    version=1,                # 二维码尺寸（1-40），值越大尺寸越大    error_correction=qrcode.constants.ERROR_CORRECT_H,  # 容错率（L/M/Q/H）    box_size=10,   ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:04:56 GMT+0800">
-                
-                    2025-04-12 22:04:56
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220456.html">阅读全文<span class="seo-reader-text">python中的qrcode库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
+	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1522,11 +1531,11 @@ QRCode 类：
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 30 篇文章
+                        共撰写了 32 篇文章
                     </span>
                     
                         <span>
-                            共 25.2k 字
+                            共 26.5k 字
                         </span>
                     
                 </p>
