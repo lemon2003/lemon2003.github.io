@@ -2203,4 +2203,142 @@
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>opencv阈值处理</title>
+    <url>/post/20250414133414.html</url>
+    <content><![CDATA[<p>好的！我来为您详细讲解OpenCV中的阈值处理（Thresholding）技术，这是图像分割的基础操作之一，通过设定阈值将像素分为前景和背景两类。</p>
+<h3 id="一、核心概念"><a href="#一、核心概念" class="headerlink" title="一、核心概念"></a>一、核心概念</h3><ol>
+<li><p><strong>阈值处理目的</strong>：</p>
+<ul>
+<li>将灰度图像转换为二值图像（黑白图像）</li>
+<li>分割感兴趣区域（ROI）与背景</li>
+<li>减少后续处理的计算量</li>
+</ul>
+</li>
+<li><p><strong>基本公式</strong>：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">二值图像像素值 = &#123; </span><br><span class="line">    255（前景）, 当原像素值 &gt; 阈值时</span><br><span class="line">    0（背景）,  其他情况</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h3 id="二、常见阈值方法"><a href="#二、常见阈值方法" class="headerlink" title="二、常见阈值方法"></a>二、常见阈值方法</h3><table>
+<thead>
+<tr>
+<th>方法类型</th>
+<th>特点</th>
+<th>适用场景</th>
+<th>OpenCV函数参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>全局阈值</strong></td>
+<td>使用固定阈值</td>
+<td>光照均匀的简单图像</td>
+<td><code>cv2.THRESH_BINARY</code></td>
+</tr>
+<tr>
+<td><strong>反相二值化</strong></td>
+<td>反转前景&#x2F;背景</td>
+<td>需要突出暗色区域的场景</td>
+<td><code>cv2.THRESH_BINARY_INV</code></td>
+</tr>
+<tr>
+<td><strong>截断阈值</strong></td>
+<td>保留超过阈值的部分</td>
+<td>保留图像高亮特征</td>
+<td><code>cv2.THRESH_TRUNC</code></td>
+</tr>
+<tr>
+<td><strong>零化阈值</strong></td>
+<td>将低于阈值的部分置零</td>
+<td>去除低亮度噪声</td>
+<td><code>cv2.THRESH_TOZERO</code></td>
+</tr>
+<tr>
+<td><strong>反相零化阈值</strong></td>
+<td>将高于阈值的部分置零</td>
+<td>去除高亮度噪声</td>
+<td><code>cv2.THRESH_TOZERO_INV</code></td>
+</tr>
+<tr>
+<td><strong>自适应阈值</strong></td>
+<td>根据局部区域动态计算阈值</td>
+<td>光照不均匀的图像（如文档扫描）</td>
+<td><code>cv2.adaptiveThreshold</code></td>
+</tr>
+</tbody></table>
+<h3 id="三、全局阈值示例"><a href="#三、全局阈值示例" class="headerlink" title="三、全局阈值示例"></a>三、全局阈值示例</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2  </span><br><span class="line">img=cv2.imread(<span class="string">&quot;yz.png&quot;</span>)  </span><br><span class="line">cv2.imshow(<span class="string">&quot;qian&quot;</span>,img)  </span><br><span class="line"><span class="comment">#阈值处理  </span></span><br><span class="line">  </span><br><span class="line">ret, binary = cv2.threshold(img, <span class="number">0</span>, <span class="number">255</span>, cv2.THRESH_BINARY)  </span><br><span class="line">cv2.imshow(<span class="string">&quot;hou&quot;</span>, binary)  </span><br><span class="line">  </span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ret: 实际使用的阈值（当使用Otsu方法时会返回优化值）</span></span><br><span class="line"><span class="comment"># binary: 二值化后的图像</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>原图 与 阈值处理后 对比图</strong><br>原来”小土拨鼠，真的好吗？”是字体是黑色（0），所以在黑色的背景下都看不到，通过<code>ret, binary = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY)</code> 将他们都变成白色（255）的，就可以看到了。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250414/3.png"
+                      alt="a"
+                ></p>
+<h3 id="四、自适应阈值详解"><a href="#四、自适应阈值详解" class="headerlink" title="四、自适应阈值详解"></a>四、自适应阈值详解</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用11x11邻域，常数C=2</span></span><br><span class="line">adaptive_thresh = cv2.adaptiveThreshold(</span><br><span class="line">    gray,</span><br><span class="line">    <span class="number">255</span>,</span><br><span class="line">    cv2.ADAPTIVE_THRESH_GAUSSIAN_C,</span><br><span class="line">    cv2.THRESH_BINARY,</span><br><span class="line">    <span class="number">11</span>,</span><br><span class="line">    <span class="number">2</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><strong>优点</strong>：处理光照不均的图像效果好</li>
+<li><strong>参数</strong>：<ul>
+<li>块大小（必须为奇数）</li>
+<li>常数C（从邻域均值中减去的值）</li>
+</ul>
+</li>
+</ul>
+<h3 id="五、Otsu方法（自动阈值）"><a href="#五、Otsu方法（自动阈值）" class="headerlink" title="五、Otsu方法（自动阈值）"></a>五、Otsu方法（自动阈值）</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在全局阈值基础上添加Otsu标志</span></span><br><span class="line">ret, otsu_thresh = cv2.threshold(gray, <span class="number">0</span>, <span class="number">255</span>, cv2.THRESH_BINARY+cv2.THRESH_OTSU)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><strong>原理</strong>：自动寻找使类间方差最大的阈值</li>
+<li><strong>适用</strong>：前景&#x2F;背景面积差异较大的图像</li>
+</ul>
+<h3 id="六、关键参数选择技巧"><a href="#六、关键参数选择技巧" class="headerlink" title="六、关键参数选择技巧"></a>六、关键参数选择技巧</h3><ol>
+<li><p><strong>阈值选择</strong>：</p>
+<ul>
+<li>简单场景：手动尝试（0-255之间）</li>
+<li>复杂场景：使用Otsu自动计算</li>
+<li>文档处理：自适应阈值（块大小约15-25）</li>
+</ul>
+</li>
+<li><p><strong>预处理</strong>：</p>
+<ul>
+<li>先进行高斯模糊（<code>cv2.GaussianBlur</code>）可提升阈值效果</li>
+<li>对低质量图像使用直方图均衡化（<code>cv2.equalizeHist</code>）</li>
+</ul>
+</li>
+</ol>
+<h3 id="七、典型应用场景"><a href="#七、典型应用场景" class="headerlink" title="七、典型应用场景"></a>七、典型应用场景</h3><ol>
+<li><p><strong>文档扫描</strong>：</p>
+<ul>
+<li>自适应阈值处理文字区域</li>
+<li>形态学操作去除噪声</li>
+</ul>
+</li>
+<li><p><strong>车牌识别</strong>：</p>
+<ul>
+<li>边缘检测后使用阈值分割字符</li>
+<li>结合颜色空间转换（如HSV）提取特定颜色区域</li>
+</ul>
+</li>
+<li><p><strong>工业检测</strong>：</p>
+<ul>
+<li>阈值分割缺陷区域</li>
+<li>测量物体尺寸和位置</li>
+</ul>
+</li>
+<li><p><strong>医学影像</strong>：</p>
+<ul>
+<li>分割细胞或组织区域</li>
+<li>增强特定解剖结构</li>
+</ul>
+</li>
+</ol>
+<h3 id="八、可视化理解"><a href="#八、可视化理解" class="headerlink" title="八、可视化理解"></a>八、可视化理解</h3><p>想象将图像看作地形高度图：</p>
+<ul>
+<li><strong>阈值</strong>就像海平面高度</li>
+<li><strong>前景像素</strong>是露出水面的陆地</li>
+<li><strong>背景像素</strong>是被淹没的海底</li>
+</ul>
+<p>通过调整阈值高度，可以控制分割出的前景区域大小。实际应用中建议先用直方图分析工具查看图像灰度分布，再选择适当的阈值方法。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
