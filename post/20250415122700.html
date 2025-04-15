@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://lemon2003.github.io/categories/解决错误/"/>
+    <link rel="canonical" href="http://lemon2003.github.io/post/20250415122700.html"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,13 +21,18 @@
     
     
         
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Lemon">
-<meta property="og:url" content="http://lemon2003.github.io/categories/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/index.html">
+        <meta name="description" content="问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子） 作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。   取值: 1.01 ~ 1.5（常用 1.1）。   影响:   值越小（如 1.01）:     ✅ 检测到更多人脸（尤其是小尺寸人脸）。     ❌ 计算量大幅增加，检测速度变慢，可能引入更多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="opencv人脸识别">
+<meta property="og:url" content="http://lemon2003.github.io/post/20250415122700.html">
 <meta property="og:site_name" content="Lemon">
+<meta property="og:description" content="问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子） 作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。   取值: 1.01 ~ 1.5（常用 1.1）。   影响:   值越小（如 1.01）:     ✅ 检测到更多人脸（尤其是小尺寸人脸）。     ❌ 计算量大幅增加，检测速度变慢，可能引入更多">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://lemon2003.github.io/images/redefine-og.webp">
-<meta property="article:author" content="John Doe">
+<meta property="article:published_time" content="2025-04-15T04:27:00.000Z">
+<meta property="article:modified_time" content="2025-04-15T04:40:58.006Z">
+<meta property="article:author" content="lemon">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lemon2003.github.io/images/redefine-og.webp">
     
@@ -41,7 +46,7 @@
     
     <title>
         
-            分类: 解决错误 | Lemon
+            opencv人脸识别 | Lemon
         
     </title>
 
@@ -365,7 +370,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/categories"
                                         >
                                     <i class="fa-regular fa-folder fa-fw"></i>
@@ -459,7 +464,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/categories"
                         >
                             <span>
@@ -543,71 +548,332 @@
 			
 
 			<div class="main-content">
-				<div class="page-template-container">
-	
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
 
-	
-	<div class="category-name">
-    <i class="fa-solid fa-folder"></i>&nbsp;解决错误
-</div>
-<div class="category-post-list">
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">opencv人脸识别</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/img/%E6%9F%A0%E6%AA%AC.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">lemon</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-04-15 12:27</span>
+        <span class="mobile">2025-04-15 12:27</span>
+        <span class="hover-info">创建</span>
+    </span>
     
-<div class="archive-list-container">
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-04-15 12:40:58</span>
+            <span class="mobile">2025-04-15 12:40:58</span>
+            <span class="hover-info">更新</span>
+        </span>
     
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2025</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">2</span>
-            </div>
-            
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
                 
-                    
-                    
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='04-14'>
-                    
-                    <a href="/post/20250414131146.html" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">OpenCV汉字输出</span>
-                    </a>
-                    
                 
-                    
                     
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='03-30'>
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
                     
-                    <a href="/post/20250330222251.html" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">hexo写博客出现unknown path</span>
-                    </a>
                     
                 
-                </li> <!-- Ensure the last item is properly closed -->
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>751 字</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h3 id="问题1：参数详解与调节指南-scaleFactor-minNeighbors-minSize"><a href="#问题1：参数详解与调节指南-scaleFactor-minNeighbors-minSize" class="headerlink" title="问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)"></a>问题1：参数详解与调节指南 (<code>scaleFactor</code>, <code>minNeighbors</code>, <code>minSize</code>)</h3><h4 id="1-scaleFactor（缩放因子）"><a href="#1-scaleFactor（缩放因子）" class="headerlink" title="1. scaleFactor（缩放因子）"></a>1. <strong><code>scaleFactor</code>（缩放因子）</strong></h4><ul>
+<li><strong>作用</strong>: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。  </li>
+<li><strong>取值</strong>: <code>1.01 ~ 1.5</code>（常用 <code>1.1</code>）。  </li>
+<li><strong>影响</strong>:  <ul>
+<li><strong>值越小</strong>（如 <code>1.01</code>）:    <ul>
+<li>✅ 检测到更多人脸（尤其是小尺寸人脸）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  <ul>
+<li><strong>值越大</strong>（如 <code>1.5</code>）:    <ul>
+<li>✅ 检测速度更快。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 可能漏检小尺寸人脸。</li>
+</ul>
+<h4 id="2-minNeighbors（最小邻居数）"><a href="#2-minNeighbors（最小邻居数）" class="headerlink" title="2. minNeighbors（最小邻居数）"></a>2. <strong><code>minNeighbors</code>（最小邻居数）</strong></h4><ul>
+<li><strong>作用</strong>: 控制人脸框的合并阈值，过滤孤立误检。  </li>
+<li><strong>取值</strong>: <code>3 ~ 6</code>（常用 <code>5</code>）。  </li>
+<li><strong>影响</strong>:  <ul>
+<li><strong>值越大</strong>（如 <code>10</code>）:    <ul>
+<li>✅ 误检率降低（更严格）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 可能漏检真实人脸（尤其是部分遮挡的人脸）。  <ul>
+<li><strong>值越小</strong>（如 <code>1</code>）:    <ul>
+<li>✅ 检测到更多人脸。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 误检率显著增加。</li>
+</ul>
+<h4 id="3-minSize（最小检测尺寸）"><a href="#3-minSize（最小检测尺寸）" class="headerlink" title="3. minSize（最小检测尺寸）"></a>3. <strong><code>minSize</code>（最小检测尺寸）</strong></h4><ul>
+<li><strong>作用</strong>: 设置人脸的最小尺寸（宽高），避免检测过小的噪声。  </li>
+<li><strong>取值</strong>: <code>(30,30)</code> ~ <code>(100,100)</code>（根据图像分辨率调整）。  </li>
+<li><strong>影响</strong>:  <ul>
+<li><strong>值越大</strong>（如 <code>(100,100)</code>）:    <ul>
+<li>✅ 减少小尺寸误检（如远处人脸）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 可能漏检小尺寸人脸。  <ul>
+<li><strong>值越小</strong>（如 <code>(20,20)</code>）:    <ul>
+<li>✅ 检测到更小人脸。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ 可能引入噪声误检。</li>
+</ul>
+<hr>
+<h4 id="完整项目代码展示"><a href="#完整项目代码展示" class="headerlink" title="完整项目代码展示"></a><strong>完整项目代码展示</strong></h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">img=cv2.imread(<span class="string">&quot;img.png&quot;</span>)</span><br><span class="line"><span class="comment">#加载人脸检测器</span></span><br><span class="line">face_cascade=cv2.CascadeClassifier(<span class="string">&quot;haarcascade_frontalface_default.xml&quot;</span>)</span><br><span class="line"></span><br><span class="line">faces=face_cascade.detectMultiScale(img,scaleFactor=<span class="number">1.03</span>,minNeighbors=<span class="number">9</span>,minSize=(<span class="number">60</span>,<span class="number">60</span>))</span><br><span class="line"><span class="built_in">print</span>(faces)</span><br><span class="line"><span class="keyword">for</span>(x,y,w,h) <span class="keyword">in</span> faces:</span><br><span class="line">    cv2.rectangle(img, (x, y), (x+w, y+h), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&quot;img&quot;</span>,img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></div>
+<h4 id="完整项目结果展示"><a href="#完整项目结果展示" class="headerlink" title="完整项目结果展示"></a><strong>完整项目结果展示</strong></h4><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250415/1.png"
+                      alt="a"
+                ></p>
+<h3 id="参数调节策略"><a href="#参数调节策略" class="headerlink" title="参数调节策略"></a><strong>参数调节策略</strong></h3><ul>
+<li><strong>多人场景优化</strong>:</li>
+</ul>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">faces = face_cascade.detectMultiScale(  </span><br><span class="line">    gray,      scaleFactor=<span class="number">1.05</span>,   <span class="comment"># 更小的缩放步长，检测更多人脸  </span></span><br><span class="line">minNeighbors=<span class="number">3</span>,     <span class="comment"># 降低阈值，减少漏检  </span></span><br><span class="line">minSize=(<span class="number">30</span>, <span class="number">30</span>)    <span class="comment"># 根据实际需求调整最小尺寸  </span></span><br><span class="line">)  </span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><strong>速度优先</strong>:</li>
+</ul>
+  <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">faces = face_cascade.detectMultiScale(  </span><br><span class="line">    gray,      scaleFactor=<span class="number">1.3</span>,    <span class="comment"># 更大的缩放步长，加快检测  </span></span><br><span class="line">minNeighbors=<span class="number">6</span>,     <span class="comment"># 更高阈值，减少误检  </span></span><br><span class="line">minSize=(<span class="number">50</span>, <span class="number">50</span>)    <span class="comment"># 忽略小尺寸目标  </span></span><br><span class="line">)  </span><br></pre></td></tr></table></figure></div>
+<h3 id="问题2：Haar级联分类器能否检测卡通人物？"><a href="#问题2：Haar级联分类器能否检测卡通人物？" class="headerlink" title="问题2：Haar级联分类器能否检测卡通人物？"></a>问题2：Haar级联分类器能否检测卡通人物？</h3><h4 id="通常不能（或效果极差）❌"><a href="#通常不能（或效果极差）❌" class="headerlink" title="通常不能（或效果极差）❌"></a>通常不能（或效果极差）❌</h4><ul>
+<li><strong>原因</strong>:    <ol>
+<li><strong>训练数据特性</strong>: Haar级联分类器是基于真实人脸的特征（如眼睛、鼻子、嘴巴的明暗对比）训练的，而卡通人物的面部特征（如夸张的眼睛比例、简化线条）与真实人脸差异巨大。  </li>
+<li><strong>特征抽象能力不足</strong>: Haar分类器依赖简单的矩形特征，无法捕捉卡通人物复杂的艺术风格。</li>
+</ol>
+</li>
+</ul>
+<h4 id="替代方案"><a href="#替代方案" class="headerlink" title="替代方案:"></a><strong>替代方案</strong>:</h4><ul>
+<li><strong>深度学习模型</strong>:<br>使用基于CNN的检测器（如YOLO、SSD、MTCNN），它们能学习更复杂的特征。  <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 示例：使用MTCNN检测卡通人脸  </span></span><br><span class="line"><span class="keyword">from</span> mtcnn <span class="keyword">import</span> MTCNN  </span><br><span class="line"></span><br><span class="line">detector = MTCNN()  faces = detector.detect_faces(img)  </span><br></pre></td></tr></table></figure></div></li>
+<li><strong>专用卡通检测器</strong>:<br>训练针对卡通人物的Haar分类器（需自行收集数据集）。</li>
+</ul>
+<h3 id="综合建议"><a href="#综合建议" class="headerlink" title="综合建议"></a>综合建议</h3><ol>
+<li><strong>真实人脸检测</strong>:    <ul>
+<li>参数推荐：<code>scaleFactor=1.1</code>, <code>minNeighbors=5</code>, <code>minSize=(30,30)</code>。  </li>
+<li>多人场景：适当降低 <code>minNeighbors</code> 并减小 <code>scaleFactor</code>。</li>
+</ul>
+</li>
+<li><strong>卡通人物检测</strong>:    <ul>
+<li>放弃Haar分类器，改用深度学习模型。</li>
+</ul>
+</li>
+</ol>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> opencv人脸识别</li>
+        <li><strong>作者:</strong> lemon</li>
+        <li><strong>创建于
+                :</strong> 2025-04-15 12:27:00</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-04-15 12:40:58
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://lemon2003.github.io/post/20250415122700.html
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
 </div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/python/">#python</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/post/20250414133414.html">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">opencv阈值处理</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'lemon2003/gitalk',
+                'data-repo-id': 'R_kgDOOM7rWQ',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDOOM7rWc4CoXWC',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '0',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
 
 	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">opencv人脸识别</div>
+		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%981%EF%BC%9A%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3%E4%B8%8E%E8%B0%83%E8%8A%82%E6%8C%87%E5%8D%97-scaleFactor-minNeighbors-minSize"><span class="nav-text">问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%B0%83%E8%8A%82%E7%AD%96%E7%95%A5"><span class="nav-text">参数调节策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%982%EF%BC%9AHaar%E7%BA%A7%E8%81%94%E5%88%86%E7%B1%BB%E5%99%A8%E8%83%BD%E5%90%A6%E6%A3%80%E6%B5%8B%E5%8D%A1%E9%80%9A%E4%BA%BA%E7%89%A9%EF%BC%9F"><span class="nav-text">问题2：Haar级联分类器能否检测卡通人物？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E5%BB%BA%E8%AE%AE"><span class="nav-text">综合建议</span></a></li></ol>
 
-	<div class="page-template-content markdown-body">
-		
-
-		
-	</div>
-
-	<div class="page-template-comments">
-		
 	</div>
 </div>
-
-<div class="paginator">
-	<span class="page-number current">1</span>
+	</div>
+	
 </div>
-  
 			</div>
 
 			
@@ -696,6 +962,26 @@
 		</div>
 	</div>
 
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
 	
 
 	<div class="right-side-tools-container">
@@ -799,6 +1085,7 @@
         containers: ["#swup"],
     });
 </script>
+
 
 
 
