@@ -2447,4 +2447,41 @@
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网络适配器无线网卡驱动不能用5g？</title>
+    <url>/post/20250415195306.html</url>
+    <content><![CDATA[<p><code>netsh wlan show drivers</code> 命令在 Windows 系统中主要用于查看无线网卡驱动的相关信息，但它并不直接显示当前连接的网络频段。不过，通过一些间接的方法，我们仍然可以获取到网络频段的相关信息。下面详细介绍如何利用 <code>netsh wlan show drivers</code> 命令以及结合其他命令来查看网络频段。</p>
+<hr>
+<h3 id="使用-netsh-wlan-show-drivers-命令"><a href="#使用-netsh-wlan-show-drivers-命令" class="headerlink" title="使用 netsh wlan show drivers 命令"></a>使用 <code>netsh wlan show drivers</code> 命令</h3><p> <code>netsh wlan show drivers</code> 可以查看无线网卡支持的无线标准（如 802.11ac、802.11ax 等），从而间接判断网卡是否支持 5GHz 频段。</p>
+<h4 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a><strong>操作步骤：</strong></h4><ol>
+<li><p><strong>打开命令提示符（CMD）</strong>：</p>
+<ul>
+<li>按 <code>Win + R</code>，输入 <code>cmd</code>，按回车。</li>
+</ul>
+</li>
+<li><p><strong>输入命令</strong>：</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh wlan show drivers</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>查看输出信息</strong>：</p>
+<ul>
+<li>在输出结果中，找到 <code>支持的无线标准</code> 或 <code>Radio types supported</code> 字段。</li>
+<li>如果显示 <code>802.11a</code>、<code>802.11ac</code>、<code>802.11ax</code> 等，则表示网卡支持 5GHz 频段。</li>
+<li>如果仅显示 <code>802.11b</code>、<code>802.11g</code>、<code>802.11n</code>，则可能仅支持 2.4GHz 频段。</li>
+</ul>
+</li>
+</ol>
+<h4 id="示例输出："><a href="#示例输出：" class="headerlink" title="示例输出："></a><strong>示例输出：</strong></h4><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250415/2.png"
+                      alt="a"
+                ></p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
+      </tags>
+  </entry>
 </search>
