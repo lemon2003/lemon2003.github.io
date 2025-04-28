@@ -2622,4 +2622,102 @@
         <tag>编译原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>GitHub Desktop上传静态网页</title>
+    <url>/post/20250428125135.html</url>
+    <content><![CDATA[<p>（此篇文章用于记录我上传静态网页的过程，我怕我下次上传的时候忘记步骤，在这里留个记录）</p>
+<p>1.在GitHub中新建一个仓库<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/1.png"
+                      alt="a"
+                ><br>2.点击创建<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/2.png"
+                      alt="a"
+                ><br>3.在GitHub Desktop中链接<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/3.png"
+                      alt="a"
+                ><br>4.在GitHub中复制HTTPS的链接<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/4.png"
+                      alt="a"
+                ><br>5.在GitHub Desktop中，将网页GitHub中复制的链接粘贴过来，然后下面的那个是在本地的位置<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/5.png"
+                      alt="a"
+                ><br>6.等待GitHub Desktop与GitHub的链接<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/6.png"
+                      alt="a"
+                ><br>7.连接好后，打开本地的仓库的地址<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/7.png"
+                      alt="a"
+                ><br>8.将需要上传的文件项目粘贴进来<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/8.png"
+                      alt="a"
+                ><br>9.然后在GitHub Desktop中就可以看到咱们需要上传的项目了，下面的那个地方，随便输入就行了，相当于是提交，最后点击一下最下面的Commit to main<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/9.png"
+                      alt="a"
+                ><br>10.然后点击他那个publish就行了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/10.png"
+                      alt="a"
+                ><br>11.然后咱们回到咱们的GitHub网页中，咱们刷新一下就可以看见咋那么刚才上传的项目<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/11.png"
+                      alt="a"
+                ><br>12.然后咱们点击setting里面的pages页面<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/12.png"
+                      alt="a"
+                ><br>13.把这个里面的none改成main，后面那个会自己改，root没改的话，手动一下，然后点击save<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/13.png"
+                      alt="a"
+                ><br>14.点击咱们的actions<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/14.png"
+                      alt="a"
+                ><br>15.你的这个项目图可能前边不是绿色的，不要着急，先点进去<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/15.png"
+                      alt="a"
+                ><br>16.在这个页面等一会儿，等他变成绿色，说明部署完毕了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/16.png"
+                      alt="a"
+                ><br>17.然后回到setting页面里面的pages就可以发现上面还有一个网页链接出现，那就说明部署成功了，点击即可访问，或者在网址栏里面输入链接就能直接访问了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250428/17.png"
+                      alt="a"
+                ></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
 </search>
