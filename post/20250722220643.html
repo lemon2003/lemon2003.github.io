@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://lemon2003.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-07-22T14:06:43.000Z">
-<meta property="article:modified_time" content="2025-07-22T14:07:16.925Z">
+<meta property="article:modified_time" content="2025-07-22T16:11:25.751Z">
 <meta property="article:author" content="lemon">
 <meta property="article:tag" content="C51单片机">
 <meta name="twitter:card" content="summary">
@@ -582,8 +582,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-07-22 22:07:16</span>
-            <span class="mobile">2025-07-22 22:07:16</span>
+            <span class="desktop">2025-07-23 00:11:25</span>
+            <span class="mobile">2025-07-23 00:11:25</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -621,7 +621,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>204 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>220 字</span>
         </span>
     
     
@@ -642,6 +642,10 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<h1 id="第十篇"><a href="#第十篇" class="headerlink" title="第十篇"></a>第十篇</h1><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>  <span class="string">&quot;reg51.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//void delay1s()</span></span><br><span class="line"><span class="comment">//&#123;  </span></span><br><span class="line"><span class="comment">//  unsigned char i;</span></span><br><span class="line"><span class="comment">//  for(i=0;i&lt;1;i++)&#123;      </span></span><br><span class="line"><span class="comment">//    TH1=(65536-10000)/256; </span></span><br><span class="line"><span class="comment">//    TL1=(65536-10000)%256; </span></span><br><span class="line"><span class="comment">//    TR1=1;</span></span><br><span class="line"><span class="comment">//    while(!TF1); </span></span><br><span class="line"><span class="comment">//    TF1=0;	</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="type">unsigned</span> <span class="type">char</span> miao=<span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">char</span> led[]=&#123;<span class="number">0xc0</span>,<span class="number">0xf9</span>,<span class="number">0xa4</span>,<span class="number">0xb0</span>,<span class="number">0x99</span>,<span class="number">0x92</span>,<span class="number">0x82</span>,<span class="number">0xf8</span>,<span class="number">0x80</span>,<span class="number">0x90</span>&#125; ;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">ZD1</span><span class="params">()</span> interrupt 3</span><br><span class="line">&#123;  </span><br><span class="line">  <span class="type">static</span> <span class="type">unsigned</span> <span class="type">char</span> count=<span class="number">0</span>;   </span><br><span class="line">  TH1=(<span class="number">65536</span><span class="number">-50000</span>)/<span class="number">256</span>; </span><br><span class="line">  TL1=(<span class="number">65536</span><span class="number">-50000</span>)%<span class="number">256</span>; </span><br><span class="line">	count++;</span><br><span class="line">  <span class="keyword">if</span>(count&gt;=<span class="number">20</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		count=<span class="number">0</span>;</span><br><span class="line">		miao++; </span><br><span class="line">    <span class="keyword">if</span>(miao==<span class="number">100</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			miao=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">disp</span><span class="params">(<span class="type">unsigned</span> <span class="type">char</span> i)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> k;</span><br><span class="line"><span class="comment">//    unsigned char led[]=&#123;0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90&#125; ;</span></span><br><span class="line"><span class="comment">//    for ( k = 0; k &lt; 50; k++)</span></span><br><span class="line"><span class="comment">//    &#123;</span></span><br><span class="line">        P2=<span class="number">0xe7</span>;</span><br><span class="line">        P0=~led[i/<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;<span class="number">100</span>;k++);</span><br><span class="line">	P0=<span class="number">0X00</span>;</span><br><span class="line"><span class="comment">//        delay1s();</span></span><br><span class="line">        P2=<span class="number">0xe3</span>;</span><br><span class="line">        P0=~led[i%<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;<span class="number">100</span>;k++);</span><br><span class="line">	P0=<span class="number">0X00</span>;</span><br><span class="line"><span class="comment">//        delay1s();</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//    unsigned char miao=0;</span></span><br><span class="line">    TMOD=<span class="number">0x10</span>; </span><br><span class="line">    TH1=(<span class="number">65536</span><span class="number">-50000</span>)/<span class="number">256</span>;  </span><br><span class="line">    TL1=(<span class="number">65536</span><span class="number">-50000</span>)%<span class="number">256</span>; </span><br><span class="line"></span><br><span class="line">	ET1=<span class="number">1</span>;<span class="comment">//开放T1中断允许</span></span><br><span class="line">	EA=<span class="number">1</span>;<span class="comment">//开放总中断允许</span></span><br><span class="line"></span><br><span class="line">		TR1=<span class="number">1</span>; 	</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">        disp(miao);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>代码下载链接（123云盘）：<a class="link"   target="_blank" rel="noopener" href="https://www.123684.com/s/wFuijv-i8Zgh" >https://www.123684.com/s/wFuijv-i8Zgh<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+
 		</div>
 
 		
@@ -655,7 +659,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-07-22 22:07:16
+                    :</strong> 2025-07-23 00:11:25
             </li>
         
         <li>
@@ -817,7 +821,7 @@
                     </span>
                     
                         <span>
-                            共 37k 字
+                            共 37.4k 字
                         </span>
                     
                 </p>
