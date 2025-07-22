@@ -637,15 +637,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">38</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">39</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -700,15 +700,15 @@
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">38</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">39</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -723,6 +723,76 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722210938.html">
+                            小灯闪烁
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            计算机科学与技术专业课程–C51单片机该系列内容为学生从第一节课到最后一节课的作业，发在网络上记录一下！
+第一篇 小灯闪烁1234567891011121314151617#include &lt;reg51.h&gt;sbit P1_0=P1^0;void delay(unsigned int i)&#123;	unsigned int k;	for(k=0;k&lt;i;k++);&#125;void main()&#123;	while(1)	&#123;		P1_0=0;		delay(10000);		P1_0=1;		delay(10000);	&#125;&#125;
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:09:38 GMT+0800">
+                
+                    2025-07-22 21:09:38
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722210938.html">阅读全文<span class="seo-reader-text">小灯闪烁</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1431,91 +1501,6 @@ cv2.THRESH_BINARY
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412223500.html">
-                            python--图像增广
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心目的
-增加数据多样性：通过随机变换原始图像（如旋转、翻转、裁剪等），生成新的训练样本，提高模型的泛化能力。
-防止过拟合：丰富训练数据的信息量，减少模型对特定属性（如位置、亮度、颜色）的依赖。
-
-2. 常用方法
-几何变换：
-旋转：按一定角度（如90°、180°或任意角度）旋转图像。
-翻转：水平或垂直翻转图像（水平翻转常用于自然场景图像）。
-缩放：放大或缩小图像尺寸。
-裁剪：从图像中随机裁剪出部分区域。
-平移：沿X轴或Y轴移动图像内容。
-仿射变换：结合旋转、缩放和平移等多种变换。
-
-
-颜色空间变换：
-亮度调整：增加或减少图像亮度。
-对比度调整：增强或减弱图像对比度。
-饱和度调整：改...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:35:00 GMT+0800">
-                
-                    2025-04-12 22:35:00
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412223500.html">阅读全文<span class="seo-reader-text">python--图像增广</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1548,11 +1533,11 @@ cv2.THRESH_BINARY
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 38 篇文章
+                        共撰写了 39 篇文章
                     </span>
                     
                         <span>
-                            共 31.3k 字
+                            共 31.4k 字
                         </span>
                     
                 </p>
