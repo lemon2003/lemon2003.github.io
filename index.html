@@ -645,7 +645,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">39</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -708,7 +708,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">39</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -733,26 +733,32 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722210938.html">
-                            小灯闪烁
+                        <a href="/post/20250722220931.html">
+                            C51-校时”功能的 6 位数码管电子钟
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            计算机科学与技术专业课程–C51单片机该系列内容为学生从第一节课到最后一节课的作业，发在网络上记录一下！
-第一篇 小灯闪烁1234567891011121314151617#include &lt;reg51.h&gt;sbit P1_0=P1^0;void delay(unsigned int i)&#123;	unsigned int k;	for(k=0;k&lt;i;k++);&#125;void main()&#123;	while(1)	&#123;		P1_0=0;		delay(10000);		P1_0=1;		delay(10000);	&#125;&#125;
+                            一、整体功能  
 
+正常走时：上电后从 00-00-00 开始，按 24 小时制计时。  
+暂停&#x2F;继续：按 K4（P3^3）立即进入&#x2F;退出暂停状态。  
+校时：在 暂停状态 下　　– K1（P3^1）小时 +1　　– K2（P3^0）分钟 +1　　– K3（P3^2）秒钟 +1  
+显示：6 位共阳数码管，动态扫描，位选由 P2，段选由 P0 输出。
+
+二、代码  
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:09:38 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:09:31 GMT+0800">
                 
-                    2025-07-22 21:09:38
+                    2025-07-22 22:09:31
                 
             </span>
         </span>
@@ -788,7 +794,7 @@
         
     </div>
 
-    <a href="/post/20250722210938.html">阅读全文<span class="seo-reader-text">小灯闪烁</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722220931.html">阅读全文<span class="seo-reader-text">C51-校时”功能的 6 位数码管电子钟</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -803,25 +809,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250428125135.html">
-                            GitHub Desktop上传静态网页
+                        <a href="/post/20250722220643.html">
+                            C51-秒表0-99（中断方式实现）
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            （此篇文章用于记录我上传静态网页的过程，我怕我下次上传的时候忘记步骤，在这里留个记录）
-1.在GitHub中新建一个仓库2.点击创建3.在GitHub Desktop中链接4.在GitHub中复制HTTPS的链接5.在GitHub Desktop中，将网页GitHub中复制的链接粘贴过来，然后下面的那个是在本地的位置6.等待GitHub Desktop与GitHub的链接7.连接好后，打开本地的仓库的地址8.将需要上传的文件项目粘贴进来9.然后在GitHub Desktop中就可以看到咱们需要上传的项目了，下面的那个地方，随便输入就行了，相当于是提交，最后点击一下最下面的Commit t...
+                            第十篇1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include  &quot;reg51.h&quot;//void delay1s()//&#123;  //  unsigned char i;//  for(i=0;i&lt;1;i++)&#123;      //    TH1=(65536-10000)/256; //    TL1=(65536-10000)%256;...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 28 2025 12:51:35 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:06:43 GMT+0800">
                 
-                    2025-04-28 12:51:35
+                    2025-07-22 22:06:43
                 
             </span>
         </span>
@@ -834,7 +839,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -849,7 +854,7 @@
                     
                         <li>
                             
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -857,7 +862,7 @@
         
     </div>
 
-    <a href="/post/20250428125135.html">阅读全文<span class="seo-reader-text">GitHub Desktop上传静态网页</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722220643.html">阅读全文<span class="seo-reader-text">C51-秒表0-99（中断方式实现）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -872,35 +877,25 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250426165340.html">
-                            编译原理选择题
+                        <a href="/post/20250722220253.html">
+                            C51-秒表0到99
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            编译原理试卷
-一、单选题（每题2.5分，共40题）
-
-程序所需的数据空间在程序运行前就可确定，称为（C）管理技术。A. 动态存储B. 栈式存储C. 静态存储D. 堆式存储  
-
-（A）是一种典型的解释型语言。A. BASICB. CC. FORTRAND. PASCAL  
-
-一个编译程序中，不仅包含词法分析、中间代码生成、代码优化、目标代码生成等五个部分，还包括（A）。A. 语法分析B. 文法分析C. 语言分析D. 解释分析  
-
-用高级语言编写的程序经编译后产生的程序叫（B）。A. 源程序B. 目标程序C. 连接程序D. 解释程序  
-
-中间代码生成时所依据的是（C）。A. 语法规则...
+                            第九篇0-99循环显示，每隔一秒，增加1
+123456789101112131415161718192021222324252627282930313233343536373839404142#include  &quot;reg51.h&quot;void delay1s()&#123;    unsigned char i;  for(i=0;i&lt;1;i++)&#123;          TH1=(65536-10000)/256;     TL1=(65536-10000)%256;     TR1=1;    while(!TF1);     TF1=0;	   &#12...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 26 2025 16:53:40 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:02:53 GMT+0800">
                 
-                    2025-04-26 16:53:40
+                    2025-07-22 22:02:53
                 
             </span>
         </span>
@@ -913,7 +908,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -928,7 +923,7 @@
                     
                         <li>
                             
-                            <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -936,7 +931,7 @@
         
     </div>
 
-    <a href="/post/20250426165340.html">阅读全文<span class="seo-reader-text">编译原理选择题</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722220253.html">阅读全文<span class="seo-reader-text">C51-秒表0到99</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -951,31 +946,25 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250418213441.html">
-                            一封情书
+                        <a href="/post/20250722215916.html">
+                            C51-密码矩阵
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            最近学习英语比较无聊，就看了一部英文动画片《奇迹少女》。
-
-月下寄言，情致君前：
-
-吾于这浩渺人间，穿行于繁华与落寞之间，心有所属，情有所钟。每至夜深，月光倾洒，吾思君之念，便如江水滔滔，难以平息。
-君，乃世间之瑰宝，才华横溢，风度翩翩。吾观君之言行，听君之言语，皆如沐春风，心旷神怡。君之智慧，犹如明灯照夜，指引吾前行之路；君之品德，更如高山流水，令吾敬仰不已。
-吾与君相遇，实乃三生有幸。君之风采，早已深入吾心，成为吾生命中不可磨灭之印记。吾愿以笔墨为媒，将这份深情厚意，化作千言万语，诉诸君前。
-吾知，爱情非儿戏，需以真心相待，以诚意相守。吾对君之情，非一朝一夕，而是日积月累，愈久弥坚。...
+                            第八篇4×4的矩阵上，有一个按键是钥匙，按“钥匙”就解开了,这里我用的是第11个按钮
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105#include &lt;reg51.h&gt;#define key 11sbit clos...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Apr 18 2025 21:34:41 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:59:16 GMT+0800">
                 
-                    2025-04-18 21:34:41
+                    2025-07-22 21:59:16
                 
             </span>
         </span>
@@ -988,7 +977,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1003,7 +992,7 @@
                     
                         <li>
                             
-                            <a href="/tags/%E7%90%90%E4%BA%8B/">琐事</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1011,7 +1000,7 @@
         
     </div>
 
-    <a href="/post/20250418213441.html">阅读全文<span class="seo-reader-text">一封情书</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722215916.html">阅读全文<span class="seo-reader-text">C51-密码矩阵</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1026,29 +1015,25 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250415195306.html">
-                            网络适配器无线网卡驱动不能用5g？
+                        <a href="/post/20250722215257.html">
+                            C51-8位数码管输出学号
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            netsh wlan show drivers 命令在 Windows 系统中主要用于查看无线网卡驱动的相关信息，但它并不直接显示当前连接的网络频段。不过，通过一些间接的方法，我们仍然可以获取到网络频段的相关信息。下面详细介绍如何利用 netsh wlan show drivers 命令以及结合其他命令来查看网络频段。
-
-使用 netsh wlan show drivers 命令 netsh wlan show drivers 可以查看无线网卡支持的无线标准（如 802.11ac、802.11ax 等），从而间接判断网卡是否支持 5GHz 频段。
-操作步骤：
-打开命令提示符（CMD）：
-...
+                            第七篇数码管输出80220101
+123456789101112131415161718192021222324#include &lt;reg51.h&gt;#include &lt;intrins.h&gt;#define time 100void delay(unsigned int i)&#123;	unsigned int k;	for(k=0;k&lt;i;k++);&#125;void main()&#123;	unsigned char led[]=&#123;0x80,0xc0,0xa4,0xa4,0xc0,0xf9,0xc0,0xf9&#125;;	unsigned ...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Apr 15 2025 19:53:06 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:52:57 GMT+0800">
                 
-                    2025-04-15 19:53:06
+                    2025-07-22 21:52:57
                 
             </span>
         </span>
@@ -1061,7 +1046,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1076,7 +1061,7 @@
                     
                         <li>
                             
-                            <a href="/tags/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1084,7 +1069,7 @@
         
     </div>
 
-    <a href="/post/20250415195306.html">阅读全文<span class="seo-reader-text">网络适配器无线网卡驱动不能用5g？</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722215257.html">阅读全文<span class="seo-reader-text">C51-8位数码管输出学号</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1099,44 +1084,53 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250415122700.html">
-                            opencv人脸识别
+                        <a href="/post/20250722214637.html">
+                            C51-抢答系统
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子）
-作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。  
-取值: 1.01 ~ 1.5（常用 1.1）。  
-影响:  
-值越小（如 1.01）:    
-✅ 检测到更多人脸（尤其是小尺寸人脸）。
+                            第六篇一、硬件系统架构
+​​输入控制​​：
+
+K1(P3.1)：模式1触发键
+K2(P3.0)：模式2触发键
+K3(P3.2)：模式3触发键
+K4(P3.3)：全局复位键
+
+
+​​输出设备​​：
+
+LED(P0)：8段数码管数据端口（共阳极）
+P2A/P2B/P2C(P2.2-4)：数码管位选控制
+
+
+​​显示逻辑​​：
+
+数码管显示值对应：
+0xC0：初始显示”0”
+0xF9：模式1显示”1”
+0xA4：模式2显示”2”
+0xB0：模式3显示”3”
 
 
 
 
-❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  
-值越大（如 1.5）:    
-✅ 检测速度更快。
 
-
-
-
-❌ 可能漏检小尺寸人脸。
-
-2. minNeighbors（最小邻居数）
-作用: 控制人脸框的合并阈值，过滤孤立误检。  ...
+二、核心运行逻辑
+​​初始化阶段​​：
+ 12P2A=1; P2B=0; P2C=0;  // 激活第一位数码管LED=0xC0...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Apr 15 2025 12:27:00 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:46:37 GMT+0800">
                 
-                    2025-04-15 12:27:00
+                    2025-07-22 21:46:37
                 
             </span>
         </span>
@@ -1149,7 +1143,7 @@
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1164,7 +1158,7 @@
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1172,7 +1166,7 @@
         
     </div>
 
-    <a href="/post/20250415122700.html">阅读全文<span class="seo-reader-text">opencv人脸识别</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722214637.html">阅读全文<span class="seo-reader-text">C51-抢答系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1187,52 +1181,51 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250414133414.html">
-                            opencv阈值处理
+                        <a href="/post/20250722214048.html">
+                            C51-多按键控制LED灯系统
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            好的！我来为您详细讲解OpenCV中的阈值处理（Thresholding）技术，这是图像分割的基础操作之一，通过设定阈值将像素分为前景和背景两类。
-一、核心概念
-阈值处理目的：
+                            第五篇​​一、硬件连接分析​​
+​​按键接口​​：
 
-将灰度图像转换为二值图像（黑白图像）
-分割感兴趣区域（ROI）与背景
-减少后续处理的计算量
-
-
-基本公式：
-1234二值图像像素值 = &#123;     255（前景）, 当原像素值 &gt; 阈值时    0（背景）,  其他情况&#125;
-
-二、常见阈值方法
+K1(P3.1)：控制LED1
+K2(P3.0)：控制LED2
+K3(P3.2)：控制LED3
+K4(P3.3)：全局复位键（NEXT）
 
 
-方法类型
-特点
-适用场景
-OpenCV函数参数
+​​LED接口​​：
+
+L1(P2.0)：LED1（低电平点亮）
+L2(P2.1)：LED2
+L3(P2.2)：LED3
 
 
 
-全局阈值
-使用固定阈值
-光照均匀的简单图像
-cv2.THRESH_BINARY
+
+​​硬件特性​​：LED低电平驱动（0点亮），按键低电平触发（需上拉电阻）。
 
 
-反...
+​​二、核心功能逻辑​​
+​​初始状态​​：
+ 1L1=1; L2=1; L3=1;  // 所有LED熄灭
+
+​​按键控制逻辑​​：
+
+​​按下K1​​：点亮L1，保持L2/L3熄灭，...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 14 2025 13:34:14 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:40:48 GMT+0800">
                 
-                    2025-04-14 13:34:14
+                    2025-07-22 21:40:48
                 
             </span>
         </span>
@@ -1245,7 +1238,7 @@ cv2.THRESH_BINARY
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1260,7 +1253,7 @@ cv2.THRESH_BINARY
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1268,7 +1261,7 @@ cv2.THRESH_BINARY
         
     </div>
 
-    <a href="/post/20250414133414.html">阅读全文<span class="seo-reader-text">opencv阈值处理</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722214048.html">阅读全文<span class="seo-reader-text">C51-多按键控制LED灯系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1283,28 +1276,25 @@ cv2.THRESH_BINARY
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250414131146.html">
-                            OpenCV汉字输出
+                        <a href="/post/20250722212805.html">
+                            C51-通过按键调整PWM占空比控制LED亮度
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            在Python中，matplotlib和opencv-python（cv2）是两套独立的库，它们的字体配置互不影响。你遇到的cv2.imshow显示中文失败的问题，需要从以下两个方向排查和解决：
-
-1. OpenCV本身不支持直接渲染中文OpenCV的cv2.putText()函数默认不支持Unicode字符（包括中文），直接传递中文字符串会导致乱码或显示异常。而cv2.imshow()显示图像时，如果图像本身包含未正确渲染的文本，自然无法正确显示中文。
-
-2. 解决方案：使用PIL渲染中文使用PIL（Python Imaging Library）绘制中文**12345678910111...
+                            第四篇通过调节占空比控制灯的亮度
+1234567891011121314151617181920212223242526272829303132333435363738394041#include &lt;reg51.h&gt;#define on 0    // 低电平点亮#define off 1   // 高电平熄灭sbit up = P3^1;sbit down = P3^0;sbit light = P2^1;void delay_ms(unsigned int ms) &#123;     unsigned int x, y;    for (x = 0; x &lt; ms...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 14 2025 13:11:46 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:28:05 GMT+0800">
                 
-                    2025-04-14 13:11:46
+                    2025-07-22 21:28:05
                 
             </span>
         </span>
@@ -1317,7 +1307,7 @@ cv2.THRESH_BINARY
                     
                         
                         <li>
-                            <a href="/categories/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1332,7 +1322,7 @@ cv2.THRESH_BINARY
                     
                         <li>
                             
-                            <a href="/tags/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1340,7 +1330,7 @@ cv2.THRESH_BINARY
         
     </div>
 
-    <a href="/post/20250414131146.html">阅读全文<span class="seo-reader-text">OpenCV汉字输出</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212805.html">阅读全文<span class="seo-reader-text">C51-通过按键调整PWM占空比控制LED亮度</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1355,43 +1345,39 @@ cv2.THRESH_BINARY
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250414124549.html">
-                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）
+                        <a href="/post/20250722212410.html">
+                            C51-声光报警器
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）操作，这是形态学处理的两个基础操作，常用于图像去噪、分割和特征提取。
-一、核心概念
-形态学操作：基于**结构元素（Kernel）**对二值图像（或灰度图像）进行几何运算，改变物体形状但不改变其拓扑结构。
+                            第三篇一、功能模块解析
+​​引脚定义​​：
 
-结构元素：
-
-是一个小型矩阵（如3x3、5x5）
-定义操作的作用范围
-常见形状：矩形、椭圆、十字形等
+S1=P3^1：按键输入（低电平触发）
+beep=P1^5：蜂鸣器输出
+green=P2^0：绿灯控制（低电平亮）
+red=P2^1：红灯控制（低电平亮）
 
 
+​​功能函数​​：
 
-二、腐蚀（Erosion）1. 原理
-用结构元素在图像上滑动
-仅当结构元素完全覆盖前景像素时，中心像素保留为前景
-效果：前景区域会”缩小”，可消除小物体、平滑边界
 
-2. 特点
-消除小于结构元素的噪声点
-分割粘连物体...
+1234void delay(unsigned int i)  // 阻塞延时void Beep(unsigned int i)   // 产生频率可调的蜂鸣声void Light(unsigned int i)   // 红灯闪烁（未在main调用）void all(unsigned int i)     // 声光同步报警（红灯闪烁+蜂鸣）
+
+
+​​主控制逻...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 14 2025 12:45:49 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:24:10 GMT+0800">
                 
-                    2025-04-14 12:45:49
+                    2025-07-22 21:24:10
                 
             </span>
         </span>
@@ -1404,7 +1390,7 @@ cv2.THRESH_BINARY
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1419,7 +1405,7 @@ cv2.THRESH_BINARY
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1427,7 +1413,7 @@ cv2.THRESH_BINARY
         
     </div>
 
-    <a href="/post/20250414124549.html">阅读全文<span class="seo-reader-text">OpenCV中的腐蚀（Erosion）和膨胀（Dilation）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212410.html">阅读全文<span class="seo-reader-text">C51-声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1442,24 +1428,25 @@ cv2.THRESH_BINARY
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412224129.html">
-                            hexo博客增加鼠标点击效果
+                        <a href="/post/20250722212012.html">
+                            C51-四个按键实现四种控制小灯样式
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            鼠标点击会出现5颗✨，星星会出现在点击点下方，随机排布且不重叠（直接放代码啦，在下面✨处，可以更换成你喜欢的图形）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384&lt;!DOCTYPE html&gt;&lt;html lang=&quot;&lt;%= config.language %&gt;&quot;&gt;&...
+                            第二篇分别通过四个按键实现一下功能：①第四位亮②高四位亮③交叉亮④流水灯
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include &lt;reg51.h&gt;#include &lt;intrins.h&gt;sbit S1=P3^1;sbit S2=P3^0;sbit S3=P3^2;sbit S4=P3^3;void delay(unsigned int i)&...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:41:29 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:20:12 GMT+0800">
                 
-                    2025-04-12 22:41:29
+                    2025-07-22 21:20:12
                 
             </span>
         </span>
@@ -1472,7 +1459,7 @@ cv2.THRESH_BINARY
                     
                         
                         <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1487,7 +1474,7 @@ cv2.THRESH_BINARY
                     
                         <li>
                             
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1495,7 +1482,7 @@ cv2.THRESH_BINARY
         
     </div>
 
-    <a href="/post/20250412224129.html">阅读全文<span class="seo-reader-text">hexo博客增加鼠标点击效果</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212012.html">阅读全文<span class="seo-reader-text">C51-四个按键实现四种控制小灯样式</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1505,7 +1492,7 @@ cv2.THRESH_BINARY
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
+	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1533,11 +1520,11 @@ cv2.THRESH_BINARY
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 39 篇文章
+                        共撰写了 49 篇文章
                     </span>
                     
                         <span>
-                            共 31.4k 字
+                            共 34.4k 字
                         </span>
                     
                 </p>
