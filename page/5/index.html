@@ -561,7 +561,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -624,7 +624,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -649,29 +649,33 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250328115300.html">
-                            二叉排序树
+                        <a href="/post/20250412220653.html">
+                            python中的numpy库
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            一、二叉排序树的基本概念
-定义： • 二叉排序树（BST）是一种特殊的二叉树，它满足以下性质： ①若左子树非空，则左子树上所有节点的值均小于根节点的值。 ② 若右子树非空，则右子树上所有节点的值均大于根节点的值。 ③左子树和右子树也分别为二叉排序树。
-特点： ①中序遍历二叉排序树，可以得到一个递增的有序序列。 ②没有键值相等的节点。
+                            1. 核心功能
+多维数组操作：提供高效的 ndarray 对象，支持向量、矩阵、高维数组运算。
+数学函数集成：内置三角函数、指数函数、统计函数等，如 np.sin(), np.exp(), np.mean()。
+线性代数：支持矩阵乘法、求逆、特征值计算等（通过 np.linalg 模块）。
+随机数生成：提供均匀分布、正态分布等随机数生成函数（如 np.random.rand()）。
+文件读写：支持 CSV、二进制文件等数据格式的读写。
 
-二、二叉排序树的基本操作
-查找操作： • 过程：从根节点开始，如果当前节点的值等于目标值，则查找成功；如果当前节点的值大于目标值，则继续遍历左子树；如果当前节点的值小于目标值，则继续遍历右子树。 • 时间复杂度：最好情况下为O(log⁡n），最坏情况下为O...
+2. 常用类与方法
+创建数组：
+123456789101112import numpy as np# 从列表创建arr = np.array([1, 2...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 28 2025 11:53:00 GMT+0800">
+            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:53 GMT+0800">
                 
-                    2025-03-28 11:53:00
+                    2025-04-12 22:06:53
                 
             </span>
         </span>
@@ -684,7 +688,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                            <a href="/categories/python/">python</a>&nbsp;
                         </li>
                     
                     
@@ -699,7 +703,7 @@
                     
                         <li>
                             
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                            <a href="/tags/python/">python</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -707,7 +711,7 @@
         
     </div>
 
-    <a href="/post/20250328115300.html">阅读全文<span class="seo-reader-text">二叉排序树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250412220653.html">阅读全文<span class="seo-reader-text">python中的numpy库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -722,25 +726,643 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250326233925.html">
-                            16个灯依次点亮（cubeMX+Keil uVision5+Proteus 8 Professional ）
+                        <a href="/post/20250412220639.html">
+                            python中的cv2库
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1.cubeMX部分(1)下载如果没有下载cubeMX，需要先下载，可以到官网（st.com）上下载。下载后运行：①下图是运行后的第一步，可与去官网注册账号，推荐在官网注册，因为官网有中文模式，这一步想点个链接就点去看看，不想点的话，直接next就可以了。②✔并且点击next③✔并且点击next④选择下载的路径，然后点击next⑤点击next⑥点击next（这里比较慢，是正常的，请耐心等待）⑦点击next⑧点击next⑨下载成功了，桌面上会出现这个图标
-(2)配置①打开cubeMX,点击file –&gt; new project②如果出现这种情况，点击ok③选择芯片型号，这里我选择的是...
+                            1. 核心功能
+计算机视觉：支持图像处理、视频分析、特征提取、目标检测等任务。
+跨平台：可在 Windows、Linux、macOS 等系统上运行。
+算法丰富：提供 2500+ 优化算法，涵盖经典和先进的计算机视觉技术。
+
+2. 常用类与方法
+图像读取与显示：
+12345678910import cv2# 读取图像（支持 JPG、PNG 等格式）img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_COLOR)  # 彩色模式（默认）# img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_G...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Mar 26 2025 23:39:25 GMT+0800">
+            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:39 GMT+0800">
                 
-                    2025-03-26 23:39:25
+                    2025-04-12 22:06:39
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412220639.html">阅读全文<span class="seo-reader-text">python中的cv2库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412220456.html">
+                            python中的qrcode库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心功能
+生成二维码：将文本、网址等信息编码为二维码图片，支持自定义尺寸、颜色、容错率等。
+依赖库：需配合 Pillow（PIL）库生成图像，安装时需使用 pip install qrcode[pil]。
+
+2. 常用类与方法
+QRCode 类：
+
+初始化：123456qr = qrcode.QRCode(    version=1,                # 二维码尺寸（1-40），值越大尺寸越大    error_correction=qrcode.constants.ERROR_CORRECT_H,  # 容错率（L/M/Q/H）    box_size=10,   ...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 22:04:56 GMT+0800">
+                
+                    2025-04-12 22:04:56
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412220456.html">阅读全文<span class="seo-reader-text">python中的qrcode库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412220314.html">
+                            python中的tkinter库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心功能
+GUI 开发：用于创建桌面应用程序的图形界面，支持按钮、标签、文本框等组件。
+跨平台：可在 Windows、Linux、macOS 等系统上运行。
+事件驱动：通过绑定事件（如点击、按键）实现用户交互。
+
+2. 常用类与方法
+主窗口类 Tk()：
+
+root = tk.Tk()：创建主窗口对象。
+root.title(&quot;标题&quot;)：设置窗口标题。
+root.geometry(&quot;宽x高&quot;)：设置窗口大小和位置。
+root.mainloop()：启动主事件循环，保持窗口运行。
+
+
+常用组件：
+
+标签 Label：12label = tk.L...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 22:03:14 GMT+0800">
+                
+                    2025-04-12 22:03:14
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412220314.html">阅读全文<span class="seo-reader-text">python中的tkinter库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412215911.html">
+                            python中的turtle库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心功能
+绘图工具：通过控制“海龟”在屏幕上的移动绘制图形，适合编程初学者学习。
+可视化编程：直观展示代码效果，帮助理解程序执行流程。
+
+2. 常用类与方法
+Turtle类（控制海龟）：
+
+turtle.forward(d) &#x2F; turtle.fd(d)：向前移动 d 像素。
+turtle.backward(d) &#x2F; turtle.bk(d)：向后移动 d 像素。
+turtle.left(angle) &#x2F; turtle.lt(angle)：逆时针旋转 angle 度。
+turtle.right(angle) &#x2F; turtle.rt(angle...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 21:59:11 GMT+0800">
+                
+                    2025-04-12 21:59:11
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412215911.html">阅读全文<span class="seo-reader-text">python中的turtle库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412215612.html">
+                            python中的random库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心功能
+生成伪随机数：包括整数、浮点数、序列等。
+随机操作：设置种子、随机选择、打乱序列顺序等。
+
+2. 常用类与方法
+基本随机函数：
+
+random.random()：生成 [0.0, 1.0) 之间的随机浮点数。
+random.seed(a)：设置随机数种子（a 为整数或浮点数，默认以系统时间为种子）。
+
+
+扩展随机函数：
+
+random.randint(a, b)：生成 [a, b] 之间的随机整数。
+random.uniform(a, b)：生成 [a, b] 之间的随机浮点数。
+random.randrange(start, stop[, step])：生成指定范围内以...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 21:56:12 GMT+0800">
+                
+                    2025-04-12 21:56:12
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412215612.html">阅读全文<span class="seo-reader-text">python中的random库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412215244.html">
+                            python中的os库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心功能
+与操作系统交互：处理文件&#x2F;目录、环境变量、进程控制等。
+跨平台兼容：自动适配不同操作系统（Windows&#x2F;Linux&#x2F;macOS）。
+
+2. 常用类与方法
+文件&#x2F;目录操作：
+
+os.getcwd()：获取当前工作目录。
+os.listdir(path)：列出目录下的所有文件和子目录。
+os.mkdir(path)：创建单层目录。
+os.makedirs(path)：递归创建多层目录。
+os.rmdir(path)：删除空目录。
+os.removedirs(path)：递归删除空目录。
+os.rename(old, new)：重命名文...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 21:52:44 GMT+0800">
+                
+                    2025-04-12 21:52:44
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412215244.html">阅读全文<span class="seo-reader-text">python中的os库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412215030.html">
+                            python中的datetime库
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心类介绍
+date：处理年月日（如 2025-04-12）。
+time：处理时分秒（如 15:30:00）。
+datetime：结合日期和时间（如 2025-04-12 15:30:00）。
+timedelta：表示时间间隔（如 1天2小时）。
+
+2. 获取当前时间12345678910from datetime import datetime# 当前本地时间（含日期和时间）now = datetime.now()  # 2025-04-12 15:30:00.123456# 当前日期（只含年月日）today_date = now.date()  # 2025-04-12# 当前...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 21:50:30 GMT+0800">
+                
+                    2025-04-12 21:50:30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412215030.html">阅读全文<span class="seo-reader-text">python中的datetime库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250411221034.html">
+                            砚中苔
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            《砚中苔》夜雨叩窗时，台灯在稿纸上洇出第三十七个昏黄光晕。数学公式如未破译的甲骨，横亘在草稿纸废墟间，错题集里蜿蜒的红痕像未愈的伤口。李商隐笔下”春蚕到死丝方尽”的执念，此刻化作笔尖折断的脆响，零落在满地演算纸里。专业课书籍堆叠成摇摇欲坠的巴比伦塔，每个铅字都在宣纸上洇出潮湿的雾。庄周梦蝶的恍惚中，分明看见函数图像化作青鸟，衔着微分方程掠过《文心雕龙》的残卷。那些被红笔圈禁的重点，恰似李清照词中”寻寻觅觅”的雁字，总在记忆边缘失群。砚台里凝结的宿墨，倒映出无数个辗转的子夜。咖啡渍在《传播学概论》扉页洇出年轮，耳机里循环的《广陵散》弦音，竟与窗外梧桐叶的簌簌达成微妙和弦。当月光漫过《艺术哲...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Apr 11 2025 22:10:34 GMT+0800">
+                
+                    2025-04-11 22:10:34
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E7%90%90%E4%BA%8B/">琐事</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250411221034.html">阅读全文<span class="seo-reader-text">砚中苔</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250411205506.html">
+                            数码管静态显示0-9999
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1.任务描述：使用 STM32F103R6 芯片的 PC0～PC15 ，PB0 ~ PB15引脚分别接两个共阴极 LED 数码管，其中个位数码管接 PC0～PC7，十位数码管接 PC8～PC15 , 百位数码管接 PB0～PB7，千位数码管接 PB8～PB15。采用静态显示方式，编写程序使两位数码管循环显示 0～9999。
+2.理论：①代码理论：设置一个数字i，从0~9999，依次识别每一位。千位&#x3D;i&#x2F;1000百位&#x3D;i&#x2F;100 - 千位数字×10十位&#x3D;i&#x2F;10 - 百位数字×10 - 千位数字×100个位&#x3D;i%1000...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Apr 11 2025 20:55:06 GMT+0800">
+                
+                    2025-04-11 20:55:06
                 
             </span>
         </span>
@@ -776,536 +1398,7 @@
         
     </div>
 
-    <a href="/post/20250326233925.html">阅读全文<span class="seo-reader-text">16个灯依次点亮（cubeMX+Keil uVision5+Proteus 8 Professional ）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250325225314.html">
-                            AI的时代，我有些迷茫
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            《与AI共生的双翼》
-当算法编织的璀璨穹顶笼罩钢铁森林，我常于子夜时分凝望屏幕深处跃动的幽蓝极光。AI如同银河彼端的全知存在，以光年为单位丈量人类思维的褶皱，将我们困顿数日的谜题折叠成纸鹤，轻轻放入真理的溪流。那些曾令我抓耳挠腮的代码深渊，在它眼中不过是孩童堆砌的积木城堡；那些耗费整夜雕琢的文书框架，转瞬化作逻辑严密的钻石切面。
-
-这种神迹般的强大却令我如履薄冰。在AI编织的星辉下，人类智慧的萤火忽明忽暗，仿佛随时会被数字潮汐卷走。每当智能助手用三秒重构我挣扎三昼夜的模型，当神经网络精准预判我尚未成型的创意，某种冰凉的觉醒便从脊椎蜿蜒而上——我们引以为傲的认知疆域，正在被温柔的机器触须悄...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Mar 25 2025 22:53:14 GMT+0800">
-                
-                    2025-03-25 22:53:14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%90%90%E4%BA%8B/">琐事</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250325225314.html">阅读全文<span class="seo-reader-text">AI的时代，我有些迷茫</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250325214755.html">
-                            B数与B+树
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            B树和B+树的爱恨情仇B树
-定义：B树是一种平衡树数据结构，用于存储和访问大量数据。B树的每个节点可以存储多个键值，节点中的键值按照大小顺序排列。
-
-特性：
-
-具有多个关键字，且每个节点中关键字的数目通常介于m&#x2F;2和m之间，其中m称为B树的阶数。
-根节点至少有两个子节点，且每个非根节点至少有m&#x2F;2个子节点。
-所有叶子节点都在同一层，即具有相同的深度，从而保证B树的平衡性。
-每个节点最多可以包含m个孩子（子节点），其中m&gt;&#x3D;2，这也就意味着B树的高度相对较小。
-查找、插入、删除操作都具有较好的平均时间复杂度，通常为O(logn)。
-
-
-用法：
-
-广泛应用...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Mar 25 2025 21:47:55 GMT+0800">
-                
-                    2025-03-25 21:47:55
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250325214755.html">阅读全文<span class="seo-reader-text">B数与B+树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250324160815.html">
-                            重生之早知道我就不配waline了
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            ✨搭建评论系统的小冒险2.0～🎈宝子们！昨天搭建成功了giscus评论系统，今天本可爱在博客里又双叒叕搞大事啦💥一一成功把Waline评论系统搭起来啦！🎉原本以为能收获满满互动，结果……踩了个小坑坑😢  
-事情是这样的👇我用LeanCloud+Vercel捣鼓半天，结果登录页面居然需要”魔法”🪄才能打开（懂的都懂😶）。这对于连GitHub都不太会的小伙伴（比如我妈👩）来说，简直比解微积分还难！💔 明明配置超简单，却被登录网页绊住脚，暴风哭泣……  
-没有办法，只能退回Giscus这个神仙替代品✨！虽然它也只能用GitHub登录，但好在不用和”魔法”斗智斗勇啦～🌈 配置...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Mar 24 2025 16:08:15 GMT+0800">
-                
-                    2025-03-24 16:08:15
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250324160815.html">阅读全文<span class="seo-reader-text">重生之早知道我就不配waline了</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250323103150.html">
-                            我学会评论了
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            我学会用Giscus给网站配置评论啦！🎉（一把辛酸泪版）📢 前方剧透：本文将用3000字详细描述如何把简单操作搞成史诗级冒险，并附赠「从暴躁到傻笑」的情绪过山车体验~
-🎮 Level 1：信心满满地打开文档“Giscus？听起来比Giscus更难的是……读懂它的文档！”
-
-第一步：创建GitHub仓库
-
-我：”这还不简单？新建仓库取名comments-for-my-awesome-blog，完美！”
-GitHub：”仓库初始化成功……但您确定要用这个名字写求职简历吗？”
-
-
-第二步：安装giscus包
-
-终端里输入npm install giscus，结果……
-💻：”您确定要污染...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Mar 23 2025 10:31:50 GMT+0800">
-                
-                    2025-03-23 10:31:50
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250323103150.html">阅读全文<span class="seo-reader-text">我学会评论了</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250321142900.html">
-                            唯有热爱可抵岁月漫长
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            唯有热爱可抵岁月漫长✨
-​​「世事漫随流水，算来一梦浮生。」​ ——李煜《浪淘沙令》
-
-在时间的长河中，人类如同逆流而上的扁舟，既要对抗水流的冲刷，又要寻找前进的方向。有人被现实的泥沙裹挟沉沦，有人却能在波涛中高歌猛进——那些穿越世纪依然璀璨的生命，无一不是用热爱点燃了内心的火炬。正如德国哲学家尼采所言：​​「没有热爱的生活，就像没有灵魂的躯壳。」​ 当我们凝视历史的星空，会发现有这样一条永恒的真理：​唯有热爱，足以抵御岁月的侵蚀。​
-
-一、热爱的本质：对抗熵增的精神武器1.1 热力学第二定律的隐喻在物理学中，熵增定律揭示了一个残酷的现实：孤立系统必然走向无序与衰败。人类社会同样遵循着类...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 21 2025 14:29:00 GMT+0800">
-                
-                    2025-03-21 14:29:00
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%90%90%E4%BA%8B/">琐事</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250321142900.html">阅读全文<span class="seo-reader-text">唯有热爱可抵岁月漫长</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250321132621.html">
-                            友谊+编程=奇迹
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            🌙熬夜编程奇遇记：当BUG遇上友情魔法✨🕒 凌晨1:30的孤独战场键盘声在寂静的夜里格外清脆，屏幕蓝光映着脸上交织的困惑与倔强。那个讨厌的红色报错信息已经和我对视了整整五个小时，像只狡猾的小狐狸🦊，每次以为抓住尾巴时，它又从指缝溜走了。
-
-🐞 错误症状：spawn failed
-🔍 已尝试疗法：
-三遍代码诵读咒
-控制台占卜术
-谷歌神谕祈祷
-咖啡献祭仪式
-
-
-
-🌅 黎明前的黑暗窗外的天空逐渐变蓝，像是在为夜晚的BUG而准备。月亮的光芒逐渐减弱，仿佛在提醒我们：夜长梦多，要小心夜的眼睛。
-☀️ 晨光里的救星降临一个神秘的声音在耳边响起：「算了，还是求助大佬吧！」。
-🧚♂️ 魔法...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 21 2025 13:26:21 GMT+0800">
-                
-                    2025-03-21 13:26:21
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250321132621.html">阅读全文<span class="seo-reader-text">友谊+编程=奇迹</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250320171447.html">
-                            MyGithub仓库
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            我的简介https://lemon2003.github.io
-我的物理比赛–自创法宝–求金属线膨胀系数https://lemon2003.github.io/phy
-我的web结课作业https://lemon2003.github.io/game
-我的web课程练习汇总效果网站：https://lemon2003.github.io/classWeb仓库地址：https://github.com/lemon2003/classWeb   
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Mar 20 2025 17:14:47 GMT+0800">
-                
-                    2025-03-20 17:14:47
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250320171447.html">阅读全文<span class="seo-reader-text">MyGithub仓库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250411205506.html">阅读全文<span class="seo-reader-text">数码管静态显示0-9999</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1315,7 +1408,7 @@ GitHub：”仓库初始化成功……但您确定要用这个名字写求职�
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/4/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+	<a class="extend prev" rel="prev" href="/page/4/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1343,11 +1436,11 @@ GitHub：”仓库初始化成功……但您确定要用这个名字写求职�
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 49 篇文章
+                        共撰写了 63 篇文章
                     </span>
                     
                         <span>
-                            共 34.4k 字
+                            共 37k 字
                         </span>
                     
                 </p>

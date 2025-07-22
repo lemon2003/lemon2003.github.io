@@ -561,7 +561,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -624,7 +624,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -649,41 +649,51 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412223500.html">
-                            python--图像增广
+                        <a href="/post/20250722214048.html">
+                            C51-多按键控制LED灯系统
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心目的
-增加数据多样性：通过随机变换原始图像（如旋转、翻转、裁剪等），生成新的训练样本，提高模型的泛化能力。
-防止过拟合：丰富训练数据的信息量，减少模型对特定属性（如位置、亮度、颜色）的依赖。
+                            第五篇​​一、硬件连接分析​​
+​​按键接口​​：
 
-2. 常用方法
-几何变换：
-旋转：按一定角度（如90°、180°或任意角度）旋转图像。
-翻转：水平或垂直翻转图像（水平翻转常用于自然场景图像）。
-缩放：放大或缩小图像尺寸。
-裁剪：从图像中随机裁剪出部分区域。
-平移：沿X轴或Y轴移动图像内容。
-仿射变换：结合旋转、缩放和平移等多种变换。
+K1(P3.1)：控制LED1
+K2(P3.0)：控制LED2
+K3(P3.2)：控制LED3
+K4(P3.3)：全局复位键（NEXT）
 
 
-颜色空间变换：
-亮度调整：增加或减少图像亮度。
-对比度调整：增强或减弱图像对比度。
-饱和度调整：改...
+​​LED接口​​：
+
+L1(P2.0)：LED1（低电平点亮）
+L2(P2.1)：LED2
+L3(P2.2)：LED3
+
+
+
+
+​​硬件特性​​：LED低电平驱动（0点亮），按键低电平触发（需上拉电阻）。
+
+
+​​二、核心功能逻辑​​
+​​初始状态​​：
+ 1L1=1; L2=1; L3=1;  // 所有LED熄灭
+
+​​按键控制逻辑​​：
+
+​​按下K1​​：点亮L1，保持L2/L3熄灭，...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:35:00 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:40:48 GMT+0800">
                 
-                    2025-04-12 22:35:00
+                    2025-07-22 21:40:48
                 
             </span>
         </span>
@@ -696,7 +706,7 @@
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -711,7 +721,7 @@
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -719,7 +729,7 @@
         
     </div>
 
-    <a href="/post/20250412223500.html">阅读全文<span class="seo-reader-text">python--图像增广</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722214048.html">阅读全文<span class="seo-reader-text">C51-多按键控制LED灯系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -734,37 +744,25 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412223204.html">
-                            python中的wordcloud库
+                        <a href="/post/20250722212805.html">
+                            C51-通过按键调整PWM占空比控制LED亮度
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-生成词云：将文本中的高频词以视觉化方式呈现，形成类似云状的彩色图片。
-自定义形状：通过掩码图片生成特定形状的词云（如心形、圆形）。
-颜色方案：支持多种颜色映射，或自定义颜色函数控制词云颜色。
-停用词处理：内置停用词列表，可过滤无意义词汇（如“的”、“和”）。
-
-2. 常用方法
-创建词云对象：
-WordCloud(width=800, height=400, background_color=&#39;white&#39;)：配置词云尺寸、背景色等参数。
-
-
-生成词云：
-generate(text)：根据文本生成词云。
-generate_from_frequencies(f...
+                            第四篇通过调节占空比控制灯的亮度
+1234567891011121314151617181920212223242526272829303132333435363738394041#include &lt;reg51.h&gt;#define on 0    // 低电平点亮#define off 1   // 高电平熄灭sbit up = P3^1;sbit down = P3^0;sbit light = P2^1;void delay_ms(unsigned int ms) &#123;     unsigned int x, y;    for (x = 0; x &lt; ms...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:32:04 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:28:05 GMT+0800">
                 
-                    2025-04-12 22:32:04
+                    2025-07-22 21:28:05
                 
             </span>
         </span>
@@ -777,7 +775,7 @@ generate_from_frequencies(f...
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -792,7 +790,7 @@ generate_from_frequencies(f...
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -800,7 +798,7 @@ generate_from_frequencies(f...
         
     </div>
 
-    <a href="/post/20250412223204.html">阅读全文<span class="seo-reader-text">python中的wordcloud库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212805.html">阅读全文<span class="seo-reader-text">C51-通过按键调整PWM占空比控制LED亮度</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -815,34 +813,39 @@ generate_from_frequencies(f...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412223136.html">
-                            python中的jieba库
+                        <a href="/post/20250722212410.html">
+                            C51-声光报警器
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-分词：支持精确模式、全模式、搜索引擎模式三种分词方式，适用于不同场景。
-词性标注：为分词结果标注词性（如名词、动词），帮助理解词语在句子中的角色。
-关键词提取：基于 TF-IDF 或 TextRank 算法提取文本关键词，快速获取文本核心信息。
-自定义词典：允许用户添加自定义词汇，提高分词的准确性和灵活性。
+                            第三篇一、功能模块解析
+​​引脚定义​​：
 
-2. 常用方法
-分词方法：
-jieba.cut(text, cut_all=False)：精确模式分词（默认），适合文本分析。
-jieba.cut(text, cut_all=True)：全模式分词，扫描所有可能的词语，适合信息检索。
-jieba.cut_for_s...
+S1=P3^1：按键输入（低电平触发）
+beep=P1^5：蜂鸣器输出
+green=P2^0：绿灯控制（低电平亮）
+red=P2^1：红灯控制（低电平亮）
+
+
+​​功能函数​​：
+
+
+1234void delay(unsigned int i)  // 阻塞延时void Beep(unsigned int i)   // 产生频率可调的蜂鸣声void Light(unsigned int i)   // 红灯闪烁（未在main调用）void all(unsigned int i)     // 声光同步报警（红灯闪烁+蜂鸣）
+
+
+​​主控制逻...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:31:36 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:24:10 GMT+0800">
                 
-                    2025-04-12 22:31:36
+                    2025-07-22 21:24:10
                 
             </span>
         </span>
@@ -855,7 +858,7 @@ jieba.cut_for_s...
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -870,7 +873,7 @@ jieba.cut_for_s...
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -878,7 +881,7 @@ jieba.cut_for_s...
         
     </div>
 
-    <a href="/post/20250412223136.html">阅读全文<span class="seo-reader-text">python中的jieba库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212410.html">阅读全文<span class="seo-reader-text">C51-声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -893,35 +896,25 @@ jieba.cut_for_s...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412223030.html">
-                            python中的sklearn库
+                        <a href="/post/20250722212012.html">
+                            C51-四个按键实现四种控制小灯样式
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-机器学习算法：提供分类（如逻辑回归、决策树、SVM）、回归（如线性回归、随机森林）、聚类（如K-means、DBSCAN）、降维（如PCA）等多种算法。
-数据预处理：支持数据清洗、特征缩放（标准化、归一化）、特征选择、缺失值处理等。
-模型选择：提供交叉验证、网格搜索等工具，帮助选择合适的模型。
-模型评估：支持准确率、精确率、召回率、ROC曲线等多种评估指标。
-
-2. 常用类与方法
-数据集加载：
-
-load_iris()：加载鸢尾花数据集（分类任务）。
-load_digits()：加载手写数字数据集（分类任务）。
-fetch_20newsgroups()：加载新闻文本数据集...
+                            第二篇分别通过四个按键实现一下功能：①第四位亮②高四位亮③交叉亮④流水灯
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include &lt;reg51.h&gt;#include &lt;intrins.h&gt;sbit S1=P3^1;sbit S2=P3^0;sbit S3=P3^2;sbit S4=P3^3;void delay(unsigned int i)&...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:30:30 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:20:12 GMT+0800">
                 
-                    2025-04-12 22:30:30
+                    2025-07-22 21:20:12
                 
             </span>
         </span>
@@ -934,7 +927,7 @@ fetch_20newsgroups()：加载新闻文本数据集...
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -949,7 +942,7 @@ fetch_20newsgroups()：加载新闻文本数据集...
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -957,7 +950,7 @@ fetch_20newsgroups()：加载新闻文本数据集...
         
     </div>
 
-    <a href="/post/20250412223030.html">阅读全文<span class="seo-reader-text">python中的sklearn库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722212012.html">阅读全文<span class="seo-reader-text">C51-四个按键实现四种控制小灯样式</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -972,31 +965,26 @@ fetch_20newsgroups()：加载新闻文本数据集...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220940.html">
-                            python中的matplotlib库
+                        <a href="/post/20250722210938.html">
+                            C51-小灯闪烁
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-数据可视化：支持折线图、散点图、柱状图、饼图、3D 图等 20+ 种图表类型。
-高度定制：可调整颜色、线型、标记、标签、标题、网格等样式。
-跨平台输出：支持保存为 PNG、PDF、SVG 等格式，适配论文、网页、报告等场景。
+                            计算机科学与技术专业课程–C51单片机该系列内容为学生从第一节课到最后一节课的作业，发在网络上记录一下！
+第一篇1234567891011121314151617#include &lt;reg51.h&gt;sbit P1_0=P1^0;void delay(unsigned int i)&#123;	unsigned int k;	for(k=0;k&lt;i;k++);&#125;void main()&#123;	while(1)	&#123;		P1_0=0;		delay(10000);		P1_0=1;		delay(10000);	&#125;&#125;
 
-2. 常用类与方法
-pyplot 模块（类似 MATLAB 语法）：
-1234567891011121314import matplotlib.pyplot as plt# 绘制折线图plt.plot([1, 2, 3, 4], [10, 20, 25, 30], &#x27;r--o&#x27;, label=&#x27;Line 1&#x27;...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:09:40 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:09:38 GMT+0800">
                 
-                    2025-04-12 22:09:40
+                    2025-07-22 21:09:38
                 
             </span>
         </span>
@@ -1009,7 +997,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                     
@@ -1024,7 +1012,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1032,7 +1020,7 @@ pyplot 模块（类似 MATLAB 语法）：
         
     </div>
 
-    <a href="/post/20250412220940.html">阅读全文<span class="seo-reader-text">python中的matplotlib库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722210938.html">阅读全文<span class="seo-reader-text">C51-小灯闪烁</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1047,29 +1035,25 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220708.html">
-                            python中的pandas库
+                        <a href="/post/20250428125135.html">
+                            GitHub Desktop上传静态网页
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-数据结构操作：提供 Series（一维）和 DataFrame（二维）数据结构，支持高效的数据操作。
-数据清洗：集成处理缺失值、重复值、异常值等方法（如 dropna(), fillna(), drop_duplicates()）。
-数据分析：支持描述性统计、聚合、分组、排序、合并等操作（如 mean(), sum(), groupby(), sort_values(), merge()）。
-文件读写：支持 CSV、Excel、SQL、JSON 等格式的数据读写（如 read_csv(), to_excel()）。
-数据可视化：集成 Matplotlib 库，支持直接绘制...
+                            （此篇文章用于记录我上传静态网页的过程，我怕我下次上传的时候忘记步骤，在这里留个记录）
+1.在GitHub中新建一个仓库2.点击创建3.在GitHub Desktop中链接4.在GitHub中复制HTTPS的链接5.在GitHub Desktop中，将网页GitHub中复制的链接粘贴过来，然后下面的那个是在本地的位置6.等待GitHub Desktop与GitHub的链接7.连接好后，打开本地的仓库的地址8.将需要上传的文件项目粘贴进来9.然后在GitHub Desktop中就可以看到咱们需要上传的项目了，下面的那个地方，随便输入就行了，相当于是提交，最后点击一下最下面的Commit t...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:07:08 GMT+0800">
+            <span class="home-article-date" data-date="Mon Apr 28 2025 12:51:35 GMT+0800">
                 
-                    2025-04-12 22:07:08
+                    2025-04-28 12:51:35
                 
             </span>
         </span>
@@ -1082,7 +1066,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
                         </li>
                     
                     
@@ -1097,7 +1081,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1105,7 +1089,7 @@ pyplot 模块（类似 MATLAB 语法）：
         
     </div>
 
-    <a href="/post/20250412220708.html">阅读全文<span class="seo-reader-text">python中的pandas库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250428125135.html">阅读全文<span class="seo-reader-text">GitHub Desktop上传静态网页</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1120,33 +1104,35 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220653.html">
-                            python中的numpy库
+                        <a href="/post/20250426165340.html">
+                            编译原理选择题
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-多维数组操作：提供高效的 ndarray 对象，支持向量、矩阵、高维数组运算。
-数学函数集成：内置三角函数、指数函数、统计函数等，如 np.sin(), np.exp(), np.mean()。
-线性代数：支持矩阵乘法、求逆、特征值计算等（通过 np.linalg 模块）。
-随机数生成：提供均匀分布、正态分布等随机数生成函数（如 np.random.rand()）。
-文件读写：支持 CSV、二进制文件等数据格式的读写。
+                            编译原理试卷
+一、单选题（每题2.5分，共40题）
 
-2. 常用类与方法
-创建数组：
-123456789101112import numpy as np# 从列表创建arr = np.array([1, 2...
+程序所需的数据空间在程序运行前就可确定，称为（C）管理技术。A. 动态存储B. 栈式存储C. 静态存储D. 堆式存储  
+
+（A）是一种典型的解释型语言。A. BASICB. CC. FORTRAND. PASCAL  
+
+一个编译程序中，不仅包含词法分析、中间代码生成、代码优化、目标代码生成等五个部分，还包括（A）。A. 语法分析B. 文法分析C. 语言分析D. 解释分析  
+
+用高级语言编写的程序经编译后产生的程序叫（B）。A. 源程序B. 目标程序C. 连接程序D. 解释程序  
+
+中间代码生成时所依据的是（C）。A. 语法规则...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:53 GMT+0800">
+            <span class="home-article-date" data-date="Sat Apr 26 2025 16:53:40 GMT+0800">
                 
-                    2025-04-12 22:06:53
+                    2025-04-26 16:53:40
                 
             </span>
         </span>
@@ -1159,7 +1145,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
                         </li>
                     
                     
@@ -1174,7 +1160,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1182,7 +1168,7 @@ pyplot 模块（类似 MATLAB 语法）：
         
     </div>
 
-    <a href="/post/20250412220653.html">阅读全文<span class="seo-reader-text">python中的numpy库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250426165340.html">阅读全文<span class="seo-reader-text">编译原理选择题</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1197,31 +1183,31 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220639.html">
-                            python中的cv2库
+                        <a href="/post/20250418213441.html">
+                            一封情书
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-计算机视觉：支持图像处理、视频分析、特征提取、目标检测等任务。
-跨平台：可在 Windows、Linux、macOS 等系统上运行。
-算法丰富：提供 2500+ 优化算法，涵盖经典和先进的计算机视觉技术。
+                            最近学习英语比较无聊，就看了一部英文动画片《奇迹少女》。
 
-2. 常用类与方法
-图像读取与显示：
-12345678910import cv2# 读取图像（支持 JPG、PNG 等格式）img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_COLOR)  # 彩色模式（默认）# img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_G...
+月下寄言，情致君前：
+
+吾于这浩渺人间，穿行于繁华与落寞之间，心有所属，情有所钟。每至夜深，月光倾洒，吾思君之念，便如江水滔滔，难以平息。
+君，乃世间之瑰宝，才华横溢，风度翩翩。吾观君之言行，听君之言语，皆如沐春风，心旷神怡。君之智慧，犹如明灯照夜，指引吾前行之路；君之品德，更如高山流水，令吾敬仰不已。
+吾与君相遇，实乃三生有幸。君之风采，早已深入吾心，成为吾生命中不可磨灭之印记。吾愿以笔墨为媒，将这份深情厚意，化作千言万语，诉诸君前。
+吾知，爱情非儿戏，需以真心相待，以诚意相守。吾对君之情，非一朝一夕，而是日积月累，愈久弥坚。...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:39 GMT+0800">
+            <span class="home-article-date" data-date="Fri Apr 18 2025 21:34:41 GMT+0800">
                 
-                    2025-04-12 22:06:39
+                    2025-04-18 21:34:41
                 
             </span>
         </span>
@@ -1234,7 +1220,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
                         </li>
                     
                     
@@ -1249,7 +1235,7 @@ pyplot 模块（类似 MATLAB 语法）：
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/%E7%90%90%E4%BA%8B/">琐事</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1257,7 +1243,7 @@ pyplot 模块（类似 MATLAB 语法）：
         
     </div>
 
-    <a href="/post/20250412220639.html">阅读全文<span class="seo-reader-text">python中的cv2库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250418213441.html">阅读全文<span class="seo-reader-text">一封情书</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1272,31 +1258,29 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220456.html">
-                            python中的qrcode库
+                        <a href="/post/20250415195306.html">
+                            网络适配器无线网卡驱动不能用5g？
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-生成二维码：将文本、网址等信息编码为二维码图片，支持自定义尺寸、颜色、容错率等。
-依赖库：需配合 Pillow（PIL）库生成图像，安装时需使用 pip install qrcode[pil]。
+                            netsh wlan show drivers 命令在 Windows 系统中主要用于查看无线网卡驱动的相关信息，但它并不直接显示当前连接的网络频段。不过，通过一些间接的方法，我们仍然可以获取到网络频段的相关信息。下面详细介绍如何利用 netsh wlan show drivers 命令以及结合其他命令来查看网络频段。
 
-2. 常用类与方法
-QRCode 类：
-
-初始化：123456qr = qrcode.QRCode(    version=1,                # 二维码尺寸（1-40），值越大尺寸越大    error_correction=qrcode.constants.ERROR_CORRECT_H,  # 容错率（L/M/Q/H）    box_size=10,   ...
+使用 netsh wlan show drivers 命令 netsh wlan show drivers 可以查看无线网卡支持的无线标准（如 802.11ac、802.11ax 等），从而间接判断网卡是否支持 5GHz 频段。
+操作步骤：
+打开命令提示符（CMD）：
+...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:04:56 GMT+0800">
+            <span class="home-article-date" data-date="Tue Apr 15 2025 19:53:06 GMT+0800">
                 
-                    2025-04-12 22:04:56
+                    2025-04-15 19:53:06
                 
             </span>
         </span>
@@ -1309,7 +1293,7 @@ QRCode 类：
                     
                         
                         <li>
-                            <a href="/categories/python/">python</a>&nbsp;
+                            <a href="/categories/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
                         </li>
                     
                     
@@ -1324,7 +1308,7 @@ QRCode 类：
                     
                         <li>
                             
-                            <a href="/tags/python/">python</a>&nbsp;
+                            <a href="/tags/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF/">解决错误</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1332,7 +1316,7 @@ QRCode 类：
         
     </div>
 
-    <a href="/post/20250412220456.html">阅读全文<span class="seo-reader-text">python中的qrcode库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250415195306.html">阅读全文<span class="seo-reader-text">网络适配器无线网卡驱动不能用5g？</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1347,40 +1331,44 @@ QRCode 类：
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250412220314.html">
-                            python中的tkinter库
+                        <a href="/post/20250415122700.html">
+                            opencv人脸识别
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            1. 核心功能
-GUI 开发：用于创建桌面应用程序的图形界面，支持按钮、标签、文本框等组件。
-跨平台：可在 Windows、Linux、macOS 等系统上运行。
-事件驱动：通过绑定事件（如点击、按键）实现用户交互。
-
-2. 常用类与方法
-主窗口类 Tk()：
-
-root = tk.Tk()：创建主窗口对象。
-root.title(&quot;标题&quot;)：设置窗口标题。
-root.geometry(&quot;宽x高&quot;)：设置窗口大小和位置。
-root.mainloop()：启动主事件循环，保持窗口运行。
+                            问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子）
+作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。  
+取值: 1.01 ~ 1.5（常用 1.1）。  
+影响:  
+值越小（如 1.01）:    
+✅ 检测到更多人脸（尤其是小尺寸人脸）。
 
 
-常用组件：
 
-标签 Label：12label = tk.L...
+
+❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  
+值越大（如 1.5）:    
+✅ 检测速度更快。
+
+
+
+
+❌ 可能漏检小尺寸人脸。
+
+2. minNeighbors（最小邻居数）
+作用: 控制人脸框的合并阈值，过滤孤立误检。  ...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:03:14 GMT+0800">
+            <span class="home-article-date" data-date="Tue Apr 15 2025 12:27:00 GMT+0800">
                 
-                    2025-04-12 22:03:14
+                    2025-04-15 12:27:00
                 
             </span>
         </span>
@@ -1416,7 +1404,7 @@ root.mainloop()：启动主事件循环，保持窗口运行。
         
     </div>
 
-    <a href="/post/20250412220314.html">阅读全文<span class="seo-reader-text">python中的tkinter库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250415122700.html">阅读全文<span class="seo-reader-text">opencv人脸识别</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1426,7 +1414,7 @@ root.mainloop()：启动主事件循环，保持窗口运行。
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/2/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/2/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1454,11 +1442,11 @@ root.mainloop()：启动主事件循环，保持窗口运行。
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 49 篇文章
+                        共撰写了 63 篇文章
                     </span>
                     
                         <span>
-                            共 34.4k 字
+                            共 37k 字
                         </span>
                     
                 </p>

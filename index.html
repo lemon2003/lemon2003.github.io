@@ -645,7 +645,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -708,7 +708,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">49</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -733,32 +733,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722220931.html">
-                            C51-校时”功能的 6 位数码管电子钟
+                        <a href="/post/20250722231232.html">
+                            STM32-14-中断9_15方式的声光报警器
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            一、整体功能  
-
-正常走时：上电后从 00-00-00 开始，按 24 小时制计时。  
-暂停&#x2F;继续：按 K4（P3^3）立即进入&#x2F;退出暂停状态。  
-校时：在 暂停状态 下　　– K1（P3^1）小时 +1　　– K2（P3^0）分钟 +1　　– K3（P3^2）秒钟 +1  
-显示：6 位共阳数码管，动态扫描，位选由 P2，段选由 P0 输出。
-
-二、代码  
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555...
+                            1.代码12345678910111213141516171819202122#include &quot;stm32f10x.h&quot;#include &quot;stm32f10x_it.h&quot;#include &quot;sys.h&quot;#include &quot;Delay.h&quot;#include &quot;led.h&quot;#include &quot;key.h&quot;#include &quot;exit.h&quot;#include &quot;alarm.h&quot;volatile u8 alarm_enabled = 0;...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 22:09:31 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 23:12:32 GMT+0800">
                 
-                    2025-07-22 22:09:31
+                    2025-07-22 23:12:32
                 
             </span>
         </span>
@@ -771,7 +763,7 @@
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -786,7 +778,7 @@
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -794,7 +786,7 @@
         
     </div>
 
-    <a href="/post/20250722220931.html">阅读全文<span class="seo-reader-text">C51-校时”功能的 6 位数码管电子钟</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722231232.html">阅读全文<span class="seo-reader-text">STM32-14-中断9_15方式的声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -809,24 +801,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722220643.html">
-                            C51-秒表0-99（中断方式实现）
+                        <a href="/post/20250722231025.html">
+                            STM32-13-中断01和9-5点亮4个灯
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第十篇1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include  &quot;reg51.h&quot;//void delay1s()//&#123;  //  unsigned char i;//  for(i=0;i&lt;1;i++)&#123;      //    TH1=(65536-10000)/256; //    TL1=(65536-10000)%256;...
+                            1.代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211311411511611711811912012112212312412512612712812913013113213313...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 22:06:43 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 23:10:25 GMT+0800">
                 
-                    2025-07-22 22:06:43
+                    2025-07-22 23:10:25
                 
             </span>
         </span>
@@ -839,7 +831,7 @@
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -854,7 +846,7 @@
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -862,7 +854,7 @@
         
     </div>
 
-    <a href="/post/20250722220643.html">阅读全文<span class="seo-reader-text">C51-秒表0-99（中断方式实现）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722231025.html">阅读全文<span class="seo-reader-text">STM32-13-中断01和9-5点亮4个灯</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -877,25 +869,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722220253.html">
-                            C51-秒表0到99
+                        <a href="/post/20250722230344.html">
+                            STM32-12-LED灯设计与实现
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第九篇0-99循环显示，每隔一秒，增加1
-123456789101112131415161718192021222324252627282930313233343536373839404142#include  &quot;reg51.h&quot;void delay1s()&#123;    unsigned char i;  for(i=0;i&lt;1;i++)&#123;          TH1=(65536-10000)/256;     TL1=(65536-10000)%256;     TR1=1;    while(!TF1);     TF1=0;	   &#12...
+                            1.代码1.1 main.c123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126#include &quo...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 22:02:53 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 23:03:44 GMT+0800">
                 
-                    2025-07-22 22:02:53
+                    2025-07-22 23:03:44
                 
             </span>
         </span>
@@ -908,7 +899,7 @@
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -923,7 +914,7 @@
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -931,7 +922,7 @@
         
     </div>
 
-    <a href="/post/20250722220253.html">阅读全文<span class="seo-reader-text">C51-秒表0到99</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722230344.html">阅读全文<span class="seo-reader-text">STM32-12-LED灯设计与实现</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -946,25 +937,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722215916.html">
-                            C51-密码矩阵
+                        <a href="/post/20250722230031.html">
+                            STM32-11-一键控制4个灯
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第八篇4×4的矩阵上，有一个按键是钥匙，按“钥匙”就解开了,这里我用的是第11个按钮
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105#include &lt;reg51.h&gt;#define key 11sbit clos...
+                            1.代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394#include &quot;stm32f10x.h&quot;#include &quot;sys.h&quot;#define KEY PCin(0)#define LED1 PBout(8)//0不亮，1亮#define ...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:59:16 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 23:00:31 GMT+0800">
                 
-                    2025-07-22 21:59:16
+                    2025-07-22 23:00:31
                 
             </span>
         </span>
@@ -977,7 +967,7 @@
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -992,7 +982,7 @@
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1000,7 +990,7 @@
         
     </div>
 
-    <a href="/post/20250722215916.html">阅读全文<span class="seo-reader-text">C51-密码矩阵</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722230031.html">阅读全文<span class="seo-reader-text">STM32-11-一键控制4个灯</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1015,61 +1005,32 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722215257.html">
-                            C51-8位数码管输出学号
+                        <a href="/post/20250722225714.html">
+                            STM32-10-中华万年历
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第七篇数码管输出80220101
-123456789101112131415161718192021222324#include &lt;reg51.h&gt;#include &lt;intrins.h&gt;#define time 100void delay(unsigned int i)&#123;	unsigned int k;	for(k=0;k&lt;i;k++);&#125;void main()&#123;	unsigned char led[]=&#123;0x80,0xc0,0xa4,0xa4,0xc0,0xf9,0xc0,0xf9&#125;;	unsigned ...
+                            1.代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211311411511611711811912012112212312412512612712812913013113213313...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:52:57 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:57:14 GMT+0800">
                 
-                    2025-07-22 21:52:57
+                    2025-07-22 22:57:14
                 
             </span>
         </span>
         
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
         
     </div>
 
-    <a href="/post/20250722215257.html">阅读全文<span class="seo-reader-text">C51-8位数码管输出学号</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722225714.html">阅读全文<span class="seo-reader-text">STM32-10-中华万年历</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1084,53 +1045,24 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722214637.html">
-                            C51-抢答系统
+                        <a href="/post/20250722225334.html">
+                            STM32-9-6个数码管扫描显示654321
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第六篇一、硬件系统架构
-​​输入控制​​：
-
-K1(P3.1)：模式1触发键
-K2(P3.0)：模式2触发键
-K3(P3.2)：模式3触发键
-K4(P3.3)：全局复位键
-
-
-​​输出设备​​：
-
-LED(P0)：8段数码管数据端口（共阳极）
-P2A/P2B/P2C(P2.2-4)：数码管位选控制
-
-
-​​显示逻辑​​：
-
-数码管显示值对应：
-0xC0：初始显示”0”
-0xF9：模式1显示”1”
-0xA4：模式2显示”2”
-0xB0：模式3显示”3”
-
-
-
-
-
-二、核心运行逻辑
-​​初始化阶段​​：
- 12P2A=1; P2B=0; P2C=0;  // 激活第一位数码管LED=0xC0...
+                            1.代码123456789101112131415161718192021222324252627282930313233343536373839404142434445#include &quot;stm32f10x.h&quot;void Delay(unsigned int count)&#123;    unsigned int i;    for (; count != 0; count--)    &#123;        i = 5000;        while (i--);    &#125;&#125;void SMG_Init(void)&#123;    GP...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:46:37 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:53:34 GMT+0800">
                 
-                    2025-07-22 21:46:37
+                    2025-07-22 22:53:34
                 
             </span>
         </span>
@@ -1143,7 +1075,7 @@ P2A/P2B/P2C(P2.2-4)：数码管位选控制
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -1158,7 +1090,7 @@ P2A/P2B/P2C(P2.2-4)：数码管位选控制
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1166,7 +1098,7 @@ P2A/P2B/P2C(P2.2-4)：数码管位选控制
         
     </div>
 
-    <a href="/post/20250722214637.html">阅读全文<span class="seo-reader-text">C51-抢答系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722225334.html">阅读全文<span class="seo-reader-text">STM32-9-6个数码管扫描显示654321</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1181,51 +1113,24 @@ P2A/P2B/P2C(P2.2-4)：数码管位选控制
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722214048.html">
-                            C51-多按键控制LED灯系统
+                        <a href="/post/20250722224919.html">
+                            STM32-8-数码管显示0-9999
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第五篇​​一、硬件连接分析​​
-​​按键接口​​：
-
-K1(P3.1)：控制LED1
-K2(P3.0)：控制LED2
-K3(P3.2)：控制LED3
-K4(P3.3)：全局复位键（NEXT）
-
-
-​​LED接口​​：
-
-L1(P2.0)：LED1（低电平点亮）
-L2(P2.1)：LED2
-L3(P2.2)：LED3
-
-
-
-
-​​硬件特性​​：LED低电平驱动（0点亮），按键低电平触发（需上拉电阻）。
-
-
-​​二、核心功能逻辑​​
-​​初始状态​​：
- 1L1=1; L2=1; L3=1;  // 所有LED熄灭
-
-​​按键控制逻辑​​：
-
-​​按下K1​​：点亮L1，保持L2/L3熄灭，...
+                            1.代码123456789101112131415161718192021222324252627282930313233343536373839404142#include &quot;stm32f10x.h&quot; uint16_t table[]=&#123;0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f&#125;; uint16_t disp[4]; uint16_t temp,i,temp2,a,b,c;void Delay(unsigned int count) &#123;  unsigned int i;  for...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:40:48 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:49:19 GMT+0800">
                 
-                    2025-07-22 21:40:48
+                    2025-07-22 22:49:19
                 
             </span>
         </span>
@@ -1238,7 +1143,7 @@ L3(P2.2)：LED3
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -1253,7 +1158,7 @@ L3(P2.2)：LED3
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1261,7 +1166,7 @@ L3(P2.2)：LED3
         
     </div>
 
-    <a href="/post/20250722214048.html">阅读全文<span class="seo-reader-text">C51-多按键控制LED灯系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722224919.html">阅读全文<span class="seo-reader-text">STM32-8-数码管显示0-9999</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1276,25 +1181,24 @@ L3(P2.2)：LED3
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722212805.html">
-                            C51-通过按键调整PWM占空比控制LED亮度
+                        <a href="/post/20250722224625.html">
+                            STM32-7-数码管静态显示0到20
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第四篇通过调节占空比控制灯的亮度
-1234567891011121314151617181920212223242526272829303132333435363738394041#include &lt;reg51.h&gt;#define on 0    // 低电平点亮#define off 1   // 高电平熄灭sbit up = P3^1;sbit down = P3^0;sbit light = P2^1;void delay_ms(unsigned int ms) &#123;     unsigned int x, y;    for (x = 0; x &lt; ms...
+                            1.代码123456789101112131415161718192021222324252627282930313233#include &quot;stm32f10x.h&quot; uint16_t table[]=&#123;0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f&#125;; uint16_t disp[2]; uint16_t temp,i;void Delay(unsigned int count) &#123;  unsigned int i;  for(;count!=0;count--)	&#123;		i=...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:28:05 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:46:25 GMT+0800">
                 
-                    2025-07-22 21:28:05
+                    2025-07-22 22:46:25
                 
             </span>
         </span>
@@ -1307,7 +1211,7 @@ L3(P2.2)：LED3
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -1322,7 +1226,7 @@ L3(P2.2)：LED3
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1330,7 +1234,7 @@ L3(P2.2)：LED3
         
     </div>
 
-    <a href="/post/20250722212805.html">阅读全文<span class="seo-reader-text">C51-通过按键调整PWM占空比控制LED亮度</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722224625.html">阅读全文<span class="seo-reader-text">STM32-7-数码管静态显示0到20</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1345,39 +1249,24 @@ L3(P2.2)：LED3
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722212410.html">
-                            C51-声光报警器
+                        <a href="/post/20250722224331.html">
+                            STM32-6-跑马灯（时钟使能）
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第三篇一、功能模块解析
-​​引脚定义​​：
-
-S1=P3^1：按键输入（低电平触发）
-beep=P1^5：蜂鸣器输出
-green=P2^0：绿灯控制（低电平亮）
-red=P2^1：红灯控制（低电平亮）
-
-
-​​功能函数​​：
-
-
-1234void delay(unsigned int i)  // 阻塞延时void Beep(unsigned int i)   // 产生频率可调的蜂鸣声void Light(unsigned int i)   // 红灯闪烁（未在main调用）void all(unsigned int i)     // 声光同步报警（红灯闪烁+蜂鸣）
-
-
-​​主控制逻...
+                            1.代码123456789101112131415161718192021222324252627282930313233343536373839404142#include &quot;stm32f10x.h&quot; uint16_t temp, i,temp1,j; void Delay(unsigned int count)&#123;  unsigned int i;  for(;count!=0;count--)  &#123;  i=5000;  while(i--);  &#125; &#125; void main(void) &#123;  RCC-&gt;APB2...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:24:10 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:43:31 GMT+0800">
                 
-                    2025-07-22 21:24:10
+                    2025-07-22 22:43:31
                 
             </span>
         </span>
@@ -1390,7 +1279,7 @@ red=P2^1：红灯控制（低电平亮）
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -1405,7 +1294,7 @@ red=P2^1：红灯控制（低电平亮）
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1413,7 +1302,7 @@ red=P2^1：红灯控制（低电平亮）
         
     </div>
 
-    <a href="/post/20250722212410.html">阅读全文<span class="seo-reader-text">C51-声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722224331.html">阅读全文<span class="seo-reader-text">STM32-6-跑马灯（时钟使能）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1428,25 +1317,24 @@ red=P2^1：红灯控制（低电平亮）
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20250722212012.html">
-                            C51-四个按键实现四种控制小灯样式
+                        <a href="/post/20250722224104.html">
+                            STM32-5-跑马灯
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            第二篇分别通过四个按键实现一下功能：①第四位亮②高四位亮③交叉亮④流水灯
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include &lt;reg51.h&gt;#include &lt;intrins.h&gt;sbit S1=P3^1;sbit S2=P3^0;sbit S3=P3^2;sbit S4=P3^3;void delay(unsigned int i)&...
+                            1.代码123456789101112131415161718192021222324252627282930313233343536373839404142#include &quot;stm32f10x.h&quot;uint16_t temp, i, j;  void Delay(unsigned int count)&#123;    unsigned int i;    for(; count != 0; count--)    &#123;        i = 5000;        while(i--);    &#125;&#125;void main(void) &...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:20:12 GMT+0800">
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:41:04 GMT+0800">
                 
-                    2025-07-22 21:20:12
+                    2025-07-22 22:41:04
                 
             </span>
         </span>
@@ -1459,7 +1347,7 @@ red=P2^1：红灯控制（低电平亮）
                     
                         
                         <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
                         </li>
                     
                     
@@ -1474,7 +1362,7 @@ red=P2^1：红灯控制（低电平亮）
                     
                         <li>
                             
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1482,7 +1370,7 @@ red=P2^1：红灯控制（低电平亮）
         
     </div>
 
-    <a href="/post/20250722212012.html">阅读全文<span class="seo-reader-text">C51-四个按键实现四种控制小灯样式</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20250722224104.html">阅读全文<span class="seo-reader-text">STM32-5-跑马灯</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1492,7 +1380,7 @@ red=P2^1：红灯控制（低电平亮）
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
+	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1520,11 +1408,11 @@ red=P2^1：红灯控制（低电平亮）
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 49 篇文章
+                        共撰写了 63 篇文章
                     </span>
                     
                         <span>
-                            共 34.4k 字
+                            共 37k 字
                         </span>
                     
                 </p>
