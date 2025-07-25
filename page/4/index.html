@@ -561,7 +561,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -611,7 +611,7 @@
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
     <div class="name">Lemon</div>
     
-        <div class="label">Lv4</div>
+        <div class="label">Lv5</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
@@ -624,7 +624,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -639,6 +639,94 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250415122700.html">
+                            opencv人脸识别
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子）
+作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。  
+取值: 1.01 ~ 1.5（常用 1.1）。  
+影响:  
+值越小（如 1.01）:    
+✅ 检测到更多人脸（尤其是小尺寸人脸）。
+
+
+
+
+❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  
+值越大（如 1.5）:    
+✅ 检测速度更快。
+
+
+
+
+❌ 可能漏检小尺寸人脸。
+
+2. minNeighbors（最小邻居数）
+作用: 控制人脸框的合并阈值，过滤孤立误检。  ...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Apr 15 2025 12:27:00 GMT+0800">
+                
+                    2025-04-15 12:27:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250415122700.html">阅读全文<span class="seo-reader-text">opencv人脸识别</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1361,79 +1449,6 @@ pyplot 模块（类似 MATLAB 语法）：
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220708.html">
-                            python中的pandas库
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-数据结构操作：提供 Series（一维）和 DataFrame（二维）数据结构，支持高效的数据操作。
-数据清洗：集成处理缺失值、重复值、异常值等方法（如 dropna(), fillna(), drop_duplicates()）。
-数据分析：支持描述性统计、聚合、分组、排序、合并等操作（如 mean(), sum(), groupby(), sort_values(), merge()）。
-文件读写：支持 CSV、Excel、SQL、JSON 等格式的数据读写（如 read_csv(), to_excel()）。
-数据可视化：集成 Matplotlib 库，支持直接绘制...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:07:08 GMT+0800">
-                
-                    2025-04-12 22:07:08
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220708.html">阅读全文<span class="seo-reader-text">python中的pandas库</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1466,11 +1481,11 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 63 篇文章
+                        共撰写了 64 篇文章
                     </span>
                     
                         <span>
-                            共 37.4k 字
+                            共 38k 字
                         </span>
                     
                 </p>

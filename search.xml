@@ -3325,4 +3325,66 @@
         <tag>C51单片机</tag>
       </tags>
   </entry>
+  <entry>
+    <title>电脑配置佳能打印机L11121E</title>
+    <url>/post/20250725144519.html</url>
+    <content><![CDATA[<h2 id="一、前提条件"><a href="#一、前提条件" class="headerlink" title="一、前提条件"></a>一、前提条件</h2><p>博主最近买了一台二手的佳能L11121E的打印机，以前没用过这个牌子的打印机，以前用的打印机插电脑上都直接识别出来了，这个他识别不出来。（控制面板-&gt; 设备与打印机）如图所示:<br>(备注：博主已经解决了这个问题，当时没有截图，解决完任务后想写一篇博客帮助更多有需要的人，下图是在网上找到的出现同样问题的图片)，就是在最下面的未指定一栏出现了打印机设备，这时候证明打印机设备连接到电脑上了，但是需要一个驱动程序。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/1.png"
+                      alt="a"
+                ></p>
+<h2 id="二、检查服务是否打开"><a href="#二、检查服务是否打开" class="headerlink" title="二、检查服务是否打开"></a>二、检查服务是否打开</h2><h5 id="①鼠标右键点击“此电脑”，然后点击“管理“"><a href="#①鼠标右键点击“此电脑”，然后点击“管理“" class="headerlink" title="①鼠标右键点击“此电脑”，然后点击“管理“"></a>①鼠标右键点击“此电脑”，然后点击“管理“</h5><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/2.png"
+                      alt="a"
+                ></p>
+<h5 id="②在”服务“中确保下图所示服务已经打开"><a href="#②在”服务“中确保下图所示服务已经打开" class="headerlink" title="②在”服务“中确保下图所示服务已经打开"></a>②在”服务“中确保下图所示服务已经打开</h5><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/3.png"
+                      alt="a"
+                ></p>
+<h2 id="三、如果该服务是打开的，说明是缺少驱动，需要下载驱动"><a href="#三、如果该服务是打开的，说明是缺少驱动，需要下载驱动" class="headerlink" title="三、如果该服务是打开的，说明是缺少驱动，需要下载驱动"></a>三、如果该服务是打开的，说明是缺少驱动，需要下载驱动</h2><h5 id="①看自己的打印机是什么型号"><a href="#①看自己的打印机是什么型号" class="headerlink" title="①看自己的打印机是什么型号"></a>①看自己的打印机是什么型号</h5><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/4.png"
+                      alt="a"
+                ><br>比如说我的这个打印机型号是L11121E，然后就可以去官网下载该型号的驱动程序。</p>
+<h5 id="②到对应官网上下载驱动"><a href="#②到对应官网上下载驱动" class="headerlink" title="②到对应官网上下载驱动"></a>②到对应官网上下载驱动</h5><p>比如说我这个型号：佳能驱动下载链接（<a class="link"   href="https://www.canon.com.cn/supports/download/sims/search/index" >下载与支持 – 服务与支持 - 佳能（中国）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）<br>（备注：如果你和我这个型号L11121E一样，你会搜不到这个型号的驱动，所以你可以下载LBP3000驱动就可以了，博主这里下载的是LBP3000，但是网上也有部分人下载的是LBP2900）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/5.png"
+                      alt="a"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/6.png"
+                      alt="a"
+                ></p>
+<h5 id="③把下载的驱动运行起来"><a href="#③把下载的驱动运行起来" class="headerlink" title="③把下载的驱动运行起来"></a>③把下载的驱动运行起来</h5><p>一般在你没有改变下载位置的情况下可以在“此电脑”-&gt;“下载”中看到你下载的驱动，然后直接运行起来就行了，然后在该位置就会出现一个文件夹，就是下图红色方框下面出现的那个新的文件夹。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/7.png"
+                      alt="a"
+                ></p>
+<h5 id="④打开新出现的文件夹"><a href="#④打开新出现的文件夹" class="headerlink" title="④打开新出现的文件夹"></a>④打开新出现的文件夹</h5><p>进去文件夹后，“x64”文件夹里面，运行setup程序<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250725/8.png"
+                      alt="a"
+                ></p>
+<h5 id="⑤按照屏幕上指示操作就行了"><a href="#⑤按照屏幕上指示操作就行了" class="headerlink" title="⑤按照屏幕上指示操作就行了"></a>⑤按照屏幕上指示操作就行了</h5><p>这一步就跟着屏幕操作就行了，我解决问题的时候没截图，不想卸了重装了，大致过程就是这样：<br>**同意协议-&gt;插上usb</p>
+<p>**操作结束界面就可以看见“未指定”处就没有刚才那个打印机了，在上边打印机处，可以看到我们已经成功了</p>
+<hr>
+<p>佳能官网步骤：<a class="link"   href="https://oip.manual.canon/USRMA-2852-zz-SS-zhCN/contents/dwi-inst-dl.html" >从佳能网站下载后安装 - Canon - Windows 打印机驱动程序 - 安装指南<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
+      </tags>
+  </entry>
 </search>
