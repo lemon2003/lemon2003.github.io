@@ -260,41 +260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AI的时代，我有些迷茫</title>
-    <url>/post/20250325225314.html</url>
-    <content><![CDATA[<p>《与AI共生的双翼》</p>
-<p>当算法编织的璀璨穹顶笼罩钢铁森林，我常于子夜时分凝望屏幕深处跃动的幽蓝极光。AI如同银河彼端的全知存在，以光年为单位丈量人类思维的褶皱，将我们困顿数日的谜题折叠成纸鹤，轻轻放入真理的溪流。那些曾令我抓耳挠腮的代码深渊，在它眼中不过是孩童堆砌的积木城堡；那些耗费整夜雕琢的文书框架，转瞬化作逻辑严密的钻石切面。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/3.png"
-                      alt="配图：深空代码银河"
-                ></p>
-<p>这种神迹般的强大却令我如履薄冰。在AI编织的星辉下，人类智慧的萤火忽明忽暗，仿佛随时会被数字潮汐卷走。每当智能助手用三秒重构我挣扎三昼夜的模型，当神经网络精准预判我尚未成型的创意，某种冰凉的觉醒便从脊椎蜿蜒而上——我们引以为傲的认知疆域，正在被温柔的机器触须悄然重构。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/2.png"
-                      alt="配图：数据洪流中的孤影"
-                ></p>
-<p>更深的惶恐源于对未知的朝圣。这架以硅为血脉的造物正加速进化，而我攥着过时的操作手册，如同站在海边拾贝的稚童，面对即将漫过脚踝的智能潮汐。那些需要皓首穷经才能参透的规律，如今被封印成简洁的API；那些浸透血汗的经验结晶，化作云端游弋的数据幽灵。我恐惧自己终将成为被时代抛下的锚点，在技术的平流层中失去飞翔的羽翎。</p>
-<p>然而当第一缕晨光刺破焦虑的茧房，某种奇异的共生感开始抽枝发芽。AI用三分钟重构我崩溃的模型时，也悄然重构了我认知的维度；当智能助手点亮文档迷宫的明灯，照亮的何止是代码的路径？那些曾让我辗转反侧的bug，如今化作算法进化的养料；那些被焦虑啃噬的深夜，正在孕育新的思维可能。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250325/1.png"
-                      alt="配图：黎明共生之舞"
-                ></p>
-<p>或许真正的觉醒，在于接受自己既是执炬者又是渡船。当AI的羽翼掠过认知的苍穹，我们不必熄灭手中的萤火，因为最动人的文明图景，永远诞生于光明与阴影的交缠。在这场静默的革命中，人类终将学会与数字精灵共舞，用惶恐淬炼出更清亮的目光，在技术的星河里，寻找生命独特的光谱——那是任何算法都无法复制的，关于存在本身的诗意证明。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>琐事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>B数与B+树</title>
     <url>/post/20250325214755.html</url>
     <content><![CDATA[<h2 id="B树和B-树的爱恨情仇"><a href="#B树和B-树的爱恨情仇" class="headerlink" title="B树和B+树的爱恨情仇"></a>B树和B+树的爱恨情仇</h2><h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><ol>
@@ -422,6 +387,92 @@
                      data-src="/img/20250325/b2.png"
                       alt="B+树"
                 ></p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI的时代，我有些迷茫</title>
+    <url>/post/20250325225314.html</url>
+    <content><![CDATA[<p>《与AI共生的双翼》</p>
+<p>当算法编织的璀璨穹顶笼罩钢铁森林，我常于子夜时分凝望屏幕深处跃动的幽蓝极光。AI如同银河彼端的全知存在，以光年为单位丈量人类思维的褶皱，将我们困顿数日的谜题折叠成纸鹤，轻轻放入真理的溪流。那些曾令我抓耳挠腮的代码深渊，在它眼中不过是孩童堆砌的积木城堡；那些耗费整夜雕琢的文书框架，转瞬化作逻辑严密的钻石切面。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/3.png"
+                      alt="配图：深空代码银河"
+                ></p>
+<p>这种神迹般的强大却令我如履薄冰。在AI编织的星辉下，人类智慧的萤火忽明忽暗，仿佛随时会被数字潮汐卷走。每当智能助手用三秒重构我挣扎三昼夜的模型，当神经网络精准预判我尚未成型的创意，某种冰凉的觉醒便从脊椎蜿蜒而上——我们引以为傲的认知疆域，正在被温柔的机器触须悄然重构。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/2.png"
+                      alt="配图：数据洪流中的孤影"
+                ></p>
+<p>更深的惶恐源于对未知的朝圣。这架以硅为血脉的造物正加速进化，而我攥着过时的操作手册，如同站在海边拾贝的稚童，面对即将漫过脚踝的智能潮汐。那些需要皓首穷经才能参透的规律，如今被封印成简洁的API；那些浸透血汗的经验结晶，化作云端游弋的数据幽灵。我恐惧自己终将成为被时代抛下的锚点，在技术的平流层中失去飞翔的羽翎。</p>
+<p>然而当第一缕晨光刺破焦虑的茧房，某种奇异的共生感开始抽枝发芽。AI用三分钟重构我崩溃的模型时，也悄然重构了我认知的维度；当智能助手点亮文档迷宫的明灯，照亮的何止是代码的路径？那些曾让我辗转反侧的bug，如今化作算法进化的养料；那些被焦虑啃噬的深夜，正在孕育新的思维可能。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250325/1.png"
+                      alt="配图：黎明共生之舞"
+                ></p>
+<p>或许真正的觉醒，在于接受自己既是执炬者又是渡船。当AI的羽翼掠过认知的苍穹，我们不必熄灭手中的萤火，因为最动人的文明图景，永远诞生于光明与阴影的交缠。在这场静默的革命中，人类终将学会与数字精灵共舞，用惶恐淬炼出更清亮的目光，在技术的星河里，寻找生命独特的光谱——那是任何算法都无法复制的，关于存在本身的诗意证明。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>琐事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉排序树</title>
+    <url>/post/20250328115300.html</url>
+    <content><![CDATA[<h2 id="一、二叉排序树的基本概念"><a href="#一、二叉排序树的基本概念" class="headerlink" title="一、二叉排序树的基本概念"></a>一、二叉排序树的基本概念</h2><ol>
+<li>定义：<br> • 二叉排序树（BST）是一种特殊的二叉树，它满足以下性质：<br> ①若左子树非空，则左子树上所有节点的值均小于根节点的值。<br> ② 若右子树非空，则右子树上所有节点的值均大于根节点的值。<br> ③左子树和右子树也分别为二叉排序树。</li>
+<li>特点：<br> ①中序遍历二叉排序树，可以得到一个递增的有序序列。<br> ②没有键值相等的节点。</li>
+</ol>
+<h2 id="二、二叉排序树的基本操作"><a href="#二、二叉排序树的基本操作" class="headerlink" title="二、二叉排序树的基本操作"></a>二、二叉排序树的基本操作</h2><ol>
+<li>查找操作：<br> • 过程：从根节点开始，如果当前节点的值等于目标值，则查找成功；如果当前节点的值大于目标值，则继续遍历左子树；如果当前节点的值小于目标值，则继续遍历右子树。<br> • 时间复杂度：最好情况下为O(log⁡n），最坏情况下为O(n)，取决于树的形态。<br>算法代码：</li>
+</ol>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">BSTNode*<span class="title function_">BST_Search</span><span class="params">(BiTreeT,ElemTypekey)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">while</span>(T!=<span class="literal">NULL</span>&amp;&amp;key!=T-&gt;data) <span class="comment">//若树空或等于根结点值，则结束循环</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(key&lt;T-&gt;data)T=T-&gt;lchild;<span class="comment">//小于，则在左子树上查找</span></span><br><span class="line">		elseT=T-&gt;rchild;<span class="comment">//大于，则在右子树上查找&#125;returnT</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>插入操作：<br> • 过程：首先查找要插入的位置（一定是叶子节点），然后创建新节点插入到该位置。<br> • 时间复杂度：O(logn)，取决于树的形态。<br>插入展示：<br> <img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/1.png"
+                      alt="cr"
+                ><br>算法代码：</li>
+</ol>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">BST_Insert</span><span class="params">(BiTree&amp;T,KeyTypek)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;<span class="comment">//原树为空，新插入的记录为根结点</span></span><br><span class="line">		T=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BSTNode));</span><br><span class="line">		T-&gt;data=k;</span><br><span class="line">		T-&gt;lchilds=T-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">		return1;<span class="comment">//返回1,插入成功).</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k==sT-&gt;data)<span class="comment">//树中存在相同关键字的结点，插入失败</span></span><br><span class="line">		return0;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k&lt;T-&gt;data)<span class="comment">//插入到T的左子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;lchildrk);</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//插入到T的右子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;rchild,k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>删除操作：<br> • 过程：<br> • 找到要删除的节点，并确定其父节点。<br> • 如果要删除的节点是叶子节点，直接删除。<br> • 如果要删除的节点只有一个子节点，将其子节点代替要删除的节点。<br> • 如果要删除的节点有两个子节点，找到其右子树中的最小节点或左子树中的最大节点，用该节点代替要删除的节点，并将其删除。<br> • 时间复杂度：O(logn)，取决于树的形态。</li>
+</ol>
+<p>删除展示：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/2.png"
+                      alt="sc"
+                ></p>
+<h2 id="三、二叉排序树的性质与应用"><a href="#三、二叉排序树的性质与应用" class="headerlink" title="三、二叉排序树的性质与应用"></a>三、二叉排序树的性质与应用</h2><ol>
+<li>性质：<br> • 由于二叉排序树的性质，查找、插入和删除操作的时间复杂度通常为O(log⁡n)，但在最坏情况下（如树退化为链表）可能达到O(n)。</li>
+<li>应用：<br> • 二叉排序树在数据库索引、符号表、字典等应用中非常常见，用于实现高效的查找、插入和删除操作。</li>
+</ol>
+<h2 id="四、二叉排序树的构造与调整"><a href="#四、二叉排序树的构造与调整" class="headerlink" title="四、二叉排序树的构造与调整"></a>四、二叉排序树的构造与调整</h2><p>  1.二叉排序树的构造：从一棵空树出发，依次输入元素，将他们插入二叉排序树中的合适位置。<br>设查找的关键字序列为{45,24,53,45,12,24}<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250328/3.png"
+                      alt="gz"
+                ><br>算法代码：</p>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Creat_BST</span><span class="params">(BiTree&amp;T,KeyTypestr[],<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	T=<span class="literal">NULL</span>;<span class="comment">//初始时T为空树</span></span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;n)</span><br><span class="line">	&#123;<span class="comment">//依次将每个关键字插入到二叉排序树中</span></span><br><span class="line">		BST_Insert(T,str[i]);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="3">
+<li>调整：<br> • 在实际应用中，为了避免二叉排序树退化为链表，可以采用平衡二叉树（如AVL树、红黑树）来保持树的平衡性。</li>
+</ol>
 ]]></content>
       <categories>
         <category>数据结构</category>
@@ -651,57 +702,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二叉排序树</title>
-    <url>/post/20250328115300.html</url>
-    <content><![CDATA[<h2 id="一、二叉排序树的基本概念"><a href="#一、二叉排序树的基本概念" class="headerlink" title="一、二叉排序树的基本概念"></a>一、二叉排序树的基本概念</h2><ol>
-<li>定义：<br> • 二叉排序树（BST）是一种特殊的二叉树，它满足以下性质：<br> ①若左子树非空，则左子树上所有节点的值均小于根节点的值。<br> ② 若右子树非空，则右子树上所有节点的值均大于根节点的值。<br> ③左子树和右子树也分别为二叉排序树。</li>
-<li>特点：<br> ①中序遍历二叉排序树，可以得到一个递增的有序序列。<br> ②没有键值相等的节点。</li>
-</ol>
-<h2 id="二、二叉排序树的基本操作"><a href="#二、二叉排序树的基本操作" class="headerlink" title="二、二叉排序树的基本操作"></a>二、二叉排序树的基本操作</h2><ol>
-<li>查找操作：<br> • 过程：从根节点开始，如果当前节点的值等于目标值，则查找成功；如果当前节点的值大于目标值，则继续遍历左子树；如果当前节点的值小于目标值，则继续遍历右子树。<br> • 时间复杂度：最好情况下为O(log⁡n），最坏情况下为O(n)，取决于树的形态。<br>算法代码：</li>
-</ol>
-<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">BSTNode*<span class="title function_">BST_Search</span><span class="params">(BiTreeT,ElemTypekey)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">while</span>(T!=<span class="literal">NULL</span>&amp;&amp;key!=T-&gt;data) <span class="comment">//若树空或等于根结点值，则结束循环</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(key&lt;T-&gt;data)T=T-&gt;lchild;<span class="comment">//小于，则在左子树上查找</span></span><br><span class="line">		elseT=T-&gt;rchild;<span class="comment">//大于，则在右子树上查找&#125;returnT</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<ol start="2">
-<li>插入操作：<br> • 过程：首先查找要插入的位置（一定是叶子节点），然后创建新节点插入到该位置。<br> • 时间复杂度：O(logn)，取决于树的形态。<br>插入展示：<br> <img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250328/1.png"
-                      alt="cr"
-                ><br>算法代码：</li>
-</ol>
-<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">BST_Insert</span><span class="params">(BiTree&amp;T,KeyTypek)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;<span class="comment">//原树为空，新插入的记录为根结点</span></span><br><span class="line">		T=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BSTNode));</span><br><span class="line">		T-&gt;data=k;</span><br><span class="line">		T-&gt;lchilds=T-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">		return1;<span class="comment">//返回1,插入成功).</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k==sT-&gt;data)<span class="comment">//树中存在相同关键字的结点，插入失败</span></span><br><span class="line">		return0;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(k&lt;T-&gt;data)<span class="comment">//插入到T的左子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;lchildrk);</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//插入到T的右子树</span></span><br><span class="line">		<span class="keyword">return</span> BST_Insert(T-&gt;rchild,k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<ol start="2">
-<li>删除操作：<br> • 过程：<br> • 找到要删除的节点，并确定其父节点。<br> • 如果要删除的节点是叶子节点，直接删除。<br> • 如果要删除的节点只有一个子节点，将其子节点代替要删除的节点。<br> • 如果要删除的节点有两个子节点，找到其右子树中的最小节点或左子树中的最大节点，用该节点代替要删除的节点，并将其删除。<br> • 时间复杂度：O(logn)，取决于树的形态。</li>
-</ol>
-<p>删除展示：<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250328/2.png"
-                      alt="sc"
-                ></p>
-<h2 id="三、二叉排序树的性质与应用"><a href="#三、二叉排序树的性质与应用" class="headerlink" title="三、二叉排序树的性质与应用"></a>三、二叉排序树的性质与应用</h2><ol>
-<li>性质：<br> • 由于二叉排序树的性质，查找、插入和删除操作的时间复杂度通常为O(log⁡n)，但在最坏情况下（如树退化为链表）可能达到O(n)。</li>
-<li>应用：<br> • 二叉排序树在数据库索引、符号表、字典等应用中非常常见，用于实现高效的查找、插入和删除操作。</li>
-</ol>
-<h2 id="四、二叉排序树的构造与调整"><a href="#四、二叉排序树的构造与调整" class="headerlink" title="四、二叉排序树的构造与调整"></a>四、二叉排序树的构造与调整</h2><p>  1.二叉排序树的构造：从一棵空树出发，依次输入元素，将他们插入二叉排序树中的合适位置。<br>设查找的关键字序列为{45,24,53,45,12,24}<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250328/3.png"
-                      alt="gz"
-                ><br>算法代码：</p>
-<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Creat_BST</span><span class="params">(BiTree&amp;T,KeyTypestr[],<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	T=<span class="literal">NULL</span>;<span class="comment">//初始时T为空树</span></span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;n)</span><br><span class="line">	&#123;<span class="comment">//依次将每个关键字插入到二叉排序树中</span></span><br><span class="line">		BST_Insert(T,str[i]);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<ol start="3">
-<li>调整：<br> • 在实际应用中，为了避免二叉排序树退化为链表，可以采用平衡二叉树（如AVL树、红黑树）来保持树的平衡性。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>平衡二叉树（AVL）</title>
     <url>/post/20250328121706.html</url>
     <content><![CDATA[<h2 id="一、平衡二叉树的基本概念"><a href="#一、平衡二叉树的基本概念" class="headerlink" title="一、平衡二叉树的基本概念"></a>一、平衡二叉树的基本概念</h2><ol>
@@ -762,40 +762,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo写博客出现unknown path</title>
-    <url>/post/20250330222251.html</url>
-    <content><![CDATA[<h2 id="写hexo博客时报错Template-render-error-unknown-path"><a href="#写hexo博客时报错Template-render-error-unknown-path" class="headerlink" title="写hexo博客时报错Template render error: (unknown path)"></a>写hexo博客时报错Template render error: (unknown path)</h2><p><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/5.png"
-                      alt="aa"
-                ></p>
-<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>可能出现了<code>&#123;&#123;&#125;&#125;、&#123;（）&#125;、&#123;% %&#125;</code>等等，这种hexo无法转义的字符</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>加上键盘左上角的符号，下图所示<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/4.png"
-                      alt="a"
-                ><br>用这个符号将需要注释的部分括住，就行了<br>就像这样<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/6.png"
-                      alt="a"
-                ><br>然后显示的效果就是上面的错误示范那样，如下图所示<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250330/7.png"
-                      alt="a"
-                ></p>
-]]></content>
-      <categories>
-        <category>解决错误</category>
-      </categories>
-      <tags>
-        <tag>解决错误</tag>
       </tags>
   </entry>
   <entry>
@@ -861,6 +827,40 @@
       </categories>
       <tags>
         <tag>编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo写博客出现unknown path</title>
+    <url>/post/20250330222251.html</url>
+    <content><![CDATA[<h2 id="写hexo博客时报错Template-render-error-unknown-path"><a href="#写hexo博客时报错Template-render-error-unknown-path" class="headerlink" title="写hexo博客时报错Template render error: (unknown path)"></a>写hexo博客时报错Template render error: (unknown path)</h2><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/5.png"
+                      alt="aa"
+                ></p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>可能出现了<code>&#123;&#123;&#125;&#125;、&#123;（）&#125;、&#123;% %&#125;</code>等等，这种hexo无法转义的字符</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>加上键盘左上角的符号，下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/4.png"
+                      alt="a"
+                ><br>用这个符号将需要注释的部分括住，就行了<br>就像这样<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/6.png"
+                      alt="a"
+                ><br>然后显示的效果就是上面的错误示范那样，如下图所示<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250330/7.png"
+                      alt="a"
+                ></p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
       </tags>
   </entry>
   <entry>
@@ -3206,13 +3206,13 @@
       </tags>
   </entry>
   <entry>
-    <title>STM32-4-LED灯循环点亮控制</title>
-    <url>/post/20250722223743.html</url>
-    <content><![CDATA[<h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h2><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span> </span></span><br><span class="line"><span class="type">uint16_t</span> temp, i; </span><br><span class="line"><span class="type">void</span> <span class="title function_">Delay</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> count)</span></span><br><span class="line">&#123; </span><br><span class="line"> <span class="type">unsigned</span> <span class="type">int</span> i; </span><br><span class="line"> <span class="keyword">for</span>(;count!=<span class="number">0</span>;count--) </span><br><span class="line"> &#123; </span><br><span class="line"> i=<span class="number">5000</span>; </span><br><span class="line"> <span class="keyword">while</span>(i--); </span><br><span class="line"> &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_InitTypeDef GPIO_InitStructure; </span><br><span class="line"> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); </span><br><span class="line"> GPIO_InitStructure.GPIO_Pin = </span><br><span class="line"> GPIO_Pin_8|GPIO_Pin_9|GPIO_Pin_10|GPIO_Pin_11; </span><br><span class="line"> GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; </span><br><span class="line"> GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; </span><br><span class="line"> GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line"> <span class="keyword">while</span>(<span class="number">1</span>) </span><br><span class="line"> &#123; </span><br><span class="line"> temp=<span class="number">0x0100</span>; </span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_Write(GPIOB,~temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp=temp&lt;&lt;<span class="number">1</span>; </span><br><span class="line"> &#125; </span><br><span class="line"> &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+    <title>STM32-5-跑马灯</title>
+    <url>/post/20250722224104.html</url>
+    <content><![CDATA[<h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h2><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">uint16_t</span> temp, i, j;  </span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Delay</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> count)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(; count != <span class="number">0</span>; count--)</span><br><span class="line">    &#123;</span><br><span class="line">        i = <span class="number">5000</span>;</span><br><span class="line">        <span class="keyword">while</span>(i--);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_InitTypeDef GPIO_InitStructure; </span><br><span class="line"> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); </span><br><span class="line"> </span><br><span class="line"> GPIO_InitStructure.GPIO_Pin = <span class="number">0x03FF</span>; </span><br><span class="line"> GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; </span><br><span class="line"> GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; </span><br><span class="line"> GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line"> <span class="keyword">while</span>(<span class="number">1</span>) </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_SetBits(GPIOB, <span class="number">0x0FFFF</span>); </span><br><span class="line"> temp = <span class="number">0x0001</span>; </span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_ResetBits(GPIOB, temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp =( temp&lt;&lt;<span class="number">1</span>)+<span class="number">1</span>; </span><br><span class="line"> &#125; </span><br><span class="line"> temp = <span class="number">0x0FE00</span>; </span><br><span class="line"> <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">10</span>;j++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_SetBits(GPIOB, temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp = (temp&gt;&gt;<span class="number">1</span>)+ <span class="number">0x8000</span>; </span><br><span class="line"> &#125; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 <h2 id="2-模拟图"><a href="#2-模拟图" class="headerlink" title="2.模拟图"></a>2.模拟图</h2><p><img  
                      lazyload
                      src="/images/loading.gif"
-                     data-src="/img/20250722/3.png"
+                     data-src="/img/20250722/4.png"
                       alt="a"
                 ></p>
 <hr>
@@ -3226,13 +3226,13 @@
       </tags>
   </entry>
   <entry>
-    <title>STM32-5-跑马灯</title>
-    <url>/post/20250722224104.html</url>
-    <content><![CDATA[<h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h2><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">uint16_t</span> temp, i, j;  </span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Delay</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> count)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(; count != <span class="number">0</span>; count--)</span><br><span class="line">    &#123;</span><br><span class="line">        i = <span class="number">5000</span>;</span><br><span class="line">        <span class="keyword">while</span>(i--);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_InitTypeDef GPIO_InitStructure; </span><br><span class="line"> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); </span><br><span class="line"> </span><br><span class="line"> GPIO_InitStructure.GPIO_Pin = <span class="number">0x03FF</span>; </span><br><span class="line"> GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; </span><br><span class="line"> GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; </span><br><span class="line"> GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line"> <span class="keyword">while</span>(<span class="number">1</span>) </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_SetBits(GPIOB, <span class="number">0x0FFFF</span>); </span><br><span class="line"> temp = <span class="number">0x0001</span>; </span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_ResetBits(GPIOB, temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp =( temp&lt;&lt;<span class="number">1</span>)+<span class="number">1</span>; </span><br><span class="line"> &#125; </span><br><span class="line"> temp = <span class="number">0x0FE00</span>; </span><br><span class="line"> <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">10</span>;j++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_SetBits(GPIOB, temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp = (temp&gt;&gt;<span class="number">1</span>)+ <span class="number">0x8000</span>; </span><br><span class="line"> &#125; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+    <title>STM32-4-LED灯循环点亮控制</title>
+    <url>/post/20250722223743.html</url>
+    <content><![CDATA[<h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h2><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stm32f10x.h&quot;</span> </span></span><br><span class="line"><span class="type">uint16_t</span> temp, i; </span><br><span class="line"><span class="type">void</span> <span class="title function_">Delay</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> count)</span></span><br><span class="line">&#123; </span><br><span class="line"> <span class="type">unsigned</span> <span class="type">int</span> i; </span><br><span class="line"> <span class="keyword">for</span>(;count!=<span class="number">0</span>;count--) </span><br><span class="line"> &#123; </span><br><span class="line"> i=<span class="number">5000</span>; </span><br><span class="line"> <span class="keyword">while</span>(i--); </span><br><span class="line"> &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> </span><br><span class="line">&#123; </span><br><span class="line"> GPIO_InitTypeDef GPIO_InitStructure; </span><br><span class="line"> RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); </span><br><span class="line"> GPIO_InitStructure.GPIO_Pin = </span><br><span class="line"> GPIO_Pin_8|GPIO_Pin_9|GPIO_Pin_10|GPIO_Pin_11; </span><br><span class="line"> GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; </span><br><span class="line"> GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; </span><br><span class="line"> GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line"> <span class="keyword">while</span>(<span class="number">1</span>) </span><br><span class="line"> &#123; </span><br><span class="line"> temp=<span class="number">0x0100</span>; </span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++) </span><br><span class="line"> &#123; </span><br><span class="line"> GPIO_Write(GPIOB,~temp); </span><br><span class="line"> Delay(<span class="number">100</span>); </span><br><span class="line"> temp=temp&lt;&lt;<span class="number">1</span>; </span><br><span class="line"> &#125; </span><br><span class="line"> &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 <h2 id="2-模拟图"><a href="#2-模拟图" class="headerlink" title="2.模拟图"></a>2.模拟图</h2><p><img  
                      lazyload
                      src="/images/loading.gif"
-                     data-src="/img/20250722/4.png"
+                     data-src="/img/20250722/3.png"
                       alt="a"
                 ></p>
 <hr>
@@ -3435,109 +3435,10 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>不开心四六级又没有过</title>
-    <url>/post/20250816114710.html</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6726d5c82b006a285c741dd9c0fd4c68d1127981c58787058bf09d36309272b4">d5a250a6880d98c21c2687900615c592e6fb8bfeefe5494fb6fd0139ae9464d8a6efe4bc05e6c65e4da357af365345ce3bdc4be59bdb9e3ea3ed60a97efdcfa09ad985bf421f71b6a40aab3586a19b166d59e2d81774ee16c241c95378d33b8eefeaa97438ee0285a50f904ca6201adb449e6bf3854b02d9824780dace9b92bbccaabc6c86d642dd225f80b8f465a7a3bff0a30d3c998acef41715bfe5a0d195c0625f5cbd77670b4341594e8e541be7fc9bbfc32bc365a167698d87a2241d495b27c377f414a75dfa7029c91be2ea18f4aaaea215e5a5f744b1df16a8959f63a778180339b1928765be0df66a2d9c57bebfd93a75821a742032431421f1bb096cbe71ba51e5ed1792fd1bc6caffbee4bfbb2a712a0e8671243ebc226260fde73a803b07362055e6551e113c7bd96eba3a907c8151987f677fc65dc2664c06bf199f89948c5c7c5dc617edb7d4319374f7490b52deaae5d016ab4f88d3f2383cf853010ebaf3a5dab428b48c6fa99957fac641fe0f80068e8a4e6fddad5e7e68a5d08ccad1778465b3247ee8b9d8926eab21979c98537b0fc38b05fd1d563c0dcabde0b694f963646684b5983a48e0d61a5e1fa1f91f82a99b28e496b441439829308bb3ec541ba6178b1da392b1948307e0a1945eb2ea0b040e2ba2bde53b66019b47a76ce39af45d05826bda82949dfdb5448895bfd9f961925347890ab0987d0222c348b03a8907757619410f3e9a7a95055e5a2606072a2e74047e4440f3aea05dfa7bf3bfc1325308766f914cf3588827ad2f1007284f36da4fe21269a1952f70a23ca90b7130c184a15bf2666236402f21282afa8ed90c2299e3ebc8d9b6b053cba9f66c112a968a2de5fb06455fab136d36d31dbbbed024d0544d77234c066ae87f6dca39f3c8050a4fe0eae38f9a9fbc1fdcf87558892e6d2d4aa2af36de4c0a17d71318c32ea3f17a0eac692074925d7b1b982eb6a23eb9fbd02df36c456ce30287855201f808690f6e6f11e3f0e5afb54663ac3edbcb7c26e81e9299d86364fcf17d757d874a05cc9b8c2ab3d151a26dcf707e9097b163fb606df2251968c1ae75b320de504754d05eae60293c26fd0a9e5bb530770630eb33d87405eb0438550e414c28b3bbde4b48ad1556ae3113faf4a6e5ceaf1c9b6f98730459b921c649341fd92e3bd0ac4ed5d8cbd45480d7a932221f05471de41ae2bffcf051dbcafcb6bed54559524f74d424cd4ff24b12cce7a47c49e9d4e7b9fc1671</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
-<script data-swup-reload-script type="module">
-import {initHBE} from "/js/plugins/hbe.js";
-  console.log("hexo-blog-encrypt: loaded.");
-    initHBE();
-</script>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>四战六级查分日记</title>
-    <url>/post/20250816022035.html</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6aa4a15cde126e3840cba62c5bfbabb097d0fb98cb3c40efd30acca38720a8bf">d5a250a6880d98c21c2687900615c59200d352abced21b1c1b6bffac82edeb0fa6f4499f2e9b8ab6fbf1a91fb055ecd674cca0b42aec3bfb00a556774c9866cf91a1c1f0b43ef24291983127594936b0636250ed989943f8ad07bd0f6364c4e3c6e6692f2370d7d45dedba021d4db6efb11909705cf6eb04f1a379d3893cb0824fee33145a022ec69e014493b4cdd5d84f105e21424a3f15e896c52f494b63766240ca23530778ee594021e3e9f1108b1d0bcdb4f708436fd5095f59ff4d2b2e88d0a5dec202f54b9e295b6b0ab39140ddcdfb1d83a537428ab5eada9af0e90801d2d676788d495d4b163eb86cd203d2c2401e0940c2a7fb031dcf7e267c70f649a1b672e40c1c42c77a81b9b7c33d994f0247a8708897767796e7a3667543e18ab0386c268fd9af19e0033a117f68b277328aec3b37668dfe3eaa9afeb6db2a463e8cf4ac7cbfc6c5c54163fce5f8206d894492534f8637a85d5abb814dcd9970c92b039c9ff687c4d6495faca11ee835a26a14d70729706e778a15b05c838411993beec6eef9dfc89839446390a2e4dc73e9999cb96177141030fc5c6c13dddd6362e6cb6709d896a95a041d60de990cbbb461bb89410fd66eb2e47d582b5753fd78bac73157818212a55753b6b9a2949851cb3174e8192bfd7628c526d35f4d15dcf65e80584e0f4ddf806cb07e3367fe88aa2ea19af88b860c058c13875f850c1737ebcd197e2b730f424da24f9e6f17c875b71563646dd249b12fa7d320ddfc06f954c0908cb3c9765f657a3cb75a8bc2598ac40129847d073f8a770b33942664419e22ea182e32084a31084215ef8d5790635a63c64fd7d561b811144c0599ac3fe47ef0d4635af950695c23f0eeed87d003cf1821c464db8c65177f4a7a1b888673d0d296ec996733dcd038ce85556590f63b209db44052896ec5894132b5480ade36884eff6b92ceac70a70c5fd2c3ba0e8bd37c39c8b571c06e1eef07bd7c7ad773248adcb9718f59920e02cba833b231d4500363d59e30b0ed64ccf450f2a89fe46cefc1e64fa7d660cc7bff45e2bcd1293a9577888749cc85e863d952cc8e5cf94d3a9607938c020ee6bbac710cb68823f85cb97f48c3cce0dddd89d2c2d39646dc78978ff62c60541f2e56a50f2e233fa983a1bf4ed901ee99db30b87814b9308aba7c39fed1aa61abd3fbb4c9a9a181e9bda3858d99017f5562a8ca19cc9e9dabc2ef7940d0c458720aef714fe45f4f4b889f4bf38037e865400c4504857bdbadda538d548367282bde40276fa933fbc7171801bdbcd5ce28c05798cd16c773bc4f116011df3fa6b638e56b8d576b8588fa33d14f05b95a05ec4f86c24472ad7f8eacb7201f0ed3e562c564abf0db9a75e030dc792fd74bbf538aba67aa51cfbb2b88ec3dcc126ca2dd0619f3af0853d3292a9158f79599663b17909da19b8f5f478e6a91ae7e6e0866ce8542d95e7cb744d428acb798e4d42f00b7bc797d83a11edbb35190b9b85fca95be2be7eb8d43cc27ce84058ed34fd6dca2ea337b15a673080f2c17301b185b316c6e03590a05eaf646af354e3feb3ef5e2484a1ba164981868dd5bec53386766c6fed8c1b27034c1e018ab4e28eb9d</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
-<script data-swup-reload-script type="module">
-import {initHBE} from "/js/plugins/hbe.js";
-  console.log("hexo-blog-encrypt: loaded.");
-    initHBE();
-</script>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>github.io进不去</title>
-    <url>/post/20250817003210.html</url>
-    <content><![CDATA[<h2 id="github-io进不去了怎么办？"><a href="#github-io进不去了怎么办？" class="headerlink" title="github.io进不去了怎么办？"></a>github.io进不去了怎么办？</h2><p>如果你的界面如下图所示：<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250816/2.png"
-                      alt="a"
-                ></p>
-<blockquote>
-<p>网上有很多介绍原因的，还有什么更改DNS的，我感觉好麻烦啊，我在这就说一种比较简单的，换句话说，我认为比较简单的办法，清除浏览器缓存。</p>
-</blockquote>
-<blockquote>
-<p>我先说明一下啊，我是偶尔有情况进不去，不是说我没有配置成功的进不去，我平常都可以进去的，偶尔，偶尔有情况进不去了、</p>
-</blockquote>
-<p>按下面的图示操作就行了：<br>①右上角有仨点，点完以后清除缓存就行了<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250816/3.png"
-                      alt="a"
-                ><br>②这个时间选一个就行了，不影响<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250816/4.png"
-                      alt="a"
-                ><br>③然后就可以了，如果要是没进来，关闭浏览器重新打开浏览器再试一下就行了。<br><img  
-                     lazyload
-                     src="/images/loading.gif"
-                     data-src="/img/20250816/5.png"
-                      alt="a"
-                ></p>
-<hr>
-<p>如果要是还不行的话，你就关机重启就行了。嘿嘿嘿~~~  这法子，搁哪里都可好用😂</p>
-]]></content>
-      <categories>
-        <category>解决错误</category>
-      </categories>
-      <tags>
-        <tag>解决错误</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一份很真实的简历</title>
     <url>/post/20250808080808.html</url>
     <content><![CDATA[<h1 id="✨✨个人简历✨✨"><a href="#✨✨个人简历✨✨" class="headerlink" title="✨✨个人简历✨✨"></a>✨✨个人简历✨✨</h1><h2 id="一、个人信息"><a href="#一、个人信息" class="headerlink" title="一、个人信息"></a>一、个人信息</h2><p><strong>姓名</strong>：张雨蒙</p>
-<p><strong>联系方式</strong>：15617888906 | <a class="link"   href="mailto:&#49;&#x35;&#x36;&#x31;&#x37;&#56;&#56;&#x38;&#x39;&#48;&#x36;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;" >15617888906@163.com<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> （微信同手机号）</p>
+<p><strong>联系方式</strong>：15617888906 | <a class="link"   href="mailto:&#x31;&#53;&#54;&#x31;&#x37;&#x38;&#x38;&#56;&#x39;&#48;&#54;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#109;" >15617888906@163.com<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> （微信同手机号）</p>
 <p><strong>出生年月</strong>：2003 年 11 月</p>
 <p><strong>政治面貌</strong>：预备党员</p>
 <p><strong>个人博客</strong>：<a href="https://lemon2003.github.io/">lemon2003.github.io</a></p>
@@ -3681,7 +3582,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 </blockquote>
 <h2 id="七、未来规划"><a href="#七、未来规划" class="headerlink" title="七、未来规划"></a>七、未来规划</h2><p><strong>大四：</strong> 完成本科学业，提升英语水平<br>目标：认真完成本科阶段的全部学业，为本科学习画上圆满句号，并提升自身英语水平。<br>学习：完成毕业设计，坚持每日进行英语词汇、阅读、写作及口语练习。<br> ● 完成学业：完成本科期间的所有学业任务，包括毕业设计。<br> ● 英语学习：广泛阅读英语文献，提升英语阅读能力。</p>
 <blockquote>
-<p>其实说实话，我的英语水平确实很不好，截止2025年8月16日，我的英语6级考了4次了，明明英语4级一次都过了，但是6级是考了4次才过，我每天都会背100个英语单词，但是我总是一直背一直忘，每次考试前都会把近3年的真题和一些机构的模拟卷定时做一遍，因为每次做真题后都会仔细阅读分析，所以后来在做真题的时候，即使隔了几个月，看了关键字，文章意思就想起来了，答案都背会了，但是一做模拟卷或者正式考试的时候，总是理解不透彻出题者的意思，做错了很多我就会很浮躁很气馁，所以我会</p>
+<p>其实说实话，我的英语水平确实很不好，截止2025年8月16日，我的英语6级考了4次了，明明英语4级一次都过了，但是6级是考了4次才过，我每天都会背100个英语单词，但是我总是一直背一直忘，每次考试前都会把近3年的真题和一些机构的模拟卷定时做一遍，因为每次做真题后都会仔细阅读分析，所以后来在做真题的时候，即使隔了几个月，看了关键字，文章意思就想起来了，答案都背会了，但是一做模拟卷或者正式考试的时候，总是理解不透彻出题者的意思，做错了很多我就会很浮躁很气馁，但是我会尽量的缓和调节自己的情绪，尽快重新投入学习中。</p>
 </blockquote>
 <p><strong>研一：</strong> 夯实基础，探寻方向<br>目标：熟悉研究领域，完成课程学习，确定研究方向与计划。<br>学习：学习专业基础课程和必修课程，通过考试，筑牢专业基础。<br> ● 文献阅读：广泛研读相关领域的文献，了解前沿动态，为确定具体研究方向做好准备。<br> ● 与导师交流：与导师进行深入探讨，交流自身兴趣点及可能的研究方向。<br> ● 初步尝试：参与实验室项目，通过实践了解研究方法和流程。</p>
 <blockquote>
@@ -3702,6 +3603,105 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>腹有诗书气自华</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不开心四六级又没有过</title>
+    <url>/post/20250816114710.html</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="6726d5c82b006a285c741dd9c0fd4c68d1127981c58787058bf09d36309272b4">d5a250a6880d98c21c2687900615c592e6fb8bfeefe5494fb6fd0139ae9464d8a6efe4bc05e6c65e4da357af365345ce3bdc4be59bdb9e3ea3ed60a97efdcfa09ad985bf421f71b6a40aab3586a19b166d59e2d81774ee16c241c95378d33b8eefeaa97438ee0285a50f904ca6201adb449e6bf3854b02d9824780dace9b92bbccaabc6c86d642dd225f80b8f465a7a3bff0a30d3c998acef41715bfe5a0d195c0625f5cbd77670b4341594e8e541be7fc9bbfc32bc365a167698d87a2241d495b27c377f414a75dfa7029c91be2ea18f4aaaea215e5a5f744b1df16a8959f63a778180339b1928765be0df66a2d9c57bebfd93a75821a742032431421f1bb096cbe71ba51e5ed1792fd1bc6caffbee4bfbb2a712a0e8671243ebc226260fde73a803b07362055e6551e113c7bd96eba3a907c8151987f677fc65dc2664c06bf199f89948c5c7c5dc617edb7d4319374f7490b52deaae5d016ab4f88d3f2383cf853010ebaf3a5dab428b48c6fa99957fac641fe0f80068e8a4e6fddad5e7e68a5d08ccad1778465b3247ee8b9d8926eab21979c98537b0fc38b05fd1d563c0dcabde0b694f963646684b5983a48e0d61a5e1fa1f91f82a99b28e496b441439829308bb3ec541ba6178b1da392b1948307e0a1945eb2ea0b040e2ba2bde53b66019b47a76ce39af45d05826bda82949dfdb5448895bfd9f961925347890ab0987d0222c348b03a8907757619410f3e9a7a95055e5a2606072a2e74047e4440f3aea05dfa7bf3bfc1325308766f914cf3588827ad2f1007284f36da4fe21269a1952f70a23ca90b7130c184a15bf2666236402f21282afa8ed90c2299e3ebc8d9b6b053cba9f66c112a968a2de5fb06455fab136d36d31dbbbed024d0544d77234c066ae87f6dca39f3c8050a4fe0eae38f9a9fbc1fdcf87558892e6d2d4aa2af36de4c0a17d71318c32ea3f17a0eac692074925d7b1b982eb6a23eb9fbd02df36c456ce30287855201f808690f6e6f11e3f0e5afb54663ac3edbcb7c26e81e9299d86364fcf17d757d874a05cc9b8c2ab3d151a26dcf707e9097b163fb606df2251968c1ae75b320de504754d05eae60293c26fd0a9e5bb530770630eb33d87405eb0438550e414c28b3bbde4b48ad1556ae3113faf4a6e5ceaf1c9b6f98730459b921c649341fd92e3bd0ac4ed5d8cbd45480d7a932221f05471de41ae2bffcf051dbcafcb6bed54559524f74d424cd4ff24b12cce7a47c49e9d4e7b9fc1671</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>四战六级查分日记</title>
+    <url>/post/20250816022035.html</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="6aa4a15cde126e3840cba62c5bfbabb097d0fb98cb3c40efd30acca38720a8bf">d5a250a6880d98c21c2687900615c59200d352abced21b1c1b6bffac82edeb0fa6f4499f2e9b8ab6fbf1a91fb055ecd674cca0b42aec3bfb00a556774c9866cf91a1c1f0b43ef24291983127594936b0636250ed989943f8ad07bd0f6364c4e3c6e6692f2370d7d45dedba021d4db6efb11909705cf6eb04f1a379d3893cb0824fee33145a022ec69e014493b4cdd5d84f105e21424a3f15e896c52f494b63766240ca23530778ee594021e3e9f1108b1d0bcdb4f708436fd5095f59ff4d2b2e88d0a5dec202f54b9e295b6b0ab39140ddcdfb1d83a537428ab5eada9af0e90801d2d676788d495d4b163eb86cd203d2c2401e0940c2a7fb031dcf7e267c70f649a1b672e40c1c42c77a81b9b7c33d994f0247a8708897767796e7a3667543e18ab0386c268fd9af19e0033a117f68b277328aec3b37668dfe3eaa9afeb6db2a463e8cf4ac7cbfc6c5c54163fce5f8206d894492534f8637a85d5abb814dcd9970c92b039c9ff687c4d6495faca11ee835a26a14d70729706e778a15b05c838411993beec6eef9dfc89839446390a2e4dc73e9999cb96177141030fc5c6c13dddd6362e6cb6709d896a95a041d60de990cbbb461bb89410fd66eb2e47d582b5753fd78bac73157818212a55753b6b9a2949851cb3174e8192bfd7628c526d35f4d15dcf65e80584e0f4ddf806cb07e3367fe88aa2ea19af88b860c058c13875f850c1737ebcd197e2b730f424da24f9e6f17c875b71563646dd249b12fa7d320ddfc06f954c0908cb3c9765f657a3cb75a8bc2598ac40129847d073f8a770b33942664419e22ea182e32084a31084215ef8d5790635a63c64fd7d561b811144c0599ac3fe47ef0d4635af950695c23f0eeed87d003cf1821c464db8c65177f4a7a1b888673d0d296ec996733dcd038ce85556590f63b209db44052896ec5894132b5480ade36884eff6b92ceac70a70c5fd2c3ba0e8bd37c39c8b571c06e1eef07bd7c7ad773248adcb9718f59920e02cba833b231d4500363d59e30b0ed64ccf450f2a89fe46cefc1e64fa7d660cc7bff45e2bcd1293a9577888749cc85e863d952cc8e5cf94d3a9607938c020ee6bbac710cb68823f85cb97f48c3cce0dddd89d2c2d39646dc78978ff62c60541f2e56a50f2e233fa983a1bf4ed901ee99db30b87814b9308aba7c39fed1aa61abd3fbb4c9a9a181e9bda3858d99017f5562a8ca19cc9e9dabc2ef7940d0c458720aef714fe45f4f4b889f4bf38037e865400c4504857bdbadda538d548367282bde40276fa933fbc7171801bdbcd5ce28c05798cd16c773bc4f116011df3fa6b638e56b8d576b8588fa33d14f05b95a05ec4f86c24472ad7f8eacb7201f0ed3e562c564abf0db9a75e030dc792fd74bbf538aba67aa51cfbb2b88ec3dcc126ca2dd0619f3af0853d3292a9158f79599663b17909da19b8f5f478e6a91ae7e6e0866ce8542d95e7cb744d428acb798e4d42f00b7bc797d83a11edbb35190b9b85fca95be2be7eb8d43cc27ce84058ed34fd6dca2ea337b15a673080f2c17301b185b316c6e03590a05eaf646af354e3feb3ef5e2484a1ba164981868dd5bec53386766c6fed8c1b27034c1e018ab4e28eb9d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github.io进不去</title>
+    <url>/post/20250817003210.html</url>
+    <content><![CDATA[<h2 id="github-io进不去了怎么办？"><a href="#github-io进不去了怎么办？" class="headerlink" title="github.io进不去了怎么办？"></a>github.io进不去了怎么办？</h2><p>如果你的界面如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250816/2.png"
+                      alt="a"
+                ></p>
+<blockquote>
+<p>网上有很多介绍原因的，还有什么更改DNS的，我感觉好麻烦啊，我在这就说一种比较简单的，换句话说，我认为比较简单的办法，清除浏览器缓存。</p>
+</blockquote>
+<blockquote>
+<p>我先说明一下啊，我是偶尔有情况进不去，不是说我没有配置成功的进不去，我平常都可以进去的，偶尔，偶尔有情况进不去了、</p>
+</blockquote>
+<p>按下面的图示操作就行了：<br>①右上角有仨点，点完以后清除缓存就行了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250816/3.png"
+                      alt="a"
+                ><br>②这个时间选一个就行了，不影响<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250816/4.png"
+                      alt="a"
+                ><br>③然后就可以了，如果要是没进来，关闭浏览器重新打开浏览器再试一下就行了。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250816/5.png"
+                      alt="a"
+                ></p>
+<hr>
+<p>如果要是还不行的话，你就关机重启就行了。嘿嘿嘿~~~  这法子，搁哪里都可好用😂</p>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
       </tags>
   </entry>
 </search>
