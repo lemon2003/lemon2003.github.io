@@ -561,7 +561,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">70</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">71</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -624,7 +624,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">70</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">71</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -639,6 +639,74 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722223221.html">
+                            STM32-2-LED灯闪烁
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1.代码123456789101112131415161718192021222324252627#include &quot;stm32f10x.h&quot; void Delay(unsigned int count) //????&#123;  unsigned int i;  for(;count!=0;count--)	&#123;		i=5000; 		while(i--); 	&#125; &#125; int main(void) &#123;  GPIO_InitTypeDef GPIO_InitStructure;  RCC_APB2PeriphClockCmd(R...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 22:32:21 GMT+0800">
+                
+                    2025-07-22 22:32:21
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/STM32/">STM32</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/STM32/">STM32</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722223221.html">阅读全文<span class="seo-reader-text">STM32-2-LED灯闪烁</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1322,94 +1390,11 @@ L3(P2.2)：LED3
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250722212410.html">
-                            C51-声光报警器
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            第三篇一、功能模块解析
-​​引脚定义​​：
-
-S1=P3^1：按键输入（低电平触发）
-beep=P1^5：蜂鸣器输出
-green=P2^0：绿灯控制（低电平亮）
-red=P2^1：红灯控制（低电平亮）
-
-
-​​功能函数​​：
-
-
-1234void delay(unsigned int i)  // 阻塞延时void Beep(unsigned int i)   // 产生频率可调的蜂鸣声void Light(unsigned int i)   // 红灯闪烁（未在main调用）void all(unsigned int i)     // 声光同步报警（红灯闪烁+蜂鸣）
-
-
-​​主控制逻...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 22 2025 21:24:10 GMT+0800">
-                
-                    2025-07-22 21:24:10
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250722212410.html">阅读全文<span class="seo-reader-text">C51-声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/2/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/2/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1437,11 +1422,11 @@ red=P2^1：红灯控制（低电平亮）
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 70 篇文章
+                        共撰写了 71 篇文章
                     </span>
                     
                         <span>
-                            共 38.4k 字
+                            共 39.1k 字
                         </span>
                     
                 </p>

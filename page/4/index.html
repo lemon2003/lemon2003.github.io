@@ -561,7 +561,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">70</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">71</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -624,7 +624,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">70</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">71</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -639,6 +639,89 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722212410.html">
+                            C51-声光报警器
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            第三篇一、功能模块解析
+​​引脚定义​​：
+
+S1=P3^1：按键输入（低电平触发）
+beep=P1^5：蜂鸣器输出
+green=P2^0：绿灯控制（低电平亮）
+red=P2^1：红灯控制（低电平亮）
+
+
+​​功能函数​​：
+
+
+1234void delay(unsigned int i)  // 阻塞延时void Beep(unsigned int i)   // 产生频率可调的蜂鸣声void Light(unsigned int i)   // 红灯闪烁（未在main调用）void all(unsigned int i)     // 声光同步报警（红灯闪烁+蜂鸣）
+
+
+​​主控制逻...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:24:10 GMT+0800">
+                
+                    2025-07-22 21:24:10
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722212410.html">阅读全文<span class="seo-reader-text">C51-声光报警器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1333,98 +1416,11 @@ cv2.THRESH_BINARY
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250414124549.html">
-                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            OpenCV中的腐蚀（Erosion）和膨胀（Dilation）操作，这是形态学处理的两个基础操作，常用于图像去噪、分割和特征提取。
-一、核心概念
-形态学操作：基于**结构元素（Kernel）**对二值图像（或灰度图像）进行几何运算，改变物体形状但不改变其拓扑结构。
-
-结构元素：
-
-是一个小型矩阵（如3x3、5x5）
-定义操作的作用范围
-常见形状：矩形、椭圆、十字形等
-
-
-
-二、腐蚀（Erosion）1. 原理
-用结构元素在图像上滑动
-仅当结构元素完全覆盖前景像素时，中心像素保留为前景
-效果：前景区域会”缩小”，可消除小物体、平滑边界
-
-2. 特点
-消除小于结构元素的噪声点
-分割粘连物体...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 14 2025 12:45:49 GMT+0800">
-                
-                    2025-04-14 12:45:49
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250414124549.html">阅读全文<span class="seo-reader-text">OpenCV中的腐蚀（Erosion）和膨胀（Dilation）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1452,11 +1448,11 @@ cv2.THRESH_BINARY
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 70 篇文章
+                        共撰写了 71 篇文章
                     </span>
                     
                         <span>
-                            共 38.4k 字
+                            共 39.1k 字
                         </span>
                     
                 </p>

@@ -3562,4 +3562,83 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>解决错误</tag>
       </tags>
   </entry>
+  <entry>
+    <title>GitHub不用魔法上网方式</title>
+    <url>/post/20250820112816.html</url>
+    <content><![CDATA[<p>昨天给朋友发了个github上很好用的软件的链接，他问我为啥进不去，所以写一下文章，如果有朋友有相同的问题的话，可以参考一下，下图是进不去的界面。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/4.png"
+                      alt="a"
+                ><br> <strong>本文介绍两种“加速器”软件进去GitHub</strong></p>
+<hr>
+<h2 id="GitHub-为啥进不去？"><a href="#GitHub-为啥进不去？" class="headerlink" title="GitHub 为啥进不去？"></a>GitHub 为啥进不去？</h2><p>平时可能有人进入github.com的时候会进不去，其实开个“魔法”就行了，但是有人可能没有“魔法”资源，这里推荐两个加速器，也可以不用“魔法”就可以访问github。<br>但是总有一些天选之子，直接就进去了，确实是幸运啊。</p>
+<p>可能有些人只是想看一下某个界面，但是一直被卡着进不去，也不“搭桥架梯”的，就把浏览器记录清一下，就可以临时的访问了，方法如下：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/8.png"
+                      alt="a"
+                ></p>
+<p>​<strong>​为啥好好的 GitHub 就访问不了了呢？简单说就俩字儿：干扰。​</strong>​</p>
+<p>说白了，不是 GitHub 自己“挂”了，而是咱们连接过去的路不太顺畅，中间有点“关卡”。想稳定访问，关键就是​<strong>​找到一条靠谱的“桥”或者“梯子”跨过去，连接到真正的 GitHub 服务器。​</strong>​</p>
+<hr>
+<p>原因有感兴趣的朋友可以自己去搜，我这里就不过多的介绍了，网上有很多人都讲，讲的也特别明白，我这里直接讲这么弄。</p>
+<h2 id="搭桥神器一：FastGithub-推荐"><a href="#搭桥神器一：FastGithub-推荐" class="headerlink" title="搭桥神器一：FastGithub (推荐)"></a>搭桥神器一：FastGithub (推荐)</h2><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/6.png"
+                      alt="a"
+                ><br>就博主个人来讲，比较推荐这一款，好用，也很稳定，github上也有，但是现在不是进不去吗，所以用清华云里面的就行。<br>链接：<a class="link"   href="https://cloud.tsinghua.edu.cn/d/df482a15afb64dfeaff8/" >清华大学云盘<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/1.png"
+                      alt="a"
+                ><br>找一下你的系统，然后下载就行了运行起来就行了，下载完解压后如下图：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/2.png"
+                      alt="a"
+                ><br>运行起来的结果如下图：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/3.png"
+                      alt="a"
+                ><br>然后就可以了，再访问GitHub如下图：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/5.png"
+                      alt="a"
+                ></p>
+<hr>
+<h2 id="搭桥神器二：Steamcommunity"><a href="#搭桥神器二：Steamcommunity" class="headerlink" title="搭桥神器二：Steamcommunity"></a>搭桥神器二：Steamcommunity</h2><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/7.png"
+                      alt="a"
+                ><br>这款软件也挺好的，是博主第一次进GitHub用的软件，但是这个有个很烦的一点就是“端口可能会被占用”还要改端口就会很麻烦，博主是计算机专业的学生，有一个web前端网页设计的课程，用的html软件，他和这个steamcommunity用的端口一样，还得改端口，很麻烦。如果你没有这个html相关课程的话，可以用这个软件，这个加速器也很好用。<br>链接：<a class="link"   href="https://www.dogfight360.com/blog/18682/" >Steamcommunity 302 Ver.13.0.06 – Dogfight360<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>解压后就可以运行下面这个程序：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/10.png"
+                      alt="a"
+                ><br>先在设置中勾选GitHub，然后启动服务，步骤如下：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20250820/9.png"
+                      alt="a"
+                ><br>然后就可以访问GitHub了，官网链接如下：<a class="link"   href="https://github.com/" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<hr>
+<h2 id="总结一下：两个软件都很好，各有千秋"><a href="#总结一下：两个软件都很好，各有千秋" class="headerlink" title="总结一下：两个软件都很好，各有千秋"></a>总结一下：两个软件都很好，各有千秋</h2><ul>
+<li><p>​​专攻 GitHub，​首选<strong>​FastGithub​</strong>​ ，简单粗暴效果好。</p>
+</li>
+<li><p>​经常打游戏（Steam&#x2F;PS&#x2F;Xbox等），顺带也想 GitHub 跑快点，就选​<strong>​steamcommunity​</strong>​ 。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>解决错误</category>
+      </categories>
+      <tags>
+        <tag>解决错误</tag>
+      </tags>
+  </entry>
 </search>
