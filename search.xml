@@ -4385,4 +4385,123 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>英语学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hexo+github搭建个人博客</title>
+    <url>/post/20251210142436.html</url>
+    <content><![CDATA[<h1 id="Hexo-GitHub-搭建个人博客完整指南"><a href="#Hexo-GitHub-搭建个人博客完整指南" class="headerlink" title="Hexo + GitHub 搭建个人博客完整指南"></a>Hexo + GitHub 搭建个人博客完整指南</h1><h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><h3 id="1-1-安装-Node-js"><a href="#1-1-安装-Node-js" class="headerlink" title="1.1 安装 Node.js"></a>1.1 安装 Node.js</h3><p>Hexo 基于 Node.js，首先需要安装 Node.js 环境。</p>
+<p><strong>Windows&#x2F;Mac 用户</strong>：</p>
+<ol>
+<li>访问 <a class="link"   href="https://nodejs.org/" >Node.js 官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>(想知道详细步骤的就自己去搜，不想搜的直接next一路到底就行)<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/1.png"
+                      alt="a"
+                ><br><strong>验证安装</strong>：(win+r调出cmd)</li>
+</ol>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line"></span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>安装VScode：<a class="link"   href="https://code.visualstudio.com/download" >vscode官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>(想知道详细步骤的就自己去搜，不想搜的直接next一路到底就行)<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/3.png"
+                      alt="a"
+                ></li>
+</ol>
+<h3 id="1-2-安装-Git"><a href="#1-2-安装-Git" class="headerlink" title="1.2 安装 Git"></a>1.2 安装 Git</h3><p>用于版本控制和部署到 GitHub。<br><strong>下载 Git</strong>：</p>
+<ul>
+<li>Windows: <a class="link"   href="https://git-scm.com/install/windows" >Git官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>(想知道详细步骤的就自己去搜，不想搜的直接next一路到底就行)<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/2.png"
+                      alt="a"
+                ><br><strong>配置 Git</strong>：<br>1.打开你想要写博客的文件夹，然后右键调出<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/4.png"
+                      alt="a"
+                ></li>
+</ul>
+<ol start="2">
+<li>然后输入你的信息</li>
+</ol>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/5.png"
+                      alt="a"
+                ><br>注意：在GitHub设置界面中，用户名和昵称要区分开，邮箱就是你的GitHub绑定的邮箱，设置里面也能看到<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/6.png"
+                      alt="a"
+                ><br>3. 然后链接github，还是在bash里面输入以下代码，输完后回车到底就行：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/7.png"
+                      alt="a"
+                ><br>4. 然后将ssh密钥占入GitHub<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/8.png"
+                      alt="a"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/9.png"
+                      alt="a"
+                ><br>5. 然后要重新打开bash，输入：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+<p>然后输入yes，就行了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/10.png"
+                      alt="a"
+                ></p>
+<h2 id="二、Hexo-安装与初始化"><a href="#二、Hexo-安装与初始化" class="headerlink" title="二、Hexo 安装与初始化"></a>二、Hexo 安装与初始化</h2><h3 id="2-1-安装-Hexo-CLI"><a href="#2-1-安装-Hexo-CLI" class="headerlink" title="2.1 安装 Hexo CLI"></a>2.1 安装 Hexo CLI</h3><ol>
+<li>使用 npm 全局安装 Hexo</li>
+</ol>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>验证安装</li>
+</ol>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></div>
+<h3 id="2-2-创建博客项目"><a href="#2-2-创建博客项目" class="headerlink" title="2.2 创建博客项目"></a>2.2 创建博客项目</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装依赖</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-3-目录结构说明"><a href="#2-3-目录结构说明" class="headerlink" title="2.3 目录结构说明"></a>2.3 目录结构说明</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">blog/</span><br><span class="line">├── _config.yml       # 主配置文件</span><br><span class="line">├── package.json      # 依赖包配置</span><br><span class="line">├── scaffolds/        # 模板文件夹</span><br><span class="line">├── source/           # 文章和页面</span><br><span class="line">│   ├── _posts/      # 博客文章</span><br><span class="line">│   └── about.md     # 关于页面</span><br><span class="line">├── themes/           # 主题文件夹</span><br><span class="line">└── node_modules/    # 依赖包</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、本地运行与测试"><a href="#三、本地运行与测试" class="headerlink" title="三、本地运行与测试"></a>三、本地运行与测试</h2><h3 id="3-1-启动本地服务器"><a href="#3-1-启动本地服务器" class="headerlink" title="3.1 启动本地服务器"></a>3.1 启动本地服务器</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态文件并启动服务器</span><br><span class="line">hexo server</span><br><span class="line"># 或简写</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<p>访问 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>查看效果。</p>
+<h3 id="3-2-常用命令"><a href="#3-2-常用命令" class="headerlink" title="3.2 常用命令"></a>3.2 常用命令</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 新建文章</span><br><span class="line">hexo new &quot;我的第一篇文章&quot;</span><br><span class="line"></span><br><span class="line"># 清理缓存</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">hexo generate</span><br><span class="line"># 或简写</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"># 启动服务器</span><br><span class="line">hexo server</span><br><span class="line"># 或简写</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"># 部署到服务器</span><br><span class="line">hexo deploy</span><br><span class="line"># 或简写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
+<h2 id="五、创建-GitHub-Pages"><a href="#五、创建-GitHub-Pages" class="headerlink" title="五、创建 GitHub Pages"></a>五、创建 GitHub Pages</h2><h3 id="5-1-创建-GitHub-仓库"><a href="#5-1-创建-GitHub-仓库" class="headerlink" title="5.1 创建 GitHub 仓库"></a>5.1 创建 GitHub 仓库</h3><ol>
+<li>登录 <a class="link"   href="https://github.com/" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>点击右上角 “+” → “New repository”</li>
+<li>仓库名必须为：<code>你的用户名.github.io</code></li>
+<li>选择 “Public”（公开）</li>
+<li>勾选 “Add a README file”</li>
+<li>GitHub在国内访问有时候会有点慢甚至是进不去，咱们可以设置成一个国内可访问的链接，如果你有域名的话，就在下面添加，如果没的话，还用 你的用户名.github.io 就行<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/11.png"
+                      alt="a"
+                ></li>
+</ol>
+<h2 id="六、部署到-GitHub"><a href="#六、部署到-GitHub" class="headerlink" title="六、部署到 GitHub"></a>六、部署到 GitHub</h2><h3 id="6-1-首次部署"><a href="#6-1-首次部署" class="headerlink" title="6.1 首次部署"></a>6.1 首次部署</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 清理缓存</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"># 部署到 GitHub</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-2-部署后访问"><a href="#6-2-部署后访问" class="headerlink" title="6.2 部署后访问"></a>6.2 部署后访问</h3><p>访问 <code>https://你的用户名.github.io</code>查看你的博客。</p>
+<h3 id="6-3-一键部署"><a href="#6-3-一键部署" class="headerlink" title="6.3 一键部署"></a>6.3 一键部署</h3><p>有时候咱们经常写博客，然后部署比较麻烦，所以可以用一个快速部署的小程序（这个是博主自己弄的，可能没有很高级，如果有人需要的话，可以参考一下）代码如下</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:: 切换到项目路径</span><br><span class="line">cd /d F:\blog</span><br><span class="line">:: 检查管理员权限</span><br><span class="line">fltmc &gt;nul 2&gt;&amp;1 || (</span><br><span class="line">    echo 正在请求管理员权限...</span><br><span class="line">    powershell -Command &quot;Start-Process cmd -ArgumentList &#x27;/c \&quot;%~f0\&quot;&#x27; -Verb RunAs&quot;</span><br><span class="line">    exit /b</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:menu</span><br><span class="line">cls</span><br><span class="line">echo.</span><br><span class="line">echo 请选择要执行的操作：</span><br><span class="line">echo.</span><br><span class="line">echo  [1] hexo clean</span><br><span class="line">echo  [2] hexo generate </span><br><span class="line">echo  [3] hexo server</span><br><span class="line">echo  [4] hexo deploy</span><br><span class="line">echo  [5] npm run server</span><br><span class="line">echo  [6] npm run deploy</span><br><span class="line">echo.</span><br><span class="line">echo  [0] 退出</span><br><span class="line">echo.</span><br><span class="line"></span><br><span class="line">choice /c 0123456 /n </span><br><span class="line">set /a choice=%errorlevel%-1</span><br><span class="line"></span><br><span class="line">if %choice% == 0 exit /b 0</span><br><span class="line"></span><br><span class="line">:: 添加变量清除逻辑</span><br><span class="line">set &quot;cmd=&quot;</span><br><span class="line"></span><br><span class="line">:: 使用延迟变量扩展</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">set &quot;commands[1]=hexo clean&quot;</span><br><span class="line">set &quot;commands[2]=hexo generate&quot; </span><br><span class="line">set &quot;commands[3]=hexo server&quot;</span><br><span class="line">set &quot;commands[4]=hexo deploy&quot;</span><br><span class="line">set &quot;commands[5]=npm run server&quot;</span><br><span class="line">set &quot;commands[6]=npm run deploy&quot;</span><br><span class="line"></span><br><span class="line">:: 修正命令获取方式</span><br><span class="line">if %choice% geq 1 (</span><br><span class="line">    set cmd=!commands[%choice%]!</span><br><span class="line">    </span><br><span class="line">    :: 在新窗口中执行命令并检查结果</span><br><span class="line">    echo 正在启动新窗口执行: !cmd!</span><br><span class="line">    timeout /t 2 /nobreak &gt;nul</span><br><span class="line">    </span><br><span class="line">    :: 在新窗口中执行命令，并根据结果显示不同信息</span><br><span class="line">    start &quot;执行结果&quot; cmd /c &quot;echo 正在执行: !cmd! &amp;&amp; echo. &amp;&amp; !cmd! &amp;&amp; (echo. &amp;&amp; echo successful &amp;&amp; pause) || (echo. &amp;&amp; echo failure &amp;&amp; pause)&quot;</span><br><span class="line">)</span><br><span class="line">endlocal</span><br><span class="line"></span><br><span class="line">goto menu</span><br></pre></td></tr></table></figure></div>
+<p>（在博客总目录下创建一个txt文本文档，将代码复制到txt文档里面，然后把后缀名改成 .bat 就行了，每次上传博客的话，点击一下这个小程序，然后：清除原来的内容按1，生成文件按2，本地预览按3，上传到GitHub按4）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20251210/12.png"
+                      alt="a"
+                ></p>
+]]></content>
+  </entry>
 </search>
