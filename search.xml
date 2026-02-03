@@ -10831,4 +10831,29 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>知识就是力量</tag>
       </tags>
   </entry>
+  <entry>
+    <title>win11智能应用控制不重装系统打开的方式</title>
+    <url>/post/20260203120013.html</url>
+    <content><![CDATA[<h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1.问题"></a>1.问题</h2><p>博主因为要装一个程序，但是win11的智能应用控制不允许，然后我把它关闭了，结果关闭才发现重新打卡要重装系统，烦啊</p>
+<h3 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h3><p>①打开注册表<br>win+r 打开运行窗口，然后输入</p>
+<div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">regedit</span><br></pre></td></tr></table></figure></div>
+<p>就可以打开注册表了（如果有弹窗，按”是“就行了）<br>③进入以下地址<code>HKEY_LOCAL_MACHINE\SYSTEM \CurrentControlSet\Control\CN\Policy</code><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260203/3.png"
+                      alt="tp"
+                ><br>④右键”修改“,数值数据改成“1”就行了<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260203/4.png"
+                      alt="tp"
+                ></p>
+]]></content>
+      <categories>
+        <category>知识就是力量</category>
+      </categories>
+      <tags>
+        <tag>知识就是力量</tag>
+      </tags>
+  </entry>
 </search>

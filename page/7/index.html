@@ -598,7 +598,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">104</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">105</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -661,7 +661,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">104</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">105</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -676,6 +676,96 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722214637.html">
+                            C51-抢答系统
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            C51-抢答系统第六篇
+一、硬件系统架构​​1.输入控制​​：
+
+K1(P3.1)：模式1触发键
+K2(P3.0)：模式2触发键
+K3(P3.2)：模式3触发键
+K4(P3.3)：全局复位键
+
+​​2.输出设备​​：
+
+LED(P0)：8段数码管数据端口（共阳极）
+P2A&#x2F;P2B&#x2F;P2C(P2.2-4)：数码管位选控制
+
+​​3.显示逻辑​​：
+
+数码管显示值对应：
+0xC0：初始显示”0”
+0xF9：模式1显示”1”
+0xA4：模式2显示”2”
+0xB0：模式3显示”3”
+
+二、核心运行逻辑​​1. ​​初始化阶段​​：
+12P2A=1; P2B=0; P2C=0;...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:46:37 GMT+0800">
+                
+                    2025-07-22 21:46:37
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722214637.html">阅读全文<span class="seo-reader-text">C51-抢答系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1336,85 +1426,6 @@ red&#x3D;P2^1：红灯控制（低电平亮）
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250415122700.html">
-                            opencv人脸识别
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            opencv人脸识别问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子）- 作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。
-
-取值: 1.01 ~ 1.5（常用 1.1）。
-影响:值越小（如 1.01）:✅ 检测到更多人脸（尤其是小尺寸人脸）。
-
-❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  - 值越大（如 1.5）:✅ 检测速度更快。
-❌ 可能漏检小尺寸人脸。
-
-minNeighbors（最小邻居数）- 作用: 控制人脸框的合并阈值，过滤孤立误检。
-
-
-取值: 3 ~ 6（常用...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Apr 15 2025 12:27:00 GMT+0800">
-                
-                    2025-04-15 12:27:00
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250415122700.html">阅读全文<span class="seo-reader-text">opencv人脸识别</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1447,11 +1458,11 @@ minNeighbors（最小邻居数）- 作用: 控制人脸框的合并阈值，过�
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 104 篇文章
+                        共撰写了 105 篇文章
                     </span>
                     
                         <span>
-                            共 84.2k 字
+                            共 84.3k 字
                         </span>
                     
                 </p>
