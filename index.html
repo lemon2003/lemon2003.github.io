@@ -892,8 +892,11 @@ mjx-container[display="true"] + br {
                             
                             从0到1实现前端直连Supabase的注册登录功能（踩坑全记录）最近尝试用前端静态页面+Supabase做一个简单的注册登录功能，过程中踩了不少坑，最终成功跑通了流程。这篇博客记录下完整过程和遇到的问题，希望能帮到同样踩坑的朋友~ 
 一、准备工作：Supabase配置 首先需要在Supabase创建项目和表，这是基础。 
-1. 新建Supabase项目 打开Supabase官网，注册账号后创建新项目； - 记住项目的Project URL和Publishable Key（后面代码要用到）。 
-2. 创建用户表进入Supabase控制台的Table Editor，创建user_info表：...
+1. 新建Supabase项目
+打开Supabase官网，注册账号后创建新项目； 
+记住项目的Project URL和Publishable Key（后面代码要用到）。 这两个东西的位置如下：①SUPABASE_URL①SUPABASE_ANON_KEY
+
+2. 创建用...
                         
                     </div>
 
@@ -961,7 +964,7 @@ mjx-container[display="true"] + br {
                     <div class="home-article-content markdown-body">
                         
                             
-                            1.问题博主因为要装一个程序，但是win11的智能应用控制不允许，然后我把它关闭了，结果关闭才发现重新打卡要重装系统，烦啊
+                            1.问题博主因为要装一个程序，但是win11的智能应用控制不允许，然后我把它关闭了，结果关闭才发现重新打开要重装系统，不嘻嘻
 2.解决办法①打开注册表win+r 打开运行窗口，然后输入
 1regedit
 就可以打开注册表了（如果有弹窗，按”是“就行了）③进入以下地址HKEY_LOCAL_MACHINE\SYSTEM \CurrentControlSet\Control\CN\Policy④右键”修改“,数值数据改成“1”就行了
