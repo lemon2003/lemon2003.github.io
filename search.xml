@@ -10974,4 +10974,272 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>知识就是力量</tag>
       </tags>
   </entry>
+  <entry>
+    <title>购买域名与阿里云配置</title>
+    <url>/post/20260213183118.html</url>
+    <content><![CDATA[<h1 id="阿里云购买域名并配置GitHub-Pages博客：从零到一的完整指南"><a href="#阿里云购买域名并配置GitHub-Pages博客：从零到一的完整指南" class="headerlink" title="阿里云购买域名并配置GitHub Pages博客：从零到一的完整指南"></a>阿里云购买域名并配置GitHub Pages博客：从零到一的完整指南</h1><p>在当今数字时代，拥有一个个人博客或项目展示网站已成为开发者和创作者的标配。GitHub Pages提供免费的静态网站托管服务，而阿里云则提供稳定可靠的域名注册服务。本文将手把手教你如何将两者结合，打造一个专业、免费的个人博客。</p>
+<h2 id="为什么选择GitHub-Pages-阿里云域名？"><a href="#为什么选择GitHub-Pages-阿里云域名？" class="headerlink" title="为什么选择GitHub Pages + 阿里云域名？"></a>为什么选择GitHub Pages + 阿里云域名？</h2><p><strong>GitHub Pages的优势</strong>：</p>
+<ul>
+<li><p>完全免费，无需服务器费用</p>
+</li>
+<li><p>支持自定义域名</p>
+</li>
+<li><p>自动HTTPS加密</p>
+</li>
+<li><p>与Git版本控制无缝集成</p>
+</li>
+<li><p>支持Jekyll等静态网站生成器<br><strong>阿里云域名的优势</strong>：</p>
+</li>
+<li><p>国内访问速度快</p>
+</li>
+<li><p>管理界面友好</p>
+</li>
+<li><p>价格实惠（.top等小众域名新人首年1元）</p>
+</li>
+<li><p>无需备案即可绑定GitHub Pages（托管在海外服务器）</p>
+</li>
+</ul>
+<h2 id="第一步：在阿里云购买域名"><a href="#第一步：在阿里云购买域名" class="headerlink" title="第一步：在阿里云购买域名"></a>第一步：在阿里云购买域名</h2><h3 id="1-1-注册阿里云账号"><a href="#1-1-注册阿里云账号" class="headerlink" title="1.1 注册阿里云账号"></a>1.1 注册阿里云账号</h3><p>访问<a class="link"   href="https://www.aliyun.com/" >阿里云官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，点击右上角”注册”按钮。如果你已有淘宝或支付宝账号，可以直接登录。</p>
+<h3 id="1-2-查询并选择域名"><a href="#1-2-查询并选择域名" class="headerlink" title="1.2 查询并选择域名"></a>1.2 查询并选择域名</h3><p>在阿里云首页搜索框中输入你想要的域名，点击”查询域名”。系统会显示该域名是否可注册以及价格信息。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/11.png"
+                      alt="img"
+                ></p>
+<h3 id="1-3-完成购买流程"><a href="#1-3-完成购买流程" class="headerlink" title="1.3 完成购买流程"></a>1.3 完成购买流程</h3><ol>
+<li>将可用域名加入购物车</li>
+<li>选择注册年限</li>
+<li>创建信息模板并完成实名认证</li>
+<li>选择支付方式完成支付<br><strong>重要提示</strong>：根据中国法规，所有域名必须完成实名认证。个人用户需上传身份证正反面照片，企业用户需上传营业执照。未完成实名认证的域名将无法正常解析。</li>
+</ol>
+<h2 id="第二步：创建GitHub-Pages博客"><a href="#第二步：创建GitHub-Pages博客" class="headerlink" title="第二步：创建GitHub Pages博客"></a>第二步：创建GitHub Pages博客</h2><h3 id="2-1-创建GitHub仓库"><a href="#2-1-创建GitHub仓库" class="headerlink" title="2.1 创建GitHub仓库"></a>2.1 创建GitHub仓库</h3><ol>
+<li>登录GitHub账号</li>
+<li>点击右上角”+”号，选择”New repository”</li>
+<li>仓库名格式：<code>username.github.io</code>（username替换为你的GitHub用户名）</li>
+<li>选择”Public”，跟自己，你不想让别人访问，就设置成私有</li>
+<li>点击”Create repository”</li>
+</ol>
+<h3 id="2-2-启用GitHub-Pages"><a href="#2-2-启用GitHub-Pages" class="headerlink" title="2.2 启用GitHub Pages"></a>2.2 启用GitHub Pages</h3><ol>
+<li>进入新建的仓库</li>
+<li>点击”Settings” → “Pages”</li>
+<li>在”Source”部分，选择分支（通常为main或master）</li>
+<li>点击”Save”</li>
+<li>等待几分钟，访问<code>https://username.github.io</code>查看效果（有时候会访问不了，这是GitHub特性）</li>
+</ol>
+<h3 id="2-3-添加博客内容"><a href="#2-3-添加博客内容" class="headerlink" title="2.3 添加博客内容"></a>2.3 添加博客内容</h3><p>你可以使用以下方式创建博客内容：</p>
+<ul>
+<li><strong>简单HTML&#x2F;CSS</strong>：直接上传HTML文件</li>
+<li><strong>Jekyll静态网站</strong>：GitHub Pages原生支持</li>
+<li><strong>Hexo&#x2F;Hugo</strong>：通过GitHub Actions自动构建</li>
+<li><strong>React&#x2F;Vue项目</strong>：构建后上传dist文件夹</li>
+</ul>
+<h2 id="第三步：配置自定义域名"><a href="#第三步：配置自定义域名" class="headerlink" title="第三步：配置自定义域名"></a>第三步：配置自定义域名</h2><h3 id="3-1-阿里云DNS解析配置"><a href="#3-1-阿里云DNS解析配置" class="headerlink" title="3.1 阿里云DNS解析配置"></a>3.1 阿里云DNS解析配置</h3><p>登录阿里云控制台，进入”域名控制台” → 选择你的域名 → “解析设置”。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/12.png"
+                      alt="img"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/13.png"
+                      alt="img"
+                ><br><strong>添加A记录（根域名解析）</strong>：</p>
+<p>需要添加4条A记录，分别指向GitHub Pages的4个IP地址：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/14.png"
+                      alt="img"
+                ></p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.108.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.109.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.110.153</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.111.153</td>
+</tr>
+</tbody></table>
+<p><strong>添加CNAME记录（www子域名）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CNAME</td>
+<td>www</td>
+<td>username.github.io</td>
+</tr>
+</tbody></table>
+<p>将<code>username</code>替换为你的GitHub用户名。</p>
+<h3 id="3-2-GitHub仓库配置"><a href="#3-2-GitHub仓库配置" class="headerlink" title="3.2 GitHub仓库配置"></a>3.2 GitHub仓库配置</h3><ol>
+<li>在仓库根目录创建名为<code>CNAME</code>的文件（无后缀）</li>
+<li>文件内容只写你的域名，如：<code>example.com</code></li>
+<li>提交并推送更改</li>
+</ol>
+<p><strong>或者通过GitHub设置</strong>：</p>
+<ol>
+<li>进入仓库”Settings” → “Pages”</li>
+<li>在”Custom domain”输入框中填写你的域名</li>
+<li>点击”Save”</li>
+<li>勾选”Enforce HTTPS”（一般阿里云那边解析完成后，这边很快）<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/15.png"
+                      alt="img"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/16.png"
+                      alt="img"
+                ></li>
+</ol>
+<h2 id="第四步：验证配置"><a href="#第四步：验证配置" class="headerlink" title="第四步：验证配置"></a>第四步：验证配置</h2><h3 id="4-1-检查DNS解析"><a href="#4-1-检查DNS解析" class="headerlink" title="4.1 检查DNS解析"></a>4.1 检查DNS解析</h3><p>使用命令行工具检查DNS记录是否生效：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 检查A记录</span><br><span class="line">nslookup example.com</span><br><span class="line"></span><br><span class="line"># 检查CNAME记录</span><br><span class="line">nslookup www.example.com</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-2-等待生效"><a href="#4-2-等待生效" class="headerlink" title="4.2 等待生效"></a>4.2 等待生效</h3><p>DNS更改通常需要10分钟到48小时才能全球生效。你可以通过以下方式测试：</p>
+<ol>
+<li>访问你的域名查看是否显示GitHub Pages内容</li>
+<li>检查浏览器地址栏是否有HTTPS锁标志</li>
+<li>使用在线DNS检测工具如<a class="link"   href="https://dnschecker.org/" >dnschecker.org<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ol>
+<h2 id="常见问题与解决方案"><a href="#常见问题与解决方案" class="headerlink" title="常见问题与解决方案"></a>常见问题与解决方案</h2><h3 id="Q1：域名无法访问"><a href="#Q1：域名无法访问" class="headerlink" title="Q1：域名无法访问"></a>Q1：域名无法访问</h3><ul>
+<li><strong>原因</strong>：DNS记录未生效或配置错误</li>
+<li><strong>解决</strong>：检查DNS记录是否正确，等待24-48小时传播</li>
+</ul>
+<h3 id="Q2：HTTPS证书错误"><a href="#Q2：HTTPS证书错误" class="headerlink" title="Q2：HTTPS证书错误"></a>Q2：HTTPS证书错误</h3><ul>
+<li><strong>原因</strong>：混合内容（HTTP&#x2F;HTTPS混用）或DNS未完全生效</li>
+<li><strong>解决</strong>：检查网页资源链接，确保全部使用HTTPS协议</li>
+</ul>
+<h3 id="Q3：www子域名无法访问"><a href="#Q3：www子域名无法访问" class="headerlink" title="Q3：www子域名无法访问"></a>Q3：www子域名无法访问</h3><ul>
+<li><strong>原因</strong>：CNAME文件内容错误或DNS记录指向错误</li>
+<li><strong>解决</strong>：确保CNAME文件仅包含域名，DNS记录正确指向<code>username.github.io</code></li>
+</ul>
+<h3 id="Q4：GitHub-Pages显示404"><a href="#Q4：GitHub-Pages显示404" class="headerlink" title="Q4：GitHub Pages显示404"></a>Q4：GitHub Pages显示404</h3><ul>
+<li><strong>原因</strong>：仓库设置错误或文件路径问题</li>
+<li><strong>解决</strong>：检查GitHub Pages设置，确保选择了正确的分支和文件夹</li>
+</ul>
+<h2 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h2><h3 id="同时支持根域名和www子域名"><a href="#同时支持根域名和www子域名" class="headerlink" title="同时支持根域名和www子域名"></a>同时支持根域名和www子域名</h3><p>GitHub Pages会自动在两者间创建重定向。配置<code>example.com</code>时，访问<code>www.example.com</code>会自动跳转；反之亦然。</p>
+<h3 id="自定义404页面"><a href="#自定义404页面" class="headerlink" title="自定义404页面"></a>自定义404页面</h3><p>在仓库根目录创建<code>404.html</code>文件，GitHub Pages会自动使用它作为404错误页面。</p>
+<h3 id="使用自定义主题"><a href="#使用自定义主题" class="headerlink" title="使用自定义主题"></a>使用自定义主题</h3><p>GitHub Pages支持Jekyll主题，你可以在<code>_config.yml</code>文件中配置：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: jekyll-theme-minimal</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="性能优化建议"><a href="#性能优化建议" class="headerlink" title="性能优化建议"></a>性能优化建议</h2><ol>
+<li><strong>CDN加速</strong>：结合Cloudflare免费套餐启用全球CDN</li>
+<li><strong>资源压缩</strong>：使用gzip或TinyPNG压缩静态资源</li>
+<li><strong>缓存策略</strong>：通过<code>_config.yml</code>配置静态资源缓存周期</li>
+<li><strong>图片优化</strong>：使用WebP格式替代JPEG&#x2F;PNG</li>
+<li><strong>代码精简</strong>：移除未使用的CSS&#x2F;JavaScript</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过阿里云购买域名并配置GitHub Pages博客，你可以在零服务器成本的情况下拥有一个专业、安全的个人网站。整个过程主要包括三个核心步骤：</p>
+<ol>
+<li><strong>购买域名</strong>：在阿里云选择并注册心仪的域名，完成实名认证</li>
+<li><strong>创建博客</strong>：在GitHub创建<code>username.github.io</code>仓库，启用GitHub Pages</li>
+<li><strong>绑定域名</strong>：配置DNS解析，在GitHub仓库添加CNAME文件</li>
+</ol>
+<p>这种组合方案特别适合个人开发者、学生、技术博主和初创项目。它不仅成本低廉，而且维护简单，让你可以专注于内容创作而非服务器管理。</p>
+<p><strong>最后提醒</strong>：虽然GitHub Pages托管在海外服务器，绑定域名无需备案，但如果你未来考虑使用国内服务器，仍需完成ICP备案。建议定期检查域名续费时间，避免因过期导致网站无法访问。</p>
+<p>现在，开始打造你的个人品牌吧！一个专业的域名加上精心维护的技术博客，将成为你职业生涯中宝贵的数字资产。</p>
+]]></content>
+      <categories>
+        <category>知识就是力量</category>
+      </categories>
+      <tags>
+        <tag>知识就是力量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建阿里云二级域名</title>
+    <url>/post/20260213184225.html</url>
+    <content><![CDATA[<h1 id="阿里云添加二级域名完全指南：从基础配置到高级应用"><a href="#阿里云添加二级域名完全指南：从基础配置到高级应用" class="headerlink" title="阿里云添加二级域名完全指南：从基础配置到高级应用"></a>阿里云添加二级域名完全指南：从基础配置到高级应用</h1><p>在网站运营和项目管理中，二级域名是组织内容、区分服务的重要工具。无论是为博客创建<code>blog.example.com</code>，还是为API服务设置<code>api.example.com</code>，二级域名都能让您的网站结构更加清晰。本文将详细介绍如何在阿里云平台添加和配置二级域名。</p>
+<h2 id="什么是二级域名？"><a href="#什么是二级域名？" class="headerlink" title="什么是二级域名？"></a>什么是二级域名？</h2><p>二级域名是主域名下的子域名，格式为<code>subdomain.example.com</code>。其中：</p>
+<ul>
+<li><code>example.com</code>是主域名（一级域名）</li>
+<li><code>subdomain</code>是二级域名前缀</li>
+<li>常见的二级域名包括：<code>www</code>、<code>mail</code>、<code>blog</code>、<code>shop</code>等</li>
+</ul>
+<p><strong>二级域名的优势</strong>：</p>
+<ul>
+<li>逻辑清晰：不同功能使用不同子域名</li>
+<li>SEO友好：搜索引擎会视为独立站点</li>
+<li>管理灵活：可独立配置SSL证书、CDN等</li>
+<li>品牌统一：保持主域名品牌一致性</li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在开始配置前，请确保满足以下条件：</p>
+<ol>
+<li><strong>已注册主域名</strong>：在阿里云或其他注册商注册了主域名（如<code>example.com</code>）</li>
+<li><strong>域名状态正常</strong>：域名未处于<code>ClientHold</code>或<code>ServerHold</code>锁定状态</li>
+<li><strong>域名托管在阿里云</strong>：如果域名在其他注册商，需将DNS服务器修改为阿里云的云解析DNS</li>
+<li><strong>明确解析目标</strong>：确定二级域名要指向的IP地址或目标域名</li>
+</ol>
+<h2 id="详细配置步骤"><a href="#详细配置步骤" class="headerlink" title="详细配置步骤"></a>详细配置步骤</h2><h3 id="步骤一：登录阿里云控制台"><a href="#步骤一：登录阿里云控制台" class="headerlink" title="步骤一：登录阿里云控制台"></a>步骤一：登录阿里云控制台</h3><ol>
+<li>访问<a class="link"   href="https://www.aliyun.com/" >阿里云官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>使用支付宝扫码等等好多种登陆方式，选一个你喜欢的</li>
+<li>进入控制台首页</li>
+</ol>
+<h3 id="步骤二：进入域名管理"><a href="#步骤二：进入域名管理" class="headerlink" title="步骤二：进入域名管理"></a>步骤二：进入域名管理</h3><ol>
+<li>在左侧导航栏点击”域名与网站” → “域名管理”</li>
+<li>找到需要设置二级域名的主域名（如<code>example.com</code>）</li>
+<li>点击右侧的”解析”按钮<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/1.png"
+                      alt="img"
+                ></li>
+</ol>
+<h3 id="步骤三-添加你想要的域名"><a href="#步骤三-添加你想要的域名" class="headerlink" title="步骤三:添加你想要的域名"></a>步骤三:添加你想要的域名</h3><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/2.png"
+                      alt="img"
+                ></p>
+<h3 id="步骤四：添加TXT记录"><a href="#步骤四：添加TXT记录" class="headerlink" title="步骤四：添加TXT记录"></a>步骤四：添加TXT记录</h3><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/3.png"
+                      alt="img"
+                ></p>
+<h3 id="步骤五：在域名中配置TXT解析"><a href="#步骤五：在域名中配置TXT解析" class="headerlink" title="步骤五：在域名中配置TXT解析"></a>步骤五：在域名中配置TXT解析</h3><p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/4.png"
+                      alt="img"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260213/5.png"
+                      alt="img"
+                ><br>然后，等他一小会，二级域名就创建成功了，就可以直接用啦</p>
+]]></content>
+      <categories>
+        <category>知识就是力量</category>
+      </categories>
+      <tags>
+        <tag>知识就是力量</tag>
+      </tags>
+  </entry>
 </search>
