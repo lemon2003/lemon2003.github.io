@@ -11260,4 +11260,470 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>随笔</tag>
       </tags>
   </entry>
+  <entry>
+    <title>从前端项目到平板 APP</title>
+    <url>/post/20260306170836.html</url>
+    <content><![CDATA[<h1 id="HBuilderX云打包-Android-Studio原生封装全教程"><a href="#HBuilderX云打包-Android-Studio原生封装全教程" class="headerlink" title="HBuilderX云打包&amp;Android Studio原生封装全教程"></a>HBuilderX云打包&amp;Android Studio原生封装全教程</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文针对纯前端开发的「百词斩6级高频词学习系统」（HTML&#x2F;CSS&#x2F;JavaScript），详细讲解两种将其转换成安卓平板可离线使用的APK格式的方法：</p>
+<ul>
+<li><strong>HBuilderX云打包</strong>：零基础友好，无需原生开发，一键生成APK；</li>
+<li><strong>Android Studio原生封装</strong>：可控性高，原生体验好，适配平板更灵活。<br>两种方法均保证平板离线稳定使用，覆盖从环境准备到最终安装的全流程，新手也能跟着操作。</li>
+</ul>
+<h2 id="一、前置准备"><a href="#一、前置准备" class="headerlink" title="一、前置准备"></a>一、前置准备</h2><h3 id="1-项目基础"><a href="#1-项目基础" class="headerlink" title="1. 项目基础"></a>1. 项目基础</h3><p>待打包的前端单词项目（核心文件：<code>index.html</code>、<code>words</code>文件夹、<code>style.css</code>、<code>wordLearner.js</code>），需确保：</p>
+<ul>
+<li>所有文件路径为<strong>相对路径</strong>（避免打包后路径错误）；</li>
+<li>本地断网测试功能正常（单词显示、标记、弹窗、切换单元无报错）；</li>
+<li>所有文件编码为UTF-8（避免平板乱码）。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/1.png"
+                      alt="tp"
+                ></li>
+</ul>
+<h3 id="2-通用工具（我用的安卓小米的平板）"><a href="#2-通用工具（我用的安卓小米的平板）" class="headerlink" title="2. 通用工具（我用的安卓小米的平板）"></a>2. 通用工具（我用的安卓小米的平板）</h3><ul>
+<li>小米平板（开启「开发者模式」+「USB调试」）</li>
+<li>原装数据线（确保数据传输，而非仅充电）。<br><strong>开启开发者模式方法：</strong> 设置→我的设备→下滑点击“全部参数与信息”→连续点击“OS版本”7次（中间会有提示还有几次，只管点就行）→然后就会提示你打开了；<br><strong>开启USB调试方法：</strong> 开启开发者模式后才能开启这个→设置→更多设置→开发者选项→开启USB调试→下滑开启USB安装；</li>
+</ul>
+<h2 id="二、方法一：HBuilderX云打包（零基础首选）"><a href="#二、方法一：HBuilderX云打包（零基础首选）" class="headerlink" title="二、方法一：HBuilderX云打包（零基础首选）"></a>二、方法一：HBuilderX云打包（零基础首选）</h2><h3 id="核心优势"><a href="#核心优势" class="headerlink" title="核心优势"></a>核心优势</h3><ul>
+<li>零原生开发成本，纯前端文件直接打包；</li>
+<li>云打包无需本地配置Android SDK，10分钟生成APK；</li>
+<li>离线稳定性拉满，所有资源内置到APK中；</li>
+<li>自动适配平板屏幕，支持横屏&#x2F;全屏配置。</li>
+</ul>
+<h3 id="步骤1：下载安装HBuilderX"><a href="#步骤1：下载安装HBuilderX" class="headerlink" title="步骤1：下载安装HBuilderX"></a>步骤1：下载安装HBuilderX</h3><ol>
+<li>官网下载：<a class="link"   href="https://hbuilderx.org/cn/" >https://www.dcloud.io/hbuilderx.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>安装；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/2.png"
+                      alt="tp"
+                ></li>
+<li>安装完成后打开，无需额外插件，基础打包功能已内置。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/3.png"
+                      alt="tp"
+                ></li>
+</ol>
+<h3 id="步骤2：创建5-App项目并导入前端文件"><a href="#步骤2：创建5-App项目并导入前端文件" class="headerlink" title="步骤2：创建5+App项目并导入前端文件"></a>步骤2：创建5+App项目并导入前端文件</h3><ol>
+<li>点击顶部菜单「文件→新建→5+App项目」；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/4.png"
+                      alt="tp"
+                ></li>
+<li>项目配置：<ul>
+<li>项目名称：CET6Words（英文，无空格&#x2F;中文）；</li>
+<li>模板：选择「空模板」；</li>
+<li>位置：选择易查找的路径（如桌面）；</li>
+<li>点击「创建」。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/5.png"
+                      alt="tp"
+                ></li>
+</ul>
+</li>
+<li>导入前端文件：<ul>
+<li>找到新建的5+App项目文件夹，删除默认的<code>index.html</code>、<code>css</code>、<code>js</code>等文件；</li>
+<li>将前端单词项目的所有文件（<code>index.html</code>、<code>words</code>文件夹、<code>style.css</code>、<code>wordLearner.js</code>）复制到项目根目录；</li>
+<li>验证：HBuilderX左侧项目管理器中，项目根目录能看到<code>index.html</code>即为正确。<br><strong>就是把你写的HTML文件复制进来就行了，这里建议是创一个5+APP项目的原因是，我原来直接导入的HTML项目没有识别成5+APP项目，所以我才新建一个5+APP项目，要是你的项目直接书别成5+APP项目的话，就不用这么麻烦了</strong><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/6.png"
+                      alt="tp"
+                ></li>
+</ul>
+</li>
+</ol>
+<h3 id="步骤3：配置应用信息（manifest-json）"><a href="#步骤3：配置应用信息（manifest-json）" class="headerlink" title="步骤3：配置应用信息（manifest.json）"></a>步骤3：配置应用信息（manifest.json）</h3><p>双击项目根目录的<code>manifest.json</code>文件，按以下要求配置：</p>
+<h4 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h4><ul>
+<li>应用名称：六级单词学习（平板显示的APP名称）；</li>
+<li>应用标识（包名）：<code>my.cet6</code>（小写英文+数字+点，唯一即可，如<code>com.cet6.words</code>）；</li>
+<li>版本号：1.0.0；</li>
+<li>AppID：点击「重新获取」（<strong>需登录HBuilderX账号，自动生成，不能为空</strong>）。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/7.png"
+                      alt="tp"
+                ></li>
+</ul>
+<h4 id="安卓配置"><a href="#安卓配置" class="headerlink" title="安卓配置"></a>安卓配置</h4><ul>
+<li>最低平台版本：Android 5.0（API 21）；</li>
+<li>屏幕方向：建议选择「横屏」（平板学习体验更好）；</li>
+<li>全屏显示：勾选（隐藏状态栏，利用大屏）；</li>
+<li>离线缓存：勾选（确保离线数据不丢失）。</li>
+</ul>
+<h4 id="权限-模块清理（关键！避免实名认证报错）（这里强调一下，根据你实际情况来，我是不需要用到这些，所以才关掉的，你要是需要，你就别关掉，有些信息如果你不关掉的话，他会让你在HBuiderX那个账号上实名认证，我可烦，所以我没认证，我就把这些都关了）"><a href="#权限-模块清理（关键！避免实名认证报错）（这里强调一下，根据你实际情况来，我是不需要用到这些，所以才关掉的，你要是需要，你就别关掉，有些信息如果你不关掉的话，他会让你在HBuiderX那个账号上实名认证，我可烦，所以我没认证，我就把这些都关了）" class="headerlink" title="权限&#x2F;模块清理（关键！避免实名认证报错）（这里强调一下，根据你实际情况来，我是不需要用到这些，所以才关掉的，你要是需要，你就别关掉，有些信息如果你不关掉的话，他会让你在HBuiderX那个账号上实名认证，我可烦，所以我没认证，我就把这些都关了）"></a>权限&#x2F;模块清理（关键！避免实名认证报错）（这里强调一下，根据你实际情况来，我是不需要用到这些，所以才关掉的，你要是需要，你就别关掉，有些信息如果你不关掉的话，他会让你在HBuiderX那个账号上实名认证，我可烦，所以我没认证，我就把这些都关了）</h4><ol>
+<li>切换到「模块配置」标签页，取消所有无关模块（通讯录、相机、定位、录音、电话等，仅保留「Core(核心模块)」）；</li>
+<li>切换到「权限配置」标签页，取消以下敏感权限：<ul>
+<li>通讯录类：<code>READ_CONTACTS</code>、<code>WRITE_CONTACTS</code>；</li>
+<li>硬件类：<code>CAMERA</code>、<code>RECORD_AUDIO</code>、<code>CALL_PHONE</code>、<code>FLASHLIGHT</code>；</li>
+<li>定位类：<code>ACCESS_COARSE_LOCATION</code>、<code>ACCESS_FINE_LOCATION</code>；</li>
+<li>其他：<code>READ_PHONE_STATE</code>、<code>GET_ACCOUNTS</code>、<code>READ_LOGS</code>、<code>WRITE_SETTINGS</code>；</li>
+</ul>
+</li>
+<li>可选保留：<code>ACCESS_NETWORK_STATE</code>（检测网络状态，非必需）；</li>
+<li>按<code>Ctrl+S</code>保存配置。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/8.png"
+                      alt="tp"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/9.png"
+                      alt="tp"
+                ></li>
+</ol>
+<h3 id="步骤4：云打包生成APK"><a href="#步骤4：云打包生成APK" class="headerlink" title="步骤4：云打包生成APK"></a>步骤4：云打包生成APK</h3><ol>
+<li>右键项目名称→「发行→App-Android&#x2F;iOS-云打包」；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/10.png"
+                      alt="tp"
+                ></li>
+<li>打包配置：<ul>
+<li>平台：选择「Android」；</li>
+<li>签名：测试阶段选择「使用公共测试证书」或者「使用云端证书」，长期使用建议生成自有证书；</li>
+<li>打包类型：正式包（Release）；</li>
+</ul>
+</li>
+<li>点击「提交」，等待云端打包（高峰期可能排队，反正我感觉他真的高峰期不断，我半夜打包，他都叫我排队，排了很长时间，说我前边有400多人，让我充钱，我没冲，等了很长时间）；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/11.png"
+                      alt="tp"
+                ></li>
+<li>打包完成后，HBuilderX会提示下载地址，点击下载APK文件（默认保存路径：项目目录<code>unpackage/release/apk/</code>）。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/12.png"
+                      alt="tp"
+                ></li>
+</ol>
+<h3 id="步骤5：平板安装APK"><a href="#步骤5：平板安装APK" class="headerlink" title="步骤5：平板安装APK"></a>步骤5：平板安装APK</h3><ol>
+<li>将APK文件传输到平板（数据线&#x2F;微信&#x2F;QQ&#x2F;顺便推荐个好用的传输软件：LocalSend）；</li>
+<li>平板开启「未知来源安装」：设置→应用设置→权限管理→安装未知应用→允许对应应用（如文件管理器）安装；</li>
+<li>找到APK文件，点击安装，完成后断网测试功能。</li>
+</ol>
+<h3 id="常见问题-解决方案"><a href="#常见问题-解决方案" class="headerlink" title="常见问题&amp;解决方案"></a>常见问题&amp;解决方案</h3><table>
+<thead>
+<tr>
+<th>问题现象</th>
+<th>原因</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AppID不能为空</td>
+<td>未登录&#x2F;未获取AppID</td>
+<td>登录HBuilderX账号，点击「重新获取」AppID</td>
+</tr>
+<tr>
+<td>要求实名认证</td>
+<td>勾选了敏感权限&#x2F;模块</td>
+<td>取消通讯录、相机、定位等无关权限&#x2F;模块</td>
+</tr>
+<tr>
+<td>打包后白屏</td>
+<td>前端文件路径错误</td>
+<td>检查<code>index.html</code>引用路径为相对路径，确保在项目根目录</td>
+</tr>
+<tr>
+<td>平板安装失败</td>
+<td>签名错误</td>
+<td>打包时勾选「V1&#x2F;V2签名」，测试阶段用公共测试证书</td>
+</tr>
+</tbody></table>
+<h2 id="三、方法二：Android-Studio原生封装（可控性更高）"><a href="#三、方法二：Android-Studio原生封装（可控性更高）" class="headerlink" title="三、方法二：Android Studio原生封装（可控性更高）"></a>三、方法二：Android Studio原生封装（可控性更高）</h2><h3 id="核心优势-1"><a href="#核心优势-1" class="headerlink" title="核心优势"></a>核心优势</h3><ul>
+<li>原生WebView封装，平板体验更接近原生APP；</li>
+<li>可自定义平板适配（横屏锁定、全屏、字体大小）；</li>
+<li>离线稳定性100%，所有前端资源内置到APK；</li>
+<li>支持深度定制（如添加原生交互、离线存储优化）。</li>
+</ul>
+<h3 id="步骤1：环境准备"><a href="#步骤1：环境准备" class="headerlink" title="步骤1：环境准备"></a>步骤1：环境准备</h3><ol>
+<li>安装Android Studio：官网下载<a class="link"   href="https://developer.android.google.cn/studio?hl=zh-cn" >https://developer.android.com/studio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/13.png"
+                      alt="tp"
+                ></li>
+<li>配置Android SDK（下载完他会提示你配置，跟着提示走就行）。</li>
+</ol>
+<h3 id="步骤2：新建Android原生项目"><a href="#步骤2：新建Android原生项目" class="headerlink" title="步骤2：新建Android原生项目"></a>步骤2：新建Android原生项目</h3><ol>
+<li>打开Android Studio→「New Project」（关闭默认项目：「File→Close Project」）；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/14.png"
+                      alt="tp"
+                ></li>
+<li>选择模板：「Empty Views Activity」→「Next」，你要是选择「Empty Activity」也可以；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/15.png"
+                      alt="tp"
+                ></li>
+<li>项目配置（关键！避免后续报错）：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/16.png"
+                      alt="tp"
+                ></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>填写值&#x2F;说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name</td>
+<td>CET6Words（英文，无空格&#x2F;中文）</td>
+</tr>
+<tr>
+<td>Package name</td>
+<td><code>my.cet6</code></td>
+</tr>
+<tr>
+<td>Save location</td>
+<td>如<code>D:\AndroidProjects\CET6Words</code></td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Java（新手友好）</td>
+</tr>
+<tr>
+<td>Minimum SDK</td>
+<td>API 26</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>点击「Finish」，等待项目初始化（首次创建下载Gradle依赖，约1-3分钟，可能时间会更长，跟你的设备和网络有关）。</li>
+</ol>
+<h3 id="步骤3：创建assets文件夹并复制前端文件"><a href="#步骤3：创建assets文件夹并复制前端文件" class="headerlink" title="步骤3：创建assets文件夹并复制前端文件"></a>步骤3：创建assets文件夹并复制前端文件</h3><ol>
+<li>切换视图：左侧Project面板顶部，将「Android」视图切换为「Project」视图；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/17.png"
+                      alt="tp"
+                ></li>
+<li>创建assets文件夹：<ul>
+<li>展开路径：<code>CET6Words→app→src→main</code>；</li>
+<li>右键「main」→「New→Folder→Assets Folder」；</li>
+<li>弹窗默认「assets」→「Finish」（安卓固定识别该名称）；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/18.png"
+                      alt="tp"
+                ></li>
+</ul>
+</li>
+<li>复制前端文件：将单词项目所有文件（<code>index.html</code>、<code>words</code>文件夹、<code>style.css</code>、<code>wordLearner.js</code>）粘贴到<code>assets</code>文件夹；<ul>
+<li>验证：展开<code>assets</code>能看到<code>index.html</code>即为正确。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/19.png"
+                      alt="tp"
+                ></li>
+</ul>
+</li>
+</ol>
+<p><strong>以下内容就是代码部分了，看的话就是理解一下逻辑就行了，具体问题具体分析，不可直接照抄</strong></p>
+<h3 id="步骤4：修改布局文件（activity-main-xml）"><a href="#步骤4：修改布局文件（activity-main-xml）" class="headerlink" title="步骤4：修改布局文件（activity_main.xml）"></a>步骤4：修改布局文件（activity_main.xml）</h3><ol>
+<li>打开路径：<code>app→src→main→res→layout→activity_main.xml</code>；</li>
+<li>删除默认代码，粘贴以下内容（全屏WebView布局）：</li>
+</ol>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:padding</span>=<span class="string">&quot;0dp&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">WebView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/web_view&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<ol start="3">
+<li>按<code>Ctrl+S</code>保存。</li>
+</ol>
+<h3 id="步骤5：修改MainActivity-java（核心逻辑）"><a href="#步骤5：修改MainActivity-java（核心逻辑）" class="headerlink" title="步骤5：修改MainActivity.java（核心逻辑）"></a>步骤5：修改MainActivity.java（核心逻辑）</h3><ol>
+<li>打开路径：<code>app→src→main→java→my→cet6→MainActivity.java</code>；</li>
+<li>删除默认代码，粘贴以下兼容新版AndroidX的代码（注释详细）：</li>
+</ol>
+<div class="code-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> my.cet6;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> androidx.activity.OnBackPressedCallback;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.Window;</span><br><span class="line"><span class="keyword">import</span> android.view.WindowManager;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebSettings;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebView;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebViewClient;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebResourceRequest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> WebView webView;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 隐藏状态栏（平板全屏）</span></span><br><span class="line">        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);</span><br><span class="line">        getWindow().setFlags(</span><br><span class="line">                WindowManager.LayoutParams.FLAG_FULLSCREEN,</span><br><span class="line">                WindowManager.LayoutParams.FLAG_FULLSCREEN</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1. 获取WebView组件</span></span><br><span class="line">        webView = findViewById(R.id.web_view);</span><br><span class="line">        <span class="type">WebSettings</span> <span class="variable">webSettings</span> <span class="operator">=</span> webView.getSettings();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 核心配置：开启JS/本地存储</span></span><br><span class="line">        webSettings.setJavaScriptEnabled(<span class="literal">true</span>); <span class="comment">// 前端交互依赖</span></span><br><span class="line">        webSettings.setDomStorageEnabled(<span class="literal">true</span>); <span class="comment">// 单词标记依赖</span></span><br><span class="line">        webSettings.setAllowFileAccess(<span class="literal">true</span>);   <span class="comment">// 访问本地文件</span></span><br><span class="line">        webSettings.setAllowFileAccessFromFileURLs(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 平板适配配置</span></span><br><span class="line">        webSettings.setUseWideViewPort(<span class="literal">true</span>); <span class="comment">// 宽屏适配</span></span><br><span class="line">        webSettings.setLoadWithOverviewMode(<span class="literal">true</span>); <span class="comment">// 缩放至屏幕</span></span><br><span class="line">        webSettings.setDefaultFontSize(<span class="number">16</span>); <span class="comment">// 字体适配</span></span><br><span class="line">        webSettings.setSupportZoom(<span class="literal">false</span>); <span class="comment">// 关闭手动缩放</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关键：拦截跳转，避免打开系统浏览器</span></span><br><span class="line">        webView.setWebViewClient(<span class="keyword">new</span> <span class="title class_">WebViewClient</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">shouldOverrideUrlLoading</span><span class="params">(WebView view, WebResourceRequest request)</span> &#123;</span><br><span class="line">                view.loadUrl(request.getUrl().toString());</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 新版返回键处理（替代废弃的onBackPressed）</span></span><br><span class="line">        <span class="type">OnBackPressedCallback</span> <span class="variable">callback</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">OnBackPressedCallback</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">handleOnBackPressed</span><span class="params">()</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (webView.canGoBack()) &#123;</span><br><span class="line">                    webView.goBack(); <span class="comment">// 网页回退</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    finish(); <span class="comment">// 退出APP</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        getOnBackPressedDispatcher().addCallback(<span class="built_in">this</span>, callback);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 加载本地前端文件（核心）</span></span><br><span class="line">        webView.loadUrl(<span class="string">&quot;file:///android_asset/index.html&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防止内存泄漏</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onDestroy</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (webView != <span class="literal">null</span>) &#123;</span><br><span class="line">            webView.destroy();</span><br><span class="line">            webView = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">super</span>.onDestroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ol start="3">
+<li>按<code>Ctrl+S</code>保存。</li>
+</ol>
+<h3 id="步骤6：配置AndroidManifest-xml（权限-适配）"><a href="#步骤6：配置AndroidManifest-xml（权限-适配）" class="headerlink" title="步骤6：配置AndroidManifest.xml（权限+适配）"></a>步骤6：配置AndroidManifest.xml（权限+适配）</h3><ol>
+<li>打开路径：<code>app→src→main→AndroidManifest.xml</code>；</li>
+<li>补充权限和适配配置，完整代码如下：</li>
+</ol>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 网络权限（可选，避免WebView报错） --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 平板屏幕适配 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">supports-screens</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:smallScreens</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:normalScreens</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:largeScreens</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:xlargeScreens</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:requiresSmallestWidthDp</span>=<span class="string">&quot;600&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:label</span>=<span class="string">&quot;六级单词学习&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:theme</span>=<span class="string">&quot;@style/Theme.CET6Words&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:name</span>=<span class="string">&quot;.MainActivity&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:exported</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:screenOrientation</span>=<span class="string">&quot;landscape&quot;</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<ol start="3">
+<li>按<code>Ctrl+S</code>保存。</li>
+</ol>
+<h3 id="步骤7：运行到小米平板（调试）"><a href="#步骤7：运行到小米平板（调试）" class="headerlink" title="步骤7：运行到小米平板（调试）"></a>步骤7：运行到小米平板（调试）</h3><ol>
+<li>连接平板：原装数据线连接平板和电脑，平板选择「传输文件」，勾选「始终允许USB调试」；</li>
+<li>选择设备：Android Studio顶部「Device」下拉框，选择小米平板（如「Xiaomi Pad 6 - Android 13」）；<ul>
+<li>若找不到设备：检查USB调试、换原装线、「Tools→Device Manager→Refresh」；</li>
+</ul>
+</li>
+<li>运行项目：点击顶部绿色三角按钮（Shift+F10）；</li>
+<li>验证：平板自动安装APP，断网测试单词显示、标记、切换单元均正常。<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/20.png"
+                      alt="tp"
+                ></li>
+</ol>
+<h3 id="步骤8：打包成APK（长期使用）（如果不用给别人分享安装包，只是自己用的话，刚才步骤7执行完，平板上就已经有程序了，可以直接用了，如果需要分享给别人APK安装包的话，请继续）"><a href="#步骤8：打包成APK（长期使用）（如果不用给别人分享安装包，只是自己用的话，刚才步骤7执行完，平板上就已经有程序了，可以直接用了，如果需要分享给别人APK安装包的话，请继续）" class="headerlink" title="步骤8：打包成APK（长期使用）（如果不用给别人分享安装包，只是自己用的话，刚才步骤7执行完，平板上就已经有程序了，可以直接用了，如果需要分享给别人APK安装包的话，请继续）"></a>步骤8：打包成APK（长期使用）（如果不用给别人分享安装包，只是自己用的话，刚才步骤7执行完，平板上就已经有程序了，可以直接用了，如果需要分享给别人APK安装包的话，请继续）</h3><ol>
+<li>生成签名文件（首次必做）：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/21.png"
+                      alt="tp"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/22.png"
+                      alt="tp"
+                ><ul>
+<li>然后Next就行了</li>
+<li>「Key store path」→「Create new…」，配置如下：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/25.png"
+                      alt="tp"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/23.png"
+                      alt="tp"
+                ></li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>填写说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Key store path</td>
+<td>地址+文件名<code>cet6_key.jks</code> 如：D:\workplace\AndroidStudioProjects\cet6ad\cet6_key.jks</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>如 123456（记住，后续更新需用）</td>
+</tr>
+<tr>
+<td>Key alias</td>
+<td>cet6_alias</td>
+</tr>
+<tr>
+<td>Validity (years)</td>
+<td>25</td>
+</tr>
+</tbody></table>
+<ul>
+<li>点击「OK」，自动填充签名信息→「Next」；</li>
+</ul>
+<ol start="2">
+<li>打包配置：<ul>
+<li>「Build Type」选择「release」；<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/24.png"
+                      alt="tp"
+                ></li>
+<li>点击「Finish」；</li>
+</ul>
+</li>
+<li>找到APK：打包完成后,就可以在release中直接看到<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/20260306/26.png"
+                      alt="tp"
+                ></li>
+<li>平板安装：将APK传输到平板，开启「未知来源安装」后点击安装。</li>
+</ol>
+<h3 id="常见问题-解决方案-1"><a href="#常见问题-解决方案-1" class="headerlink" title="常见问题&amp;解决方案"></a>常见问题&amp;解决方案</h3><table>
+<thead>
+<tr>
+<th>问题现象</th>
+<th>原因</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>布局文件报错「android:outline不存在」</td>
+<td>无效属性</td>
+<td>删除<code>android:outline=&quot;none&quot;</code></td>
+</tr>
+<tr>
+<td>运行后白屏</td>
+<td>前端文件路径错误</td>
+<td>检查<code>assets</code>有<code>index.html</code>，<code>loadUrl</code>路径为<code>file:///android_asset/index.html</code></td>
+</tr>
+<tr>
+<td>JS功能失效</td>
+<td>未开启JavaScript</td>
+<td>确认<code>webSettings.setJavaScriptEnabled(true)</code></td>
+</tr>
+<tr>
+<td>平板识别不到</td>
+<td>驱动&#x2F;数据线问题</td>
+<td>安装小米助手，换原装线</td>
+</tr>
+<tr>
+<td>APK安装失败</td>
+<td>未签名</td>
+<td>打包时勾选V1&#x2F;V2签名</td>
+</tr>
+</tbody></table>
+<h2 id="四、两种方法对比与选择建议"><a href="#四、两种方法对比与选择建议" class="headerlink" title="四、两种方法对比与选择建议"></a>四、两种方法对比与选择建议</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>HBuilderX云打包</th>
+<th>Android Studio原生封装</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术门槛</td>
+<td>极低（纯前端操作）</td>
+<td>中等（少量Java代码）</td>
+</tr>
+<tr>
+<td>打包速度</td>
+<td>快</td>
+<td>较慢（首次配置环境耗时）</td>
+</tr>
+<tr>
+<td>平板适配</td>
+<td>自动适配，可配置</td>
+<td>手动定制，更灵活</td>
+</tr>
+<tr>
+<td>原生体验</td>
+<td>较好（WebView内核）</td>
+<td>优秀（深度定制）</td>
+</tr>
+<tr>
+<td>离线稳定性</td>
+<td>满分</td>
+<td>满分</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>零基础、快速落地、简单适配</td>
+<td>需深度定制、追求原生体验、平板专属优化</td>
+</tr>
+</tbody></table>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>无论是HBuilderX云打包还是Android Studio原生封装，都能将纯前端单词项目转换成平板离线可用的APK：</p>
+<ul>
+<li>新手&#x2F;快速落地：优先选HBuilderX，无需配置复杂环境，一键打包；</li>
+<li>追求原生体验&#x2F;深度适配：选Android Studio，可自定义横屏、全屏、交互逻辑。<br>两种方法均保留原项目所有功能，平板断网后可稳定使用，满足六级单词学习的核心需求。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>小发明</category>
+      </categories>
+      <tags>
+        <tag>小发明</tag>
+      </tags>
+  </entry>
 </search>

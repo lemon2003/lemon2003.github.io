@@ -598,7 +598,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">110</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">111</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -661,7 +661,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">110</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">111</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -676,6 +676,91 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250412224130.html">
+                            python-图像增广
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            1. 核心目的
+增加数据多样性：通过随机变换原始图像（如旋转、翻转、裁剪等），生成新的训练样本，提高模型的泛化能力。
+防止过拟合：丰富训练数据的信息量，减少模型对特定属性（如位置、亮度、颜色）的依赖。
+
+2. 常用方法
+几何变换：
+旋转：按一定角度（如90°、180°或任意角度）旋转图像。
+翻转：水平或垂直翻转图像（水平翻转常用于自然场景图像）。
+缩放：放大或缩小图像尺寸。
+裁剪：从图像中随机裁剪出部分区域。
+平移：沿X轴或Y轴移动图像内容。
+仿射变换：结合旋转、缩放和平移等多种变换。
+
+
+颜色空间变换：
+亮度调整：增加或减少图像亮度。
+对比度调整：增强或减弱图像对比度。
+饱和度调整：改...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Apr 12 2025 22:41:30 GMT+0800">
+                
+                    2025-04-12 22:41:30
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250412224130.html">阅读全文<span class="seo-reader-text">python-图像增广</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1363,86 +1448,11 @@ pyplot 模块（类似 MATLAB 语法）：
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220456.html">
-                            python-qrcode
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-生成二维码：将文本、网址等信息编码为二维码图片，支持自定义尺寸、颜色、容错率等。
-依赖库：需配合 Pillow（PIL）库生成图像，安装时需使用 pip install qrcode[pil]。
-
-2. 常用类与方法
-QRCode 类：
-
-初始化：123456qr = qrcode.QRCode(    version=1,                # 二维码尺寸（1-40），值越大尺寸越大    error_correction=qrcode.constants.ERROR_CORRECT_H,  # 容错率（L/M/Q/H）    box_size=10,   ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:04:56 GMT+0800">
-                
-                    2025-04-12 22:04:56
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220456.html">阅读全文<span class="seo-reader-text">python-qrcode</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/8/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/8/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1470,11 +1480,11 @@ QRCode 类：
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 110 篇文章
+                        共撰写了 111 篇文章
                     </span>
                     
                         <span>
-                            共 89.4k 字
+                            共 92.7k 字
                         </span>
                     
                 </p>
