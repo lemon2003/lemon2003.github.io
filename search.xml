@@ -11726,4 +11726,37 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>随笔</tag>
       </tags>
   </entry>
+  <entry>
+    <title>安装docker</title>
+    <url>/post/20260311104814.html</url>
+    <content><![CDATA[<h1 id="不废话装docker-desktop"><a href="#不废话装docker-desktop" class="headerlink" title="不废话装docker desktop"></a>不废话装docker desktop</h1><p>1.power shell管理员模式运行</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">wsl --install</span><br></pre></td></tr></table></figure></div>
+<p>2.下载docker desktop：<a class="link"   href="https://docs.docker.com/desktop/setup/install/windows-install/" >Windows | Docker Docs<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>(我这个仓库里也放了一个：<a class="link"   href="https://github.com/lemon2003/danggecangkuyongba" >下载的话选docker文件夹<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)<br>3.管理员模式运行：(第一行的代码改成你自己的地址)</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Start-Process -FilePath &quot;C:\Users\92736\Downloads\Docker Desktop Installer.exe&quot; ` </span><br><span class="line">-ArgumentList @( </span><br><span class="line">&quot;install&quot;, </span><br><span class="line">&quot;-accept-license&quot;, </span><br><span class="line">&quot;--installation-dir=&quot;&quot;D:\Docker&quot;&quot;&quot;, </span><br><span class="line">&quot;--wsl-default-data-root=&quot;&quot;D:\Docker\data&quot;&quot;&quot;, </span><br><span class="line">&quot;--windows-containers-default-data-root=&quot;&quot;D:\Docker&quot;&quot;&quot; ) ` </span><br><span class="line">-Wait -NoNewWindow</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260311/1.png"
+                      alt="tp"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260311/2.png"
+                      alt="tp"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260311/3.png"
+                      alt="tp"
+                ><br>4.然后有些电脑会报错，需要下载 WSL2 内核升级包<br>①网上推荐的是：(这个博主试的很慢，我不喜欢，你要用就用吧)</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">wsl --update</span><br></pre></td></tr></table></figure></div>
+<p>②打开我的GitHub链接下载（.msi文件直接运行）：<br>链接：<a class="link"   href="https://github.com/lemon2003/danggecangkuyongba" >下载的话选docker文件夹<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>知识就是力量</category>
+      </categories>
+      <tags>
+        <tag>知识就是力量</tag>
+      </tags>
+  </entry>
 </search>

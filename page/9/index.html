@@ -598,7 +598,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">111</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -661,7 +661,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">111</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -676,6 +676,95 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250414124549.html">
+                            python-图像腐蚀和膨胀
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            一、核心概念
+形态学操作：基于**结构元素（Kernel）**对二值图像（或灰度图像）进行几何运算，改变物体形状但不改变其拓扑结构。
+
+结构元素：
+
+是一个小型矩阵（如3x3、5x5）
+定义操作的作用范围
+常见形状：矩形、椭圆、十字形等
+
+
+
+二、腐蚀（Erosion）1. 原理
+用结构元素在图像上滑动
+仅当结构元素完全覆盖前景像素时，中心像素保留为前景
+效果：前景区域会”缩小”，可消除小物体、平滑边界
+
+2. 特点
+消除小于结构元素的噪声点
+分割粘连物体
+边界向内收缩
+
+3. OpenCV实现123456789101112import cv2import numpy as np# 定义...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Apr 14 2025 12:45:49 GMT+0800">
+                
+                    2025-04-14 12:45:49
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250414124549.html">阅读全文<span class="seo-reader-text">python-图像腐蚀和膨胀</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1373,81 +1462,6 @@ pyplot 模块（类似 MATLAB 语法）：
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220639.html">
-                            python-cv2
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-计算机视觉：支持图像处理、视频分析、特征提取、目标检测等任务。
-跨平台：可在 Windows、Linux、macOS 等系统上运行。
-算法丰富：提供 2500+ 优化算法，涵盖经典和先进的计算机视觉技术。
-
-2. 常用类与方法
-图像读取与显示：
-12345678910import cv2# 读取图像（支持 JPG、PNG 等格式）img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_COLOR)  # 彩色模式（默认）# img = cv2.imread(&quot;image.jpg&quot;, cv2.IMREAD_G...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:39 GMT+0800">
-                
-                    2025-04-12 22:06:39
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220639.html">阅读全文<span class="seo-reader-text">python-cv2</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1480,11 +1494,11 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 111 篇文章
+                        共撰写了 112 篇文章
                     </span>
                     
                         <span>
-                            共 92.7k 字
+                            共 92.9k 字
                         </span>
                     
                 </p>
