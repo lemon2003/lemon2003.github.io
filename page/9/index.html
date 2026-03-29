@@ -598,7 +598,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">113</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -661,7 +661,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">112</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">113</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -676,6 +676,79 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250414131146.html">
+                            python-cv2中文渲染
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            在Python中，matplotlib和opencv-python（cv2）是两套独立的库，它们的字体配置互不影响。你遇到的cv2.imshow显示中文失败的问题，需要从以下两个方向排查和解决：
+
+
+1. OpenCV本身不支持直接渲染中文OpenCV的cv2.putText()函数默认不支持Unicode字符（包括中文），直接传递中文字符串会导致乱码或显示异常。而cv2.imshow()显示图像时，如果图像本身包含未正确渲染的文本，自然无法正确显示中文。
+
+2. 解决方案：使用PIL或cv2.freetype渲染中文方案一：使用PIL（Python Imaging Library）绘制...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Apr 14 2025 13:11:46 GMT+0800">
+                
+                    2025-04-14 13:11:46
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250414131146.html">阅读全文<span class="seo-reader-text">python-cv2中文渲染</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1387,81 +1460,6 @@ fetch_20newsgroups()：加载新闻文本数据集...
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250412220653.html">
-                            python-matplotlib
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            1. 核心功能
-数据可视化：支持折线图、散点图、柱状图、饼图、3D 图等 20+ 种图表类型。
-高度定制：可调整颜色、线型、标记、标签、标题、网格等样式。
-跨平台输出：支持保存为 PNG、PDF、SVG 等格式，适配论文、网页、报告等场景。
-
-2. 常用类与方法
-pyplot 模块（类似 MATLAB 语法）：
-1234567891011121314import matplotlib.pyplot as plt# 绘制折线图plt.plot([1, 2, 3, 4], [10, 20, 25, 30], &#x27;r--o&#x27;, label=&#x27;Line 1&#x27;...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Apr 12 2025 22:06:53 GMT+0800">
-                
-                    2025-04-12 22:06:53
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250412220653.html">阅读全文<span class="seo-reader-text">python-matplotlib</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1494,11 +1492,11 @@ pyplot 模块（类似 MATLAB 语法）：
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 112 篇文章
+                        共撰写了 113 篇文章
                     </span>
                     
                         <span>
-                            共 92.9k 字
+                            共 93k 字
                         </span>
                     
                 </p>
