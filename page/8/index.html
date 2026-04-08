@@ -598,7 +598,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">113</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">115</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -661,7 +661,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">113</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">115</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -676,6 +676,185 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722214637.html">
+                            C51-抢答系统
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            C51-抢答系统第六篇
+一、硬件系统架构​​1.输入控制​​：
+
+K1(P3.1)：模式1触发键
+K2(P3.0)：模式2触发键
+K3(P3.2)：模式3触发键
+K4(P3.3)：全局复位键
+
+​​2.输出设备​​：
+
+LED(P0)：8段数码管数据端口（共阳极）
+P2A&#x2F;P2B&#x2F;P2C(P2.2-4)：数码管位选控制
+
+​​3.显示逻辑​​：
+
+数码管显示值对应：
+0xC0：初始显示”0”
+0xF9：模式1显示”1”
+0xA4：模式2显示”2”
+0xB0：模式3显示”3”
+
+二、核心运行逻辑​​1. ​​初始化阶段​​：
+12P2A=1; P2B=0; P2C=0;...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:46:37 GMT+0800">
+                
+                    2025-07-22 21:46:37
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722214637.html">阅读全文<span class="seo-reader-text">C51-抢答系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20250722214048.html">
+                            C51-多按键控制LED灯系统
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            C51-多按键控制LED灯系统第五篇​
+​一、硬件连接分析​​​​按键接口​​：
+
+K1(P3.1)：控制LED1
+K2(P3.0)：控制LED2
+K3(P3.2)：控制LED3
+K4(P3.3)：全局复位键（NEXT）
+
+​​LED接口​​：
+
+L1(P2.0)：LED1（低电平点亮）
+L2(P2.1)：LED2
+L3(P2.2)：LED3
+
+​​硬件特性​​：LED低电平驱动（0点亮），按键低电平触发（需上拉电阻）。 
+
+​​二、核心功能逻辑​​​​初始状态​​：
+11L1=1; L2=1; L3=1;  // 所有LED熄灭
+
+​​按键控制逻辑​​：
+
+​​按下 K1​​：点亮 L...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jul 22 2025 21:40:48 GMT+0800">
+                
+                    2025-07-22 21:40:48
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C51%E5%8D%95%E7%89%87%E6%9C%BA/">C51单片机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20250722214048.html">阅读全文<span class="seo-reader-text">C51-多按键控制LED灯系统</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -1247,188 +1426,6 @@ red&#x3D;P2^1：红灯控制（低电平亮）
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250415122700.html">
-                            opencv人脸识别
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            opencv人脸识别问题1：参数详解与调节指南 (scaleFactor, minNeighbors, minSize)1. scaleFactor（缩放因子）- 作用: 控制图像金字塔的缩放步长，用于检测不同大小的人脸。
-
-取值: 1.01 ~ 1.5（常用 1.1）。
-影响:值越小（如 1.01）:✅ 检测到更多人脸（尤其是小尺寸人脸）。
-
-❌ 计算量大幅增加，检测速度变慢，可能引入更多误检。  - 值越大（如 1.5）:✅ 检测速度更快。
-❌ 可能漏检小尺寸人脸。
-
-minNeighbors（最小邻居数）- 作用: 控制人脸框的合并阈值，过滤孤立误检。
-
-
-取值: 3 ~ 6（常用...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Apr 15 2025 12:27:00 GMT+0800">
-                
-                    2025-04-15 12:27:00
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250415122700.html">阅读全文<span class="seo-reader-text">opencv人脸识别</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20250414133414.html">
-                            openCV阈值处理
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            一、核心概念
-阈值处理目的：
-
-将灰度图像转换为二值图像（黑白图像）
-分割感兴趣区域（ROI）与背景
-减少后续处理的计算量
-
-
-基本公式：
-1234二值图像像素值 = &#123;     255（前景）, 当原像素值 &gt; 阈值时    0（背景）,  其他情况&#125;
-
-二、常见阈值方法
-
-
-方法类型
-特点
-适用场景
-OpenCV函数参数
-
-
-
-全局阈值
-使用固定阈值
-光照均匀的简单图像
-cv2.THRESH_BINARY
-
-
-反相二值化
-反转前景&#x2F;背景
-需要突出暗色区域的场景
-cv2.THRESH_BINARY_INV
-
-
-截断阈值
-保留超过阈值的部分
-保留图像高...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 14 2025 13:34:14 GMT+0800">
-                
-                    2025-04-14 13:34:14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/python/">python</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20250414133414.html">阅读全文<span class="seo-reader-text">openCV阈值处理</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1461,11 +1458,11 @@ cv2.THRESH_BINARY_INV
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 113 篇文章
+                        共撰写了 115 篇文章
                     </span>
                     
                         <span>
-                            共 93k 字
+                            共 96k 字
                         </span>
                     
                 </p>
