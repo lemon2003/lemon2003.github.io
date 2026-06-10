@@ -11910,4 +11910,47 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>知识就是力量</tag>
       </tags>
   </entry>
+  <entry>
+    <title>安卓studio设置APP桌面图标</title>
+    <url>/post/20260610120238.html</url>
+    <content><![CDATA[<h3 id="一、准备图片"><a href="#一、准备图片" class="headerlink" title="一、准备图片"></a>一、准备图片</h3><ul>
+<li>尺寸：<strong>512×512 px 正方形</strong></li>
+<li>格式：<strong>PNG（透明背景）</strong></li>
+<li>命名：英文小写，无空格（如 <code>logo.png</code>）</li>
+<li>放哪里都行，你放桌面上也不影响</li>
+</ul>
+<hr>
+<h3 id="二、使用-Image-Asset-Studio"><a href="#二、使用-Image-Asset-Studio" class="headerlink" title="二、使用 Image Asset Studio"></a>二、使用 Image Asset Studio</h3><ol>
+<li>左侧切到 <strong>Android 视图</strong></li>
+<li>展开 <code>app</code> → 右键 <code>res</code> → <strong>New → Image Asset</strong><br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260610/1.jpg"
+                      alt="tp"
+                ></li>
+<li>配置窗口：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260610/2.jpg"
+                      alt="tp"
+                ><br>① <strong>Icon Type</strong>：选 <strong>Launcher Icons (Adaptive and Legacy)</strong><br>②<strong>Name</strong>：默认 <code>ic_launcher</code>（覆盖旧图标）<br>③ <strong>Foreground Layer</strong> → <strong>Asset Type</strong>：选 <strong>Image</strong> → 选你的 <code>logo.png</code><br>④<strong>Background Layer</strong>：可设颜色或图片<br>⑤右侧预览正常 → <strong>Next</strong> → <strong>Finish</strong></li>
+<li>自动完成：<br><img  
+                     lazyload
+                     src="/images/loading.gif"
+                     data-src="/img/20260610/3.jpg"
+                      alt="tp"
+                ><br>① 在 <code>res/mipmap-*</code> 生成多分辨率图标<br>②自动修改 <code>AndroidManifest.xml</code>：</li>
+</ol>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">   <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span></span></span><br><span class="line"><span class="tag"> <span class="attr">...</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<hr>
+<h3 id="三、修改应用名称（可选）"><a href="#三、修改应用名称（可选）" class="headerlink" title="三、修改应用名称（可选）"></a>三、修改应用名称（可选）</h3><p>打开 <code>res/values/strings.xml</code>：</p>
+<div class="code-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;app_name&quot;</span>&gt;</span>我的新应用<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>知识就是力量</category>
+      </categories>
+      <tags>
+        <tag>知识就是力量</tag>
+      </tags>
+  </entry>
 </search>
