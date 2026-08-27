@@ -114,7 +114,119 @@
     
     
     
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 
@@ -590,15 +702,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">117</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">127</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -653,15 +765,15 @@
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">117</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">127</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -686,8 +798,371 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20251122214156.html">
-                            另一个我
+                        <a href="/post/20251218162341.html">
+                            李宏毅深度学习--第二章
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            李宏毅深度学习–第二章核心概念总览本章系统性地讲解了机器学习模型训练中的三大关键问题：模型偏差、优化问题和过拟合，并提出了完整的诊断方法论。通过”大海捞针”的比喻贯穿始终，帮助我们建立系统化的模型调试思维。
+一、基础诊断框架：大海捞针比喻1.1 核心比喻解析
+针​ = 最完美、错误率最低的理想模型
+
+大海​ = 模型有能力表示的所有可能函数的集合
+
+训练模型​ = 在大海中捞针的过程
+
+
+1.2 两种基本问题类型当模型在训练数据上表现不佳时，首先需要判断问题的本质：
+问题①：模型偏差——针不在海里
+问题特征：模型过于简单，函数集合太小，无法包含低损失的理想函数
+
+比喻：用勺子去太平洋捞针...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 18 2025 16:23:41 GMT+0800">
+                
+                    2025-12-18 16:23:41
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251218162341.html">阅读全文<span class="seo-reader-text">李宏毅深度学习--第二章</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251218160254.html">
+                            李宏毅机器学习--第一章
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            李宏毅深度学习–第一章1. 机器学习基本概念1.1 什么是机器学习机器学习就是让机器具备找函数的能力。根据要找的函数类型不同，机器学习可以分为：
+
+回归：输出为数值（如预测PM2.5）
+
+分类：输出为类别选择（如垃圾邮件检测、AlphaGo下棋）
+
+结构化学习：输出为结构化对象（如图像生成、文章写作）
+
+
+1.2 机器学习三步骤
+定义模型：写出带有未知参数的函数
+
+定义损失函数：评估参数好坏的标准
+
+优化：找到让损失最小的参数
+
+
+2. 案例学习：视频点击量预测2.1 问题描述根据频道历史数据预测未来观看次数，后台信息包括：每天点赞人数、订阅人数、观看次数等。
+2.2 初始模型使用简单的...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 18 2025 16:02:54 GMT+0800">
+                
+                    2025-12-18 16:02:54
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251218160254.html">阅读全文<span class="seo-reader-text">李宏毅机器学习--第一章</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251212212320.html">
+                            六级作文题目（截止到2025年6月）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            总结的是六级的作文题目，因为博主发现自己总是不知道作文应该怎么编，所以总结了历年真题进行练手，没有总结范文模板，我主要是不知道应该怎么编作文内容，这个就总结了个题目，可以根据题目编一下大致内容，列个提纲。
+
+📊 历年六级作文题目汇总（2004-2025）
+
+
+考试年月
+作文题目（三选一）
+
+
+
+2025年6月
+① 大学生职业准备（As requirements for job applications are getting increasingly higher…）  ② 社交媒体的正确使用（As social media is used more and more extensiv...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Dec 12 2025 21:23:20 GMT+0800">
+                
+                    2025-12-12 21:23:20
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251212212320.html">阅读全文<span class="seo-reader-text">六级作文题目（截止到2025年6月）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251212212104.html">
+                            英语短语分类学习
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            考研英语写作核心短语分类表第一章 考研写作总论历史文化遗迹及传统特色事物
+
+
+中文
+英文
+
+
+
+故宫
+the Palace Museum, the Forbidden City
+
+
+长城
+the Great Wall
+
+
+天安门广场
+Tian’anmen Square
+
+
+颐和园
+the Summer Palace
+
+
+天坛
+the Temple of Heaven
+
+
+胡同
+alley
+
+
+唐装
+Tang Costume
+
+
+筷子
+chopsticks
+
+
+中国菜
+Chinese cuisine
+
+
+北京烤鸭
+Peking roast duck
+
+
+汉字
+Chinese charact...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Dec 12 2025 21:21:04 GMT+0800">
+                
+                    2025-12-12 21:21:04
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251212212104.html">阅读全文<span class="seo-reader-text">英语短语分类学习</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251212205018.html">
+                            无语日记
                         </a>
                     </h3>
 
@@ -701,9 +1176,9 @@
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Nov 22 2025 21:41:56 GMT+0800">
+            <span class="home-article-date" data-date="Fri Dec 12 2025 20:50:18 GMT+0800">
                 
-                    2025-11-22 21:41:56
+                    2025-12-12 20:50:18
                 
             </span>
         </span>
@@ -739,7 +1214,7 @@
         
     </div>
 
-    <a href="/post/20251122214156.html">阅读全文<span class="seo-reader-text">另一个我</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20251212205018.html">阅读全文<span class="seo-reader-text">无语日记</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -754,498 +1229,35 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20251122212949.html">
-                            六级高频词打卡words9
+                        <a href="/post/20251210142436.html">
+                            hexo+github搭建个人博客
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            masculine
-&#x2F; ˈmæskjəlɪn &#x2F;
-adj. 男性的；阳刚的
+                            Hexo + GitHub 搭建个人博客完整指南一、环境准备1.1 安装 Node.jsHexo 基于 Node.js，首先需要安装 Node.js 环境。
+Windows&#x2F;Mac 用户：
 
-She has a deep, masculine​ voice.
-她的嗓音低沉，像男性一样。
+访问 Node.js 官网(想知道详细步骤的就自己去搜，不想搜的直接next一路到底就行)验证安装：(win+r调出cmd)
 
-investigate
-&#x2F; ɪnˈvestɪɡeɪt &#x2F;
-v. 调查；研究
+123node -vnpm -v
 
-The police will investigate​ the cause of the accident.
-警方将调查事故原因。
+安装VScode：vscode官网(想知道详细步骤的就自己去搜，不想搜的直接next一路到底就行)
 
-prototype
-&#x2F; ˈproʊtətaɪp &#x2F;
-n. 原型；样本
+1.2 安装 Git用于版本控制和部署到 GitHub。下载 Git：
 
-They built a prototype​ of the new c...
+Windows: Git官网(想知道详细步骤的就自己...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Nov 22 2025 21:29:49 GMT+0800">
+            <span class="home-article-date" data-date="Wed Dec 10 2025 14:24:36 GMT+0800">
                 
-                    2025-11-22 21:29:49
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251122212949.html">阅读全文<span class="seo-reader-text">六级高频词打卡words9</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251121201813.html">
-                            英语精彩句子--3
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            一、开头部分开头第一句（描述背景或现象）
-With the remarkable development of advanced science and technology, an overwhelming majority of people acknowledged that … should not be underestimated.随着先进科学技术的显著发展，绝大多数人认为…不应该被低估。
-
-Along with the steady growth in the country’s economy as well as the people’s living standard...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Nov 21 2025 20:18:13 GMT+0800">
-                
-                    2025-11-21 20:18:13
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251121201813.html">阅读全文<span class="seo-reader-text">英语精彩句子--3</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251121201624.html">
-                            英语精彩句子--2
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            一、开篇引入（现象&#x2F;背景&#x2F;名言）现象描述
-In an era characterized by unprecedented technological advancement and globalization, the ability to … has become a focal point of public discourse.
-
-在一个以前所未有的技术进步和全球化为特征的时代，…的能力已成为公众讨论的焦点。
-
-
-The past decade has witnessed a sea change in people’s attitudes towards …...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Nov 21 2025 20:16:24 GMT+0800">
-                
-                    2025-11-21 20:16:24
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251121201624.html">阅读全文<span class="seo-reader-text">英语精彩句子--2</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251121201446.html">
-                            英语精彩句子--1
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            一、开头部分现象描述万能句
-Nowadays, a hotly debated topic is whether… , which has aroused widespread concern in the whole society. 当前，一个热议的话题是是否…，这已经引起了全社会的广泛关注。
-
-With the rapid globalization and cultural integration, an increasing emphasis has been placed on the importance of… 随着快速的全球化和文化融合，人们越来越重视…的重要性。
-
-W...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Nov 21 2025 20:14:46 GMT+0800">
-                
-                    2025-11-21 20:14:46
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251121201446.html">阅读全文<span class="seo-reader-text">英语精彩句子--1</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251121201029.html">
-                            作文模板
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            📝 一、现象描述类模板社会现象描述模板结构：
-
-背景引入： In contemporary society, we are witnessing a noticeable trend that…
-现象具体化： This phenomenon manifests itself in various aspects, particularly in…
-影响分析： Such a development exerts profound impacts on…
-
-示例：In contemporary society, we are witnessing a noticeable trend th...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Nov 21 2025 20:10:29 GMT+0800">
-                
-                    2025-11-21 20:10:29
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251121201029.html">阅读全文<span class="seo-reader-text">作文模板</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251121200915.html">
-                            写作词汇
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            🔥 高频核心词汇1. 基础提升类
-
-
-单词
-词性
-中文释义
-例句
-例句翻译
-
-
-
-crucial​
-adj.
-至关重要的
-Education plays a crucial​ role in personal development.
-教育在个人发展中起着至关重要的作用。
-
-
-significant​
-adj.
-重要的，显著的
-Technology has brought significant​ changes to our lives.
-技术给我们的生活带来了显著的变化。
-
-
-essential​
-adj.
-必不可少的
-Water is essential​ for all liv...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Nov 21 2025 20:09:15 GMT+0800">
-                
-                    2025-11-21 20:09:15
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/post/20251121200915.html">阅读全文<span class="seo-reader-text">写作词汇</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/post/20251120222148.html">
-                            其实，我需要一点波澜
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Nov 20 2025 22:21:48 GMT+0800">
-                
-                    2025-11-20 22:21:48
+                    2025-12-10 14:24:36
                 
             </span>
         </span>
@@ -1281,7 +1293,7 @@ Water is essential​ for all liv...
         
     </div>
 
-    <a href="/post/20251120222148.html">阅读全文<span class="seo-reader-text">其实，我需要一点波澜</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20251210142436.html">阅读全文<span class="seo-reader-text">hexo+github搭建个人博客</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1296,42 +1308,45 @@ Water is essential​ for all liv...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/post/20251120220502.html">
-                            六级高频词打卡words8
+                        <a href="/post/20251203092626.html">
+                            英语写作翻译词汇积累
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            cultivate
-&#x2F; ˈkʌltɪveɪt &#x2F;
-vt. 培养；耕作
+                            1. 社会发展类
 
-We need to cultivate​ good study habits.
-我们需要培养良好的学习习惯。
 
-livestock
-&#x2F; ˈlaɪvstɑːk &#x2F;
-n. 家畜；牲畜
+英文
+中文释义
+例句
 
-The farm raises various types of livestock.
-这个农场饲养着多种家畜。
 
-adequately
-&#x2F; ˈædɪkwətli &#x2F;
-adv. 充分地；足够地
 
-The problem wasn’t adequately​ addressed....
+aging population
+老龄化人口
+China is facing the challenge of an aging population. 中国正面临老龄化人口的挑战。
+
+
+demographic structure
+人口结构
+The demographic structure​ of China has changed significantly. 中国的人口结构发生了显著变化。
+
+
+social security
+社会保障
+The government is improving the social security​ ...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Nov 20 2025 22:05:02 GMT+0800">
+            <span class="home-article-date" data-date="Wed Dec 03 2025 09:26:26 GMT+0800">
                 
-                    2025-11-20 22:05:02
+                    2025-12-03 09:26:26
                 
             </span>
         </span>
@@ -1367,7 +1382,7 @@ The problem wasn’t adequately​ addressed....
         
     </div>
 
-    <a href="/post/20251120220502.html">阅读全文<span class="seo-reader-text">六级高频词打卡words8</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20251203092626.html">阅读全文<span class="seo-reader-text">英语写作翻译词汇积累</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1378,46 +1393,40 @@ The problem wasn’t adequately​ addressed....
                 
 
                 
+                    
+                
 
                 
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/post/20251128214119.html">
+                            <img src="/img/20251128/1.jpg" alt="尼克狐尼克，你被捕了！" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
                     <h3 class="home-article-title">
-                        <a href="/post/20251120220456.html">
-                            六级高频词打卡words7
+                        <a href="/post/20251128214119.html">
+                            尼克狐尼克，你被捕了！
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            inauguration
-&#x2F; ɪˌnɔːɡjəˈreɪʃn &#x2F;
-n. 就职典礼；开幕式
+                            《疯狂动物城2》看完啦！我疯狂上头！ 🦊❤️🐰朋友们，我宣布：《疯狂动物城2》绝对是年度最佳动画电影之一！太好看了！🥳 剧情、角色、情感，全部在线！而且，谁再说尼克和朱迪只是纯洁的友情我跟谁急，这分明就是爱情！💘 鉴-定-完-毕！
+下面我来分享一下让我印象最深的几个点，含大量剧透，没看过的朋友慎入哦！😉
 
-The presidential inauguration​ will be held next week.
-总统就职典礼将于下周举行。
-
-lavish
-&#x2F; ˈlævɪʃ &#x2F;
-adj. 奢侈的；丰富的
-
-They held a lavish​ wedding ceremony.
-他们举办了一场奢华的婚礼。
-
-plight
-&#x2F; plaɪt &#x2F;
-n. 困境；窘境
-
-The government is trying to improve the ...
+① “我们不一样” - 最伤人的话与最深的牵挂电影开头，故事看似比较平缓。朱迪为了追寻正义，一心要调查清楚笔记本的秘密，找到了蛇盖瑞。但我们的尼克呢？他其实一点都不在乎什么大阴谋，他满心满眼只想保护兔朱迪的安全，觉得这太危险了。😟
+所以当朱迪说出那句 “我们不一样” 的时候...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Nov 20 2025 22:04:56 GMT+0800">
+            <span class="home-article-date" data-date="Fri Nov 28 2025 21:41:19 GMT+0800">
                 
-                    2025-11-20 22:04:56
+                    2025-11-28 21:41:19
                 
             </span>
         </span>
@@ -1430,7 +1439,7 @@ The government is trying to improve the ...
                     
                         
                         <li>
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
                         </li>
                     
                     
@@ -1445,7 +1454,7 @@ The government is trying to improve the ...
                     
                         <li>
                             
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/">英语学习</a>&nbsp;
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1453,7 +1462,172 @@ The government is trying to improve the ...
         
     </div>
 
-    <a href="/post/20251120220456.html">阅读全文<span class="seo-reader-text">六级高频词打卡words7</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/post/20251128214119.html">阅读全文<span class="seo-reader-text">尼克狐尼克，你被捕了！</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/post/20251122214739.html">
+                            <img src="/img/20251122/3.jpg" alt="大数据比我更懂我" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251122214739.html">
+                            大数据比我更懂我
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            🤯 天啊！它比我自己都懂我！(๑•̀ㅂ•́)و✧哇！刚才无意中点开拼多多的拼小圈，在“我的兴趣”那个页面，我直接愣住了！不是随便看看的那种，是真正的、被震撼到的愣住！一种混合着惊喜、难以置信和被巨大认同感包围的情绪，像温暖的潮水一样把我淹没啦！💖
+那个界面干净利落，上面清清楚楚地写着一行行标签：
+
+爱买甜美风饰品 爱吃甜食美妆达人 护肤达人爱买简约风文具 爱吃巧克力爱吃辣 爱穿文艺风 健康达人爱穿学院风 爱买可爱风文具
+
+每一个标签，都像是一束追光，“啪”地一声，精准地打中了我生活中的一个小确幸！这简直是我的一份“兴趣说明书”，比我自己写的简历还要准确一万倍！✨
+🎯 精准狙击！它是...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 22 2025 21:47:39 GMT+0800">
+                
+                    2025-11-22 21:47:39
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251122214739.html">阅读全文<span class="seo-reader-text">大数据比我更懂我</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/post/20251122214433.html">
+                            <img src="/img/20251122/2.jpg" alt="对的人，会站在你的前途里" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/post/20251122214433.html">
+                            对的人，会站在你的前途里
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            🌄 对的人，会站在你的前途里 ✨偶然看到一幅画，一瞬间就被击中了。画是水墨的风格，山峦云雾，只有黑白灰的基调，却有一种说不出的磅礴与深情。一条蜿蜒的小路，从眼前延伸至画面的中上部，路的尽头，是一对相拥的剪影。他们在那云雾缭绕的至高处，仿佛在轻声交谈，背景是漫天金黄的银杏叶，无声飘落。🍂
+而画的右侧，竖排写着两行字，像一句古老的箴言，也像一声温柔的叹息：
+
+前途
+你会明白，前途比爱情更重要，你也终会明白，爱情比前途更难得，但对的人会站在你的前途里。
+
+我盯着这行字和那对剪影，看了很久很久。心里某种纠结已久的东西，仿佛被轻轻化解开了。
+🚶‍♀️ 那条蜿蜒的“前途”路画中的小路，曲折却清...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Nov 22 2025 21:44:33 GMT+0800">
+                
+                    2025-11-22 21:44:33
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/post/20251122214433.html">阅读全文<span class="seo-reader-text">对的人，会站在你的前途里</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1463,7 +1637,7 @@ The government is trying to improve the ...
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-	<a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
+	<a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
   
     </div>
@@ -1491,11 +1665,11 @@ The government is trying to improve the ...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 117 篇文章
+                        共撰写了 127 篇文章
                     </span>
                     
                         <span>
-                            共 97.6k 字
+                            共 111.1k 字
                         </span>
                     
                 </p>
