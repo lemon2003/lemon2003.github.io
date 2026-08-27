@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Lemon">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://lemon2003.dpdns.org/post/20260827111124.html"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="版本：Claude‑Code 2.1.247 说明：Claude‑Code 是终端CLI工具，不是桌面软件；国内无法直接使用Anthropic官方账号，依靠国产大模型兼容Anthropic协议API实现使用。 ⚠️官方一键脚本 irm claude.ai&#x2F;install.ps1 | iex 国内网络会被Cloudflare拦截，直接废弃不要使用。  一、前置环境1. 软件依赖 Windows10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude code安装配置">
+<meta property="og:url" content="https://lemon2003.dpdns.org/post/20260827111124.html">
+<meta property="og:site_name" content="Lemon">
+<meta property="og:description" content="版本：Claude‑Code 2.1.247 说明：Claude‑Code 是终端CLI工具，不是桌面软件；国内无法直接使用Anthropic官方账号，依靠国产大模型兼容Anthropic协议API实现使用。 ⚠️官方一键脚本 irm claude.ai&#x2F;install.ps1 | iex 国内网络会被Cloudflare拦截，直接废弃不要使用。  一、前置环境1. 软件依赖 Windows10">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lemon2003.dpdns.org/images/redefine-og.webp">
+<meta property="article:published_time" content="2026-08-27T03:11:24.000Z">
+<meta property="article:modified_time" content="2026-08-27T03:11:34.910Z">
+<meta property="article:author" content="lemon">
+<meta property="article:tag" content="知识就是力量">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lemon2003.dpdns.org/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/img/%E6%9F%A0%E6%AA%AC.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/%E6%9F%A0%E6%AA%AC.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/img/%E6%9F%A0%E6%AA%AC.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Claude code安装配置 | Lemon
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+        
+            
+    
+            
+    
+            
+                
+                    <link rel="stylesheet" href="/css/custom.css">
+                
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"lemon2003.dpdns.org","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":false},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":2,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":false,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":"come on...","style":"circle"},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":null},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/img/background.webp","dark":"/img/backgroundT.webp"},"title":"心有猛虎，细嗅蔷薇。","subtitle":{"text":["星光不负赶路人，岁月不负有心人。","星河滚烫，你是人间理想。"],"hitokoto":{"enable":true,"show_author":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":"927367539@qq.com"},"qrs":{"weixin":"/img/weixin.jpg","qq":"/img/QQ.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":10},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Friends":"/friends"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"星河滚烫，你是人间理想。","show_on_mobile":true,"links":{"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD HH:mm:ss","excerpt_length":300,"categories":{"enable":true,"limit":5},"tags":{"enable":true,"limit":3}},"footerStart":"2025/3/19 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<!-- 在head部分结束前添加CSS样式 -->
+<style>
+  .star {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+    animation: twinkle 1.2s ease-out forwards;
+    z-index: 9999;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-40px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-80px) scale(1.2);
+    }
+  }
+
+  /* 颜色定义 */
+  .red { color: #ff4444; }
+  .orange { color: #ffaa00; }
+  .yellow { color: #ffff00; }
+  .green { color: #00ff00; }
+  .blue { color: #00aaff; }
+  .purple { color: #aa00ff; }
+  .pink { color: #ff00aa; }
+  .cyan { color: #00ffff; }
+  .lime { color: #aaff00; }
+  .magenta { color: #ff00ff; }
+</style>
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        come on...
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/img/%E6%9F%A0%E6%AA%AC.png" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Lemon
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    友情链接
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">友情链接</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">117</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Claude code安装配置</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/img/tx.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">lemon</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv5</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-08-27 11:11:24</span>
+        <span class="mobile">2026-08-27 11:11:24</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-08-27 11:11:34</span>
+            <span class="mobile">2026-08-27 11:11:34</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E7%9F%A5%E8%AF%86%E5%B0%B1%E6%98%AF%E5%8A%9B%E9%87%8F/">知识就是力量</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%9F%A5%E8%AF%86%E5%B0%B1%E6%98%AF%E5%8A%9B%E9%87%8F/">知识就是力量</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k 字</span>
+        </span>
+    
+    
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<blockquote>
+<p>版本：Claude‑Code <code>2.1.247</code> 说明：Claude‑Code 是终端CLI工具，不是桌面软件；国内无法直接使用Anthropic官方账号，依靠国产大模型兼容Anthropic协议API实现使用。 ⚠️官方一键脚本 <code>irm claude.ai/install.ps1 | iex</code> <strong>国内网络会被Cloudflare拦截，直接废弃不要使用</strong>。</p>
+</blockquote>
+<h2 id="一、前置环境"><a href="#一、前置环境" class="headerlink" title="一、前置环境"></a>一、前置环境</h2><h3 id="1-软件依赖"><a href="#1-软件依赖" class="headerlink" title="1. 软件依赖"></a>1. 软件依赖</h3><ul>
+<li>Windows10 &#x2F; Windows11</li>
+<li>Node.js ≥18 LTS（推荐安装24版本），安装时务必勾选 <code>Add to PATH</code></li>
+<li>Git（可选，用于识别git项目，不安装也能运行）</li>
+</ul>
+<h3 id="2-验证环境"><a href="#2-验证环境" class="headerlink" title="2. 验证环境"></a>2. 验证环境</h3><p>打开 <strong>Windows PowerShell</strong>（不要用CMD命令提示符）</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure></div>
+
+<p>正常输出版本号代表环境就绪。</p>
+<h3 id="3-API准备（二选一）"><a href="#3-API准备（二选一）" class="headerlink" title="3. API准备（二选一）"></a>3. API准备（二选一）</h3><ol>
+<li>DeepSeek：<a class="link"   target="_blank" rel="noopener" href="https://platform.deepseek.com/usage" >DeepSeek 开放平台<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>获取API Key，按量计费</li>
+<li>智谱AI：<a class="link"   target="_blank" rel="noopener" href="https://open.bigmodel.cn/console/overview" >智谱丨BigModel 平台<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>获取API Key</li>
+</ol>
+<blockquote>
+<p>全程<strong>不需要科学上网</strong>，模型请求全部走国内接口；仅客户端会尝试访问海外地址做遥测上报，该请求失败属于正常警告，不影响功能。</p>
+</blockquote>
+<h2 id="二、安装Claude‑Code（npm方式，国内稳定）"><a href="#二、安装Claude‑Code（npm方式，国内稳定）" class="headerlink" title="二、安装Claude‑Code（npm方式，国内稳定）"></a>二、安装Claude‑Code（npm方式，国内稳定）</h2><h3 id="设置国内npm镜像"><a href="#设置国内npm镜像" class="headerlink" title="设置国内npm镜像"></a>设置国内npm镜像</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></div>
+<h3 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure></div>
+<h3 id="全局安装claude‑code"><a href="#全局安装claude‑code" class="headerlink" title="全局安装claude‑code"></a>全局安装claude‑code</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="验证安装成功"><a href="#验证安装成功" class="headerlink" title="验证安装成功"></a>验证安装成功</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude --version</span><br></pre></td></tr></table></figure></div>
+
+<p>输出版本号，如 <code>2.1.247 (Claude Code)</code> 代表安装完成。</p>
+<blockquote>
+<p>⚠️安装完成后<strong>关闭全部PowerShell窗口，重新打开新终端</strong>，刷新系统PATH，否则提示<code>claude不是内部命令</code>。</p>
+</blockquote>
+<h2 id="三、配置文件说明（两个核心文件，路径不能错）"><a href="#三、配置文件说明（两个核心文件，路径不能错）" class="headerlink" title="三、配置文件说明（两个核心文件，路径不能错）"></a>三、配置文件说明（两个核心文件，路径不能错）</h2><blockquote>
+<p>⚠️文件管理器需要打开【查看】→勾选【文件扩展名】，防止后缀变成<code>.txt</code>导致失效。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.claude.json</code></td>
+<td><code>C:\Users\&lt;你的用户名&gt;\.claude.json</code></td>
+<td>跳过官方地区检测、首次登录引导，仅本地标记，<strong>不能调用模型</strong></td>
+</tr>
+<tr>
+<td><code>settings.json</code></td>
+<td><code>C:\Users\&lt;你的用户名&gt;\.claude\settings.json</code></td>
+<td>填写API地址、密钥、模型名称，真正调用大模型</td>
+</tr>
+</tbody></table>
+<h3 id="1-claude-json-内容"><a href="#1-claude-json-内容" class="headerlink" title="1. .claude.json 内容"></a>1. <code>.claude.json</code> 内容</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;hasCompletedOnboarding&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-settings-json"><a href="#2-settings-json" class="headerlink" title="2. settings.json"></a>2. <code>settings.json</code></h3><blockquote>
+<p>注意：如果文件自带<code>&quot;autoUpdatesChannel&quot;: &quot;latest&quot;</code>，<strong>不要删除，合并到同一个大括号内，禁止出现两组独立{}</strong></p>
+</blockquote>
+<h4 id="🟦方案1：DeepSeek配置模板（推荐）"><a href="#🟦方案1：DeepSeek配置模板（推荐）" class="headerlink" title="🟦方案1：DeepSeek配置模板（推荐）"></a>🟦方案1：DeepSeek配置模板（推荐）</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;autoUpdatesChannel&quot;: &quot;latest&quot;,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.deepseek.com/anthropic&quot;,</span><br><span class="line">    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-替换为你的真实密钥，不要留空格&quot;,</span><br><span class="line">    &quot;ANTHROPIC_MODEL&quot;: &quot;deepseek-v4-flash&quot;,</span><br><span class="line">    &quot;API_TIMEOUT_MS&quot;: &quot;120000&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="🟩方案2：智谱GLM‑5-1配置模板"><a href="#🟩方案2：智谱GLM‑5-1配置模板" class="headerlink" title="🟩方案2：智谱GLM‑5.1配置模板"></a>🟩方案2：智谱GLM‑5.1配置模板</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;autoUpdatesChannel&quot;: &quot;latest&quot;,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,</span><br><span class="line">    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;替换为你的真实密钥，不要留空格&quot;,</span><br><span class="line">    &quot;ANTHROPIC_MODEL&quot;: &quot;glm-5.1&quot;,</span><br><span class="line">    &quot;API_TIMEOUT_MS&quot;: &quot;120000&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>⚠️重要避坑</p>
+<ol>
+<li>第三方兼容API必须使用 <code>ANTHROPIC_AUTH_TOKEN</code>，<strong>禁止写<code>ANTHROPIC_API_KEY</code>，写错直接报<code>Not logged in</code></strong></li>
+<li>base_url不要手动追加<code>/v1</code>后缀，会404；直接复制平台给出的Anthropic兼容接口地址</li>
+<li>JSON语法校验：复制内容到 <a class="link"   target="_blank" rel="noopener" href="https://json.cn/" >json.cn<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，无报错才合格。</li>
+</ol>
+</blockquote>
+<h2 id="四、启动运行"><a href="#四、启动运行" class="headerlink" title="四、启动运行"></a>四、启动运行</h2><ol>
+<li>重新打开PowerShell，切换到你的项目目录，<strong>不要在C:\Windows\System32运行claude</strong></li>
+</ol>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd D:\你的项目</span><br><span class="line">claude</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>首次运行询问信任目录：输入 <code>y</code> 回车授权访问本地文件。</li>
+</ol>
+<blockquote>
+<p>出现红色警告：无法连接<code>api.anthropic.com</code>，为客户端遥测上报，<strong>直接忽略，不影响对话、读写文件</strong>。</p>
+</blockquote>
+<h3 id="Claude‑Code会话内常用命令"><a href="#Claude‑Code会话内常用命令" class="headerlink" title="Claude‑Code会话内常用命令"></a>Claude‑Code会话内常用命令</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/clear      清空当前会话上下文</span><br><span class="line">/doctor     自动诊断配置文件、环境问题（排错首选）</span><br><span class="line">/logout     登出</span><br><span class="line">Ctrl+C      退出claude，返回PowerShell终端</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h3><p>输入：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出当前目录下的文件列表</span><br></pre></td></tr></table></figure></div>
+
+<p>能够读取本地文件，代表工具调用tool_use正常，整套环境部署完成。</p>
+<h2 id="五、DeepSeek计费简单说明"><a href="#五、DeepSeek计费简单说明" class="headerlink" title="五、DeepSeek计费简单说明"></a>五、DeepSeek计费简单说明</h2><blockquote>
+<p>2026‑08，按token按量计费，输入输出分开计费；支持上下文缓存优惠；V4系列有峰谷定价。</p>
+</blockquote>
+<ul>
+<li>高峰（工作日9‑12点、14‑18点）价格翻倍；周末全天为低价空闲时段</li>
+<li><code>deepseek‑v4‑flash</code>：性价比最高，适合日常写代码</li>
+<li><code>deepseek‑reasoner(R1)</code>：推理模型，输出token很贵，不建议日常编码使用</li>
+<li>平台控制台开启用量告警，防止无意识消耗大量token。</li>
+</ul>
+<h2 id="六、高频报错排错清单"><a href="#六、高频报错排错清单" class="headerlink" title="六、高频报错排错清单"></a>六、高频报错排错清单</h2><table>
+<thead>
+<tr>
+<th>报错现象</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Not logged in · Run /login</code></td>
+<td>1.确认变量名<code>ANTHROPIC_AUTH_TOKEN</code>；2.检查<code>.claude.json</code>；3.密钥无多余空格；4.完全重启终端</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>base_url不要手动加<code>/v1</code>后缀，严格复制官方Anthropic兼容地址</td>
+</tr>
+<tr>
+<td>能聊天，但是不能读写文件、执行shell</td>
+<td>接口不完整支持<code>tool_use</code>工具调用；DeepSeek使用v4‑flash；智谱需要开通Coding编码套餐</td>
+</tr>
+<tr>
+<td><code>claude</code>不是内部命令</td>
+<td>全部关闭终端，重新打开；确认npm全局安装成功</td>
+</tr>
+<tr>
+<td>JSON解析报错</td>
+<td>检查json逗号、引号，不能有中文全角符号，不要出现两组独立大括号</td>
+</tr>
+<tr>
+<td>PowerShell识别不了New‑Item &#x2F; Out‑File命令</td>
+<td>不要使用CMD，打开真正Windows PowerShell；或者手动创建配置文件</td>
+</tr>
+</tbody></table>
+<h2 id="七、升级-卸载"><a href="#七、升级-卸载" class="headerlink" title="七、升级&amp;卸载"></a>七、升级&amp;卸载</h2><h3 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure></div>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>⚠️版本更新风险：升级Claude‑Code新版本后，<code>.claude.json</code>的<code>hasCompletedOnboarding:true</code>有可能被重置，会重新弹出登录引导，需要重新检查该文件。</p>
+</blockquote>
+<h2 id="八、重要注意事项"><a href="#八、重要注意事项" class="headerlink" title="八、重要注意事项"></a>八、重要注意事项</h2><ol>
+<li>本方案属于社区魔改用法，<strong>非Anthropic官方支持</strong>，客户端更新后存在兼容波动可能性。</li>
+<li>所有配置修改完成，<strong>必须关闭全部终端窗口，新开终端才会加载新配置</strong>。</li>
+<li>不要把settings.json放到错误目录，路径错误会直接读取不到配置。</li>
+<li>不要在系统目录<code>C:\Windows\System32</code>运行claude，必须切换到业务项目目录。</li>
+</ol>
+<hr>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E7%9F%A5%E8%AF%86%E5%B0%B1%E6%98%AF%E5%8A%9B%E9%87%8F/">#知识就是力量</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/post/20260610120238.html">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">安卓studio设置APP桌面图标</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'lemon2003/gitalk',
+                'data-repo-id': 'R_kgDOOM7rWQ',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDOOM7rWc4CoXWC',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '0',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">Claude code安装配置</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">一、前置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85Claude%E2%80%91Code%EF%BC%88npm%E6%96%B9%E5%BC%8F%EF%BC%8C%E5%9B%BD%E5%86%85%E7%A8%B3%E5%AE%9A%EF%BC%89"><span class="nav-text">二、安装Claude‑Code（npm方式，国内稳定）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E%EF%BC%88%E4%B8%A4%E4%B8%AA%E6%A0%B8%E5%BF%83%E6%96%87%E4%BB%B6%EF%BC%8C%E8%B7%AF%E5%BE%84%E4%B8%8D%E8%83%BD%E9%94%99%EF%BC%89"><span class="nav-text">三、配置文件说明（两个核心文件，路径不能错）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%90%AF%E5%8A%A8%E8%BF%90%E8%A1%8C"><span class="nav-text">四、启动运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81DeepSeek%E8%AE%A1%E8%B4%B9%E7%AE%80%E5%8D%95%E8%AF%B4%E6%98%8E"><span class="nav-text">五、DeepSeek计费简单说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E9%AB%98%E9%A2%91%E6%8A%A5%E9%94%99%E6%8E%92%E9%94%99%E6%B8%85%E5%8D%95"><span class="nav-text">六、高频报错排错清单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%8D%87%E7%BA%A7-%E5%8D%B8%E8%BD%BD"><span class="nav-text">七、升级&amp;卸载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E9%87%8D%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">八、重要注意事项</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">心如琉璃，六根清净。</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2025</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Lemon</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 117 篇文章
+                    </span>
+                    
+                        <span>
+                            共 97.6k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+        
+        
+            
+                
+        
+                
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+	<!-- 在scripts部分结束前添加JavaScript -->
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+    
+<script src="/js/build/libs/pangu.min.js"></script>
+
+<script src="/js/build/plugins/pangu.js"></script>
+
+
+
+
+	
+
+	<script>
+	// 鼠标点击星星效果
+	document.addEventListener('click', (e) => {
+	  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 
+	                 'purple', 'pink', 'cyan', 'lime', 'magenta'];
+	  const container = document.body;
+	  
+	  // 创建5颗星星
+	  for(let i=0; i<5; i++) {
+	    const star = document.createElement('span');
+	    star.className = `star ${colors[Math.floor(Math.random() * colors.length)]}`;
+	    star.textContent = '✨';
+	    
+	    // 随机位置偏移（在点击点下方10-30px范围内）
+	    const offsetX = (Math.random() - 0.5) * 40; // 水平偏移±20px
+	    const offsetY = (Math.random() * 20) + 10;   // 垂直偏移10-30px
+	    
+	    star.style.left = `${e.clientX + offsetX}px`;
+	    star.style.top = `${e.clientY + offsetY}px`;
+	    
+	    // 添加旋转效果
+	    star.style.transform += `rotate(${Math.random() * 360}deg)`;
+	    
+	    container.appendChild(star);
+	    
+	    // 动画结束后移除元素
+	    setTimeout(() => star.remove(), 1200);
+	  }
+	});
+	</script>
+</body>
+
+</html>
